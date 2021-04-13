@@ -8,6 +8,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrandsComponent } from './components/brands/brands.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ChefSignupComponent } from './components/chef-signup/chef-signup.component';
+import { UserSignupComponent } from './components/user-signup/user-signup.component';
+import { ServiceInfoComponent } from './components/service-info/service-info.component';
+import { ServicesComponent } from './components/services/services.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +21,11 @@ import { ContactComponent } from './components/contact/contact.component';
     NavbarComponent,
     BrandsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ChefSignupComponent,
+    UserSignupComponent,
+    ServiceInfoComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
