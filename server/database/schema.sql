@@ -50,3 +50,5 @@ CREATE TABLE user (
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL
 );
+
+
