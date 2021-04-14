@@ -57,4 +57,4 @@ CREATE TABLE sessionn (
     ID_user INT,
     PRIMARY KEY (ID_session),
     FOREIGN KEY (ID_user) REFERENCES sessionn(ID_user)
-);
+)
