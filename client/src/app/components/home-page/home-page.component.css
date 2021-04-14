@@ -1,0 +1,49 @@
+.slider{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://media4.giphy.com/media/l378AwfJ7pqLlRHr2/giphy.gif');
+    background-size: cover;
+    max-width: 100%;
+    overflow: hidden;
+}
+.slider-content{
+    width: 100vw;
+    height: 100vh;
+}
+.h1{
+    margin-bottom: 30px;
+    margin-top:50px;
+    font-family: playfair display,serif;
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: whitesmoke;
+
+}
+.h5{
+    margin-bottom: 60px;
+    font-family: playfair display,serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: whitesmoke;
+}
+.btn{
+    margin-left: 30px;
+    margin-bottom: 60px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.2!important;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: 0em;
+    border-radius: 0em;
+    padding: 0.8em 1.8em;
+    background: whitesmoke;
+    border-color: transparent;
+    color: #1F1A1E!important;
+    box-shadow: 0 0em 0em rgb(0 0 0 / 20%);
+}
+.btn:hover{
+    background-color: grey;
+}
