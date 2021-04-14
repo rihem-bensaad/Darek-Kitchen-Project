@@ -9,7 +9,6 @@ router.get('/getall', userController.getuser);
 
 router.get('/:id', userController.getuserById);     
       
-      
 router.put('/:id', userController.edituser);
 
 router.delete('/:id', userController.deleteuser);
