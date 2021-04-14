@@ -11,3 +11,5 @@ server/package-lock.json
 client/dist
 server/dist
 node_modules
+
+server/database/config.js
