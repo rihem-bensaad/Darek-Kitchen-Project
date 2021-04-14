@@ -51,6 +51,4 @@ CREATE TABLE user (
     location VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE _session (
-    
-)
+
