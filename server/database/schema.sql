@@ -51,10 +51,6 @@ CREATE TABLE user (
     location VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE sessionn (
-    ID_session INT AUTO_INCREMENT,
-    sessionName  VARCHAR(255) NOT NULL,
-    ID_user INT,
-    PRIMARY KEY (ID_session),
-    FOREIGN KEY (ID_user) REFERENCES sessionn(ID_user)
+CREATE TABLE _session (
+    
 )
