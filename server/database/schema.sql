@@ -49,5 +49,5 @@ CREATE TABLE user (
     password VARCHAR(55) NOT NULL,
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL
-);
+)
 
