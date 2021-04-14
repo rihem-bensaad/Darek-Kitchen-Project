@@ -49,14 +49,12 @@ CREATE TABLE user (
     password VARCHAR(55) NOT NULL,
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL
-    );
+);
 
 CREATE TABLE sessionn (
     ID_session INT AUTO_INCREMENT,
     sessionName  VARCHAR(255) NOT NULL,
-    date DATE NOT NULL,
-    PRIMARY KEY (ID_session),
     ID_user INT,
     PRIMARY KEY (ID_session),
-    FOREIGN KEY (ID_brands) REFERENCES brands(ID_brands)
+    FOREIGN KEY (ID_user) REFERENCES sessionn(ID_user)
 );
