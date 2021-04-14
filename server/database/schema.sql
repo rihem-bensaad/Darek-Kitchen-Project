@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS mykitchen;
+DROP DATABASE IF EXISTS darekitchen;
 
-CREATE DATABASE mykitchen;
+CREATE DATABASE darekitchen;
 
-USE mykitchen;
+USE darekitchen;
 
 CREATE TABLE chef (
     ID INT AUTO_INCREMENT,
