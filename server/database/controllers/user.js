@@ -22,3 +22,16 @@ module.exports.getuserById = function (req, res) {
     }
   });
 };
+
+
+  module.exports.edituser = function(req,res){ 
+    let sql =  "UPDATE user SET firstName=?, lastName=?, email=?, phoneNumber=?, location=? WHERE id = ?";
+    let x = req.body
+        con.query(sql,[x.firstName, x.lastName, x.email, x.phoneNumber, x.location,req.params.id],function(err, result){
+          if (err) {
+            console.error(err);
+          } else {
+            res.send(result);
+          }        
+    })
+}
