@@ -6,7 +6,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
 const db = require('./database/config.js');
-const routes = require('./database/routers/index.js');
+const routes = require('../server/database/routers/index.js');
 
 app.use(cors());
 app.use(cookieParser());
