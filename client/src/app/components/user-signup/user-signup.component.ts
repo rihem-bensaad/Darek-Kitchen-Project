@@ -10,12 +10,12 @@ import { UserService } from '../../services/user.service'
 })
 export class UserSignupComponent implements OnInit {
 
-  firstName: string = '';
-  lastName: string = '';
-  email: string = '';
-  password: string = '';
-  phoneNumber: string = '';
-  location: string = '';
+  FirstName: string = '';
+  LastName: string = '';
+  Email: string = '';
+  Password: string = '';
+  PhoneNumber: string = '';
+  Location: string = '';
 
 
   constructor(private userService: UserService, private router: Router) { }
@@ -25,30 +25,32 @@ export class UserSignupComponent implements OnInit {
   changeData(event: Event) {
     const { target } = event;
     if (target) {
-      this.firstName = (target as HTMLButtonElement).value;
+      this.FirstName = (target as HTMLButtonElement).value;
     }
     if (target) {
-      this.lastName = (target as HTMLButtonElement).value;
+      this.LastName = (target as HTMLButtonElement).value;
     }
     if (target) {
-      this.email = (target as HTMLButtonElement).value;
+      this.Email = (target as HTMLButtonElement).value;
     }
     if (target) {
-      this.password = (target as HTMLButtonElement).value;
+      this.Password = (target as HTMLButtonElement).value;
     }
     if (target) {
-      this.phoneNumber = (target as HTMLButtonElement).value;
+      this.PhoneNumber = (target as HTMLButtonElement).value;
     }
     if (target) {
-      this.location = (target as HTMLButtonElement).value;
+      this.Location = (target as HTMLButtonElement).value;
     }
   }
 
 
   postFrom() {
     this.userService.postFrom({
-      firstName: this.firstName, lastName: this.lastName, email: this.email, password: this.password, phoneNumber: this.phoneNumber, location: this.location
-    }).subscribe(() => console.log('your data is posted'))
+      FirstName: this.FirstName, LastName: this.LastName, Email: this.Email, Password: this.Password, PhoneNumber: this.PhoneNumber,
+      Location: this.Location
+    })
+      .subscribe(() => console.log('your data is posted'))
     this.router.navigate(["singin"])
   }
 }

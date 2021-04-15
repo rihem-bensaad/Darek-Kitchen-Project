@@ -14,17 +14,21 @@
 
             <div class="input-field">
               <i class="fa fa-at"></i>
-              <input type="text" placeholder="Email" id='Email' (change)='this.changeData($event)'/>
+              <input type="email" placeholder="Email" id='Email' (change)='this.changeData($event)'/>
             </div>
 
             <div class="input-field">
               <i class="fa fa-lock"></i>
               <input type="password" placeholder="Password" id='Password' (change)='this.changeData($event)'/>
             </div>
+            <div class="input-field">
+             <i class="fa fa-mobile"></i>
+              <input type="number" placeholder="PhoneNumber" id='PhoneNumber' (change)='this.changeData($event)'/>
+            </div>
 
             <div class="input-field">
               <i class="fa fa-map-marker"></i>
-              <input type="location" placeholder="location" id='location' (change)='this.changeData($event)'/>
+              <input type="text" placeholder="Location" id='Location' (change)='this.changeData($event)'/>
             </div>
 
             <input type="submit" value="Login" class="btn solid" (click)="postFrom()"/>
