@@ -12,6 +12,6 @@ export class UserService {
      return this.http.post('http://localhost:8000/user/signup', data)
   }
   goEat(data:any) {
-    return this.http.get('http://localhost:8000/user/singin', data)
+    return this.http.get('http://localhost:8000/user/login', data)
   }
 }

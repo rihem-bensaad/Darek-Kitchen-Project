@@ -13,3 +13,5 @@ server/dist
 node_modules
 
 server/database/config.js
+
+config
