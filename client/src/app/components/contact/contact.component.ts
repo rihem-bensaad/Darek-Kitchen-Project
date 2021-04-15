@@ -24,5 +24,6 @@ export class ContactComponent implements OnInit {
     console.log(this.contactForm.value);
     this.contactService.addContact(this.contactForm.value)
     .subscribe((data: any) =>{ console.log(data)})
+    location.reload()
   }
 }
