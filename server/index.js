@@ -4,7 +4,7 @@ const port = 3000;
 
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const User = require('./database/routers/UserRouter.js')
+const User = require('./routers/UserRouter.js')
 
 
 app.use(cors());
