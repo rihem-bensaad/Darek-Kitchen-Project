@@ -1,36 +1,33 @@
-
 <div>
-
   <form action="#" class="sign-in-form">
     <h2 class="title">Sign up</h2>
 
             <div class="input-field">
               <i class="fa fa-user"></i>
-              <input type="text" placeholder="FirstName" />
+              <input type="text" placeholder="FirstName" id='FirstName' (change)='this.changeData($event)' />
             </div>
 
             <div class="input-field">
               <i class="fa fa-user"></i>
-              <input type="text" placeholder="LastName" />
+              <input type="text" placeholder="LastName" id='LastName' (change)='this.changeData($event)'/>
             </div>
 
             <div class="input-field">
               <i class="fa fa-at"></i>
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Email" id='Email' (change)='this.changeData($event)'/>
             </div>
 
             <div class="input-field">
               <i class="fa fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" id='Password' (change)='this.changeData($event)'/>
             </div>
 
             <div class="input-field">
               <i class="fa fa-map-marker"></i>
-              <input type="location" placeholder="location" />
+              <input type="location" placeholder="location" id='location' (change)='this.changeData($event)'/>
             </div>
 
-            <input type="submit" value="Login" class="btn solid" />
-
+            <input type="submit" value="Login" class="btn solid" (click)="postFrom()"/>
           </form>
 </div>
 
