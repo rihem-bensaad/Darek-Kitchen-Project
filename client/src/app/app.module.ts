@@ -12,7 +12,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ChefSignupComponent } from './components/chef-signup/chef-signup.component';
 import { UserSignupComponent } from './components/user-signup/user-signup.component';
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
-import { ServicesComponent } from './components/services/services.component';
 
 
 @NgModule({
@@ -26,7 +25,6 @@ import { ServicesComponent } from './components/services/services.component';
     ChefSignupComponent,
     UserSignupComponent,
     ServiceInfoComponent,
-    ServicesComponent
   ],
   imports: [
     BrowserModule,
