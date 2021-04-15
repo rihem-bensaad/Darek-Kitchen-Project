@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import {ContactService} from '../../services/contact.service';
+
+
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  contactForm = new FormGroup({
+    fullName: new FormControl(''),
+    email: new FormControl(''),
+    message: new FormControl(''),
 
-  constructor() { }
+  });
+  constructor(private contactService: ContactService) { }
 
   ngOnInit(): void {
   }
-
+  handleSubmit(){
+    console.log(this.contactForm.value);
+    this.contactService.addContact(this.contactForm.value)
+    .subscribe((data: any) =>{ console.log(data)})
+  }
 }

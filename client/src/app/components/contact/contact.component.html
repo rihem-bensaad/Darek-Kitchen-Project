@@ -1,5 +1,21 @@
 <div class="nav">
-
+    <form [formGroup]="contactForm" (submit)="handleSubmit()">
+  
+        <label>
+          Full Name:
+          <input type="text" formControlName="fullName">
+        </label>
+      
+        <label>
+          email:
+          <input type="text" formControlName="email">
+        </label>
+        <label>
+            message:
+            <input type="text" formControlName="message">
+          </label>
+          <button type="submit">Click</button>
+      </form>
 </div>
 
 

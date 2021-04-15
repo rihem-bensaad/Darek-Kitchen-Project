@@ -6,3 +6,8 @@
         max-width: 100%;
         overflow: hidden;
     }
+
+form{
+    margin-top: 20%;
+    color: #ffff;
+}
