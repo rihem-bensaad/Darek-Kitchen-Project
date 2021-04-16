@@ -9,9 +9,7 @@ export class UserService {
   constructor(private http: HttpClient) {
   }
   postFrom(data: any) {
-    console.log(data);
-
-     return this.http.post('http://localhost:8000/user/signup', data)
+    return this.http.post('http://localhost:8000/user/signup', data)
   }
   goEat(data:any) {
     return this.http.get('http://localhost:8000/user/login', data)

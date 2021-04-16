@@ -1,37 +1,37 @@
 <div>
-  <form action="#" class="sign-in-form">
+  <form [formGroup]="signupForm" class="sign-in-form"  >
     <h2 class="title">Sign up</h2>
 
             <div class="input-field">
               <i class="fa fa-user"></i>
-              <input type="text" placeholder="FirstName" id='FirstName' (change)='this.changeData($event)' />
+              <input type="text" placeholder="FirstName" id='firstName'  formControlName="firstName"/>
             </div>
 
             <div class="input-field">
               <i class="fa fa-user"></i>
-              <input type="text" placeholder="LastName" id='LastName' (change)='this.changeData($event)'/>
+              <input type="text" placeholder="LastName" id='lastName' formControlName="lastName"/>
             </div>
 
             <div class="input-field">
               <i class="fa fa-at"></i>
-              <input type="email" placeholder="Email" id='Email' (change)='this.changeData($event)'/>
+              <input type="email" placeholder="Email" id='email' formControlName="email"/>
             </div>
 
             <div class="input-field">
               <i class="fa fa-lock"></i>
-              <input type="password" placeholder="Password" id='Password' (change)='this.changeData($event)'/>
+              <input type="password" placeholder="Password" id='password' formControlName="password"/>
             </div>
             <div class="input-field">
              <i class="fa fa-mobile"></i>
-              <input type="number" placeholder="PhoneNumber" id='PhoneNumber' (change)='this.changeData($event)'/>
+              <input type="tel" placeholder="PhoneNumber" id='phoneNumber' formControlName="phoneNumber"/>
             </div>
 
             <div class="input-field">
               <i class="fa fa-map-marker"></i>
-              <input type="text" placeholder="Location" id='Location' (change)='this.changeData($event)'/>
+              <input type="text" placeholder="Location" id='location' formControlName="location"/>
             </div>
 
-            <input type="submit" value="Login" class="btn solid" (click)="postFrom()"/>
+            <button class="btn solid" (click)="postFrom()">Signup</button>
           </form>
 </div>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -9,29 +10,20 @@ import { UserService } from '../../services/user.service';
 })
 export class UserLoginComponent implements OnInit {
 
-  email: string = '';
-  password: string = '';
+    signupForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
 
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
   }
-  changeData(event: Event) {
-    const { target } = event;
-    if (target) {
-      this.email = (target as HTMLButtonElement).value;
-    }
-    if (target) {
-      this.password = (target as HTMLButtonElement).value;
-    }
-  }
 
   postFrom() {
-    this.userService.postFrom({
-      email: this.email, password: this.password
-    })
+    this.userService.postFrom(this.loginForm.value)
       .subscribe(() => console.log('your data is posted'))
-    this.router.navigate(["singin"])
+    this.router.navigate(["/"])
   }
 
 }
