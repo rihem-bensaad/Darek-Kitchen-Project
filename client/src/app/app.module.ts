@@ -34,6 +34,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MDBBootstrapModule.forRoot()
 

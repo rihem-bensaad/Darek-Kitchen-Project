@@ -22,12 +22,14 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
   handleSubmit(){
-    console.log(this.contactForm.value);
+    console.log('llllllll',this.contactForm.value);
     this.contactService.addContact(this.contactForm.value)
     .subscribe((data: any) =>{ console.log(data)})
     // location.reload()
   }
   alertWithSuccess(){  
+    console.log('******',this.contactForm.value);
+
     if(this.contactForm.value.email.length === 0 || this.contactForm.value.message.length === 0 || this.contactForm.value.subject.length === 0){
       Swal.fire({
         icon: 'error',
@@ -35,7 +37,8 @@ export class ContactComponent implements OnInit {
         text: 'Something went wrong!',
         footer: '<a href>Why do I have this issue?</a>'
       })
-    } else{
+    } else{ 
+      this.handleSubmit()
     Swal.fire({
       position: 'top-end',
       icon: 'success',
@@ -43,7 +46,7 @@ export class ContactComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500
     })
-    this.contactForm.reset()
+    this.contactForm.setValue({email: '', subject: '', message: ''})
   }
     
 
