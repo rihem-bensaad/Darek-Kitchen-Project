@@ -24,6 +24,7 @@ export class UserLoginComponent implements OnInit {
   postFrom() {
     this.userService.login(this.loginForm.value)
       .subscribe((result) => {
+        localStorage.setItem('data', JSON.stringify(result))
         console.log(result)
         this.router.navigate([''])
       })
