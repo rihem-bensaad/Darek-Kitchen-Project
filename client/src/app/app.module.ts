@@ -14,6 +14,8 @@ import { ChefSignupComponent } from './components/chef-signup/chef-signup.compon
 import { UserSignupComponent } from './components/user-signup/user-signup.component';
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { UserLoginComponent } from './components/user-login/user-login.component
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    MDBBootstrapModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
