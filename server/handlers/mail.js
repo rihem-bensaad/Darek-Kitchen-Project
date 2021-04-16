@@ -13,11 +13,11 @@ const transporter = nodemailer.createTransport(mailGun(auth));
 
 //Chunk 4
 
-const sendMail = (email, fullName, message, cb) =>{
+const sendMail = (email, subject, message, cb) =>{
     const mailOptions = {
         from: email,
         to: 'nadhembacha@gmail.com',
-        
+        subject,
         text: message
     };
     

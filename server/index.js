@@ -22,11 +22,11 @@ app.use(express.urlencoded({
 app.use('/user', User);
 
 app.post('/email', (req,res)=>{
-    const{fullName, email, message} = req.body
+    const{subject, email, message} = req.body
     console.log('Data', req.body);
     console.log('======>',handlers);
 
-    handlers.mail.sendMail(email, fullName, message, function(err, data){
+    handlers.mail.sendMail(email, subject, message, function(err, data){
         if(err){
             console.log(err);
             res.status(500).json({msg: 'Internal Error'})
