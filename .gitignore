@@ -1,6 +1,7 @@
 client/node_modules
 server/node_modules
 
+server/database/config.js
 .env
 
 dist
@@ -12,4 +13,4 @@ client/dist
 server/dist
 node_modules
 
-server/database/config.js
+
