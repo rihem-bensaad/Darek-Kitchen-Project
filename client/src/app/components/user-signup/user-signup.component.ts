@@ -32,7 +32,7 @@ export class UserSignupComponent implements OnInit {
   postFrom() {
  console.log(this.signupForm.value)
     this.userService.postFrom(this.signupForm.value)
-      .subscribe((x) => {
+      .subscribe(() => {
         this.router.navigate(['/login']);
       })
   }

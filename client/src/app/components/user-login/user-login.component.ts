@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
 import { UserService } from '../../services/user.service';
 
+
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.component.html',
@@ -21,9 +22,11 @@ export class UserLoginComponent implements OnInit {
   }
 
   postFrom() {
-    this.userService.postFrom(this.loginForm.value)
-      .subscribe(() => console.log('your data is posted'))
-    this.router.navigate(["/"])
+    this.userService.login(this.loginForm.value)
+      .subscribe((result) => {
+        console.log(result)
+        this.router.navigate([''])
+      })
   }
 
 }
