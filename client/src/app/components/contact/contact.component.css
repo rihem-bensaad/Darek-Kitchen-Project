@@ -42,7 +42,7 @@ form{
 {
 	font-size: 36px;
 	font-weight: 500;
-	color: #fff;
+	color: #F7F709;
 }
 .contact .content p
 {
@@ -92,16 +92,16 @@ form{
 .containers .info .box .text h3
 {
 	font-weight: 500;
-	color: black
+	color: #F7F709;
 	
 }
 .contactForm
 {
 	width: 40%;
 	padding: 40px;
-	background: #ffa01a65;
+	background: #f7f70962;
 	border-radius: 10px;
-	box-shadow: 7px -7px #ffa01a8e
+	box-shadow: 7px -7px #f7f70983
 	
 	
 }
