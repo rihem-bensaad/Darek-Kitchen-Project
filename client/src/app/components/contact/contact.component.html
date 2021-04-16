@@ -1,5 +1,75 @@
-<div class="nav">
-
+<!-- <div class="nav">
+    <form [formGroup]="contactForm" (submit)="handleSubmit()">
+  
+        <label>
+          Full Name:
+          <input type="text" formControlName="fullName">
+        </label>
+      
+        <label>
+          email:
+          <input type="text" formControlName="email">
+        </label>
+        <label>
+            message:
+            <input type="text" formControlName="message">
+          </label>
+          <button type="submit">Click</button>
+      </form>
 </div>
 
+ -->
+ 
 
+ <section class="contact">
+  <div class="content">
+    <h2>Contact Us</h2>
+    <p>Just send us your questions or concerns by starting a new case and we will give you the help you need.</p>
+  </div>
+  <div class="containers">
+  <div class="info">
+      <div class="box">
+         <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+      <div class="text">
+    
+        <h3>Address</h3>
+        <p>41 Bis Rue Ali Belhouane<br> Hammamlif <br> 2050</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+      <div class="text">
+        <h3>Phone</h3>
+        <p>00216-21-608-815</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+      <div class="text">
+        <h3>Email</h3>
+        <p>nadhembecha@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="contactForm">
+    <form [formGroup]="contactForm">
+      <h2>Send Message</h2>
+      <div class="inputBox">
+        <input required="required" type="text" formControlName="subject"> 
+        <span>Subject</span>
+      </div>
+      <div class="inputBox">
+        <input required="required" type="text" formControlName="email">
+        <span>Email</span>
+      </div>
+      <div class="inputBox">
+        <textarea required="required" type="text" formControlName="message"></textarea>
+        <span>Type your Message...</span>
+      </div>
+      <div class="inputBox">
+        <input type="submit" name="" value="Send" (click)='alertWithSuccess()'>
+      </div>
+    </form>
+  </div>
+</div>
+</section>
