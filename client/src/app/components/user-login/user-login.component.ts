@@ -10,7 +10,7 @@ import { UserService } from '../../services/user.service';
 })
 export class UserLoginComponent implements OnInit {
 
-    signupForm = new FormGroup({
+    loginForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
   });
