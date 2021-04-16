@@ -21,11 +21,27 @@ module.exports.login = (req,res)=>{
    if (result.length>0){
       bcrypt.compare(req.body.password,result[0].password, (err,result)=>{
           if (err){
-              throw err
+            return res.status(404).json({
+                message: 'Authentication failed'
+            })
+          }else{
+              if(result){
+                  const token = jwt.sign({
+                      email : req.body.email,
+                      userId: req.params.id
+                  }, 'secret', function(err,token){
+                      res.status(200).json({
+                          message : " authentication sucessful !",
+                          token : token
+                      })
+                  })
+              }else{
+                res.status(404).json({message: 'Wrong Password!'})
+              }
           }
+
      
       })
    }
-        // err ? console.log(err) : res.status(201).send(user.password)
     })
 }
