@@ -46,4 +46,18 @@
 }
 .btn:hover{
     background-color: grey;
+    
+}
+
+#imagemodal{
+  margin-top: 5%;
+}
+
+.submit{
+    border: 1px solid;
+    border-radius:3px;
+    background-color: blue;
+    margin-top: 17%;
+    margin-left: 33%;
+
 }
