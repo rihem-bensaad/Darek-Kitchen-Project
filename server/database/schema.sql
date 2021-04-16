@@ -45,8 +45,8 @@ CREATE TABLE user (
     ID_user INT AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(55) NOT NULL,
     lastName VARCHAR(55) NOT NULL,
-    email VARCHAR(55) NOT NULL,
-    password VARCHAR(55) NOT NULL,
+    email VARCHAR(55) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL
 )

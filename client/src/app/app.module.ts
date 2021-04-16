@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ChefSignupComponent } from './components/chef-signup/chef-signup.component';
 import { UserSignupComponent } from './components/user-signup/user-signup.component';
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
-import { ServicesComponent } from './components/services/services.component';
+import { UserLoginComponent } from './components/user-login/user-login.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 
 @NgModule({
@@ -26,12 +29,15 @@ import { ServicesComponent } from './components/services/services.component';
     ChefSignupComponent,
     UserSignupComponent,
     ServiceInfoComponent,
-    ServicesComponent
+    UserLoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    MDBBootstrapModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
