@@ -17,7 +17,7 @@
     font-size: 70px;
     font-weight: 900;
     line-height: 1.2;
-    color: whitesmoke;
+    color: #F7F709;
 
 }
 .h5{
@@ -39,13 +39,14 @@
     letter-spacing: 0em;
     border-radius: 0em;
     padding: 0.8em 1.8em;
-    background: whitesmoke;
+    background: #df500e;
     border-color: transparent;
     color: #1F1A1E!important;
-    box-shadow: 0 0em 0em rgb(0 0 0 / 20%);
+    
+    border-radius: 30px;
 }
 .btn:hover{
-    background-color: grey;
+    background-color: #F7F709;
     
 }
 
