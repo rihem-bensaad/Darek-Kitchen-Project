@@ -7,7 +7,7 @@ module.exports.createChef = (req,res)=>{
     
     bcrypt.genSalt(10,function(err,salt){
         bcrypt.hash(req.body.password,salt,function(err,hash){
-            db.createUser([req.body.firstName, req.body.lastName,req.body.email,hash,req.body.phoneNumber,req.body.location],(err,result)=>{
+            db.createChef([req.body.firstName, req.body.lastName,req.body.email,hash,req.body.phoneNumber,req.body.location,req.body.imageCardId],(err,result)=>{
                 err ? console.log(err) : res.status(201).send(result)
         })
     })
