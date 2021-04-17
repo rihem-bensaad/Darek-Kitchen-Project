@@ -3,6 +3,15 @@ body{
     padding: 0px;
     box-sizing: border-box;
 }
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://media4.giphy.com/media/l378AwfJ7pqLlRHr2/giphy.gif');
+    background-size: cover;
+    max-width: 100%;
+    overflow: hidden;
+
+}
 img {
     max-width: 100%;
 }

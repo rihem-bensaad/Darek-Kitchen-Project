@@ -6,16 +6,18 @@ import {AboutComponent} from './components/about/about.component';
 import {ContactComponent} from './components/contact/contact.component';
 import { ChefSignupComponent } from './components/chef-signup/chef-signup.component';
 import { UserSignupComponent } from './components/user-signup/user-signup.component';
-import { ServiceInfoComponent } from './components/service-info/service-info.component'
+import { ServiceInfoComponent } from './components/service-info/service-info.component';
+import { UserLoginComponent } from './components/user-login/user-login.component';
 
 const routes: Routes = [
 {path:'',component:HomePageComponent},
-{path:'Brands',component:BrandsComponent},
-{path:'About',component:AboutComponent},
-{path:'Contact',component:ContactComponent},
-{path:'ChefSignup',component:ChefSignupComponent},
-{path:'UserSignup',component:UserSignupComponent},
-{path:'Service',component:ServiceInfoComponent}
+{ path:'brands', component: BrandsComponent },
+{path:'login',component:UserLoginComponent},
+{path:'about',component:AboutComponent},
+{path:'contact',component:ContactComponent},
+{path:'chefSignup',component:ChefSignupComponent},
+{path:'userSignup',component:UserSignupComponent},
+{path:'service',component:ServiceInfoComponent}
 ];
 
 @NgModule({
