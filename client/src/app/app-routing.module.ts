@@ -19,7 +19,7 @@ const routes: Routes = [
 {path:'chefSignup',component:ChefSignupComponent},
 {path:'userSignup',component:UserSignupComponent},
 {path: 'service', component: ServiceInfoComponent},
-{path: 'login', component: ChefLoginComponent}
+{path: 'chefLogin', component: ChefLoginComponent}
 ];
 
 @NgModule({

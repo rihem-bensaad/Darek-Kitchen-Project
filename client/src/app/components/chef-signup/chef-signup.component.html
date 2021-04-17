@@ -1,5 +1,5 @@
 
-  <form>
+  <form [formGroup]="signupForm">
     <div class="container">
       <h1>Register as a Chef</h1>
       <hr>
@@ -29,7 +29,7 @@
       </div>
       <input type="file" placeholder="Image Card Id..." name="img" id="img" formControlName="imageCardId">
       <hr>
-      <button type="submit" class="registerbtn"(click)="postFrom()">Signup</button>
+      <button class="registerbtn" (click)="postFrom()">Signup</button>
     </div>
   </form>
 
