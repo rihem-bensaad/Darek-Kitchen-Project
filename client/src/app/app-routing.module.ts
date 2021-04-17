@@ -8,6 +8,7 @@ import { ChefSignupComponent } from './components/chef-signup/chef-signup.compon
 import { UserSignupComponent } from './components/user-signup/user-signup.component';
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
+import { ChefLoginComponent } from './components/chef-login/chef-login.component';
 
 const routes: Routes = [
 {path:'',component:HomePageComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
 {path:'contact',component:ContactComponent},
 {path:'chefSignup',component:ChefSignupComponent},
 {path:'userSignup',component:UserSignupComponent},
-{path:'service',component:ServiceInfoComponent}
+{path: 'service', component: ServiceInfoComponent},
+{path: 'login', component: ChefLoginComponent}
 ];
 
 @NgModule({
