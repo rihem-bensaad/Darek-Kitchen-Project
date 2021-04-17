@@ -29,24 +29,13 @@ input {
 
 }
 
-.signin-signup {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  left: 75%;
-  width: 50%;
-  transition: 1s 0.7s ease-in-out;
-  display: grid;
-  grid-template-columns: 1fr;
-  z-index: 5;
-}
 
 form {
-  background-color:rgba(0, 0, 0, 0.589);
+  background-color:rgba(0, 0, 0, 0.836);
   border-radius: 6%;
   width: 30%;
-  margin-left: 38%;
-  margin-top: 12%;
+  margin-left: 59.5%;
+  margin-top: 13%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -65,10 +54,10 @@ form {
 }
 
 .input-field {
-  max-width: 380px;
+  max-width: 480px;
   width: 100%;
   background-color: #f0f0f0;
-  margin: 10px 0;
+  margin: 15px 0;
   height: 40px;
   border-radius: 8px;
   display: grid;
@@ -100,13 +89,17 @@ form {
   border: none;
   outline: none;
   height: 49px;
-  border-radius: 49px;
+  border-radius: 12px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
   transition: 0.5s;
+  margin-left: 65%;
+}
+label{
+  margin-top:12%
 }
 
 .btn:hover {
