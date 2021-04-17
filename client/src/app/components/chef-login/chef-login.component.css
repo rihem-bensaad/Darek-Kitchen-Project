@@ -43,7 +43,7 @@ hr {
 
 /* Set a style for the submit button */
 .registerbtn {
-  background-color: #571d02;
+  background-color: orange;
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
@@ -57,7 +57,7 @@ hr {
   opacity: 1;
 }
 .registerbtn:hover {
-    background-color: orange;
+    background-color: #571d02;
 }
 a {
   color: orange;
