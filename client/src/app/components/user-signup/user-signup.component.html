@@ -1,4 +1,4 @@
-<div class="nav">
+
   <form [formGroup]="signupForm" class="sign-in-form">
     <h2 class="title">Signup Now</h2>
 
@@ -28,12 +28,12 @@
             </div>
 
             <div class="fields">
-              <div class="inputi"><label><i class="fas fa-map-marker-alt fa-lg"></i></label></div>
+              <label class='inputi'><i class="fas fa-map-marker-alt fa-lg"></i></label>
               <input type="text" placeholder="Location" id='location' formControlName="location"/>
             </div>
 
             <button class="btn solid" (click)="postFrom()">Signup</button>
           </form>
-</div>
+
 
 

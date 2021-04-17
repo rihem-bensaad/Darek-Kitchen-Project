@@ -13,6 +13,8 @@ body {
   background-color: rgba(7, 7, 7, 0.712);
   margin-top: 7%;
   width: 40% ! important;
+  border-radius: 2px;
+  margin-left: 55%;
 }
 
 h1{
@@ -22,11 +24,9 @@ h1{
 }
 #img{
   margin-top: 2%;
-  margin-left: 2%;
+  margin-left: 3%;
 }
-#location{
-  margin-right: 1.5%;
-}
+
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 93%;
@@ -35,7 +35,8 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: none;
   background: #f1f1f1;
-  margin-left: 16px;
+  margin-left: 17px;
+  border-radius: 1.5px;
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -49,6 +50,9 @@ i{
 label{
   color: white;
 }
+.inputi{
+  margin-left: 0.5%;
+}
 
 /* Set a style for the submit button */
 .registerbtn {
@@ -59,9 +63,9 @@ label{
   border: none;
   cursor: pointer;
   width: 30%;
-  margin-left: 35%;
+  margin-left: 69%;
   margin-bottom: -1%;
-  border-radius: 3px;
+  border-radius: 2px;
 
 }
 

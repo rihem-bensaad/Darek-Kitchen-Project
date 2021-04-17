@@ -18,11 +18,12 @@ input {
 
 form {
   background-color:rgba(0, 0, 0, 0.863);
-  border-radius: 6%;
- 
-  margin-top: 17%;
-  
-  padding: 0rem 5rem;
+  border-radius: 3%;
+  box-shadow: 6px -4px rgb(0, 0, 0);
+  width: 30%;
+  margin-top: 8%;
+  margin-left: 59.5%;
+  padding: 0rem 0rem;
   transition: all 0.2s 0.7s;
   overflow: hidden;
   grid-column: 1 / 2;
@@ -68,19 +69,19 @@ form {
 
 
 .btn {
-  width: 150px;
+  width: 120px;
   background-color: #571d02;
   border: none;
   outline: none;
-  height: 49px;
-  border-radius: 49px;
+  height: 43px;
+  border-radius: 5px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
   margin: 50px 0;
   cursor: pointer;
   transition: 0.5s;
-  margin-left: 19%;
+  margin-left: 68%;
 }
 
 .btn:hover {
@@ -88,28 +89,42 @@ form {
 }
 
 input{
-  min-width: 120%;
+  min-width: 80%;
   background-color: #f0f0f0;
-  margin: 0px 0;
-  height: 42px;
-  border-radius: 8px;
+  margin: 20px 0;
+  height: 35px;
+  border-radius: 5px;
   box-shadow: 5px -4px rgba(0, 0, 0, 0.685);
-  
+  margin-left: 5%;
+  margin-bottom: -1%;
 }
 label{
-  margin-right: 0%;
-  margin-top: 0%;
+  margin-left: 4%;
+  margin-bottom: -10%;
   color: white
+}
+.inputi{
+ margin-left:5.2%;
 }
 
 @media only screen and (max-width: 500px) {
   .title{
-    color: red;
+    font-size: 1.2rem;
+   
+  text-align: center;
+ 
+  color: white;
+
   }
   form{ 
-   width:90%;
+    width:90%;
     margin-left: 5%;
-    padding: 13rem 1rem;
-    
+    padding: 1rem 1rem;
+    height: 80%;
+    margin-top: 29%;
+  }
+  .btn{
+    margin-left: 49%;
+    margin-top: 5%;
   }
 }
