@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { ChefService } from '../../services/chef.service';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-chef-signup',
@@ -6,10 +11,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chef-signup.component.css']
 })
 export class ChefSignupComponent implements OnInit {
+   signupForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl(''),
+    phoneNumber: new FormControl(''),
+    location: new FormControl(''),
+    imageCardId: new FormControl('')
+  });
 
-  constructor() { }
+  constructor(private chefService: ChefService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+   postFrom() {
+ console.log(this.signupForm.value)
+    this.chefService.postFrom(this.signupForm.value)
+      .subscribe(() => {
+        this.router.navigate(['/login']);
+      })
   }
 
 }

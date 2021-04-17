@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: rgba(7, 7, 7, 0.712);
+  margin-top: 7%;
+  width: 40% ! important;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 70%;
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #4d4343;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #571d02;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+.registerbtn:hover {
+    background-color: orange;
+}
+a {
+  color: orange;
+}
+@media only screen and (max-width: 500px) {
+.container{
+    
+    margin-top: 14%;
+    width: 100% ! important;
+    height:auto ! important;
+
+}
+h1{
+    font-size:18px;
+}
+}
+

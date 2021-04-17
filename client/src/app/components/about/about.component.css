@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
+  background: rgba(0, 0, 0, 0.849);
 }
 
 .container {
@@ -30,7 +30,7 @@
 }
 
 body {
-  color: #0D070A;
+  color: white;
 }
 
 h1 {
