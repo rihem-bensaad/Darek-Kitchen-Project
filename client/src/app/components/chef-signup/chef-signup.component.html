@@ -4,13 +4,13 @@
     <div class="container">
       <h1>Register</h1>
       <hr>
-      <input type="text" placeholder="First Name..." name="fn" id="fn" required>
-      <input type="text" placeholder="Last Name..." name="ln" id="ln" required>
-      <input type="text" placeholder="Enter Email..." name="email" id="email" required>
-      <input type="password" placeholder="Enter Password..." name="psw" id="psw" required>
-      <input type="text" placeholder="Phone Number..." name="ph" id="ph" required>
-      <input type="text" placeholder="Location..." name="location" id="location" required>
-      <input type="text" placeholder="Image Card Id..." name="img" id="img" required>
+      <input type="text" placeholder="First Name..." name="fn" id="fn" formControlName="firstName">
+      <input type="text" placeholder="Last Name..." name="ln" id="ln" formControlName="lastName">
+      <input type="text" placeholder="Enter Email..." name="email" id="email" formControlName="email">
+      <input type="password" placeholder="Enter Password..." name="psw" id="psw" formControlName="password">
+      <input type="text" placeholder="Phone Number..." name="ph" id="ph" formControlName="phoneNumber">
+      <input type="text" placeholder="Location..." name="location" id="location" formControlName="location">
+      <input type="text" placeholder="Image Card Id..." name="img" id="img" formControlName="imageCardId">
       <hr>
       <button type="submit" class="registerbtn">Register</button>
     </div>
