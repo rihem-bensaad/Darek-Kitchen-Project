@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
@@ -6,7 +7,7 @@
   box-sizing: border-box;
 }
 
-body,
+
 input {
   font-family: "Poppins", sans-serif;
 }
@@ -41,20 +42,26 @@ input {
 }
 
 form {
-  display: flex;
+  background-color:rgba(0, 0, 0, 0.589);
+  border-radius: 6%;
+  width: 30%;
+  margin-left: 38%;
+  margin-top: 12%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0rem 5rem;
+  padding: 1rem 1rem;
   transition: all 0.2s 0.7s;
   overflow: hidden;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+
 }
 
 .title {
   font-size: 2.2rem;
-  margin-bottom: 10px;
+  margin-bottom:50px;
+  margin-top:10px;
+  text-align: center;
+  color: white;
 }
 
 .input-field {
@@ -62,11 +69,11 @@ form {
   width: 100%;
   background-color: #f0f0f0;
   margin: 10px 0;
-  height: 55px;
-  border-radius: 55px;
+  height: 40px;
+  border-radius: 8px;
   display: grid;
   grid-template-columns: 15% 85%;
-  padding: 0 0.4rem;
+  padding: 0 0.9rem;
   position: relative;
 }
 
@@ -89,7 +96,7 @@ form {
 
 .btn {
   width: 150px;
-  background-color: red;
+  background-color: #571d02;
   border: none;
   outline: none;
   height: 49px;
@@ -103,9 +110,14 @@ form {
 }
 
 .btn:hover {
-  background-color: black;
+  background-color: orange;
 }
-
-
+@media only screen and (max-width: 500px) {
+form{
+  margin-left: 3%;
+  margin-top: 35% ! important;
+  width:93%
+}
+}
 
 

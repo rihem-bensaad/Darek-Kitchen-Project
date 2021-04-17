@@ -1,16 +1,17 @@
-<div>
+
+
   <form [formGroup]="loginForm" class="sign-in-form">
     <h2 class="title">Login</h2>
     <div class="input-field">
-      <i class="fa fa-at"></i>
+      <label><i class="fas fa-envelope fa-lg"></i></label>
         <input type="email" placeholder="Email" id='Email' formControlName="email"/>
     </div>
 
     <div class="input-field">
-      <i class="fa fa-lock"></i>
-        <input type="password" placeholder="Password" id='Password' formControlName="password"/>
+      <label><i class="fas fa-key fa-lg"></i></label>
+      <input type="password" placeholder="Password" id='Password' formControlName="password"/>
     </div>
     <button class="btn solid" (click)="postFrom()">Login</button>
 
   </form>
-</div>
+

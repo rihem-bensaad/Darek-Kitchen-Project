@@ -50,7 +50,7 @@ CREATE TABLE user (
     password VARCHAR(255) NOT NULL,
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL
-)
+);
 
 -- Traditional Food
 INSERT INTO brands ( brandName,category,logo) values ("Dar Zmen","Traditional Food","")

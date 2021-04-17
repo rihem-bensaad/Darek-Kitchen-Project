@@ -34,8 +34,7 @@ export class ContactComponent implements OnInit {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Something went wrong!',
-        footer: '<a href>Why do I have this issue?</a>'
+        text: 'Please fill all the form !'
       })
     } else{ 
       this.handleSubmit()
