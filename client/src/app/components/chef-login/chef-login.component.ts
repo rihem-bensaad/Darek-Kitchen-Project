@@ -9,7 +9,7 @@ import { ChefService } from '../../services/chef.service';
   styleUrls: ['./chef-login.component.css']
 })
 export class ChefLoginComponent implements OnInit {
- loginForm = new FormGroup({
+ loginChef = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
   });
@@ -17,12 +17,12 @@ export class ChefLoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-    loginFrom() {
-    this.chefService.login(this.loginForm.value)
+    loginchef() {
+    this.chefService.loginChef(this.loginChef.value)
       .subscribe((result) => {
         localStorage.setItem('data', JSON.stringify(result))
         console.log(result)
-        this.router.navigate([''])
+        this.router.navigate(['/'])
       })
   }
 

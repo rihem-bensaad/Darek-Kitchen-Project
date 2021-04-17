@@ -15,9 +15,7 @@ import { UserSignupComponent } from './components/user-signup/user-signup.compon
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
 import { ChefLoginComponent } from './components/chef-login/chef-login.component';
-
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 
@@ -35,7 +33,6 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     UserSignupComponent,
     ServiceInfoComponent,
     UserLoginComponent,
-
     ChefLoginComponent,
 
   ],
