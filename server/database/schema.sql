@@ -8,6 +8,7 @@ CREATE TABLE chef (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(55) NOT NULL,
     lastName VARCHAR(55) NOT NULL,
+    email VARCHAR(55) UNIQUE NOT NULL,
     phoneNumber INT NOT NULL,
     locationChef VARCHAR(255) NOT NULL,
     imageCardId VARCHAR(255) NOT NULL
@@ -49,5 +50,5 @@ CREATE TABLE user (
     password VARCHAR(255) NOT NULL,
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL
-)
+);
 
