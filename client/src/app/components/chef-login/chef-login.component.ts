@@ -17,12 +17,14 @@ export class ChefLoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-    loginchef() {
+  loginchef() {
+      console.log(this.loginChef.value);
+
     this.chefService.loginChef(this.loginChef.value)
       .subscribe((result) => {
         localStorage.setItem('data', JSON.stringify(result))
         console.log(result)
-        this.router.navigate(['/'])
+        this.router.navigate([''])
       })
   }
 
