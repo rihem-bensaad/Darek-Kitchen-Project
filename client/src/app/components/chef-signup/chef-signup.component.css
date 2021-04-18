@@ -10,10 +10,10 @@ body {
 /* Add padding to containers */
 .container {
   padding: 16px;
-  background-color: rgba(7, 7, 7, 0.712);
+  background-color: rgba(7, 7, 7, 0.918);
   margin-top: 7%;
   width: 40% ! important;
-  border-radius: 2px;
+  border-radius: 3px;
   margin-left: 55%;
 }
 
