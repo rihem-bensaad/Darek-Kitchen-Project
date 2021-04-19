@@ -26,7 +26,7 @@ export class UserLoginComponent implements OnInit {
       .subscribe((result) => {
         localStorage.setItem('data', JSON.stringify(result))
         console.log(result)
-        this.router.navigate([''])
+        this.router.navigate(['/'])
       })
   }
 

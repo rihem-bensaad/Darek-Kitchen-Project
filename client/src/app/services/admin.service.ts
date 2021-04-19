@@ -4,14 +4,14 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ChefService {
+export class AdminService {
   userData : any = []
   constructor(private http: HttpClient) {
   }
-  postFrom(data: any) {
-    return this.http.post('http://localhost:3000/chef/signup', data)
+  adminFrom(data: any) {
+    return this.http.post('http://localhost:3000/admin/signup', data)
   }
-  loginChef(data:any) {
+  login(data:any) {
     return this.http.post('http://localhost:3000/user/login', data)
   }
 }
