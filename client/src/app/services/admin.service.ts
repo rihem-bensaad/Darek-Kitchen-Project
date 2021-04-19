@@ -12,6 +12,6 @@ export class AdminService {
     return this.http.post('http://localhost:3000/admin/signup', data)
   }
   login(data:any) {
-    return this.http.post('http://localhost:3000/admin/login', data)
+    return this.http.post('http://localhost:3000/user/login', data)
   }
 }

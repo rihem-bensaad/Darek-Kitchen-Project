@@ -12,6 +12,6 @@ export class ChefService {
     return this.http.post('http://localhost:3000/chef/signup', data)
   }
   loginChef(data:any) {
-    return this.http.post('http://localhost:3000/chef/login', data)
+    return this.http.post('http://localhost:3000/user/login', data)
   }
 }

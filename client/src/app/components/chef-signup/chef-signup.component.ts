@@ -29,7 +29,7 @@ export class ChefSignupComponent implements OnInit {
  console.log(this.signupForm.value)
     this.chefService.postFrom(this.signupForm.value)
       .subscribe(() => {
-        this.router.navigate(['/chefLogin']);
+        this.router.navigate(['/login']);
       })
   }
 
