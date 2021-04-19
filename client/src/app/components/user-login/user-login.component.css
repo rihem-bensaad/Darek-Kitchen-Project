@@ -1,6 +1,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
+body{
+  text-align:center ! important;
+}
 * {
   margin: 0;
   padding: 0;
@@ -33,8 +36,8 @@ input {
 form {
   background-color:rgba(0, 0, 0, 0.836);
   border-radius: 6%;
-  width: 30%;
-  margin-left: 59.5%;
+  max-width: 32em;
+   margin: auto;
   margin-top: 13%;
   align-items: center;
   justify-content: center;
@@ -110,6 +113,9 @@ form{
   margin-left: 3%;
   margin-top: 35% ! important;
   width:93%
+}
+.btn{
+  margin-left: 52%;
 }
 }
 
