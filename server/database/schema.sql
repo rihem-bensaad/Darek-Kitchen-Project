@@ -53,21 +53,21 @@ CREATE TABLE user (
     location VARCHAR(255) NOT NULL
 );
 
--- -- Traditional Food
--- INSERT INTO brands ( brandName,category,logo) values ("Dar Zmen","Traditional Food","");
--- INSERT INTO brands ( brandName,category,logo) values ("Pates Fait Maison","Traditional Food","");
--- INSERT INTO brands ( brandName,category,logo) values ("Le Pirate","Traditional Food","");
--- INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S KITCHEN","Traditional Food","");
--- -- Homemade Fast Food;
--- INSERT INTO brands ( brandName,category,logo) values ("Home Burger","HomeMade Fast Food","");
--- INSERT INTO brands ( brandName,category,logo) values ("CowBoys","HomeMade Fast Food","");
--- INSERT INTO brands ( brandName,category,logo) values ("Faster&Cheaper","HomeMade Fast Food","");
--- INSERT INTO brands ( brandName,category,logo) values ("Hot doggy dog","HomeMade Fast Food","");
--- -- Sweaty Food
--- INSERT INTO brands ( brandName,category,logo) values ("Donuts&Bagels","Sweaty Food","");
--- INSERT INTO brands ( brandName,category,logo) values ("Flavors","Sweaty Food","");
--- INSERT INTO brands ( brandName,category,logo) values ("Chocolatine","Sweaty Food","");
--- INSERT INTO brands ( brandName,category,logo) values ("Juice Fountain","Sweaty Food","");
+-- Traditional Food
+INSERT INTO brands ( brandName,category,logo) values ("Dar Zmen","Traditional Food","");
+INSERT INTO brands ( brandName,category,logo) values ("Pates Fait Maison","Traditional Food","");
+INSERT INTO brands ( brandName,category,logo) values ("Le Pirate","Traditional Food","");
+INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S KITCHEN","Traditional Food","");
+-- Homemade Fast Food;
+INSERT INTO brands ( brandName,category,logo) values ("Home Burger","HomeMade Fast Food","");
+INSERT INTO brands ( brandName,category,logo) values ("CowBoys","HomeMade Fast Food","");
+INSERT INTO brands ( brandName,category,logo) values ("Faster&Cheaper","HomeMade Fast Food","");
+INSERT INTO brands ( brandName,category,logo) values ("Hot doggy dog","HomeMade Fast Food","");
+-- Sweaty Food
+INSERT INTO brands ( brandName,category,logo) values ("Donuts&Bagels","Sweaty Food","");
+INSERT INTO brands ( brandName,category,logo) values ("Flavors","Sweaty Food","");
+INSERT INTO brands ( brandName,category,logo) values ("Chocolatine","Sweaty Food","");
+INSERT INTO brands ( brandName,category,logo) values ("Juice Fountain","Sweaty Food","");
 
 -- -- Dar Zmen
 -- INSERT INTO menu (title,description,price,ID_brands) values ("Couscous Traditionel","",9,1) ;

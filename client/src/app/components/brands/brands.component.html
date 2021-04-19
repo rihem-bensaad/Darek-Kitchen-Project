@@ -1,4 +1,4 @@
-<div class="nav">
+<div class="nav" *ngFor="let brand of brand">
   <div class='card1'>
   <div class="card">
   <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
@@ -11,14 +11,14 @@
     </a>
   </div>
   <div class="card-body">
-    <h5 class="card-title">3ejja bel mergez</h5>
-    <h4>chef 3loulou</h4>
+    <h5 class="card-title">{{brand.brandName}}</h5>
+    <h4>{{brand.category}}</h4>
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star"></span>
     <span class="fa fa-star"></span>
     <p class="card-text">
-      It is a very popular Tunisian dish consisting of tomato, green pepper, eggs, merguez and hot pepper (Harissa)!</p>
+      {{brand.logo}}</p>
     <a href="#!" class="btn btn-dark">Buy Now!</a>
   </div>
 </div>
