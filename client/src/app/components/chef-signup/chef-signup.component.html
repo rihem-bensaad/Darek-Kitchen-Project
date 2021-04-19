@@ -1,37 +1,38 @@
-<form [formGroup]="signupForm">
+
+  <form [formGroup]="signupForm">
     <div class="container">
       <h1>Register as a Chef</h1>
       <hr>
       <div>
-        <i class="fa fa-user"></i>
-        <input type="text" placeholder="First Name..." formControlName="firstName" >
+       <label> <i class="fas fa-user-alt fa-lg"></i> </label>
+        <input type="text" placeholder="First Name..." name="fn" id="fn" formControlName="firstName" >
       </div>
       <div>
-        <i class="fa fa-user"></i>
-        <input type="text" placeholder="Last Name..." formControlName="lastName">
+        <label> <i class="fas fa-user-circle fa-lg"></i></label>
+        <input type="text" placeholder="Last Name..." name="ln" id="ln" formControlName="lastName">
       </div>
       <div>
-        <i class="fa fa-at"></i>
-        <input type="text" placeholder="Enter Email..." formControlName="email">
+        <label> <i class="fas fa-envelope fa-lg"></i></label>
+        <input type="text" placeholder="Enter Email..." name="email" id="email" formControlName="email">
       </div>
       <div>
-        <i class="fa fa-lock"></i>
-        <input type="password" placeholder="Enter Password..." formControlName="password">
+        <label> <i class="fas fa-key fa-lg"></i></label>
+        <input type="password" placeholder="Enter Password..." name="psw" id="psw" formControlName="password">
       </div>
       <div>
-        <i class="fa fa-mobile"></i>
-        <input type="text" placeholder="Phone Number..." formControlName="phoneNumber">
+        <label> <i class="fas fa-phone fa-lg"></i></label>
+        <input type="text" placeholder="Phone Number..." name="ph" id="ph" formControlName="phoneNumber">
       </div>
-      <div>
-        <i class="fa fa-map-marker"></i>
-        <input type="text" placeholder="Location..." formControlName="location">
+      <div class="inputi">
+        <label class="inputi"><i class="fas fa-map-marker-alt fa-lg"></i></label>
+        <input type="text" placeholder="Location..." name="location" id="location" formControlName="location">
       </div>
-      <div>
-        <i class="fa fa-address-card"></i>
-        <input type="text" placeholder="Image Card Id..." formControlName="imageCardId">
-      </div>
-      <hr>
-      <button class="registerbtn" (click)="chefFrom()">Signup</button>
+
+      <label><i class="fas fa-camera fa-lg"></i></label>
+      <input type="file" placeholder="Image Card Id..." name="img" id="img" formControlName="imageCardId">
+      <!-- <label>Upload Image</label> -->
+
+      <button type="submit" class="registerbtn"(click)="postFrom()">Signup</button>
     </div>
   </form>
 

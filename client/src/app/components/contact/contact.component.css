@@ -1,6 +1,6 @@
 
 form{
-    margin-top: 20%;
+    
     color: #ffff;
 }
 
@@ -173,12 +173,12 @@ form{
 	}
 	.containers .info
 	{
-		margin-bottom: 40px;
+		margin-bottom: 10px;
 	}
 	.containers .info,
 	.contactForm
 	{
-		width: 100%;
+		width: 80%;
 	}
 	.content{
 		font-size: 12px;
@@ -193,6 +193,15 @@ form{
 	.containers p{
 		font-size: 10px;
 	}
+	.icon{
+	min-width: 30px ! important;
+	height: 30px ! important;
+	
+	
+	border-radius: 50%;
+	font-size: 22px;
+	}
+	
 }
 
 

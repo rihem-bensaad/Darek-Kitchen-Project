@@ -6,7 +6,7 @@
     max-width: 100%;
     overflow: hidden;
 }
-@import "https://fonts.googleapis.com/css?family=Rozha+One";
+
 .container-wrapper {
   min-height: 100vh;
   display: flex;
@@ -30,7 +30,7 @@
 }
 
 body {
-  color: white;
+  color: #0D070A;
 }
 
 h1 {

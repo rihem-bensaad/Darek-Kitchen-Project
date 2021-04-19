@@ -25,7 +25,7 @@ export class ChefSignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-   chefFrom() {
+  postFrom() {
  console.log(this.signupForm.value)
     this.chefService.postFrom(this.signupForm.value)
       .subscribe(() => {
