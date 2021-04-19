@@ -6,7 +6,8 @@ const port = 3000;
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const User = require('./routers/UserRouter.js');
-const chef = require('./routers/ChefRouter.js')
+const chef = require('./routers/ChefRouter.js');
+const brand = require('./routers/brandRouter')
 
 
 app.use(cors());
@@ -20,7 +21,7 @@ app.use(express.urlencoded({
 
 app.use('/user', User);
 app.use('/chef', chef);
-
+app.use('/brand', brand);
 app.post('/email', (req,res)=>{
     const{subject, email, message} = req.body
     console.log('Data', req.body);
