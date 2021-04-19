@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { AdminService } from '../../services/admin.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-admin-login',
@@ -12,9 +15,15 @@ export class AdminLoginComponent implements OnInit {
     password: new FormControl('')
   });
 
-  constructor() { }
+  constructor(private adminService: AdminService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+    postFrom() {
+    this.adminService.adminFrom(this.adminForm.value)
+      .subscribe(() => {
+        this.router.navigate(['/login']);
+      })
   }
 
 }
