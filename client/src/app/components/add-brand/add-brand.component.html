@@ -1,0 +1,20 @@
+<form [formGroup]="brandForm" >
+    <h2 class="title">Login</h2>
+    <div class="input-field">
+      <label><i class="fas fa-envelope fa-lg"></i></label>
+        <input type="text" placeholder="Brand Name"  formControlName="name"/>
+    </div>
+
+    <div class="input-field">
+      <label><i class="fas fa-key fa-lg"></i></label>
+      <input type="text" placeholder="Category" id='Password' formControlName="category"/>
+    </div>
+
+    <div class="input-field">
+      <label><i class="fas fa-key fa-lg"></i></label>
+      <input type="text" placeholder="Image Logo"  formControlName="logo"/>
+    </div>
+    <button class="btn solid" >Add Brand</button>
+
+  </form>
+
