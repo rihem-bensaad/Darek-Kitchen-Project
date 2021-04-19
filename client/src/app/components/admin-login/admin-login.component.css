@@ -1,0 +1,83 @@
+.nav{
+width:90%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+
+
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+form {
+  background-color:rgba(0, 0, 0, 0.863);
+  border-radius: 6%;
+
+  margin-top: 17%;
+
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 5.3%;
+  color: white;
+}
+
+
+
+.btn {
+  width: 150px;
+  background-color: #571d02;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 50px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 19%;
+}
+
+.btn:hover {
+  background-color:orange;
+}
+
+input{
+  min-width: 120%;
+  background-color: #f0f0f0;
+  margin: 0px 0;
+  height: 42px;
+  border-radius: 8px;
+  box-shadow: 5px -4px rgba(0, 0, 0, 0.685);
+
+}
+label{
+  margin-right: 0%;
+  margin-top: 0%;
+  color: white
+}
+
+@media only screen and (max-width: 500px) {
+  .title{
+    color: red;
+  }
+  form{
+   width:90%;
+    margin-left: 5%;
+    padding: 13rem 1rem;
+
+  }
+}
