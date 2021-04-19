@@ -22,8 +22,7 @@ const routes: Routes = [
 {path:'chefSignup',component:ChefSignupComponent},
 {path:'userSignup',component:UserSignupComponent},
 {path: 'service', component: ServiceInfoComponent},
-  { path: 'chefLogin', component: ChefLoginComponent },
-
+{ path: 'chefLogin', component: ChefLoginComponent },
 {path: 'adminLogin', component: AdminLoginComponent },
 {path: 'admin', component: AdminSignupComponent},
 ];

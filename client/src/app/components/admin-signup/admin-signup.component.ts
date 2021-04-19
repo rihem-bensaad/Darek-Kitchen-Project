@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
 import { Router } from '@angular/router';
-import { AdminService } from '../../services/admin.service'
-
+import { AdminService } from '../../services/admin.service';
 
 @Component({
   selector: 'app-admin-signup',
@@ -20,10 +19,11 @@ export class AdminSignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  adminFrom() {
-    this.adminService.postFrom(this.adminForm.value)
+   postFrom() {
+    this.adminService.adminFrom(this.adminForm.value)
       .subscribe(() => {
-        this.router.navigate(['/adminLogin']);
+        this.router.navigate(['/login']);
       })
   }
+
 }
