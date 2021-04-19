@@ -8,7 +8,7 @@ import { BrandService } from '../../services/brand.service'
 })
 export class BrandsComponent implements OnInit {
 
-  brand: any = [];
+  brands: any = [];
 
   brandName: string='';
   category: string='';
@@ -22,8 +22,8 @@ export class BrandsComponent implements OnInit {
 
   getBrands() {
     this.brandService.getbrand().subscribe((data) => {
-      this.brand = data
-      console.log('data of brands', this.brand);
+      this.brands = data
+      console.log('data of brands', this.brands);
       })
  }
 }

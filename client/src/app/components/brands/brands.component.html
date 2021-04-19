@@ -1,9 +1,9 @@
-<div class="nav" *ngFor="let brand of brand">
+<div class="nav" *ngFor="let brand of brands">
   <div class='card1'>
   <div class="card">
   <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
     <img
-      src="https://miro.medium.com/max/5376/1*pbqVPZcMUy2rcj5OL_GSoA.jpeg"
+      src={{brand.logo}}
       class="img-fluid"
     />
     <a href="#!">
@@ -18,7 +18,7 @@
     <span class="fa fa-star"></span>
     <span class="fa fa-star"></span>
     <p class="card-text">
-      {{brand.logo}}</p>
+      </p>
     <a href="#!" class="btn btn-dark">Buy Now!</a>
   </div>
 </div>
