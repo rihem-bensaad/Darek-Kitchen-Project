@@ -1,6 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
+  text-align: center;
+  
 }
 
 * {
@@ -10,47 +11,88 @@ body {
 /* Add padding to containers */
 .container {
   padding: 16px;
-  background-color: white;
+  background-color: rgba(7, 7, 7, 0.973);
+  margin-top: 7%;
+  width: 40% ! important;
+  border-radius: 10px;
+  box-shadow: 5px -2px rgba(0, 0, 0, 0.788); 
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 30px
+}
+#img{
+  margin-top: 2%;
+  margin-left: 3%;
 }
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-  width: 70%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  width: 93%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
   display: inline-block;
   border: none;
   background: #f1f1f1;
+  margin-left: 17px;
+  border-radius: 1.5px;
 }
 
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
+i{
+  color-adjust: #fff ! important;
+}
 
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+label{
+  color: white;
+}
+.inputi{
+  margin-left: 0.5%;
 }
 
 /* Set a style for the submit button */
 .registerbtn {
-  background-color: red;
+  background-color: #571d02;
   color: white;
-  padding: 16px 20px;
+  padding: 8px 0px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 70%;
-  opacity: 0.9;
+  width: 30%;
+  margin-left: 69%;
+  margin-bottom: -1%;
+  border-radius: 2px;
+
 }
 
 .registerbtn:hover {
   opacity: 1;
 }
-
+.registerbtn:hover {
+    background-color: orange;
+}
 a {
   color: orange;
+}
+@media only screen and (max-width: 800px) {
+.container{
+    
+    margin-top: 26%;
+    width: 90% ! important;
+  
+    
+
+}
+h1{
+    font-size:18px ! important;
+}
+input{
+  width: 80% !important
+}
 }
 

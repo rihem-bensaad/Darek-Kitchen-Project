@@ -6,13 +6,13 @@
     max-width: 100%;
     overflow: hidden;
 }
-@import "https://fonts.googleapis.com/css?family=Rozha+One";
+
 .container-wrapper {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
+  background: rgba(0, 0, 0, 0.849);
 }
 
 .container {

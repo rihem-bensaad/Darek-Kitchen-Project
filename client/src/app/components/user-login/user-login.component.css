@@ -1,12 +1,16 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
+body{
+  text-align:center ! important;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body,
+
 input {
   font-family: "Poppins", sans-serif;
 }
@@ -28,45 +32,40 @@ input {
 
 }
 
-.signin-signup {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  left: 75%;
-  width: 50%;
-  transition: 1s 0.7s ease-in-out;
-  display: grid;
-  grid-template-columns: 1fr;
-  z-index: 5;
-}
 
 form {
-  display: flex;
+  background-color:rgba(0, 0, 0, 0.836);
+  border-radius: 6%;
+  max-width: 32em;
+   margin: auto;
+  margin-top: 13%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0rem 5rem;
+  padding: 1rem 1rem;
   transition: all 0.2s 0.7s;
   overflow: hidden;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+
 }
 
 .title {
   font-size: 2.2rem;
-  margin-bottom: 10px;
+  margin-bottom:50px;
+  margin-top:10px;
+  text-align: center;
+  color: white;
 }
 
 .input-field {
-  max-width: 380px;
+  max-width: 480px;
   width: 100%;
   background-color: #f0f0f0;
-  margin: 10px 0;
-  height: 55px;
-  border-radius: 55px;
+  margin: 15px 0;
+  height: 40px;
+  border-radius: 8px;
   display: grid;
   grid-template-columns: 15% 85%;
-  padding: 0 0.4rem;
+  padding: 0 0.9rem;
   position: relative;
 }
 
@@ -89,23 +88,35 @@ form {
 
 .btn {
   width: 150px;
-  background-color: red;
+  background-color: #571d02;
   border: none;
   outline: none;
   height: 49px;
-  border-radius: 49px;
+  border-radius: 12px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
   transition: 0.5s;
+  margin-left: 69%;
+}
+label{
+  margin-top:12%
 }
 
 .btn:hover {
-  background-color: black;
+  background-color: orange;
 }
-
-
+@media only screen and (max-width: 500px) {
+form{
+  margin-left: 3%;
+  margin-top: 35% ! important;
+  width:93%
+}
+.btn{
+  margin-left: 52%;
+}
+}
 
 
