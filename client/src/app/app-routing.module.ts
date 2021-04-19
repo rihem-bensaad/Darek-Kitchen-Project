@@ -9,6 +9,8 @@ import { UserSignupComponent } from './components/user-signup/user-signup.compon
 import { ServiceInfoComponent } from './components/service-info/service-info.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+
 
 
 const routes: Routes = [
@@ -21,6 +23,8 @@ const routes: Routes = [
 {path:'userSignup',component:UserSignupComponent},
 {path: 'service', component: ServiceInfoComponent},
 {path: 'admin', component: AdminSignupComponent},
+{path: 'dashboard', component: AdminDashboardComponent},
+
 ];
 
 @NgModule({
