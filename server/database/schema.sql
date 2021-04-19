@@ -52,83 +52,83 @@ CREATE TABLE user (
     location VARCHAR(255) NOT NULL
 );
 
--- Traditional Food
-INSERT INTO brands ( brandName,category,logo) values ("Dar Zmen","Traditional Food","")
-INSERT INTO brands ( brandName,category,logo) values ("Pates Fait Maison","Traditional Food","")
-INSERT INTO brands ( brandName,category,logo) values ("Le Pirate","Traditional Food","")
-INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S KITCHEN","Traditional Food","")
--- Homemade Fast Food
-INSERT INTO brands ( brandName,category,logo) values ("Home Burger","HomeMade Fast Food","")
-INSERT INTO brands ( brandName,category,logo) values ("CowBoys","HomeMade Fast Food","")
-INSERT INTO brands ( brandName,category,logo) values ("Faster&Cheaper","HomeMade Fast Food","")
-INSERT INTO brands ( brandName,category,logo) values ("Hot doggy dog","HomeMade Fast Food","")
--- Sweaty Food
-INSERT INTO brands ( brandName,category,logo) values ("Donuts&Bagels","Sweaty Food","")
-INSERT INTO brands ( brandName,category,logo) values ("Flavors","Sweaty Food","")
-INSERT INTO brands ( brandName,category,logo) values ("Chocolatine","Sweaty Food","")
-INSERT INTO brands ( brandName,category,logo) values ("Juice Fountain","Sweaty Food","")
+-- -- Traditional Food
+-- INSERT INTO brands ( brandName,category,logo) values ("Dar Zmen","Traditional Food","")
+-- INSERT INTO brands ( brandName,category,logo) values ("Pates Fait Maison","Traditional Food","")
+-- INSERT INTO brands ( brandName,category,logo) values ("Le Pirate","Traditional Food","")
+-- INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S KITCHEN","Traditional Food","")
+-- -- Homemade Fast Food
+-- INSERT INTO brands ( brandName,category,logo) values ("Home Burger","HomeMade Fast Food","")
+-- INSERT INTO brands ( brandName,category,logo) values ("CowBoys","HomeMade Fast Food","")
+-- INSERT INTO brands ( brandName,category,logo) values ("Faster&Cheaper","HomeMade Fast Food","")
+-- INSERT INTO brands ( brandName,category,logo) values ("Hot doggy dog","HomeMade Fast Food","")
+-- -- Sweaty Food
+-- INSERT INTO brands ( brandName,category,logo) values ("Donuts&Bagels","Sweaty Food","")
+-- INSERT INTO brands ( brandName,category,logo) values ("Flavors","Sweaty Food","")
+-- INSERT INTO brands ( brandName,category,logo) values ("Chocolatine","Sweaty Food","")
+-- INSERT INTO brands ( brandName,category,logo) values ("Juice Fountain","Sweaty Food","")
 
--- Dar Zmen
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous Traditionel","",9,1) ;
-INSERT INTO menu (title,description,price,ID_brands) values ("Ojja au merguez","",6,1) ;
-INSERT INTO menu (title,description,price,ID_brands) values ("Chakchouka","",6,1);
-INSERT INTO menu (title,description,price,ID_brands) values ("Madfouna","",8,1);
+-- -- Dar Zmen
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous Traditionel",9,1) ;
+-- INSERT INTO menu (title,price,ID_brands) values ("Ojja au merguez",6,1) ;
+-- INSERT INTO menu (title,price,ID_brands) values ("Chakchouka",6,1);
+-- INSERT INTO menu (title,price,ID_brands) values ("Madfouna",8,1);
 
--- Pates Fait Maison
-INSERT INTO menu (title,description,price,ID_brands) values ("Spaguetti Carbonara","",7,2);
-INSERT INTO menu (title,description,price,ID_brands) values ("Spaguetti bolognaise","",7,2);
-INSERT INTO menu (title,description,price,ID_brands) values ("Tagliatelles au saumon fumé ","",14,2);
-INSERT INTO menu (title,description,price,ID_brands) values ("ravioli maison","",9,2);
--- Le Pirate
-INSERT INTO menu (title,description,price,ID_brands) values ("daurade grillé au four","",9,3);
-INSERT INTO menu (title,description,price,ID_brands) values ("loup de mer au four","",9,3);
-INSERT INTO menu (title,description,price,ID_brands) values ("Poisson du jour","",9,3);
-INSERT INTO menu (title,description,price,ID_brands) values ("daurade grillé au four","",9,3);
--- Granny kitchen
-INSERT INTO menu (title,description,price,ID_brands) values ("Ojja","",6,4);
-INSERT INTO menu (title,description,price,ID_brands) values ("Loubia","",9,4);
-INSERT INTO menu (title,description,price,ID_brands) values ("riz basmati au four","",9,4);
-INSERT INTO menu (title,description,price,ID_brands) values ("market kaaber","",4,4);
+-- -- Pates Fait Maison
+-- INSERT INTO menu (title,price,ID_brands) values ("Spaguetti Carbonara",7,2);
+-- INSERT INTO menu (title,price,ID_brands) values ("Spaguetti bolognaise",7,2);
+-- INSERT INTO menu (title,price,ID_brands) values ("Tagliatelles au saumon fumé ",14,2);
+-- INSERT INTO menu (title,price,ID_brands) values ("ravioli maison",9,2);
+-- -- Le Pirate
+-- INSERT INTO menu (title,price,ID_brands) values ("daurade grillé au four",9,3);
+-- INSERT INTO menu (title,price,ID_brands) values ("loup de mer au four",9,3);
+-- INSERT INTO menu (title,price,ID_brands) values ("Poisson du jour",9,3);
+-- INSERT INTO menu (title,price,ID_brands) values ("daurade grillé au four",9,3);
+-- -- Granny kitchen
+-- INSERT INTO menu (title,price,ID_brands) values ("Ojja",6,4);
+-- INSERT INTO menu (title,price,ID_brands) values ("Loubia",9,4);
+-- INSERT INTO menu (title,price,ID_brands) values ("riz basmati au four",9,4);
+-- INSERT INTO menu (title,price,ID_brands) values ("market kaaber",4,4);
 
--- Home Burger
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,5);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,5);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,5);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,5);
--- Cowboys
+-- -- Home Burger
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,5);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,5);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,5);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,5);
+-- -- Cowboys
 
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,6);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,6);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,6);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,6);
--- Faster&Cheaper
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,7);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,7);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,7);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,7);
--- Hot doggy dog
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,8);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,8);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,8);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,8);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,6);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,6);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,6);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,6);
+-- -- Faster&Cheaper
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,7);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,7);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,7);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,7);
+-- -- Hot doggy dog
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,8);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,8);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,8);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,8);
 
--- Donuts&Bagels
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,9);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,9);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,9);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,9);
--- Flavors
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,10);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,10);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,10);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,10);
--- Chocolatine
-INSERT INTO menu (title,description,price,ID_brands) values ("Chantilly au chocolat blanc","",9,11);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,11);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,11);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,11);
--- juice Fountain
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,12);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,12);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,12);
-INSERT INTO menu (title,description,price,ID_brands) values ("Couscous","",9,12);
+-- -- Donuts&Bagels
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,9);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,9);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,9);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,9);
+-- -- Flavors
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,10);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,10);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,10);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,10);
+-- -- Chocolatine
+-- INSERT INTO menu (title,price,ID_brands) values ("Chantilly au chocolat blanc",9,11);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,11);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,11);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,11);
+-- -- juice Fountain
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,12);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,12);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,12);
+-- INSERT INTO menu (title,price,ID_brands) values ("Couscous",9,12);
