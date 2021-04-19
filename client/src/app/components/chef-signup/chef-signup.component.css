@@ -26,12 +26,18 @@ h1{
 #img{
   margin-top: 2%;
   margin-left: 3%;
+  cursor: pointer;
+  border: 0.5px solid white;
+  padding: 6px;
+  width: 92.5%;
+  color: white;
+  border-radius:2%
 }
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 93%;
-  padding: 8px;
+  padding: 6px;
   margin: 5px 0 10px 0;
   display: inline-block;
   border: none;
