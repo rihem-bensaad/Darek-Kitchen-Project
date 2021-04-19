@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./brands.component.css']
 })
 export class BrandsComponent implements OnInit {
+  name: string;
+  category: string;
+  logo: string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+    getBrands() {
+
+ }
 }

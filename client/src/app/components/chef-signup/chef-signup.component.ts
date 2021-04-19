@@ -32,5 +32,4 @@ export class ChefSignupComponent implements OnInit {
         this.router.navigate(['/login']);
       })
   }
-
 }
