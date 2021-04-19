@@ -22,7 +22,7 @@ export class AdminLoginComponent implements OnInit {
     postFrom() {
     this.adminService.adminFrom(this.adminForm.value)
       .subscribe(() => {
-        this.router.navigate(['/login']);
+        this.router.navigate(['/']);
       })
   }
 
