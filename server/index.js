@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const User = require('./routers/UserRouter.js');
 const chef = require('./routers/ChefRouter.js');
 const brand = require('./routers/brandRouter')
-
+const admin = require('./routers/adminRouter')
 
 app.use(cors());
 app.use(cookieParser());
@@ -18,7 +18,7 @@ app.use(express.urlencoded({
     extended: false
 }));
 
-
+app.use('/admin',admin)
 app.use('/user', User);
 app.use('/chef', chef);
 app.use('/brand', brand);

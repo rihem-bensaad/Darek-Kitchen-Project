@@ -2,9 +2,9 @@ const connection = require ('../config.js');
 const mysql = require('mysql');
 
 
-const addAdmin = function(callback){
+const addAdmin = function(params,callback){
     let syntax = "INSERT INTO admin (userName,email,password) values (?,?,?)"
-    connection.query(syntax,(err,result)=>{
+    connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })
 }
@@ -39,17 +39,17 @@ const deleteUser = function(params,callback){
 }
 
 const deleteChef = function(params,callback){
-    let syntax = "DELETE from chef where id=?"
+    let syntax = `DELETE from chef where id=?`
     connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })
 }
 
-const updateBrand = function(info,callback){
-let syntax =`UPDATE events SET brandName= '${info.brandName}', category= '${info.category}', logo='${info.logo}' WHERE id =${info.id}`
-connection.query(syntax,(err,result)=>{
+const updateBrand = function(params,callback){
+let syntax =`UPDATE brands SET brandName=?,category=?,logo=? WHERE id=?`
+connection.query(syntax,params,(err,result)=>{
     return err ? callback(err,null) : callback(null,result)
-})   
+})  
 }
 
 module.exports={
