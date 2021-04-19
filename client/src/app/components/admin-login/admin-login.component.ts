@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-admin-login',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-login.component.css']
 })
 export class AdminLoginComponent implements OnInit {
+    adminForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl('')
+  });
 
   constructor() { }
 
