@@ -17,6 +17,7 @@ import { UserLoginComponent } from './components/user-login/user-login.component
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
+import { AddBrandComponent } from './components/add-brand/add-brand.component';
 
 
 
@@ -34,6 +35,7 @@ import { AdminSignupComponent } from './components/admin-signup/admin-signup.com
     ServiceInfoComponent,
     UserLoginComponent,
     AdminSignupComponent,
+    AddBrandComponent,
 
   ],
   imports: [
