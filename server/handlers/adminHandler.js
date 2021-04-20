@@ -14,24 +14,31 @@ module.exports.addAdmin = (req,res)=>{
 })
 }
 
-module.exports.adminLogin = (req,res)=>{
+module.exports.adminLogin = (req,res,callback)=>{
     
     db.adminLogin(req.body.email, (err,result) =>{
-   if (result.length>0){
+        if (result.length===0){
+            callback()
+        }
+   else if (result.length>0){ 
       bcrypt.compare(req.body.password,result[0].password, (err,result)=>{
-          if (err){
-            return res.status(404).json({
-                message: 'Authentication failed'
-            })
+          if (err){ 
+             
+                     return res.status(404).json({
+                        message: 'Authentication failed'
+                  })
           }else{
               if(result){
                   const token = jwt.sign({
                       email : req.body.email,
-                      userId: req.params.id
+                      userId: req.params.id,
+                      role : "admin"
+                      
                   }, 'secret', function(err,token){
                       res.status(200).json({
                           message : " authentication sucessful !",
-                          token : token
+                          token : token,
+                         
                       })
                   })
               }
