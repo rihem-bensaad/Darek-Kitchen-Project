@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
-import { UserService } from '../../services/user.service';
+import jwt_decode from "jwt-decode";
+import { AuthenticationService } from '../../services/authentication.service'
 
 
 @Component({
@@ -16,14 +17,18 @@ export class UserLoginComponent implements OnInit {
     password: new FormControl(''),
   });
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private authService: AuthenticationService, private router: Router) { }
 
   ngOnInit(): void {
   }
+  DecodeToken(token: string): any {
+    return jwt_decode(token);
+    }
 
   postFrom() {
-    this.userService.login(this.loginForm.value)
-      .subscribe((result) => {
+    this.authService.login(this.loginForm.value)
+      .subscribe((result : any) => {
+        if(this.DecodeToken(result['token'])['role'])
         localStorage.setItem('data', JSON.stringify(result))
         console.log(result)
         this.router.navigate(['/'])

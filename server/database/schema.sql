@@ -55,19 +55,19 @@ CREATE TABLE user (
 
 -- Traditional Food
 INSERT INTO brands ( brandName,category,logo) values ("Dar MiMa","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("Pates Fait Maison","Traditional Food","");
-INSERT INTO brands ( brandName,category,logo) values ("Le Pirate","Traditional Food","");
-INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S KITCHEN","Traditional Food","");
+INSERT INTO brands ( brandName,category,logo) values ("Pates Fait Maison","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Le Pirate","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
 -- Homemade Fast Food;
-INSERT INTO brands ( brandName,category,logo) values ("Home Burger","HomeMade Fast Food","");
-INSERT INTO brands ( brandName,category,logo) values ("CowBoys","HomeMade Fast Food","");
-INSERT INTO brands ( brandName,category,logo) values ("Faster&Cheaper","HomeMade Fast Food","");
-INSERT INTO brands ( brandName,category,logo) values ("Hot doggy dog","HomeMade Fast Food","");
+INSERT INTO brands ( brandName,category,logo) values ("Home Burger","HomeMade Fast Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("CowBoys","HomeMade Fast Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Faster&Cheaper","HomeMade Fast Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Hot doggy dog","HomeMade Fast Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
 -- Sweaty Food
-INSERT INTO brands ( brandName,category,logo) values ("Donuts&Bagels","Sweaty Food","");
-INSERT INTO brands ( brandName,category,logo) values ("Flavors","Sweaty Food","");
-INSERT INTO brands ( brandName,category,logo) values ("Chocolatine","Sweaty Food","");
-INSERT INTO brands ( brandName,category,logo) values ("Juice Fountain","Sweaty Food","");
+INSERT INTO brands ( brandName,category,logo) values ("Donuts&Bagels","Sweaty Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Flavors","Sweaty Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Chocolatine","Sweaty Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Juice Fountain","Sweaty Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
 
 -- -- Dar Zmen
 -- INSERT INTO menu (title,description,price,ID_brands) values ("Couscous Traditionel","",9,1) ;

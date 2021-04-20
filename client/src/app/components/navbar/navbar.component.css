@@ -115,3 +115,8 @@
     border-radius: 10%;
 
   }
+
+.navbar{
+  position: absolute ! important;
+
+}

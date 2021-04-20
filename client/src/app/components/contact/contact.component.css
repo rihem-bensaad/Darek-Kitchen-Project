@@ -173,6 +173,7 @@ form{
 	.contact
 	{
 		padding: 50px;
+		position: absolute ! important;
 	}
 	.containers
 	{

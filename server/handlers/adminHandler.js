@@ -14,7 +14,7 @@ module.exports.addAdmin = (req,res)=>{
 })
 }
 
-module.exports.adminLogin = (req,res)=>{
+module.exports.adminLogin = (req,res,callback)=>{
     
     db.adminLogin(req.body.email, (err,result) =>{
     if (result.length>0){

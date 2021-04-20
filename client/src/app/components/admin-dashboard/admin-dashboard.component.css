@@ -8,6 +8,7 @@
     --main-color: #1D2231;
     --colo-dark: ;
     --text-grey: #8390A2;
+    position: absolute !important;
     
 }
 *{
@@ -30,17 +31,17 @@
 .sidebar-brand{
     height: 90px;
     padding: 1rem 0rem 1rem 2rem;
-    color:#fff
-}
-.sidebar-brand{
-    height:90px;
-    padding: 1rem 0rem 1rem 2rem;
-    color: #fff
+    color:#fff;
+    
 }
 .sidebar-brand span{
     display: inline-block;
 }
 .main-content{
     margin-left: 345px;
-   font-size: 10px;
+   font-size: 20px;
+}
+img{
+    width: 180px;
+    border-radius: 50px ! important;
 }

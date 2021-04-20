@@ -1,4 +1,4 @@
-
+/* 
 .card1{
   width: 30%;
   height: 40%;
@@ -12,5 +12,24 @@
 .checked {
   color: orange;
 }
+ */
+ .row{
+   position: absolute ! important;
+ }
+ 
+ .col-lg-2 {
+  margin-top:5%;
+  margin-left:2%;
+  padding: 100px 10 20px
+  
+ }
+.card-ecommerce{
+  height: 0 auto;
+  width: 260px ! important;
+  
+}
 
-
+.view{
+  min-height: 160px;
+  
+}

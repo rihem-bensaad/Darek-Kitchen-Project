@@ -40,15 +40,15 @@
     letter-spacing: 0em;
     border-radius: 0em;
     padding: 0.8em 1.8em;
-    background: #df500e;
+    background: #F7F709 ;
     border-color: transparent;
-    color: #1F1A1E!important;
+    color: #1F1A1E !important;
     
     border-radius: 30px;
 }
 .btn:hover{
-    background-color: #F7F709;
-    
+    background-color: #df500e;
+    color: white ! important;
 }
 
 #imagemodal{
