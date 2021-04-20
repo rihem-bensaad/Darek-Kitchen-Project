@@ -18,6 +18,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AddBrandComponent } from './components/add-brand/add-brand.component';
 
 
 
@@ -36,6 +37,7 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
     UserLoginComponent,
     AdminSignupComponent,
     AdminDashboardComponent,
+    AddBrandComponent,
 
   ],
   imports: [
