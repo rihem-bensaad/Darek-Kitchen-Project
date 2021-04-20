@@ -13,7 +13,7 @@ export class BrandService {
   getbrand() {
     return this.http.get("http://localhost:3000/brand/get")
   }
-  postbrand(data:any) {
-    return this.http.post("http://localhost:3000/brand/add", data)
+  postbrand(brandObject: any) {
+    return this.http.post("http://localhost:3000/brand/add", brandObject)
   }
 }

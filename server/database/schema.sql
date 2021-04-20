@@ -54,7 +54,7 @@ CREATE TABLE user (
 );
 
 -- -- Traditional Food
--- INSERT INTO brands ( brandName,category,logo) values ("Dar Zmen","Traditional Food","");
+-- INSERT INTO brands ( brandName,category,logo) values ("Dar MiMa","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
 -- INSERT INTO brands ( brandName,category,logo) values ("Pates Fait Maison","Traditional Food","");
 -- INSERT INTO brands ( brandName,category,logo) values ("Le Pirate","Traditional Food","");
 -- INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S KITCHEN","Traditional Food","");

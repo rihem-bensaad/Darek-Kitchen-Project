@@ -2,7 +2,7 @@
     <h2 class="title">ADD BRAND</h2>
     <div class="input-field">
       <label><i></i></label>
-        <input type="text" placeholder="Brand Name"  formControlName="name"/>
+        <input type="text" placeholder="Brand Name"  formControlName="brandName"/>
     </div>
 
     <div class="input-field">
@@ -14,7 +14,7 @@
       <label><i></i></label>
       <input type="text" placeholder="Image Logo"  formControlName="logo"/>
     </div>
-    <button class="btn solid" >Add Brand</button>
+    <button class="btn solid" (click)="addBrand()">Add Brand</button>
 
   </form>
 
