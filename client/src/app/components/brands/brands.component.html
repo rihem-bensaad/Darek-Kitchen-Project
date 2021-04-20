@@ -1,4 +1,4 @@
-<div class="nav" *ngFor="let brand of brands">
+<!-- <div class="nav" *ngFor="let brand of brands">
   <div class='card1'>
   <div class="card">
   <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
@@ -21,4 +21,79 @@
 </div>
 </div>
 </div>
+ -->
 
+<div>
+  <!--Grid row-->
+  <div class="row">
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-6 mb-3" *ngFor="let brand of brands">
+      <!--Card-->
+      <mdb-card  class="card-ecommerce">
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src="{{brand.logo}}" alt="sample photo"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--Card image-->
+        <!--Card content-->
+        <mdb-card-body  class="text-center">
+          <!--Category & Title-->
+          <a href="" class="grey-text">
+            <h5>{{brand.category}}</h5>
+          </a>
+          <mdb-card-title>
+            <h4>
+              <strong>
+                <a href="">{{brand.brandName}}</a>
+              </strong>
+            </h4>
+          </mdb-card-title>
+
+          <!--Rating-->
+          <!-- <ul class="rating">
+            <li>
+              <mdb-icon fas icon="star"></mdb-icon>
+            </li>
+            <li>
+              <mdb-icon fas icon="star"></mdb-icon>
+            </li>
+            <li>
+              <mdb-icon fas icon="star"></mdb-icon>
+            </li>
+            <li>
+              <mdb-icon fas icon="star"></mdb-icon>
+            </li>
+            <li>
+              <mdb-icon fas icon="star"></mdb-icon>
+            </li>
+          </ul> -->
+          <!--Description-->
+          <mdb-card-text>Neque porro quisquam est, qui dolorem ipsum quia dolor sit..
+          </mdb-card-text>
+          <!--Card footer-->
+          <mdb-card-footer>
+            <span class="float-left font-weight-bold">
+             
+            </span>
+            <span class="float-right">
+              <a data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                <mdb-icon fas icon="shopping-cart" class="grey-text ml-3"></mdb-icon>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Share">
+                <mdb-icon fas icon="share-alt" class="grey-text ml-3"></mdb-icon>
+              </a>
+              <a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist">
+                <mdb-icon fas icon="heart" class="ml-3"></mdb-icon>
+              </a>
+            </span>
+          </mdb-card-footer>
+        </mdb-card-body>
+        <!--Card content-->
+      </mdb-card>
+      <!--Card-->
+    </div>
+   </div>
+  </div>x

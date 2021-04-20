@@ -40,6 +40,7 @@ form{
 {
 	font-weight: 300;
 	color: #fff;
+	background-color: rgba(255, 255, 255, 0.096);
 }
 .containers
 {
@@ -80,11 +81,16 @@ form{
 	color: #fff;
 	flex-direction: column;
 	font-weight: 300;
+	
 }
 .containers .info .box .text h3
 {
 	font-weight: 500;
 	color: #F7F709;
+	
+}
+.containers p{
+	background-color: rgba(255, 255, 255, 0.103);
 	
 }
 .contactForm
@@ -104,6 +110,7 @@ form{
 	font-size: 500;
 	text-align: center;
 	margin-bottom: 0%;
+	background-color: rgba(255, 255, 255, 0.158);
 }
 .contactForm .inputBox
 {
@@ -166,6 +173,7 @@ form{
 	.contact
 	{
 		padding: 50px;
+		position: absolute ! important;
 	}
 	.containers
 	{
