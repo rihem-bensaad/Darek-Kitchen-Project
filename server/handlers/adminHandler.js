@@ -84,3 +84,11 @@ module.exports.addChef = (req,res)=>{
                 err ? console.log(err) : res.status(201).send(result)
         })
   }
+ 
+  
+  module.exports.getChef = (req,res)=>{
+    db.getChef((err,result)=>{
+        err ? console.log(err) : res.status(201).send(result)
+})
+}
+
