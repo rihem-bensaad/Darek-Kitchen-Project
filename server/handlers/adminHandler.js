@@ -51,7 +51,7 @@ db.postbrand([req.body.brandName, req.body.category , req.body.logo],(err,result
 
 
 module.exports.deletebrand = (req,res)=>{
-    db.deletebrand(req.params.id,(err,result)=>{
+    db.deletebrand([req.body.brandName,req.body.category,req.body.logo],req.params.id,(err,result)=>{
         err ? console.log(err) : res.status(201).send("brand deleted")
 
     })
@@ -59,22 +59,22 @@ module.exports.deletebrand = (req,res)=>{
 
 
 module.exports.deleteUser = (req,res)=>{
-    db.deleteUser(req.params.id,(err,result)=>{
+    db.deleteUser([req.body.brandName,req.body.category,req.body.logo],req.params.id,(err,result)=>{
         err ? console.log(err) : res.status(201).send("user account deleted")
     })
     
 }
 
 module.exports.deleteChef = (req,res)=>{
-    db.deleteChef(req.params.id,(err,result)=>{
+    db.deleteChef([req.body.brandName,req.body.category,req.body.logo],req.params.id,(err,result)=>{
         err ? console.log(err) : res.status(201).send("cook account deleted")
 
     })
     
 }
 
-module.exports.updateBrand = (req,res)=>{
-    db.updateBrand([req.body.brandName,req.body.category,req.body.logo,req.params.id],(err,result)=>{
+module.exports.updateBrand = (req,res)=>{ 
+    db.updateBrand([req.body.brandName,req.body.category,req.body.logo],req.params.id,(err,result)=>{
         err ? console.log(err) : res.status(201).send(result)
     })
 }

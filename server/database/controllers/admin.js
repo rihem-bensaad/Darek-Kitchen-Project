@@ -24,29 +24,29 @@ const postbrand = function(params,callback){
     })
 }
 
-const deletebrand = function(params,callback){
-    let syntax = `DELETE from brands where id=?`
+const deletebrand = function(params,id,callback){
+    let syntax = `DELETE from brands where ID_brands=${id}`
     connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })
 }
 
-const deleteUser = function(params,callback){
-    let syntax = "DELETE from user where id=?"
+const deleteUser = function(params,id,callback){
+    let syntax = `DELETE from user where ID_user=${id}`
     connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })
 }
 
-const deleteChef = function(params,callback){
-    let syntax = `DELETE from chef where id=?`
+const deleteChef = function(params,id,callback){
+    let syntax = `DELETE from chef where id=${id}`
     connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })
 }
 
-const updateBrand = function(params,callback){
-let syntax =`UPDATE brands SET brandName=?,category=?,logo=? WHERE id=?`
+const updateBrand = function(params,id,callback){
+let syntax =`UPDATE brands SET brandName=?,category=?,logo=? WHERE ID_brands=${id}`
 connection.query(syntax,params,(err,result)=>{
     return err ? callback(err,null) : callback(null,result)
 })  
