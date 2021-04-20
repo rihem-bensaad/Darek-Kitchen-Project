@@ -4,7 +4,7 @@ const handler = require('../handlers')
 
 
 router.route('/signup').post(handler.user.createUser);
-router.route('/login').post(handler.user.login);
+// router.route('/login').post(handler.user.login);
 
 
 
