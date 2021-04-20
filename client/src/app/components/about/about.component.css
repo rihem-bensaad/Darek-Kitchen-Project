@@ -1,11 +1,4 @@
-.nav{
-    width: 100vw;
-    height: 100vh;
-    background-image: url('https://media4.giphy.com/media/l378AwfJ7pqLlRHr2/giphy.gif');
-    background-size: cover;
-    max-width: 100%;
-    overflow: hidden;
-}
+
 
 .container-wrapper {
   min-height: 100vh;
