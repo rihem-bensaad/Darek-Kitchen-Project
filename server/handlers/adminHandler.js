@@ -78,3 +78,9 @@ module.exports.updateBrand = (req,res)=>{
         err ? console.log(err) : res.status(201).send(result)
     })
 }
+
+module.exports.addChef = (req,res)=>{
+            db.addChef([req.body.firstName, req.body.lastName,req.body.email,hash,req.body.phoneNumber,req.body.location,req.body.imageCardId],(err,result)=>{
+                err ? console.log(err) : res.status(201).send(result)
+        })
+  }
