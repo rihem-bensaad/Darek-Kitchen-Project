@@ -11,8 +11,8 @@
     </div>
 
     <div class="input-field">
-      <label><i></i></label>
-      <input type="text" placeholder="Image Logo"  formControlName="logo"/>
+
+      <input type="file" placeholder="Image Logo"  (change)="onFileSelected($event)"/>
     </div>
     <button class="btn solid" (click)="addBrand()">Add Brand</button>
 

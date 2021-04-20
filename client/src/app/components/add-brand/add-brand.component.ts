@@ -9,11 +9,15 @@ import { BrandService } from '../../services/brand.service'
   styleUrls: ['./add-brand.component.css']
 })
 export class AddBrandComponent implements OnInit {
-   brandForm = new FormGroup({
+  brandForm = new FormGroup({
     brandName: new FormControl(''),
     category: new FormControl(''),
     logo: new FormControl('')
   });
+
+  onFileSelected(event: any) {
+    console.log(event);
+  }
 
   constructor( private brandService: BrandService) { }
 
