@@ -11,9 +11,9 @@ export class BrandService {
   constructor(private http: HttpClient) {
   }
   getbrand() {
-    return this.http.get("http://localhost:3000/brand")
+    return this.http.get("http://localhost:3000/brand/get")
   }
   postbrand(data:any) {
-    return this.http.post("http://localhost:3000/brand", data)
+    return this.http.post("http://localhost:3000/brand/add", data)
   }
 }

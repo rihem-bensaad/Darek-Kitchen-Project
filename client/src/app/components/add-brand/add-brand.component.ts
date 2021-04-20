@@ -19,4 +19,8 @@ export class AddBrandComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addBrand() {
+    
+  }
+
 }
