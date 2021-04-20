@@ -14,9 +14,10 @@ export class AddBrandComponent implements OnInit {
     category: new FormControl(''),
     logo: new FormControl('')
   });
+  selectedFile = null;
 
   onFileSelected(event: any) {
-    console.log(event);
+    this.selectedFile = event.target.files[0]
   }
 
   constructor( private brandService: BrandService) { }
