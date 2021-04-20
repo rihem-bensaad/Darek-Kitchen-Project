@@ -38,7 +38,7 @@ CREATE TABLE admin (
     ID INT AUTO_INCREMENT,
     userName VARCHAR(55) NOT NULL,
     email VARCHAR(55) UNIQUE NOT NULL,
-    password VARCHAR(55) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     PRIMARY KEY (ID)
 );
 
