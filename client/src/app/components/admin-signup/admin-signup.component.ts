@@ -10,7 +10,7 @@ import { AdminService } from '../../services/admin.service';
 })
 export class AdminSignupComponent implements OnInit {
   adminForm = new FormGroup({
-    fullName: new FormControl(''),
+    userName: new FormControl(''),
     email: new FormControl(''),
     password: new FormControl('')
   });
@@ -22,7 +22,7 @@ export class AdminSignupComponent implements OnInit {
    postFrom() {
     this.adminService.adminFrom(this.adminForm.value)
       .subscribe(() => {
-        this.router.navigate(['/login']);
+        this.router.navigate(['/']);
       })
   }
 
