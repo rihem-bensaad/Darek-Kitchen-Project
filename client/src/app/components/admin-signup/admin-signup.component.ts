@@ -18,6 +18,9 @@ export class AdminSignupComponent implements OnInit {
   constructor(private adminService: AdminService, private router: Router) { }
 
   ngOnInit(): void {
+
+   
+
   }
    postFrom() {
     this.adminService.adminFrom(this.adminForm.value)
