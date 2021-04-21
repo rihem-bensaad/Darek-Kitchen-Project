@@ -14,4 +14,5 @@ export class AdminService {
   login(data:any) {
     return this.http.post('http://localhost:3000/admin/login', data)
   }
+ 
 }
