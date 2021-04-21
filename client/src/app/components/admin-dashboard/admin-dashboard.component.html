@@ -109,7 +109,10 @@
     <div >
         <h2 >Brands</h2>
         <span *ngFor="let brand of brands">
-         <h5>{{brand.brandName}}</h5>
+            <h5></h5>
+            <span>{{brand.brandName}}</span>
+            <button class="btn red" (click)="deleteBrand(brand)">Delete</button>
+            <button class="btn green" (click)="updateBrand(brand)">Update</button>
         </span>
     </div>
     </div>
