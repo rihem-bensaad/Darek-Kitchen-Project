@@ -16,6 +16,7 @@ import { ServiceInfoComponent } from './components/service-info/service-info.com
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
 
 
@@ -34,7 +35,10 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
     UserSignupComponent,
     ServiceInfoComponent,
     UserLoginComponent,
-    AddBrandComponent
+    AddBrandComponent,
+    AdminDashboardComponent,
+    AddBrandComponent,
+
   ],
 
   imports: [

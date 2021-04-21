@@ -26,9 +26,10 @@ export class BrandsComponent implements OnInit {
       console.log('data of brands', this.brands);
       })
   }
-    deleteBrand() {
-    this.brandService.deleteBrand(this.brands.id).subscribe((data: any) => {
-      console.log(data);
-    })
-  }
+    deleteBrand(ID_brands: string) {
+      this.brandService.DeleteBrand(ID_brands).subscribe((result:any) => {
+        this.getBrands()
+      })
+      console.log("deleted");
+    }
 }

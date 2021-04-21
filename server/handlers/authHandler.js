@@ -5,9 +5,6 @@ const userHandler = require('./userHandler')
 
 module.exports.authentication = (req,res)=>{
 adminHandler.adminLogin(req,res,()=>{
-   chefHandler.cheflogin(req,res,()=>{ 
        userHandler.login(req,res) 
-   })
 })
-
 }

@@ -22,7 +22,8 @@ export class BrandService {
     let data = value;
     return this.http.post('https://api.cloudinary.com/v1_1/codexmaker/image/upload', data)
   }
-  deleteBrand(data: any) {
-    return this.http.delete('http://localhost:3000/brand/removebrand/:id', data)
+  DeleteBrand(ID_brands: string) {
+    return this.http.delete('http://localhost:3000/admin/removebrand/'+ ID_brands)
   }
+
 }

@@ -53,6 +53,7 @@
 
   .nav-link {
     padding: .2rem 1rem;
+    
   }
 
   .nav-link.active,.nav-link:focus{
@@ -103,3 +104,19 @@
   vertical-align:top;
 
   }
+  
+   .nav-link:hover{
+    border-bottom: 4px solid #F7F709;
+    color:#F7F709 ! important;  
+  }
+  .navbar-brand{
+    text-decoration: underline solid 4px #F7F709;
+    background-color:rgba(255, 255, 255, 0.13);
+    border-radius: 10%;
+
+  }
+
+.navbar{
+  position: absolute ! important;
+
+}
