@@ -28,7 +28,7 @@ export class UserLoginComponent implements OnInit {
   postFrom() {
     this.authService.login(this.loginForm.value)
       .subscribe((result : any) => {
-        if(this.DecodeToken(result['token'])['role'])
+       this.DecodeToken(result['token'])['role']
         localStorage.setItem('data', JSON.stringify(result))
         console.log(result)
         this.router.navigate(['/'])
