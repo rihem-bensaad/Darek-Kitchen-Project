@@ -25,7 +25,7 @@ const postbrand = function(params,callback){
 }
 
 const deletebrand = function(params,id,callback){
-    let syntax = `DELETE from brands where ID_brands=${id}`
+    let syntax = `DELETE from brands where id=${id}`
     connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })

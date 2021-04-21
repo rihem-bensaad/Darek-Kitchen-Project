@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BrandService } from '../../services/brand.service';
 
+
 @Component({
   selector: 'app-brands',
   templateUrl: './brands.component.html',
@@ -26,10 +27,10 @@ export class BrandsComponent implements OnInit {
       console.log('data of brands', this.brands);
       })
   }
-    deleteBrand(ID_brands: string) {
-      this.brandService.DeleteBrand(ID_brands).subscribe((result:any) => {
-        this.getBrands()
-      })
-      console.log("deleted");
-    }
+    // deleteBrand(id: string) {
+    //   this.brandService.DeleteBrand(id).subscribe(() => {
+    //     this.getBrands()
+    //   })
+    //   console.log("deleted");
+    // }
 }
