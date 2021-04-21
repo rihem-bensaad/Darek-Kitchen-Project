@@ -19,7 +19,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
-import { AuthGuard } from './components/auth.guard';
+// import { AuthGuard } from './components/auth.guard';
 
 
 
@@ -50,7 +50,7 @@ import { AuthGuard } from './components/auth.guard';
     HttpClientModule,
     IvyCarouselModule
   ],
-  providers: [AuthGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

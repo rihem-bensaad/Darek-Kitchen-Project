@@ -10,7 +10,7 @@ import { UserSignupComponent } from './components/user-signup/user-signup.compon
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
-import { AuthGuard } from './components/auth.guard';
+// import { AuthGuard } from './components/auth.guard';
 
 
 
@@ -24,7 +24,7 @@ const routes: Routes = [
 {path:'userSignup',component:UserSignupComponent},
 // {path: 'service', component: ServiceInfoComponent},
 {path: 'admin', component: AdminSignupComponent},
-{path: 'dashboard', component: AdminDashboardComponent , canActivate: [AuthGuard]},
+{path: 'dashboard', component: AdminDashboardComponent },
 
 ];
 
