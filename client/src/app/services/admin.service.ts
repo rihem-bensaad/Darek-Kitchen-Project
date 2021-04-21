@@ -8,9 +8,7 @@ export class AdminService {
   userData : any = []
   constructor(private http: HttpClient) {
   }
-  adminFrom(data: any) {
-    return this.http.post('http://localhost:3000/admin/signup', data)
-  }
+ 
   login(data:any) {
     return this.http.post('http://localhost:3000/admin/login', data)
   }

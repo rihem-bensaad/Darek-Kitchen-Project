@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BrandService } from '../../services/brand.service'
+import { BrandService } from '../../services/brand.service';
 
 @Component({
   selector: 'app-brands',
@@ -25,5 +25,10 @@ export class BrandsComponent implements OnInit {
       this.brands = data
       console.log('data of brands', this.brands);
       })
- }
+  }
+    deleteBrand() {
+    this.brandService.deleteBrand(this.brands.id).subscribe((data: any) => {
+      console.log(data);
+    })
+  }
 }
