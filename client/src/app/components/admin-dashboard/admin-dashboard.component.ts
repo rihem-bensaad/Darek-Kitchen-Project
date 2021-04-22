@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-dashboard.component.css']
 })
 export class AdminDashboardComponent implements OnInit {
-
+  
+  brands: any = [];
+  
   constructor() { }
 
   ngOnInit(): void {
