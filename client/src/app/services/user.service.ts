@@ -14,4 +14,7 @@ export class UserService {
   login(data:any) {
     return this.http.post('http://localhost:3000/user/login', data)
   }
+  getUser() {
+    return this.http.get("http://localhost:3000/user/getall")
+  }
 }

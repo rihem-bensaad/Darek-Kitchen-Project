@@ -5,8 +5,7 @@ const port = 3000;
 const helmet = require("helmet");
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const User = require('./routers/UserRouter.js');
-// const chef = require('./routers/ChefRouter.js');
+const User = require('./routers/user.js');
 const brand = require('./routers/brandRouter')
 const admin = require('./routers/adminRouter')
 const auth = require('./routers/authRouter')
@@ -21,7 +20,6 @@ app.use(express.urlencoded({
 
 app.use('/admin',admin)
 app.use('/user', User);
-// app.use('/chef', chef);
 app.use('/login',auth)
 app.use('/brand', brand);
 app.post('/email', (req,res)=>{

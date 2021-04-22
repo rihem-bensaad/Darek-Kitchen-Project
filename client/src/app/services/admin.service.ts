@@ -20,6 +20,4 @@ export class AdminService {
      return this.http.put('http://localhost:3000/admin/updatebrand/' + ID_brands, brandObj)
   }
 
- 
-
 }

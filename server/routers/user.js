@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/user.js')
-const con = require('../config.js');
+const userController = require('../database/controllers/user.js')
+const con = require('../database/config.js');
 
 
 

@@ -103,6 +103,16 @@
         </div>
         <div class="card-single" >
         <div >
+          <h2>Users</h2>
+          <div *ngFor="let user of users">
+              <ul>
+                <li>
+                  {{user.firstName}}
+                  {{user.lastName}}
+                  <button>delete</button>
+                </li>
+              </ul>
+          </div>
             <h2 >Brands</h2>
             <span *ngFor="let brand of brands">
                 <h5></h5>
