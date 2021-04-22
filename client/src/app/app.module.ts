@@ -22,8 +22,6 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
 
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +35,6 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
     AddBrandComponent,
     AdminDashboardComponent,
     AddBrandComponent,
-
   ],
 
   imports: [

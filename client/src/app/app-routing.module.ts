@@ -18,7 +18,6 @@ const routes: Routes = [
 {path:'login',component:UserLoginComponent},
 {path:'about',component:AboutComponent},
 {path:'contact',component:ContactComponent},
-
 {path:'userSignup',component:UserSignupComponent},
 { path: 'addBrand', component: AddBrandComponent },
 {path: 'dashboard', component: AdminDashboardComponent },
