@@ -10,7 +10,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrandsComponent } from './components/brands/brands.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+
 import { UserSignupComponent } from './components/user-signup/user-signup.component';
+
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
@@ -30,9 +32,11 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
     ContactComponent,
     UserSignupComponent,
     UserLoginComponent,
+    AddBrandComponent,
     AdminDashboardComponent,
     AddBrandComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -40,9 +44,10 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
     ReactiveFormsModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+
   ],
-  // providers: [AuthGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
