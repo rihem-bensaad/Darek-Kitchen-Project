@@ -10,15 +10,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrandsComponent } from './components/brands/brands.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ChefSignupComponent } from './components/chef-signup/chef-signup.component';
+
 import { UserSignupComponent } from './components/user-signup/user-signup.component';
-import { ServiceInfoComponent } from './components/service-info/service-info.component';
+
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
-import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
+
+
 
 
 
@@ -31,15 +32,14 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
     BrandsComponent,
     AboutComponent,
     ContactComponent,
-    ChefSignupComponent,
     UserSignupComponent,
-    ServiceInfoComponent,
     UserLoginComponent,
-    AdminSignupComponent,
+    AddBrandComponent,
     AdminDashboardComponent,
     AddBrandComponent,
 
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,7 +47,8 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
     ReactiveFormsModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

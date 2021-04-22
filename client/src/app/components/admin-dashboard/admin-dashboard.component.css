@@ -5,12 +5,12 @@
      width:100%; 
      height:669px;
     background-color: white !important;
-    --main-color: #1D2231;
-    --colo-dark: ;
+    --main-color: rgb(51, 2, 2);
+    --colo-dark: #1D2231;
     --text-grey: #8390A2;
-    position: absolute !important;
-    
+    position: absolute;
 }
+
 *{
     padding: 0;
     margin: 0;
@@ -31,17 +31,18 @@
 .sidebar-brand{
     height: 90px;
     padding: 1rem 0rem 1rem 2rem;
-    color:#fff;
-    
+    color:#fff
 }
+
 .sidebar-brand span{
     display: inline-block;
 }
 .main-content{
     margin-left: 345px;
-   font-size: 20px;
+    font-size: 10px;
 }
 img{
-    width: 180px;
-    border-radius: 50px ! important;
+  width: 180px !important;
+  border-radius: 40% !important;
 }
+
