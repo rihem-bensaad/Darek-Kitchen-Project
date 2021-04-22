@@ -4,7 +4,7 @@ const mysql = require('mysql');
 
 const addAdmin = function(params,callback){
     let syntax = "INSERT INTO admin (userName,email,password) values (?,?,?)"
-    connection.query(syntax,params,(err,result)=>{ 
+    connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })
 }
@@ -52,20 +52,6 @@ connection.query(syntax,params,(err,result)=>{
 })  
 }
 
-const addChef= function(params,callback) {
-    let syntax = "INSERT into chef (firstName,lastName,email,phoneNumber,location,imageCardId) values (?,?,?,?,?,?)"
-    connection.query(syntax,params,(err,result)=>{
-        return err ? callback(err,null) : callback(null,result)
-    })   
-}
-
-const getChef = function(callback) {
-    let syntax ="SELECT * FROM chef"
-    connection.query(syntax,(err,result)=>{
-        return err ? callback(err,null) : callback(null,result)
-    })
-}
-
 module.exports={
     addAdmin,
     adminLogin,
@@ -73,7 +59,5 @@ module.exports={
     deletebrand,
     deleteUser,
     deleteChef,
-    updateBrand,
-    addChef,
-    getChef
+    updateBrand
 }

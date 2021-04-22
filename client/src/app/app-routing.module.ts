@@ -8,9 +8,10 @@ import { ChefSignupComponent } from './components/chef-signup/chef-signup.compon
 import { UserSignupComponent } from './components/user-signup/user-signup.component';
 // import { ServiceInfoComponent } from './components/service-info/service-info.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
-import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AddBrandComponent } from './components/add-brand/add-brand.component';
 import { AuthGuard } from './components/auth.guard';
+
 
 
 
@@ -23,8 +24,13 @@ const routes: Routes = [
 {path:'chefSignup',component:ChefSignupComponent},
 {path:'userSignup',component:UserSignupComponent},
 // {path: 'service', component: ServiceInfoComponent},
+
+
+{ path: 'addBrand', component: AddBrandComponent },
+
 {path: 'admin', component: AdminSignupComponent},
 {path: 'dashboard', component: AdminDashboardComponent , canActivate: [AuthGuard]},
+
 
 ];
 
