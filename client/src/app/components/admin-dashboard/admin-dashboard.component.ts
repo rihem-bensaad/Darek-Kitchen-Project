@@ -55,12 +55,4 @@ export class AdminDashboardComponent implements OnInit {
     console.log("data new" , data);
     this.brandForm.setValue(data)
 }
-  // ChangeInput(event: Event): void {
-  //   var { target } = event
-  //   if (target) {
-  //     if ((target as HTMLButtonElement).id == 'nameEdit') {
-  //       this.brandForm = (target as HTMLButtonElement).value
-  //     }
-  //   }
-  // }
 }
