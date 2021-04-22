@@ -41,19 +41,14 @@ export class AdminDashboardComponent implements OnInit {
     console.log("deleted");
   }
 
-  updateBrand(myID: Number) {
-    console.log("value", this.brandForm.value);
-
-    this.adminService.UpdateBrand(myID, this.brandForm.value)
-
+  updateBrand() {
+    this.adminService.UpdateBrand(this.brandForm.value.ID_brands, this.brandForm.value)
       .subscribe(() => {
         location.reload()
-        // this.router.navigate(['brands'])
       })
-    console.log("updated");
   }
+
   getvalues(data: any) {
-    console.log("data new" , data);
     this.brandForm.setValue(data)
   }
   banBrand() {
