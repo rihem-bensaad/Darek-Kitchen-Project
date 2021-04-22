@@ -47,12 +47,15 @@ export class AdminDashboardComponent implements OnInit {
     this.adminService.UpdateBrand(myID, this.brandForm.value)
 
       .subscribe(() => {
-        this.router.navigate(['brands'])
+        this.router.navigate(['/'])
       })
     console.log("updated");
   }
   getvalues(data: any) {
     console.log("data new" , data);
     this.brandForm.setValue(data)
-}
+  }
+  banBrand() {
+    
+  }
 }

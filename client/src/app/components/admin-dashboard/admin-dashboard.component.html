@@ -101,47 +101,47 @@
     </div>
     </div>
     <div class="card-single" >
-    <div >
-        <h2 >Brands</h2>
-        <span *ngFor="let brand of brands">
-            <h5></h5>
-            <span>{{brand.brandName}}</span>
-            <button class="btn red" (click)="deleteBrand(brand)">Delete</button>
-            <button class="btn green" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)">Update</button>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-body">
-          <form [formGroup]="brandForm" >
-          <input type="text"  value={{brand.brandName}} formControlName="brandName"/>
-          <input type="text" value={{brand.category}} formControlName="category"/>
-          <input type="text" value={{brand.logo}} formControlName="logo"/>
-          <button (click)="updateBrand(brand.ID_brands)">EDIT</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <div class="container">
-  <!-- The Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
+      <div >
+          <h2 >Brands</h2>
+          <span *ngFor="let brand of brands">
+              <h5></h5>
+              <span>{{brand.brandName}}</span>
+              <button class="btn red" (click)="deleteBrand(brand)">Delete</button>
+              <button class="btn green" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)">Update</button>
+              <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <form [formGroup]="brandForm" >
+                        <input type="text"  value={{brand.brandName}} formControlName="brandName"/>
+                        <input type="text" value={{brand.category}} formControlName="category"/>
+                        <input type="text" value={{brand.logo}} formControlName="logo"/>
+                        <button (click)="updateBrand(brand.ID_brands)">EDIT</button>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <div class="container">
+                        <!-- The Modal -->
+                        <div class="modal" id="myModal">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <!-- Modal footer -->
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+              </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </span>
       </div>
-    </div>
-  </div>
-</div>
-        </div>
-      </div>
-    </div>
-  </div>
-        </span>
-    </div>
     </div>
 <div>
     <span class="las la-google-wallet"></span>
