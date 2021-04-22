@@ -2,7 +2,7 @@ const express = require('express');
 const handlers = require('./handlers');
 const app = express();
 const port = 3000;
-
+const helmet = require("helmet");
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const User = require('./routers/UserRouter.js');
@@ -11,6 +11,7 @@ const brand = require('./routers/brandRouter')
 const admin = require('./routers/adminRouter')
 const auth = require('./routers/authRouter')
 app.use(cors());
+app.use(helmet());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.static(__dirname + '/../client/dist/darek-kitchen'));

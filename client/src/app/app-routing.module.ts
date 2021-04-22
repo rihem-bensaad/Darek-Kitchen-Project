@@ -11,6 +11,7 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
 
 
 
+
 const routes: Routes = [
 {path:'',component:HomePageComponent},
 {path:'brands', component: BrandsComponent },
@@ -18,8 +19,10 @@ const routes: Routes = [
 {path:'about',component:AboutComponent},
 {path:'contact',component:ContactComponent},
 {path:'userSignup',component:UserSignupComponent},
-{ path:'dashboard', component: AdminDashboardComponent },
-{ path:'addBrand', component: AddBrandComponent },
+{ path: 'addBrand', component: AddBrandComponent },
+{path: 'dashboard', component: AdminDashboardComponent },
+
+
 ];
 
 @NgModule({

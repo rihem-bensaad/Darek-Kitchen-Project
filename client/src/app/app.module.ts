@@ -10,14 +10,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrandsComponent } from './components/brands/brands.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+
 import { UserSignupComponent } from './components/user-signup/user-signup.component';
+
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
-
 
 
 
