@@ -48,7 +48,7 @@ export class AdminDashboardComponent implements OnInit {
 
       .subscribe(() => {
         location.reload()
-        this.router.navigate(['brands'])
+        // this.router.navigate(['brands'])
       })
     console.log("updated");
   }
