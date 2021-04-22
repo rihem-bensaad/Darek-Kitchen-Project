@@ -10,6 +10,8 @@ import { UserSignupComponent } from './components/user-signup/user-signup.compon
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
+import { AuthGuard } from './components/auth.guard';
+
 
 
 
@@ -22,8 +24,13 @@ const routes: Routes = [
 {path:'chefSignup',component:ChefSignupComponent},
 {path:'userSignup',component:UserSignupComponent},
 // {path: 'service', component: ServiceInfoComponent},
-{ path: 'dashboard', component: AdminDashboardComponent },
+
+
 { path: 'addBrand', component: AddBrandComponent },
+
+{path: 'admin', component: AdminSignupComponent},
+{path: 'dashboard', component: AdminDashboardComponent , canActivate: [AuthGuard]},
+
 
 ];
 

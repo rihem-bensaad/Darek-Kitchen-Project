@@ -18,6 +18,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
+import { AuthGuard } from './components/auth.guard';
 
 
 
@@ -51,7 +52,7 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
     IvyCarouselModule,
 
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
