@@ -1,4 +1,4 @@
-<form [formGroup]="brandForm" >
+<form [formGroup]="brandForm">
     <h2 class="title">ADD BRAND</h2>
     <div class="input-field">
       <label><i></i></label>
@@ -7,14 +7,14 @@
 
     <div class="input-field">
       <label><i></i></label>
-      <input type="text" placeholder="Category" id='Password' formControlName="category"/>
+      <input type="text" placeholder="Category"  formControlName="category"/>
     </div>
 
     <div class="input-field">
-
-      <input type="file" placeholder="Image Logo"  (change)="onFileSelected($event)"/>
+      <input type="file" placeholder="Image Logo"  (change)="onSelect($event)"/>
     </div>
     <button class="btn solid" (click)="addBrand()">Add Brand</button>
+
 
   </form>
 

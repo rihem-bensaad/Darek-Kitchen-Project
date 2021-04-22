@@ -1,11 +1,4 @@
-.nav{
-    width: 100vw;
-    height: 100vh;
-    background-image: url('https://media4.giphy.com/media/l378AwfJ7pqLlRHr2/giphy.gif');
-    background-size: cover;
-    max-width: 100%;
-    overflow: hidden;
-}
+
 
 .container-wrapper {
   min-height: 100vh;
@@ -62,4 +55,16 @@ ul a {
 }
 ul a:hover {
   color: #bc1f49;
+}
+
+p{
+  margin-left: 19%;
+  margin-top: 12%;
+  margin-bottom:-10%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.678) ;
+  font-size: 30px;
+  color: #F7F709;
+  max-width: 60%;
+  font-family: Cervino Regular, Condensed;
 }

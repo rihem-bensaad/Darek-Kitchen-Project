@@ -1,20 +1,8 @@
-/* 
-.card1{
-  width: 30%;
-  height: 40%;
-  margin-top:10%;
-  margin-left:21.3%
-}
-.img{
-  width: 100%;
-  height: 130px
-}
-.checked {
-  color: orange;
-}
- */
+
  .row{
    position: absolute ! important;
+   background-image: url('https://s1.1zoom.me/big0/127/Fast_food_Hamburger_Buns_Vegetables_Meat_products_560830_791x1024.jpg');
+   background-size: cover;
  }
  
  .col-lg-2 {
