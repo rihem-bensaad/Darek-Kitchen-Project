@@ -28,7 +28,8 @@ module.exports.login = (req,res)=>{
               if(result){
                   const token = jwt.sign({
                       email : req.body.email,
-                      userId: req.params.id
+                      userId: req.params.id,
+                      role: "user"
                   }, 'secret', function(err,token){
                       res.status(200).json({
                           message : " authentication sucessful !",

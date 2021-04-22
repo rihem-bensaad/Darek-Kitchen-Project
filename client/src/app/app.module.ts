@@ -16,8 +16,9 @@ import { ServiceInfoComponent } from './components/service-info/service-info.com
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
-import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
+
 
 
 
@@ -34,10 +35,12 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
     UserSignupComponent,
     ServiceInfoComponent,
     UserLoginComponent,
-    AdminSignupComponent,
+    AddBrandComponent,
+    AdminDashboardComponent,
     AddBrandComponent,
 
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -45,7 +48,8 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
     ReactiveFormsModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
