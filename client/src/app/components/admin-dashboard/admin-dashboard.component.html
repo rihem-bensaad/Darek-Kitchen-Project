@@ -1,4 +1,4 @@
-<!-- <div class="dash">
+<div class="dash">
 
 <div class="sidebar">
     <div class="sidebar-brand">
@@ -46,7 +46,7 @@
             <label for="">
                 <span class="las la-bars"></span>
             </label>
-            
+
             Dashboard
         </h2>
 
@@ -58,12 +58,11 @@
         <div class="search-wrapper">
             <img src="https://teleme.io/assets/feature_updates/tg_group_admins.jpg">
         <div>
-        <h4>Nadhem Bacha</h4>
+        <h4>Darekitchen</h4>
         <small>Super admin</small>
     </div>
 </div>
     </header>
-
     <section>
         <div class="cards">
             <div class="card-single">
@@ -75,7 +74,7 @@
                 <span class="las la-users"></span>
         </div>
         </div>
-   
+
         <div class="card-single">
             <div>
                 <h2>79</h2>
@@ -86,7 +85,6 @@
             <span class="las la-clipboard-list"></span>
     </div>
     </div>
-
     <div class="card-single">
         <div>
             <h2>124</h2>
@@ -96,136 +94,58 @@
     <div>
         <span class="las la-shopping-bag"></span>
 </div>
-
-
 <div class="card-single">
     <div>
         <h2>$6K</h2>
         <span>Income</span>
     </div>
     </div>
+    <div class="card-single" >
+    <div >
+        <h2 >Brands</h2>
+        <span *ngFor="let brand of brands">
+            <h5></h5>
+            <span>{{brand.brandName}}</span>
+            <button class="btn red" (click)="deleteBrand(brand)">Delete</button>
+            <button class="btn green" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)">Update</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <form [formGroup]="brandForm" >
+          <input type="text"  value={{brand.brandName}} formControlName="brandName"/>
+          <input type="text" value={{brand.category}} formControlName="category"/>
+          <input type="text" value={{brand.logo}} formControlName="logo"/>
+          <button (click)="updateBrand(brand.ID_brands)">EDIT</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <div class="container">
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </span>
+    </div>
+    </div>
 <div>
     <span class="las la-google-wallet"></span>
 </div>
-
     </section>
 </div>
-</div> -->
-
-<div class="container">
-    <section>
-        
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><span class="glyphicon glyphicon-thumbs-up"></span> Admin Dashboard Buttons</h3>
-                    </div>
-                    <div class="panel-body">
-                    
-                        <div class="row">
-                            <div class="col-md-12">
-                            <!-- dblue -->
-                            <a href="#" class="btn btn-dblue btn-lg" role="button"><span class="glyphicon glyphicon-user glyphsize"></span> <br />Add <span class="glyphicon glyphicon-plus green"></span><br />Customer</a>
-                            <a href="#" class="btn btn-dblue btn-lg" role="button"><span class="glyphicon glyphicon-user glyphsize"></span> <br />edit <span class="glyphicon glyphicon-edit yellow"></span><br />Customer</a>
-                            <a href="#" class="btn btn-dblue btn-lg" role="button"><span class="glyphicon glyphicon-user glyphsize"></span> <br />Delete <span class="glyphicon glyphicon-minus red"></span><br />Customer</a>
-                            <a href="#" class="btn btn-dblue btn-lg" role="button"><span class="glyphicon glyphicon-user glyphsize"></span> <br />Customer<br />Marketing <span class="glyphicon glyphicon-envelope"></span></a>
-                            <a href="#" class="btn btn-dblue btn-lg" role="button"><span class="glyphicon glyphicon-user glyphsize"></span> <br />Customer<br />Reporting <span class="glyphicon glyphicon-signal"></span></a>
-                            <a href="#" class="btn btn-dblue btn-lg" role="button"><span class="glyphicon glyphicon-user glyphsize"></span> <br />Customer<br />Database <span class="glyphicon glyphicon-book"></span></a>
-                            <a href="#" class="btn btn-dblue btn-lg" role="button"><span class="glyphicon glyphicon-user glyphsize"></span> <br />Customer<br />Export - CSV <span class="glyphicon glyphicon-export"></span></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                              <!-- dred -->
-                              <a href="#" class="btn btn-dred btn-lg" role="button"><span class="glyphicon glyphicon-calendar glyphsize"></span> <br/>Add <span class="glyphicon glyphicon-plus green"></span><br /> Appointment</a>
-                              <a href="#" class="btn btn-dred btn-lg" role="button"><span class="glyphicon glyphicon-calendar glyphsize"></span> <br />Edit <span class="glyphicon glyphicon-edit yellow"></span><br />Appointment</a>
-                              <a href="#" class="btn btn-dred btn-lg" role="button"><span class="glyphicon glyphicon-calendar glyphsize"></span> <br/>Delete <span class="glyphicon glyphicon-minus red"></span><br /> Appointment</a>
-                              <a href="#" class="btn btn-dred btn-lg" role="button"><span class="glyphicon glyphicon-calendar glyphsize"></span> <br/>View <span class="glyphicon glyphicon-eye-open"></span><br />Diary</a>
-                              <a href="#" class="btn btn-dred btn-lg" role="button"><span class="glyphicon glyphicon-calendar glyphsize"></span> <br/>Manage <br /> Diary</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                              <!-- dgreen -->
-                              <a href="#" class="btn btn-dgreen btn-lg" role="button"><span class="glyphicon glyphicon-signal glyphsize green"></span> <br/>Business<br />Reports </a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                              <!-- mred -->
-                              <a href="#" class="btn btn-mred btn-lg" role="button"><span class="glyphicon glyphicon-envelope glyphsize"></span> <br/>Postage<br />Manager</a>
-                              <a href="#" class="btn btn-mred btn-lg" role="button"><span class="glyphicon glyphicon-home glyphsize"></span> <br/>Postcode<br />Setup</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                              <!-- orange -->
-                              <a href="#" class="btn btn-orange btn-lg" role="button"><span class="glyphicon glyphicon-bullhorn glyphsize"></span> <br/>Announcement<br />Manager</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                              <!-- lblue -->
-                              <a href="#" class="btn btn-lblue btn-lg" role="button"><span class="glyphicon glyphicon-list glyphsize blue"></span> <br /><span class="blue">Category<br />Manager</span></a>
-                              <a href="#" class="btn btn-lblue btn-lg" role="button"><span class="glyphicon glyphicon-list-alt glyphsize blue"></span> <br/><span class="blue">SubCategory<br />Manager</span></a>
-                            </div>
-                        </div>
-                       
-                        <div class="row">
-                            <div class="col-md-12">
-                              <!-- green -->
-                              <a href="#" class="btn btn-green btn-lg" role="button"><span class="glyphicon glyphicon-dashboard glyphsize dgreen"></span> <br /><br />Dashboard</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                              <!-- lime -->
-                              <a href="#" class="btn btn-lime btn-lg" role="button"><span class="glyphicon glyphicon-globe glyphsize dgreen"></span> <span class="dgreen"><br />Website<br />Manager</span></a>
-                              <a href="#" class="btn btn-lime btn-lg" role="button"><span class="glyphicon glyphicon-cog glyphsize dgreen"></span> <span class="dgreen"><br />SEO<br />Setup</span></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                              <!-- mokka -->
-                              <a href="#" class="btn btn-mokka btn-lg" role="button"><span class="glyphicon glyphicon-triangle-right glyphsize green"></span><span class="glyphicon glyphicon-home glyphsize choc"></span> <br />Delivery<br />Setup</a>
-                              <a href="#" class="btn btn-mokka btn-lg" role="button"><span class="glyphicon glyphicon-tasks glyphsize choc"></span> <br />Departments<br />Setup</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                              <!-- dpurple -->
-                              <a href="#" class="btn btn-dpurple btn-lg" role="button"><span class="glyphicon glyphicon-gbp glyphsize lilac"></span> <br/>Payments<br />Manager</a>
-                            </div>
-                        </div>
-                       
-                       
-                        <div class="row">
-                            <div class="col-md-12">
-                              <!-- lilac -->
-                              <a href="#" class="btn btn-lilac btn-lg" role="button"><span class="glyphicon glyphicon-file glyphsize purple"></span> <br/>Product<br />Manager</a>
-                              <a href="#" class="btn btn-lilac btn-lg" role="button"><span class="glyphicon glyphicon-text-width glyphsize"></span> <br/>Product<br />Sizes</a>
-                              <a href="#" class="btn btn-lilac btn-lg" role="button"><span class="glyphicon glyphicon-text-width glyphsize purple"></span> <br/>Sizes<br />Manager</a>
-                              <a href="#" class="btn btn-lilac btn-lg" role="button"><span class="glyphicon glyphicon-th-large glyphsize"></span> <br/>Stock<br />Manager</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                              <!-- yellow -->
-                              <a href="#" class="btn btn-yellow btn-lg" role="button"><span class="glyphicon glyphicon-user glyphsize orange"></span> <br/><span class="orange">User<br />Setup</span></a>
-                              <a href="#" class="btn btn-yellow btn-lg" role="button"><span class="glyphicon glyphicon-question-sign glyphsize orange"></span> <br/><span class="orange">Vaccination<br />Manager</span></a>
-                    
-                            </div>
-                        </div>
-    
-                    </div>
-                    <div class="panel-footer">
-                        <div class="pull-left">Author: Dennis Pattison</div>
-                        <div class="pull-right"><a href="http://www.dinara.co.uk" target="_blank">Dinara Design</a></div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    </div>
+</div>
