@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BrandService } from '../../services/brand.service';
 import { AdminService } from '../../services/admin.service';
+import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
 
 
 
@@ -12,41 +13,54 @@ import { AdminService } from '../../services/admin.service';
 })
 export class AdminDashboardComponent implements OnInit {
   brands: any = [];
-  brandName: string='';
-  category: string='';
-  logo: string = '';
-  ID_brands: Number = 0;
+  brandForm = new FormGroup({
+    ID_brands : new FormControl(''),
+    brandName: new FormControl(''),
+    category: new FormControl(''),
+    logo: new FormControl('')
+   });
 
-  constructor(private brandService: BrandService, private adminService: AdminService,private router: Router) { }
+  values: any = {};
+
+
+  constructor(private brandService: BrandService, private adminService: AdminService, private router: Router) { }
 
   ngOnInit(): void {
     this.getBrands()
   }
-
-  // editBrand(this.brandName, this.category, this.logo) {
-  //   this.brandName = brandName;
-  //   this.category = category;
-  //   this.logo = logo;
-
-  // }
-    getBrands() {
+  getBrands() {
     this.brandService.getbrand().subscribe((data) => {
       this.brands = data
       console.log('data of brands', this.brands);
-      })
+    })
   }
-    deleteBrand(brand: any) {
-      this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
-        this.getBrands()
-      })
-      console.log("deleted");
+  deleteBrand(brand: any) {
+    this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
+      this.getBrands()
+    })
+    console.log("deleted");
   }
 
-  updateBrand() {
-    this.adminService.UpdateBrand(this.ID_brands, this.brandName, this.category, this.logo)
+  updateBrand(myID: Number) {
+    console.log("value", this.brandForm.value);
+
+    this.adminService.UpdateBrand(myID, this.brandForm.value)
+
       .subscribe(() => {
-        this.router.navigate([''])
+        this.router.navigate(['brands'])
       })
-      console.log("updated");
-    }
+    console.log("updated");
+  }
+  getvalues(data: any) {
+    console.log("data new" , data);
+    this.brandForm.setValue(data)
+}
+  // ChangeInput(event: Event): void {
+  //   var { target } = event
+  //   if (target) {
+  //     if ((target as HTMLButtonElement).id == 'nameEdit') {
+  //       this.brandForm = (target as HTMLButtonElement).value
+  //     }
+  //   }
+  // }
 }
