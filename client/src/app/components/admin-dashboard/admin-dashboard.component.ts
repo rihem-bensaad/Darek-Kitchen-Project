@@ -64,8 +64,8 @@ export class AdminDashboardComponent implements OnInit {
     })
   }
    deleteUser(brand: any) {
-    this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
-      this.getBrands()
+    this.adminService.DeleteUser(brand.ID_user).subscribe(() => {
+      this.getusers()
     })
     console.log("deleted");
   }

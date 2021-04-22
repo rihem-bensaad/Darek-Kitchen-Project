@@ -9,10 +9,10 @@ export class UserService {
   constructor(private http: HttpClient) {
   }
   postFrom(data: any) {
-    return this.http.post('http://localhost:3000/user/signup', data)
+    return this.http.post('http://localhost:3000/userr/signup', data)
   }
   login(data:any) {
-    return this.http.post('http://localhost:3000/user/login', data)
+    return this.http.post('http://localhost:3000/userr/login', data)
   }
   getUser() {
     return this.http.get("http://localhost:3000/user/getall")

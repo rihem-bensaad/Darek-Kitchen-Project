@@ -19,5 +19,7 @@ export class AdminService {
    UpdateBrand(ID_brands:Number, brandObj:any) {
      return this.http.put('http://localhost:3000/admin/updatebrand/' + ID_brands, brandObj)
   }
-
+  DeleteUser(ID_user:Number) {
+    return this.http.delete('http://localhost:3000/user/'+ ID_user)
+  }
 }
