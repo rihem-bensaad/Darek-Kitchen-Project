@@ -20,13 +20,14 @@
   
 }
 .sidebar{
-    width: 345px;
+    width: 300px;
     position: fixed;
     left: 0;
     top:0;
     height:100%;
     background: var(--main-color);
-    margin-top: 4%;
+    
+    
 }
 .sidebar-brand{
     height: 90px;
@@ -69,4 +70,60 @@ h5{
   font-family: Arial, Helvetica, sans-serif;
   border-radius:5px !important;
 
+}
+.modal{
+  text-align: center;
+  margin: 8% 50%;
+  width: 100%;
+
+}
+.modalinput1{
+  margin-bottom: 6.5%;
+  margin-top: 3%;
+  margin-left: 3%;
+  margin-right:8%;
+  width:200px;
+  height:35px;
+  font-size: 16px;
+}
+.modalinput2{
+  margin-bottom: 6.5%;
+  margin-top: 3%;
+  margin-left: 3%;
+  margin-right:10%;
+  width:200px;
+  height:35px;
+  font-size: 16px;
+}
+.modalinput3{
+  margin-bottom: 6.5%;
+  margin-top: 3%;
+  margin-left: 7%;
+  margin-right:13%;
+  width:200px;
+  height:35px;
+  font-size: 16px;
+}
+.modalinput{
+  margin-right: 13%;
+}
+.imgmodal{
+  margin-top: 0.5%;
+  width: 200px !important;
+  height:200px !important;
+  border: 1px solid grey ! important;
+}
+label{
+  /* margin-left: 13%; */
+  margin-right: 10%;
+  font-size: 16px;
+  
+}
+.label3{
+  text-align: center;
+  margin-right: 4%;
+}
+.editbtn{
+  width: 200px;
+  height:35px;
 }

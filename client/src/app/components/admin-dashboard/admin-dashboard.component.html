@@ -83,11 +83,17 @@
           <div class="modal-content">
             <div class="modal-body">
               <form [formGroup]="brandForm" >
+                <img src={{brand.logo}} class="imgmodal" formControlName="logo">
+                <div class="modalinput">
+                <label><strong>Logo :</strong></label>
+                <input class="modalinput1" type="text" value={{brand.logo}} formControlName="logo"/><br>
+                <label><strong>Name :</strong></label>
+                <input class="modalinput2" type="text"  value={{brand.brandName}} formControlName="brandName"/><br>
+                <label class="label3"><strong>Category :</strong></label>
+                <input class="modalinput3" type="text" value={{brand.category}} formControlName="category"/>
 
-              <input type="text"  value={{brand.brandName}} formControlName="brandName"/>
-              <input type="text" value={{brand.category}} formControlName="category"/>
-              <input type="text" value={{brand.logo}} formControlName="logo"/>
-              <button (click)="updateBrand()">EDIT</button>
+                </div>
+              <button class="btn red editbtn" (click)="updateBrand()">EDIT</button>
                 
               </form>
             </div>
