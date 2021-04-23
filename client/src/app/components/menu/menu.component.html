@@ -1,0 +1,45 @@
+<section id="our_menu" class="pt-5 pb-5" >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page_title text-center mb-4">
+          <h1>My Menu</h1>
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let menu of menus">
+			<div class="row">
+				<div class="tab-content col-lg-12" id="myTabContent">
+					<div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="single_menu">
+									<img src={{menu.image}} alt="burger">
+									<div class="menu_content">
+										<h4>{{menu.title}}  <span>${{menu.price}}</span></h4>
+                  Add to order
+                    <button>
+                      <!-- <i class="fa fa-bullhorn" aria-hidden="true"></i> -->
+                      <i class="fas fa-shopping-bag"></i></button>
+										<p></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+							<div class="single_menu">
+									<img src={{menu.image}} alt="meat">
+									<div class="menu_content">
+                    <h4>{{menu.title}}  <span>${{menu.price}}</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+</section>
+
+
