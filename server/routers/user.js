@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/user.js')
-const con = require('../config.js');
+const userController = require('../database/controllers/user.js')
+const con = require('../database/config.js');
 
 
 
@@ -11,7 +11,7 @@ router.get('/:id', userController.getuserById);
       
 router.put('/:id', userController.edituser);
 
-router.delete('/:id', userController.deleteuser);
+router.delete('/:ID_user', userController.deleteuser);
        
 
 module.exports = router;
