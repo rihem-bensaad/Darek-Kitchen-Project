@@ -9,6 +9,8 @@ import { UserLoginComponent } from './components/user-login/user-login.component
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
 import { ListUserComponent} from './components/list-user/list-user.component';
+import { GetUserComponent } from './components/get-user/get-user.component';
+import {BrandsAdminComponent } from './components/brands-admin/brands-admin.component'
 
 
 
@@ -23,6 +25,8 @@ const routes: Routes = [
 { path: 'addBrand', component: AddBrandComponent },
 { path: 'dashboard', component: AdminDashboardComponent },
 { path: 'users', component: ListUserComponent},
+{path:'getusers', component : GetUserComponent},
+{path:'getbrands',component: BrandsAdminComponent}
 
 
 ];
