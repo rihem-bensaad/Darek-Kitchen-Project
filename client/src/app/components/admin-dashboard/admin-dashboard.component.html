@@ -43,82 +43,39 @@
 
     <div class="main-content">
         <header>
-            <h2>
-                <label for="">
-                    <span class="las la-bars"></span>
-                </label>
-
-                Dashboard
-            </h2>
-
+            
             <div class="search-wrapper">
-                <span class="las la-search"></span>
-                <input type="search" placeholder="Search here" />
+                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                <input class="search" type="search" placeholder="Search here..." />
             </div>
-
-            <div class="search-wrapper">
-                <img src="https://teleme.io/assets/feature_updates/tg_group_admins.jpg">
+    
+            <!-- <div class="search-wrapper">
+            <img src="https://teleme.io/assets/feature_updates/tg_group_admins.jpg">
             <div>
-            <h4>Darekitchen</h4>
-            <small>Super admin</small>
         </div>
-    </div>
+    </div> -->
         </header>
-        <!-- <main> --><section>
-            <div class="cards">
-                <div class="card-single">
-                    <div>
-                        <h2>54</h2>
-                        <span>Customers</span>
-                    </div>
-                <div>
-                    <span class="las la-users"></span>
+        <div class="card-single" >
+          <div >
+            <h2>Users</h2>
+            <div *ngFor="let user of users">
+                <ul>
+                  <li>
+                    {{user.firstName}}
+                    {{user.lastName}}
+                  </li>
+                  <button class="btn red" (click)="deleteUser(user)">delete</button>
+                </ul>
             </div>
-            </div>
-
-            <div class="card-single">
-                <div>
-                    <h2>79</h2>
-                    <span>Projects</span>
-                </div>
-            </div>
-            <div>
-                <span class="las la-clipboard-list"></span>
-        </div>
-        </div>
-        <div class="card-single">
-            <div>
-                <h2>124</h2>
-                <span>Orders</span>
-            </div>
-            </div>
-        <div>
-            <span class="las la-shopping-bag"></span>
-    </div>
-    <div class="card-single">
-        <div>
-            <h2>$6K</h2>
-            <span>Income</span>
-        </div>
-        </div>
+        
+        <h2 >Brands</h2>
         <div class="card-single" >
         <div >
-          <h2>Users</h2>
-          <div *ngFor="let user of users">
-              <ul>
-                <li>
-                  {{user.firstName}}
-                  {{user.lastName}}
-                  <button class="btn red" (click)="deleteUser(user)">delete</button>
-                </li>
-              </ul>
-          </div>
-            <h2 >Brands</h2>
             <span *ngFor="let brand of brands">
-                <h5></h5>
-                <span>{{brand.brandName}}</span>
-                <button class="btn red" (click)="deleteBrand(brand)">Delete</button>
+                <h5>-{{brand.brandName}}-</h5>
+                <img src={{brand.logo}}>
                 <button class="btn green" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)" >Update</button>
+                <button class="btn red" (click)="deleteBrand(brand)">Delete</button>
       <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -159,6 +116,7 @@
     <div>
         <span class="las la-google-wallet"></span>
     </div>
-        <!-- </main> --></section>
+     
     </div>
     </div>
+    

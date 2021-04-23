@@ -43,6 +43,7 @@ export class AdminDashboardComponent implements OnInit {
     this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
       this.getBrands()
     })
+    
     console.log("deleted");
   }
 
@@ -50,6 +51,7 @@ export class AdminDashboardComponent implements OnInit {
     console.log("myId", this.brandForm);
 
     this.adminService.UpdateBrand(this.brandForm.value.ID_brands, this.brandForm.value)
+
       .subscribe(() => {
         location.reload()
       })
