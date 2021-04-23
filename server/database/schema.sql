@@ -24,7 +24,7 @@ CREATE TABLE brands (
 CREATE TABLE menu (
     ID_menu INT AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
-    FoodImage VARCHAR(255) NOT NULL,
+    image VARCHAR(255) NOT NULL,
     price INT NOT NULL,
     ID_brands INT,
     PRIMARY KEY (ID_menu),
