@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import jwt_decode from "jwt-decode";
 
 @Component({
   selector: 'app-navbar',
+  changeDetection : ChangeDetectionStrategy.Default ,
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
@@ -16,7 +17,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
 setInterval(()=>{
   this.role()
-},1000)
+},300)
   }
   DecodeToken(token: string): any {
       return jwt_decode(token);    
