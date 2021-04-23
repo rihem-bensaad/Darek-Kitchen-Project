@@ -5,7 +5,7 @@
         <div class="sidebar-brand">
             <h2><span class="las la-utensils"></span>Darek-Kitchen</h2>
         </div>
-    
+
         <div class="sidebar-menu">
             <ul>
                 <li>
@@ -39,8 +39,8 @@
             </ul>
         </div>
     </div>
-    
-    
+
+
     <div class="main-content">
         <header>
             
@@ -55,6 +55,18 @@
         </div>
     </div> -->
         </header>
+        <div class="card-single" >
+          <div >
+            <h2>Users</h2>
+            <div *ngFor="let user of users">
+                <ul>
+                  <li>
+                    {{user.firstName}}
+                    {{user.lastName}}
+                  </li>
+                  <button class="btn red" (click)="deleteUser(user)">delete</button>
+                </ul>
+            </div>
         
         <h2 >Brands</h2>
         <div class="card-single" >
@@ -71,10 +83,12 @@
           <div class="modal-content">
             <div class="modal-body">
               <form [formGroup]="brandForm" >
+
               <input type="text"  value={{brand.brandName}} formControlName="brandName"/>
               <input type="text" value={{brand.category}} formControlName="category"/>
               <input type="text" value={{brand.logo}} formControlName="logo"/>
               <button (click)="updateBrand()">EDIT</button>
+                
               </form>
             </div>
             <div class="modal-footer">
@@ -105,3 +119,4 @@
      
     </div>
     </div>
+    
