@@ -5,7 +5,7 @@
         <div class="sidebar-brand">
             <h2><span class="las la-utensils"></span>Darek-Kitchen</h2>
         </div>
-    
+
         <div class="sidebar-menu">
             <ul>
                 <li>
@@ -39,23 +39,23 @@
             </ul>
         </div>
     </div>
-    
-    
+
+
     <div class="main-content">
         <header>
             <h2>
                 <label for="">
                     <span class="las la-bars"></span>
                 </label>
-    
+
                 Dashboard
             </h2>
-    
+
             <div class="search-wrapper">
                 <span class="las la-search"></span>
                 <input type="search" placeholder="Search here" />
             </div>
-    
+
             <div class="search-wrapper">
                 <img src="https://teleme.io/assets/feature_updates/tg_group_admins.jpg">
             <div>
@@ -75,7 +75,7 @@
                     <span class="las la-users"></span>
             </div>
             </div>
-    
+
             <div class="card-single">
                 <div>
                     <h2>79</h2>
@@ -103,6 +103,16 @@
         </div>
         <div class="card-single" >
         <div >
+          <h2>Users</h2>
+          <div *ngFor="let user of users">
+              <ul>
+                <li>
+                  {{user.firstName}}
+                  {{user.lastName}}
+                  <button class="btn red" (click)="deleteUser(user)">delete</button>
+                </li>
+              </ul>
+          </div>
             <h2 >Brands</h2>
             <span *ngFor="let brand of brands">
                 <h5></h5>
@@ -116,10 +126,12 @@
           <div class="modal-content">
             <div class="modal-body">
               <form [formGroup]="brandForm" >
+
               <input type="text"  value={{brand.brandName}} formControlName="brandName"/>
               <input type="text" value={{brand.category}} formControlName="category"/>
               <input type="text" value={{brand.logo}} formControlName="logo"/>
               <button (click)="updateBrand()">EDIT</button>
+                
               </form>
             </div>
             <div class="modal-footer">

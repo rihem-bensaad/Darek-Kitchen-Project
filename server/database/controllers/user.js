@@ -37,12 +37,13 @@ module.exports.getuserById = function (req, res) {
 }
 
 module.exports.deleteuser = function(req,res) { 
-  const sql = 'DELETE FROM user WHERE id=?'
-        con.query(sql, [req.params.id],function(err, result) {
+  const sql = 'DELETE FROM user WHERE ID_user=?'
+        con.query(sql, [req.params.ID_user],function(err, result) {
           if (err) {
             console.error(err);
           } else {
             res.send(result);
           }
         })
-      }
+}
+      
