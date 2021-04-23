@@ -38,17 +38,17 @@ export class AdminDashboardComponent implements OnInit {
     this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
       this.getBrands()
     })
+    
     console.log("deleted");
   }
 
-  updateBrand(myID: Number) {
-    console.log("value", this.brandForm.value);
+  updateBrand() {
+    console.log("myId", this.brandForm);
 
-    this.adminService.UpdateBrand(myID, this.brandForm.value)
+    this.adminService.UpdateBrand(this.brandForm.value.ID_brands, this.brandForm.value)
 
       .subscribe(() => {
         location.reload()
-        // this.router.navigate(['brands'])
       })
     console.log("updated");
   }
