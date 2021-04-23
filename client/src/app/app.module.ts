@@ -20,6 +20,7 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { AddMenuComponent } from './components/add-menu/add-menu.component';
 
 
 
@@ -39,6 +40,7 @@ import { MenuComponent } from './components/menu/menu.component';
     AddBrandComponent,
     ListUserComponent,
     MenuComponent,
+    AddMenuComponent,
 
   ],
 

@@ -15,8 +15,7 @@ export class MenuService {
   getmenu() {
     return this.http.get("http://localhost:3000/menu/get")
   }
-  postbrand(menuObject: any) {
+  postmenu(menuObject: any) {
     return this.http.post("http://localhost:3000/menu/post", menuObject)
   }
-
 }
