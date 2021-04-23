@@ -126,10 +126,12 @@
           <div class="modal-content">
             <div class="modal-body">
               <form [formGroup]="brandForm" >
-                <input type="text"  value={{brand.brandName}} formControlName="brandName"/>
-                <input type="text" value={{brand.category}} formControlName="category"/>
-                <input type="text" value={{brand.logo}} formControlName="logo"/>
-                <button (click)="updateBrand()">EDIT</button>
+
+              <input type="text"  value={{brand.brandName}} formControlName="brandName"/>
+              <input type="text" value={{brand.category}} formControlName="category"/>
+              <input type="text" value={{brand.logo}} formControlName="logo"/>
+              <button (click)="updateBrand()">EDIT</button>
+                
               </form>
             </div>
             <div class="modal-footer">
