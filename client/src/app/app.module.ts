@@ -21,6 +21,8 @@ import { AddBrandComponent } from './components/add-brand/add-brand.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { AddMenuComponent } from './components/add-menu/add-menu.component';
+import { GetUserComponent } from './components/get-user/get-user.component';
+import { BrandsAdminComponent } from './components/brands-admin/brands-admin.component';
 
 
 
@@ -41,6 +43,8 @@ import { AddMenuComponent } from './components/add-menu/add-menu.component';
     ListUserComponent,
     MenuComponent,
     AddMenuComponent,
+    GetUserComponent,
+    BrandsAdminComponent,
 
   ],
 

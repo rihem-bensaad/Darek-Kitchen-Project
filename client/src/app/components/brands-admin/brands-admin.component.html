@@ -13,11 +13,11 @@
                     <span>Dashboard</span></a>
                 </li>
                 <li >
-                    <a  href="/getusers"  ><span class="las la-users" (click)="showMyContainer=!showMyContainer" ></span>
+                    <a  href="/getusers"  ><span class="las la-users" ></span>
                     <span>My Users</span></a>
                 </li>
                 <li>
-                    <a href="/getbrands"><span class="las la-clipboard-list"></span>
+                    <a href=""><span class="las la-clipboard-list"></span>
                     <span>Brands</span></a>
                 </li>
                 <li>
@@ -43,12 +43,12 @@
 
     <div class="main-content">
         <header>
-
+            
             <div class="search-wrapper">
                 <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                 <input class="search" type="search" placeholder="Search here..." />
             </div>
-
+    
             <!-- <div class="search-wrapper">
             <img src="https://teleme.io/assets/feature_updates/tg_group_admins.jpg">
             <div>
@@ -68,25 +68,20 @@
                   <button class="btn red" (click)="deleteUser(user)">delete</button>
                 </ul>
             </div>
-<<<<<<< HEAD
-
-        <h2 >Brands</h2>
-=======
           </div> -->
         
-        <!-- <h2 >Brands</h2> -->
->>>>>>> 91732087f3f3396dac74ee6f1b6607330e069bdc
+        <h2 >Brands</h2>
         <div class="card-single" >
-        <!-- <div > -->
-            <!-- <span *ngFor="let brand of brands">
+        <div >
+            <span *ngFor="let brand of brands">
                 <h5>-{{brand.brandName}}-</h5>
                 <img src={{brand.logo}}>
                 <button class="btn green" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)" >Update</button>
                 <button class="btn red" (click)="deleteBrand(brand)">Delete</button>
-       
+      <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
-          
+          <!-- Modal content-->
           <div class="modal-content">
             <div class="modal-body">
               <form [formGroup]="brandForm" >
@@ -95,17 +90,17 @@
               <input type="text" value={{brand.category}} formControlName="category"/>
               <input type="text" value={{brand.logo}} formControlName="logo"/>
               <button (click)="updateBrand()">EDIT</button>
-
+                
               </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               <div class="container">
-      <!-- The Modal 
+      <!-- The Modal -->
       <div class="modal" id="myModal">
         <div class="modal-dialog">
           <div class="modal-content">
-            <!-- Modal footer
+            <!-- Modal footer -->
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
@@ -118,12 +113,12 @@
         </div>
       </div>
             </span>
-        </div> -->
+        </div>
         </div>
     <div>
         <span class="las la-google-wallet"></span>
     </div>
-
+     
     </div>
     </div>
-
+    
