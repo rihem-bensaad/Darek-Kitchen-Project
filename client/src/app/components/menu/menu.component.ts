@@ -1,0 +1,22 @@
+import { Component, OnInit } from '@angular/core';
+import { MenuService } from '../../services/menu.service';
+
+@Component({
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css']
+})
+export class MenuComponent implements OnInit {
+menus: any = [];
+  constructor(private menuService: MenuService) { }
+
+  ngOnInit(): void {
+     this.getMenus()
+  }
+ getMenus() {
+    this.menuService.getmenu().subscribe((data) => {
+      this.menus = data
+      console.log('data of menus', this.menus);
+    })
+  }
+}

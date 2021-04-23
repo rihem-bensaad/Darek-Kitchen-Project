@@ -5,16 +5,15 @@ import { AdminService } from '../../services/admin.service';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
 import { UserService } from '../../services/user.service';
 
-
 @Component({
-  selector: 'app-admin-dashboard',
-  templateUrl: './admin-dashboard.component.html',
-  styleUrls: ['./admin-dashboard.component.css']
+  selector: 'app-brands-admin',
+  templateUrl: './brands-admin.component.html',
+  styleUrls: ['./brands-admin.component.css']
 })
-export class AdminDashboardComponent implements OnInit {
-  users: any = [];
+export class BrandsAdminComponent implements OnInit {
 
   brands: any = [];
+  
   brandForm = new FormGroup({
     ID_brands : new FormControl(''),
     brandName: new FormControl(''),
@@ -23,13 +22,12 @@ export class AdminDashboardComponent implements OnInit {
    });
 
   values: any = {};
-  showMyContainer: boolean = false;
   
-  constructor(private brandService: BrandService, private adminService: AdminService,private userService: UserService, private router: Router) { }
+  constructor(private brandService: BrandService, private adminService: AdminService, private router: Router) { }
 
   ngOnInit(): void {
     this.getBrands()
-    this.getusers()
+
   }
 
   getBrands() {
@@ -43,7 +41,7 @@ export class AdminDashboardComponent implements OnInit {
     this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
       this.getBrands()
     })
-
+    
     console.log("deleted");
   }
 
@@ -59,17 +57,5 @@ export class AdminDashboardComponent implements OnInit {
 
   getvalues(data: any) {
     this.brandForm.setValue(data)
-  }
-
-   getusers() {
-    this.userService.getUser().subscribe((data) => {
-      this.users = data
-    })
-  }
-   deleteUser(brand: any) {
-    this.adminService.DeleteUser(brand.ID_user).subscribe(() => {
-      this.getusers()
-    })
-    console.log("deleted");
   }
 }
