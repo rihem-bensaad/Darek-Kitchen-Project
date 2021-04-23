@@ -135,3 +135,6 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     top: 0;
     left: 0;
 }
+#our_menu{
+  position: absolute;
+}
