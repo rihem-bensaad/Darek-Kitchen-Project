@@ -5,6 +5,8 @@ const port = 3000;
 const helmet = require("helmet");
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const menu = require('./routers/menuRouter.js')
+
 const User = require('./routers/user.js');
 const user = require('./routers/UserRouter.js');
 
@@ -20,6 +22,7 @@ app.use(express.urlencoded({
     extended: false
 }));
 
+app.use('/menu', menu);
 app.use('/admin',admin)
 app.use('/user', User);
 app.use('/userr', user);
