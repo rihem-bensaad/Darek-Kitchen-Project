@@ -33,7 +33,7 @@
         <!--Card image-->
         <div class="view view-cascade overlay waves-light" mdbWavesEffect>
           <a routerLink="menu/{{brand.ID_brands}}">
-          <div class="imgBrand"><mdb-card-img src="{{brand.logo}}" alt="sample photo"></mdb-card-img></div>
+          <div class="imgBrand"><mdb-card-img href="/menu" src="{{brand.logo}}" alt="sample photo"></mdb-card-img></div>
           </a>
           <a>
             <div class="mask rgba-white-slight"></div>
@@ -43,13 +43,13 @@
         <!--Card content-->
         <mdb-card-body  class="text-center">
           <!--Category & Title-->
-          <a href="" class="grey-text">
+          <a href="/menu" class="grey-text">
             <h5>{{brand.category}}</h5>
           </a>
           <mdb-card-title>
             <h4>
               <strong>
-                <a href="">{{brand.brandName}}</a>
+                <a href="/menu">{{brand.brandName}}</a>
               </strong>
             </h4>
           </mdb-card-title>
