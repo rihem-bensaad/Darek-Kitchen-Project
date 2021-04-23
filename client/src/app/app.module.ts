@@ -19,6 +19,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 
@@ -37,6 +38,7 @@ import { ListUserComponent } from './components/list-user/list-user.component';
     AdminDashboardComponent,
     AddBrandComponent,
     ListUserComponent,
+    MenuComponent,
 
   ],
 
