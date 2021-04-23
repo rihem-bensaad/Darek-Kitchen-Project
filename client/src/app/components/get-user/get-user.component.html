@@ -18,55 +18,61 @@
                 <a href="/getbrands"><span class="las la-clipboard-list"></span>
                 <span>Update Brands</span></a>
             </li>
-            <li>
-                <a href=""><span><i class="fas fa-shipping-fast"></i></span>
-                <span>Orders</span></a>
-            </li>
-            <li>
-                <a href=""><span class="las la-receipt"></span>
-                <span>Inventory</span></a>
-            </li>
-            <li>
-                <a href=""><span class="las la-circle"></span>
-                <span>Accounts</span></a>
-            </li>
-            <li>
-                <a href=""><span class="las la-clipboard-list"></span>
-                <span>Tasks</span></a>
-            </li>
+
+            <!--Work is loading for those features-->
+
+                <!-- <li>
+                    <a href=""><span><i class="fas fa-shipping-fast"></i></span>
+                    <span>Orders</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-receipt"></span>
+                    <span>Inventory</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-circle"></span>
+                    <span>Accounts</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-clipboard-list"></span>
+                    <span>Tasks</span></a>
+                </li> -->
         </ul>
     </div>
 </div>
-
-
 
 <div class="main-content">
   <header>
       
       <div class="search-wrapper">
-          <i class="fa fa-search fa-lg" aria-hidden="true"></i>
-          <input class="search" type="search" placeholder="Search here..." />
+          <!-- <i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i> -->
+          <input class="search" type="search" placeholder="Type here to search..." />
       </div>
 
-      <!-- <div class="search-wrapper">
-      <img src="https://teleme.io/assets/feature_updates/tg_group_admins.jpg">
-      <div>
-  </div>
-</div> -->
   </header>
-  <div class="card-single" >
-    <div > 
-      <div >
-      <h2>Users</h2>
-      <div *ngFor="let user of users">
-          <ul>
-            <li>
-              {{user.firstName}}
-              {{user.lastName}}
-            </li>
-            <button class="btn red" (click)="deleteUser(user)">delete</button>
-          </ul>
-      </div>
+  
+  <div class="row">
+    
+    <table class="table">
+        <tr>
+        <th><i class="fa fa-user fa-lg" aria-hidden="true"></i><strong>First Name</strong> </th>
+        <th><i class="fas fa-user-circle fa-lg"></i><strong>Last Name</strong> </th>
+        <th><i class="fas fa-envelope fa-lg"></i><strong>Email</strong> </th>
+        <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
+        <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
+    </tr>
+
+    <tr *ngFor="let user of users">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.location}}</td>
+        <td><button id="deletebtn" class="btn red" (click)="deleteUser(user)">delete</button></td>
+      </tr>
+    </table>
+</div>
+
+  
 <div>
   <span class="las la-google-wallet"></span>
 </div>

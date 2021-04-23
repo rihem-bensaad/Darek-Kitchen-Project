@@ -20,64 +20,61 @@
                 <a href="/getbrands"><span class="las la-clipboard-list"></span>
                 <span>Update Brands</span></a>
             </li>
-            <li>
-                <a href=""><span><i class="fas fa-shipping-fast"></i></span>
-                <span>Orders</span></a>
-            </li>
-            <li>
-                <a href=""><span class="las la-receipt"></span>
-                <span>Inventory</span></a>
-            </li>
-            <li>
-                <a href=""><span class="las la-circle"></span>
-                <span>Accounts</span></a>
-            </li>
-            <li>
-                <a href=""><span class="las la-clipboard-list"></span>
-                <span>Tasks</span></a>
-            </li>
+            
+            <!--Work is loading for those features-->
+
+                <!-- <li>
+                    <a href=""><span><i class="fas fa-shipping-fast"></i></span>
+                    <span>Orders</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-receipt"></span>
+                    <span>Inventory</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-circle"></span>
+                    <span>Accounts</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-clipboard-list"></span>
+                    <span>Tasks</span></a>
+                </li> -->
         </ul>
+      </div>
     </div>
-</div>
 
 
     <div class="main-content">
         <header>
             
-            <div class="search-wrapper">
-                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
-                <input class="search" type="search" placeholder="Search here..." />
-            </div>
-    
-            <!-- <div class="search-wrapper">
-            <img src="https://teleme.io/assets/feature_updates/tg_group_admins.jpg">
-            <div>
+          <div class="search-wrapper">
+            <!-- <i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i> -->
+            <input class="search" type="search" placeholder="Type here to search..." />
         </div>
-    </div> -->
+    
+
         </header>
-        <!-- <div class="card-single" >
-          <div > 
-            <div *ngIf="showMyContainer">
-            <h2>Users</h2>
-            <div *ngFor="let user of users">
-                <ul>
-                  <li>
-                    {{user.firstName}}
-                    {{user.lastName}}
-                  </li>
-                  <button class="btn red" (click)="deleteUser(user)">delete</button>
-                </ul>
-            </div>
-          </div> -->
-        
-        <h2 >Brands</h2>
+
         <div class="card-single" >
-        <div >
-            <span *ngFor="let brand of brands">
-                <h5>-{{brand.brandName}}-</h5>
-                <img src={{brand.logo}}>
-                <button class="btn green" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)" >Update</button>
-                <button class="btn red" (click)="deleteBrand(brand)">Delete</button>
+          <div class="row">
+    
+            <table class="table">
+                <tr>
+                <th><i class="far fa-copyright fa-lg"></i><strong>Brand Name</strong> </th>
+                <th><i class="fas fa-utensils fa-lg"></i><strong>Category</strong> </th>
+                <th><i class="far fa-images fa-lg"></i><strong>Brand Logo</strong> </th>
+                <th><i class="fas fa-edit fa-lg udatebtn"></i><strong>Update</strong> </th>
+                <th><i id="deleteicon" class="fas fa-minus-circle fa-lg deletebtn"></i><strong>Delete</strong> </th>
+            </tr>
+        
+            <tr *ngFor="let brand of brands">
+                <td>{{brand.brandName}}</td>
+                <td>{{brand.category}}</td>
+                <td><img src={{brand.logo}}></td>
+                <td><button class="btn green" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)">Update</button></td>
+                <td><button class="btn red" (click)="deleteBrand(brand)">Delete</button></td>
+                
+    
       <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -106,10 +103,8 @@
       <div class="modal" id="myModal">
         <div class="modal-dialog">
           <div class="modal-content">
-            <!-- Modal footer -->
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
+         
+           
           </div>
         </div>
       </div>
@@ -118,7 +113,9 @@
           </div>
         </div>
       </div>
-            </span>
+    </tr>
+  </table>
+            
         </div>
         </div>
     <div>
@@ -127,4 +124,4 @@
      
     </div>
     </div>
-    
+ 
