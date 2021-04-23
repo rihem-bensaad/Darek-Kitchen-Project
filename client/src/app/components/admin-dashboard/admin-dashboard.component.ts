@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { BrandService } from '../../services/brand.service';
 import { AdminService } from '../../services/admin.service';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
-
+import { UserService } from '../../services/user.service';
 
 
 @Component({
@@ -12,6 +12,8 @@ import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms'
   styleUrls: ['./admin-dashboard.component.css']
 })
 export class AdminDashboardComponent implements OnInit {
+  users: any = [];
+
   brands: any = [];
   brandForm = new FormGroup({
     ID_brands : new FormControl(''),
@@ -23,37 +25,51 @@ export class AdminDashboardComponent implements OnInit {
   values: any = {};
 
 
-  constructor(private brandService: BrandService, private adminService: AdminService, private router: Router) { }
+  constructor(private brandService: BrandService, private adminService: AdminService,private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.getBrands()
+    this.getusers()
   }
+
   getBrands() {
     this.brandService.getbrand().subscribe((data) => {
       this.brands = data
       console.log('data of brands', this.brands);
     })
   }
+
   deleteBrand(brand: any) {
     this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
       this.getBrands()
     })
+    
     console.log("deleted");
   }
 
-  updateBrand(myID: Number) {
-    console.log("value", this.brandForm.value);
+  updateBrand() {
+    console.log("myId", this.brandForm);
 
-    this.adminService.UpdateBrand(myID, this.brandForm.value)
+    this.adminService.UpdateBrand(this.brandForm.value.ID_brands, this.brandForm.value)
 
       .subscribe(() => {
         location.reload()
-        // this.router.navigate(['brands'])
       })
-    console.log("updated");
   }
+
   getvalues(data: any) {
-    console.log("data new" , data);
     this.brandForm.setValue(data)
-}
+  }
+
+   getusers() {
+    this.userService.getUser().subscribe((data) => {
+      this.users = data
+    })
+  }
+   deleteUser(brand: any) {
+    this.adminService.DeleteUser(brand.ID_user).subscribe(() => {
+      this.getusers()
+    })
+    console.log("deleted");
+  }
 }
