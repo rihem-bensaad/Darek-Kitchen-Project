@@ -21,3 +21,8 @@
   min-height: 160px;
   
 }
+
+.imgBrand{
+  width: 100% ! important;
+  height: 60px ! important;
+}

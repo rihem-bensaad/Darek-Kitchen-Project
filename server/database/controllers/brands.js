@@ -14,7 +14,7 @@ const postBrands = function(params,callback){
     })
 }
 
-module.exports ={
+module.exports = {
     postBrands,
     getBrands
 }

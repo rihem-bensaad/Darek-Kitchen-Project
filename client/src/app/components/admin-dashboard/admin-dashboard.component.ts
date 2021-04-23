@@ -6,7 +6,6 @@ import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms'
 import { UserService } from '../../services/user.service';
 
 
-
 @Component({
   selector: 'app-admin-dashboard',
   templateUrl: './admin-dashboard.component.html',
@@ -44,11 +43,15 @@ export class AdminDashboardComponent implements OnInit {
     this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
       this.getBrands()
     })
+    
     console.log("deleted");
   }
 
   updateBrand() {
+    console.log("myId", this.brandForm);
+
     this.adminService.UpdateBrand(this.brandForm.value.ID_brands, this.brandForm.value)
+
       .subscribe(() => {
         location.reload()
       })
