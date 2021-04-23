@@ -17,8 +17,8 @@
                     <span>Customers</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-clipboard-list"></span>
-                    <span>Projects</span></a>
+                    <a href="" routerLink="/brands"><span class="las la-clipboard-list"></span>
+                    <span>Update Brands</span></a>
                 </li>
                 <li>
                     <a href=""><span class="las la-shipping-bag"></span>
@@ -83,7 +83,7 @@
           <div class="modal-content">
             <div class="modal-body">
               <form [formGroup]="brandForm" >
-                <img src={{brand.logo}} class="imgmodal" formControlName="logo">
+                <img src={{brand.logo}} class="imgmodal" formControlName="logo"   >
                 <div class="modalinput">
                 <label><strong>Logo :</strong></label>
                 <input class="modalinput1" type="text" value={{brand.logo}} formControlName="logo"/><br>
