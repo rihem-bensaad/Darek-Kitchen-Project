@@ -3,7 +3,7 @@ const router = express.Router();
 const handler = require('../handlers')
 
 
-router.route('/menu').post(handler.menu.postmenu);
+router.route('/post').post(handler.menu.postmenu);
 
 
 

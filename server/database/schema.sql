@@ -15,7 +15,7 @@ CREATE TABLE chef (
 );
 
 CREATE TABLE brands (
-    ID_brand INT AUTO_INCREMENT PRIMARY KEY,
+    ID_brands INT AUTO_INCREMENT PRIMARY KEY,
     brandName VARCHAR(255) NOT NULL,
     category VARCHAR(255) NOT NULL,
     logo VARCHAR(255) NOT NULL
@@ -122,7 +122,7 @@ INSERT INTO brands ( brandName,category,logo) values ("Juice Fountain","Sweaty F
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,10);
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,10);
 -- -- Chocolatine
--- INSERT INTO menu (title, image, price, ID_brands) values ("Chantilly  "", 9 ,11);
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Chantilly  "", 9,11);
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
