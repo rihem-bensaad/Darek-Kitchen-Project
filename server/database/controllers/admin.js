@@ -46,7 +46,7 @@ const deleteChef = function(params,id,callback){
 }
 
 const updateBrand = function(params,id,callback){
-let syntax =`UPDATE brands SET brandName=?,category=?,logo=? WHERE ID_brands=${id}`
+let syntax =`UPDATE brands SET brandName=?,category=?, logo=? WHERE ID_brands=${id}`
 connection.query(syntax,params,(err,result)=>{
     return err ? callback(err,null) : callback(null,result)
 })  

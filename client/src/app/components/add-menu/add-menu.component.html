@@ -1,0 +1,20 @@
+<form [formGroup]="menuForm">
+
+    <h2 class="title">ADD Menu</h2>
+
+    <div class="input-field">
+        <input type="text" placeholder="Menu Title"  formControlName="title"/>
+    </div>
+
+    <div class="input-field">
+      <input type="text" placeholder="Image Menu"  formControlName="image"/>
+    </div>
+
+    <div class="input-field">
+      <input type="text" placeholder="Price Menu"  formControlName="price"/>
+    </div>
+
+    <button class="btn solid" (click)="addMenu()">Add Menu</button>
+
+  </form>
+
