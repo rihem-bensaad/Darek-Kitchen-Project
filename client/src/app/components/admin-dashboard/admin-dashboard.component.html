@@ -3,13 +3,13 @@
 
     <div class="sidebar">
         <div class="sidebar-brand">
-            <h2><span class="las la-utensils"></span>Darek-Kitchen</h2>
+            <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
         </div>
 
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href=""><span class="las la-igloo"></span>
+                    <a href="/dashboard"><span class="las la-igloo"></span>
                     <span>Dashboard</span></a>
                 </li>
                 <li >
@@ -18,10 +18,13 @@
                 </li>
                 <li>
                     <a href="/getbrands"><span class="las la-clipboard-list"></span>
-                    <span>Brands</span></a>
+                    <span>Update Brands</span></a>
                 </li>
-                <li>
-                    <a href=""><span class="las la-shipping-bag"></span>
+
+                <!--Work is loading for those features-->
+
+                <!-- <li>
+                    <a href=""><span><i class="fas fa-shipping-fast"></i></span>
                     <span>Orders</span></a>
                 </li>
                 <li>
@@ -35,7 +38,7 @@
                 <li>
                     <a href=""><span class="las la-clipboard-list"></span>
                     <span>Tasks</span></a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
@@ -43,82 +46,40 @@
 
     <div class="main-content">
         <header>
-            
-            <div class="search-wrapper">
-                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
-                <input class="search" type="search" placeholder="Search here..." />
-            </div>
-    
-            <!-- <div class="search-wrapper">
-            <img src="https://teleme.io/assets/feature_updates/tg_group_admins.jpg">
-            <div>
-        </div>
-    </div> -->
-        </header>
-        <!-- <div class="card-single" >
-          <div > 
-            <div *ngIf="showMyContainer">
-            <h2>Users</h2>
-            <div *ngFor="let user of users">
-                <ul>
-                  <li>
-                    {{user.firstName}}
-                    {{user.lastName}}
-                  </li>
-                  <button class="btn red" (click)="deleteUser(user)">delete</button>
-                </ul>
-            </div>
-          </div> -->
-        
-        <!-- <h2 >Brands</h2> -->
-        <div class="card-single" >
-        <!-- <div > -->
-            <!-- <span *ngFor="let brand of brands">
-                <h5>-{{brand.brandName}}-</h5>
-                <img src={{brand.logo}}>
-                <button class="btn green" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)" >Update</button>
-                <button class="btn red" (click)="deleteBrand(brand)">Delete</button>
-       
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-          
-          <div class="modal-content">
-            <div class="modal-body">
-              <form [formGroup]="brandForm" >
 
-              <input type="text"  value={{brand.brandName}} formControlName="brandName"/>
-              <input type="text" value={{brand.category}} formControlName="category"/>
-              <input type="text" value={{brand.logo}} formControlName="logo"/>
-              <button (click)="updateBrand()">EDIT</button>
-                
-              </form>
+
+        <div class="card-single" >
+          <div class="panel-body">
+            <div class="col-md">
+              <div class="well dash-box">
+                <h2><span><i class="fas fa-users lg-fa"></i></span> 203</h2>
+                <h4>Users</h4>
+              </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <div class="container">
-      <!-- The Modal 
-      <div class="modal" id="myModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <!-- Modal footer
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <div class="col-md">
+              <div class="well dash-box">
+                <h2><span><i class="fas fa-utensils lg-fa"></i></span> 12</h2>
+                <h4>Category</h4>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="well dash-box">
+                <h2><span><i class="fas fa-copyright lg-fa"></i></span>33</h2>
+                <h4>Brands</h4>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="well dash-box">
+                <h2><span><i class="fas fa-shipping-fast "></i></span> 12,334</h2>
+                <h4>Orders</h4>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-            </div>
-          </div>
-        </div>
-      </div>
-            </span>
-        </div> -->
+        
         </div>
     <div>
         <span class="las la-google-wallet"></span>
     </div>
-     
-    </div>
-    </div>
-    
+
+ 
+
