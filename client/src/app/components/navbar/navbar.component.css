@@ -8,6 +8,10 @@
     background-size: cover;
 
   }
+
+  .nav-logo{
+    width: 78px;
+  }
   .carousel-caption {
     bottom: 270px;
   }

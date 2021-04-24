@@ -23,7 +23,7 @@
 -->
 
 <div class="myrow">
-  
+
   <!--Grid row-->
   <div class="row">
     <!--Grid column-->
@@ -32,7 +32,9 @@
       <mdb-card  class="card-ecommerce">
         <!--Card image-->
         <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-          <div class="imgBrand"><mdb-card-img src="{{brand.logo}}" alt="sample photo"></mdb-card-img></div>
+        
+          <div class="imgBrand" ><mdb-card-img src="{{brand.logo}}" alt="sample photo" ></mdb-card-img></div>
+        
           <a>
             <div class="mask rgba-white-slight"></div>
           </a>
@@ -41,13 +43,13 @@
         <!--Card content-->
         <mdb-card-body  class="text-center">
           <!--Category & Title-->
-          <a href="" class="grey-text">
-            <h5>{{brand.category}}</h5>
-          </a>
+          
+            <h6>{{brand.category}}</h6>
+          
           <mdb-card-title>
             <h4>
               <strong>
-                <a href="">{{brand.brandName}}</a>
+                <a href="/menu">{{brand.brandName}}</a>
               </strong>
             </h4>
           </mdb-card-title>
@@ -76,7 +78,7 @@
           <!--Card footer-->
           <mdb-card-footer>
             <span class="float-left font-weight-bold">
-          
+
             </span>
             <span class="float-right">
               <a data-toggle="tooltip" data-placement="top" title="Add to Cart">
