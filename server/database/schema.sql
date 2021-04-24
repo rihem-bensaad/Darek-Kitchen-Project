@@ -74,10 +74,10 @@ INSERT INTO brands ( brandName,category,logo) values ("Food Express","Healthy Fo
 INSERT INTO brands ( brandName,category,logo) values ("Foundation","Healthy Food","https://i.pinimg.com/236x/ac/56/bc/ac56bca76efa388b7b6f01dbe5d900cb--coffee-logo-food-logos.jpg");
 
 -- -- Dar Zmen
--- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous T "", r aditionel",9,1) ;
--- INSERT INTO menu (title, image, price, ID_brands) values ("Ojja au me "", r guez",6,1) ;
--- INSERT INTO menu (title, image, price, ID_brands) values ("Chakchouka "", " ,6,1);
--- INSERT INTO menu (title, image, price, ID_brands) values ("Madfouna", "", 8 ,1);
+INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "",9,1) ;
+INSERT INTO menu (title, image, price, ID_brands) values ("Ojja au me",  "guez",6,1) ;
+INSERT INTO menu (title, image, price, ID_brands) values ("Chakchouka", "",6,1);
+INSERT INTO menu (title, image, price, ID_brands) values ("Madfouna", "", 8 ,1);
 
 -- -- Pates Fait Maison
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Spaguetti  "", C arbonara",7,2);
