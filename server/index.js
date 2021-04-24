@@ -5,12 +5,15 @@ const port = 3000;
 const helmet = require("helmet");
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const menu = require('./routers/menuRouter.js');
+
 const User = require('./routers/user.js');
 const user = require('./routers/UserRouter.js');
 
 const brand = require('./routers/brandRouter')
 const admin = require('./routers/adminRouter')
 const auth = require('./routers/authRouter')
+
 app.use(cors());
 app.use(helmet());
 app.use(cookieParser());
@@ -20,6 +23,7 @@ app.use(express.urlencoded({
     extended: false
 }));
 
+app.use('/menu', menu);
 app.use('/admin',admin)
 app.use('/user', User);
 app.use('/userr', user);
@@ -39,6 +43,8 @@ app.post('/email', (req,res)=>{
         }
     }); 
 });
+
+
 
 app.listen(port, () => {
 console.log(`app listening at http://localhost:${port}`);
