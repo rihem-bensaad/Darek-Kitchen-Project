@@ -72,12 +72,12 @@ form {
 
 .btn {
   width: 120px;
-  background-color: #571d02;
+  background-color: #F7F709;
   border: none;
   outline: none;
   height: 43px;
   border-radius: 5px;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   font-weight: 600;
   margin: 50px 0;
@@ -87,7 +87,7 @@ form {
 }
 
 .btn:hover {
-  background-color:orange;
+  color:white;
 }
 
 input{
@@ -106,7 +106,7 @@ label{
   color: white
 }
 .inputi{
- margin-left:5.2%;
+ margin-left:3.5%;
 }
 
 @media only screen and (max-width: 500px) {
