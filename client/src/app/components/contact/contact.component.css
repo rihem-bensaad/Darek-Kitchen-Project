@@ -156,12 +156,16 @@ form{
 .contactForm .inputBox input[type="submit"]
 {
 	width: 100px;
-	background: #571d02;
-	color: #fff;
+	background: #F7F709;
+	color: black;
 	border: none;
 	cursor: pointer;
 	padding: 10px;
-	font-size: 18px;
+	font-size: 16px;
+}
+.contactForm .inputBox input[type="submit"]:hover
+{
+	background: #fff;
 }
 .content{
 	margin-top: 5%;
