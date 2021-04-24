@@ -26,3 +26,20 @@
   width: 100% ! important;
   height: 60px ! important;
 }
+
+.rating {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+	color: #ddd; /* Personal choice */
+  margin-left: -23%;
+  margin-top: 10%;
+}
+.rating input {
+	display: none;
+}
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked + label,
+.rating input:checked + label ~ label {
+	color: #ffc107; /* Personal color choice. Lifted from Bootstrap 4 */
+}
