@@ -43,3 +43,6 @@
 .rating input:checked + label ~ label {
 	color: #ffc107; /* Personal color choice. Lifted from Bootstrap 4 */
 }
+a{
+  color:#ffc107
+}
