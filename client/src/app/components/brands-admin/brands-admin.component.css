@@ -131,14 +131,22 @@ margin-right: 4%;
 .editbtn{
   width: 200px;
   height:35px;
+  color: white;
+  box-shadow: none !important;
 }
 .btnblack{
-  color: white
+  color: white;
+  box-shadow: none !important;
 }
 .btnyellow{
   background-color:#F7F709;
+  box-shadow: none !important;
 }
 
 .deletebtn{
   color: #F7F709;
+}
+.btncloseblack{
+  color: white;
+  box-shadow: none !important;
 }

@@ -160,4 +160,5 @@ label{
 
 .btnyellow{
   background-color:#F7F709;
+  box-shadow: none !important;
 }
