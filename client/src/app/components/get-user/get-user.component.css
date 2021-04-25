@@ -18,7 +18,7 @@
     position: absolute;
     left: 0;
     top:0;
-    height: 100%;
+    height: 100vh;
     background: #0a0a0afa;
 }
 a{
@@ -84,7 +84,6 @@ height:200px !important;
 border: 1px solid grey ! important;
 }
 label{
-/* margin-left: 13%; */
 margin-right: 10%;
 font-size: 16px;
 }
@@ -125,25 +124,7 @@ margin-right: 4%;
   height:35px;
   font-size: 16px;
 }
-.modalinput{
-  margin-right: 13%;
-}
-.imgmodal{
-  margin-top: 0.5%;
-  width: 200px !important;
-  height:200px !important;
-  border: 1px solid grey ! important;
-}
-label{
-  /* margin-left: 13%; */
-  margin-right: 10%;
-  font-size: 16px;
-  
-}
-.label3{
-  text-align: center;
-  margin-right: 4%;
-}
+
 .editbtn{
   width: 200px;
   height:35px;
