@@ -3,9 +3,6 @@
    width:100%; 
    height:669px;
   background-color: white !important;
-  --main-color: rgba(56, 5, 5, 0.603);
-  --colo-dark: #1D2231;
-  --text-grey: #8390A2;
   position: absolute;
 }
 *{
@@ -40,7 +37,7 @@ span{
 .sidebar-brand{
     margin-right:14%;
     height: 60px;
-    color:#fff;
+    color:#F7F709;
     
 }
 .sidebar-brand span{
@@ -118,7 +115,6 @@ height:200px !important;
 border: 1px solid grey ! important;
 }
 label{
-/* margin-left: 13%; */
 margin-right: 10%;
 font-size: 16px;
 }
@@ -126,31 +122,7 @@ font-size: 16px;
 text-align: center;
 margin-right: 4%;
 }
-.modal{
-  text-align: center;
-  margin: 8% 50%;
-  width: 100%;
-}
 
-.modalinput{
-  margin-right: 13%;
-}
-.imgmodal{
-  margin-top: 0.5%;
-  width: 200px !important;
-  height:200px !important;
-  border: 1px solid grey ! important;
-}
-label{
-  /* margin-left: 13%; */
-  margin-right: 10%;
-  font-size: 16px;
-  
-}
-.label3{
-  text-align: center;
-  margin-right: 4%;
-}
 .editbtn{
   width: 200px;
   height:35px;
