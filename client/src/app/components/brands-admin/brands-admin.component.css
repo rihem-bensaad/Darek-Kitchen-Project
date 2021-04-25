@@ -135,9 +135,13 @@ margin-right: 4%;
   width: 200px;
   height:35px;
 }
-.udatebtn{
-  color:green;
+.btnblack{
+  color: white
 }
+.btnyellow{
+  background-color:#F7F709;
+}
+
 .deletebtn{
-  color: red
+  color: #F7F709;
 }
