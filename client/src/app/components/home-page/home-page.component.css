@@ -42,7 +42,7 @@
     background: #F7F709 ;
     border-color: transparent;
     color: #1F1A1E !important;
-    
+    box-shadow: none !important;
     border-radius: 30px;
 }
 .btn:hover{
