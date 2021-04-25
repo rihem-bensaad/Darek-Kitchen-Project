@@ -85,6 +85,7 @@ form {
   transition: 0.5s;
   margin-left: 68%;
   text-decoration: bold !important;
+  box-shadow: none !important;
 }
 
 .btn:hover {
