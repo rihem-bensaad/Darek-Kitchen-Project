@@ -13,7 +13,7 @@ import { UserService } from '../../services/user.service';
 export class BrandsAdminComponent implements OnInit {
 
   brands: any = [];
-  brandCategory: string = "";//npih
+  brandCategory: string = "";
 
   brandForm = new FormGroup({
     ID_brands : new FormControl(''),

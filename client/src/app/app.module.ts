@@ -18,7 +18,6 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
-import { ListUserComponent } from './components/list-user/list-user.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { AddMenuComponent } from './components/add-menu/add-menu.component';
 import { GetUserComponent } from './components/get-user/get-user.component';
@@ -42,14 +41,12 @@ import { FilterBrandPipe } from './pipes/filter-brand.pipe';
     AddBrandComponent,
     AdminDashboardComponent,
     AddBrandComponent,
-    ListUserComponent,
     MenuComponent,
     AddMenuComponent,
     GetUserComponent,
     BrandsAdminComponent,
     CartComponent,
     FilterBrandPipe,
-
   ],
 
   imports: [
