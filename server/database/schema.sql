@@ -54,14 +54,14 @@ CREATE TABLE user (
 -- Traditional Food
 INSERT INTO brands ( brandName,category,logo) values ("Espace MiMa","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
 INSERT INTO brands ( brandName,category,logo) values ("Fait Maison","Traditional Food","https://im.qccdn.fr/node/decryptage-restauration-que-recouvre-la-mention-fait-maison-64043/original-42267.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("Pirate","Traditional Food","https://www.seekpng.com/png/detail/73-733097_pirate-logo-skull-and-crossbones.png");
+INSERT INTO brands ( brandName,category,logo) values ("EL PRATA","Traditional Food","https://logopond.com/logos/f53415b25befdad90e6636d973bc4eb7.png");
 INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S","Traditional Food","https://pbs.twimg.com/profile_images/702199326383198209/2z5vkEie.png");
 
 -- Homemade Fast Food;
-INSERT INTO brands ( brandName,category,logo) values ("Papy Burger","HomeMade Fast Food","https://static.wixstatic.com/media/0259db_4af9537da28e423093cad7ee262e6032~mv2.png/v1/fit/w_2500,h_1330,al_c/0259db_4af9537da28e423093cad7ee262e6032~mv2.png");
-INSERT INTO brands ( brandName,category,logo) values ("CowBoys","HomeMade Fast Food","https://pbs.twimg.com/profile_images/1372568603501936650/WZ_u6Zsr_400x400.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("Hot doggy dog","HomeMade Fast Food","https://i.pinimg.com/736x/00/ee/8c/00ee8c8f9dcf4d3b1e8587e508b7dc3a.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("Streat House","HomeMade Fast Food","http://lh3.googleusercontent.com/TzGYMcbZ9HWy3zbsuP_yh3uNYapE0ZaeUsEwuE_vzwvSndxxj07CyH3i39wOVp4NumDjXIfVjGDftLi5oc3wh1ZNmjk");
+-- INSERT INTO brands ( brandName,category,logo) values ("Papy Burger","HomeMade Fast Food","https://static.wixstatic.com/media/0259db_4af9537da28e423093cad7ee262e6032~mv2.png/v1/fit/w_2500,h_1330,al_c/0259db_4af9537da28e423093cad7ee262e6032~mv2.png");
+-- INSERT INTO brands ( brandName,category,logo) values ("CowBoys","HomeMade Fast Food","https://pbs.twimg.com/profile_images/1372568603501936650/WZ_u6Zsr_400x400.jpg");
+-- INSERT INTO brands ( brandName,category,logo) values ("Hot doggy dog","HomeMade Fast Food","https://i.pinimg.com/736x/00/ee/8c/00ee8c8f9dcf4d3b1e8587e508b7dc3a.jpg");
+-- INSERT INTO brands ( brandName,category,logo) values ("Streat House","HomeMade Fast Food","http://lh3.googleusercontent.com/TzGYMcbZ9HWy3zbsuP_yh3uNYapE0ZaeUsEwuE_vzwvSndxxj07CyH3i39wOVp4NumDjXIfVjGDftLi5oc3wh1ZNmjk");
 INSERT INTO brands ( brandName,category,logo) values ("Berger Home","HomeMade Fast Food","https://s3.eu-central-1.amazonaws.com/w4ve/box/shops/logo/@3x251648@3x.png");
 INSERT INTO brands ( brandName,category,logo) values ("Holy Chick","HomeMade Fast Food","https://3.bp.blogspot.com/-JcRI6gm4C5Y/WEf5ueBrreI/AAAAAAAAAGI/PsD8Pzmw2PEoUuv4ncKKWjAip4f9zcEPQCLcB/s320/13882647_182398792174241_6209154348795634606_n.jpg");
 -- Sweaty Food
@@ -73,11 +73,11 @@ INSERT INTO brands ( brandName,category,logo) values ("Miss PoP cake","Sweaty Fo
 INSERT INTO brands ( brandName,category,logo) values ("Food Express","Healthy Food","https://dcassetcdn.com/design_img/1889677/191816/191816_10296849_1889677_9e3dc4c9_image.png");
 INSERT INTO brands ( brandName,category,logo) values ("Foundation","Healthy Food","https://i.pinimg.com/236x/ac/56/bc/ac56bca76efa388b7b6f01dbe5d900cb--coffee-logo-food-logos.jpg");
 
--- -- Dar Zmen
-INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "",9,1) ;
-INSERT INTO menu (title, image, price, ID_brands) values ("Ojja au me",  "guez",6,1) ;
-INSERT INTO menu (title, image, price, ID_brands) values ("Chakchouka", "",6,1);
-INSERT INTO menu (title, image, price, ID_brands) values ("Madfouna", "", 8 ,1);
+-- -- Dar zmen
+INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "https://www.196flavors.com/wp-content/uploads/2018/03/couscous-tunisien-1-FP-500x500.jpg",9600, 1) ;
+INSERT INTO menu (title, image, price, ID_brands) values ("Ojja",  "https://www.mesinspirationsculinaires.com/wp-content/uploads/2018/08/ojja-tunisienne-merguez-et-oeufs-1.jpg",6500, 1) ;
+INSERT INTO menu (title, image, price, ID_brands) values ("Makarouna", "https://pbs.twimg.com/media/EWM97HvXYAAIwuk.jpg",10450, 1);
+INSERT INTO menu (title, image, price, ID_brands) values ("Mloukhiya", "https://assets.afcdn.com/recipe/20180727/81606_w1024h1024c1cx355cy250.jpg", 18000, 1);
 
 -- -- Pates Fait Maison
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Spaguetti  "", C arbonara",7,2);
