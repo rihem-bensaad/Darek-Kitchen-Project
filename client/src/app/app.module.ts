@@ -23,6 +23,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { AddMenuComponent } from './components/add-menu/add-menu.component';
 import { GetUserComponent } from './components/get-user/get-user.component';
 import { BrandsAdminComponent } from './components/brands-admin/brands-admin.component';
+import { CreateChefComponent } from './components/create-chef/create-chef.component';
 
 
 
@@ -45,6 +46,7 @@ import { BrandsAdminComponent } from './components/brands-admin/brands-admin.com
     AddMenuComponent,
     GetUserComponent,
     BrandsAdminComponent,
+    CreateChefComponent,
 
   ],
 
