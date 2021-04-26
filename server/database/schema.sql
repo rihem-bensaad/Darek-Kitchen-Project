@@ -9,6 +9,7 @@ CREATE TABLE chef (
     firstName VARCHAR(55) NOT NULL,
     lastName VARCHAR(55) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) UNIQUE NOT NULL,
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL,
     imageCardId VARCHAR(255) NOT NULL,

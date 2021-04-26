@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
 setInterval(()=>{
   this.role()
-},300)
+},500)
   }
   DecodeToken(token: string): any {
       return jwt_decode(token);
@@ -43,8 +43,10 @@ role(){
     this.userRole='user'
   }else if(this.DecodeToken(dataUser)['role']==='admin'){
     this.userRole = 'admin'
-  }else if(this.DecodeToken(dataUser)['role']===undefined){
-   this.userRole = undefined
+  }else if(this.DecodeToken(dataUser)['role']==='chef'){
+   this.userRole = 'chef'
+}else if(this.DecodeToken(dataUser)['role']===undefined){
+  this.userRole = undefined
 }
 
   }

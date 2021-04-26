@@ -24,6 +24,12 @@ import { GetUserComponent } from './components/get-user/get-user.component';
 import { BrandsAdminComponent } from './components/brands-admin/brands-admin.component';
 import { CartComponent } from './components/cart/cart.component';
 import { FilterBrandPipe } from './pipes/filter-brand.pipe';
+import { CreateChefComponent } from './components/create-chef/create-chef.component';
+import { LoggedHomeComponent } from './components/logged-home/logged-home.component';
+import { ManagementComponent } from './components/management/management.component';
+import { AddPlateComponent } from './components/add-plate/add-plate.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { PlateComponent } from './components/plate/plate.component';
 
 
 
@@ -47,6 +53,13 @@ import { FilterBrandPipe } from './pipes/filter-brand.pipe';
     BrandsAdminComponent,
     CartComponent,
     FilterBrandPipe,
+    CreateChefComponent,
+    LoggedHomeComponent,
+    ManagementComponent,
+    AddPlateComponent,
+    OrdersComponent,
+    PlateComponent,
+
   ],
 
   imports: [
