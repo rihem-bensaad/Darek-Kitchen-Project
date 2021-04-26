@@ -4,7 +4,7 @@
 body{
   text-align:center ! important;
   
-  
+
 }
 * {
   margin: 0;
@@ -90,25 +90,26 @@ form {
 
 .btn {
   width: 150px;
-  background-color: #571d02;
+  background-color: #F7F709;
   border: none;
   outline: none;
   height: 49px;
   border-radius: 12px;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
   transition: 0.5s;
   margin-left: 69%;
+  box-shadow: none !important;
 }
 label{
   margin-top:12%
 }
 
 .btn:hover {
-  background-color: orange;
+  color: white;
 }
 @media only screen and (max-width: 500px) {
 form{

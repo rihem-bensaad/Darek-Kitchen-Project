@@ -33,17 +33,35 @@ export class ContactComponent implements OnInit {
     if(this.contactForm.value.email.length === 0 || this.contactForm.value.message.length === 0 || this.contactForm.value.subject.length === 0){
       Swal.fire({
         icon: 'error',
-        title: 'Oops...',
-        text: 'Please fill all the form !'
+        title: "<h5 style='color:#F7F709; margin-bottom:2px;font-family: Poppins, sans-serif'>Oops...<br> Please fill all the<br> form !</h5>",
+        width:"350px",
+        background:"black",
+        backdrop: "rgba(0, 0, 0, 0.685)",
+        allowOutsideClick: true,
+        allowEscapeKey: true,
+        allowEnterKey: true,
+        iconColor: '#fff',
+        showConfirmButton: true,
+        buttonsStyling: false,
+        
       })
     } else{ 
       this.handleSubmit()
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'success',
-      title: 'Your work has been saved',
-      showConfirmButton: false,
-      timer: 1500
+      title: "<h5 style='color:white; margin-bottom:2px; font-family: Poppins, sans-serif'> Your message has been sended<br> Successfully !<br>😉</h5>",
+      showConfirmButton: true,
+      confirmButtonColor: "black",
+      width:"350px",
+      background:"black",
+      backdrop: "#f7f70938",
+      allowOutsideClick: true,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      iconColor: '#F7F709',
+      buttonsStyling: false,
+      
     })
     this.contactForm.setValue({email: '', subject: '', message: ''})
   }
