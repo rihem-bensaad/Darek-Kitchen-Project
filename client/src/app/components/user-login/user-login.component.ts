@@ -31,7 +31,7 @@ export class UserLoginComponent implements OnInit {
       
         localStorage.setItem('data', JSON.stringify(result))
         if(this.DecodeToken(result['token'])['role']==="user"){
-          this.router.navigate(['/'])
+          this.router.navigate(['/welcome'])
 
         }else{
           this.router.navigate(['/dashboard'])
