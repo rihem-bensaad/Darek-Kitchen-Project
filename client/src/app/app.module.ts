@@ -24,6 +24,10 @@ import { AddMenuComponent } from './components/add-menu/add-menu.component';
 import { GetUserComponent } from './components/get-user/get-user.component';
 import { BrandsAdminComponent } from './components/brands-admin/brands-admin.component';
 import { LoggedHomeComponent } from './components/logged-home/logged-home.component';
+import { ManagementComponent } from './components/management/management.component';
+import { AddPlateComponent } from './components/add-plate/add-plate.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { PlateComponent } from './components/plate/plate.component';
 
 
 
@@ -47,6 +51,10 @@ import { LoggedHomeComponent } from './components/logged-home/logged-home.compon
     GetUserComponent,
     BrandsAdminComponent,
     LoggedHomeComponent,
+    ManagementComponent,
+    AddPlateComponent,
+    OrdersComponent,
+    PlateComponent,
 
   ],
 

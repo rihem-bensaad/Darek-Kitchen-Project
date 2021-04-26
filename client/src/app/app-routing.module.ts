@@ -13,6 +13,10 @@ import { MenuComponent } from './components/menu/menu.component';
 import { GetUserComponent } from './components/get-user/get-user.component';
 import {BrandsAdminComponent } from './components/brands-admin/brands-admin.component'
 import { LoggedHomeComponent } from './components/logged-home/logged-home.component';
+import { ManagementComponent } from './components/management/management.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { AddPlateComponent } from './components/add-plate/add-plate.component';
+import { PlateComponent } from './components/plate/plate.component';
 
 
 
@@ -30,7 +34,11 @@ const routes: Routes = [
 { path: 'users', component: ListUserComponent},
 {path:'getusers', component : GetUserComponent},
 {path:'getbrands',component: BrandsAdminComponent},
-{path:'welcome',component:LoggedHomeComponent}
+{path:'welcome',component:LoggedHomeComponent},
+{path:'manage',component: ManagementComponent},
+{path:'order',component : OrdersComponent},
+{path:'addplate',component:AddPlateComponent},
+{path:'plate',component:PlateComponent},
 
 
 ];
