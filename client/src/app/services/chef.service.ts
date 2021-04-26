@@ -14,4 +14,7 @@ export class ChefService {
   loginChef(data:any) {
     return this.http.post('http://localhost:3000/chef/login', data)
   }
+  getChef() {
+    return this.http.get("http://localhost:3000/chef/getall")
+  }
 }
