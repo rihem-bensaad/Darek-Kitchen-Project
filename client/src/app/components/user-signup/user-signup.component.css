@@ -1,20 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 .nav{
   /* width: 100vw;
   height: 100vh; */
-
 width:90%;
 
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
-
-
-
 input {
   font-family: "Poppins", sans-serif;
 }
-
-
 
 form {
   background-color:rgba(0, 0, 0, 0.863);
@@ -72,22 +67,24 @@ form {
 
 .btn {
   width: 120px;
-  background-color: #571d02;
+  background-color: #F7F709;
   border: none;
   outline: none;
   height: 43px;
   border-radius: 5px;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   font-weight: 600;
   margin: 50px 0;
   cursor: pointer;
   transition: 0.5s;
   margin-left: 68%;
+  text-decoration: bold !important;
+  box-shadow: none !important;
 }
 
 .btn:hover {
-  background-color:orange;
+  color:white;
 }
 
 input{
@@ -106,7 +103,7 @@ label{
   color: white
 }
 .inputi{
- margin-left:5.2%;
+ margin-left:3.5%;
 }
 
 @media only screen and (max-width: 500px) {
