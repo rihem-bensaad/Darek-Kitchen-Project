@@ -58,6 +58,12 @@ const createChef= function(params,callback) {
         return err ? callback(err,null) : callback(null,results);
     })
 }
+const getChef= function(callback) {
+    let syntax = 'SELECT * FROM chef'
+    connection.query(syntax,(err,results)=>{
+        return err ? callback(err,null) : callback(null,results);
+    })
+}
 
 
 
@@ -69,5 +75,6 @@ module.exports={
     deleteUser,
     deleteChef,
     updateBrand,
-    createChef
+    createChef,
+    getChef
 }

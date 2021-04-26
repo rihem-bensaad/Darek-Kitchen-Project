@@ -31,45 +31,45 @@
 <div class="main-content">
 <header>
     
-    <form class="text-center">
+    <form class="text-center" [formGroup]="signupForm" >
         
         <h4 class="h4 mb-4"><i class="fas fa-users la-lg"></i><br>Create a new Chef Account</h4>
 
         <div class="form-row mb-4">
           <div class="col col1">
             <!-- First name -->
-            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First Name">
+            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First Name" formControlName="firstName">
           </div>
           <div class="col col2">
             <!-- Last name -->
-            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last Name">
+            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last Name" formControlName="lastName">
           </div>
         </div>
 
         <!-- E-mail -->
-        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" formControlName="email">
 
         <!-- Password -->
-        <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+        <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" formControlName="password">
         <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
           
         </small>
 
         <!-- Phone number -->
-        <input type="text" id="defaultRegisterFormPhoneNumber" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+        <input type="text" id="defaultRegisterFormPhoneNumber" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="phoneNumber">
         <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
           
         </small>
 
          <!-- Location -->
-         <input type="text" id="defaultRegisterFormLocation" class="form-control" placeholder="Location" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+         <input type="text" id="defaultRegisterFormLocation" class="form-control" placeholder="Location" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="location">
          <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
            
          </small>
 
          <!-- ID Cart Image -->
          
-         <input type="file" id="defaultRegisterFormImageCardId" class="form-control" placeholder="Upload your ID card" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+         <input type="file" id="defaultRegisterFormImageCardId" class="form-control" placeholder="Upload your ID card" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="imageCardId">
          <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
            
          </small>
@@ -81,7 +81,7 @@
         </div> -->
 
         <!-- Sign up button -->
-        <button class="btn" type="submit">Create</button>
+        <button class="btn" type="submit" (click)="addChef()" >Create</button>
 
         <!-- Social register -->
         <!-- <p>or sign up with:</p>
@@ -134,7 +134,7 @@
         <td>{{chef.phoneNumber}}</td>
         <td>{{chef.location}}</td>
         <td>{{chef.imageCardId}}</td>
-        <td><button id="deletebtn" class="btn F7F709 btnyellow">delete</button></td>
+        <td><button id="deletebtn" class="btn F7F709 btnyellow"  (click)="deleteChef(chef)">delete</button></td>
     </tr>
     </table>
 </div>
