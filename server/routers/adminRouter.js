@@ -12,6 +12,7 @@ router.route('/removechef/:id').delete(handler.admin.deleteChef);
 router.route('/updatebrand/:id').put(handler.admin.updateBrand);
 router.route('/postchef').post(handler.admin.addChef);
 router.route('/getchef').get(handler.admin.getChef);
+router.route('/createchef').post(handler.admin.createChef)
 
 
 module.exports = router

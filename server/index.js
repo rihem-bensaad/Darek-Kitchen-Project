@@ -6,7 +6,7 @@ const helmet = require("helmet");
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const menu = require('./routers/menuRouter.js');
-
+const chef = require('./routers/ChefRouter')
 const User = require('./routers/user.js');
 const user = require('./routers/UserRouter.js');
 
@@ -25,6 +25,7 @@ app.use(express.urlencoded({
 
 app.use('/menu', menu);
 app.use('/admin',admin)
+app.use('/chef',chef);
 app.use('/user', User);
 app.use('/userr', user);
 app.use('/login',auth)

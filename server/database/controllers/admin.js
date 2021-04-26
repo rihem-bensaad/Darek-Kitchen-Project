@@ -52,6 +52,15 @@ connection.query(syntax,params,(err,result)=>{
 })  
 }
 
+const createChef= function(params,callback) {
+    let syntax = 'INSERT into chef (firstName,lastName,email,password,phoneNumber,location,imageCardId) values (?,?,?,?,?,?,?)'
+    connection.query(syntax,params,(err,results)=>{
+        return err ? callback(err,null) : callback(null,results);
+    })
+}
+
+
+
 module.exports={
     addAdmin,
     adminLogin,
@@ -59,5 +68,6 @@ module.exports={
     deletebrand,
     deleteUser,
     deleteChef,
-    updateBrand
+    updateBrand,
+    createChef
 }
