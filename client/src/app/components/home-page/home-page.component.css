@@ -11,7 +11,7 @@
 }
 .h1{
     margin-bottom: 30px;
-    margin-top:50px;
+    margin-top:1px;
     font-family: playfair display,serif;
     font-size: 70px;
     font-weight: 900;
@@ -20,7 +20,7 @@
 
 }
 .h5{
-    margin-bottom: 60px;
+    margin-bottom: 85px;
     font-family: playfair display,serif;
     font-size: 25px;
     font-weight: 500;
@@ -42,12 +42,13 @@
     background: #F7F709 ;
     border-color: transparent;
     color: #1F1A1E !important;
-    
+    box-shadow: none !important;
     border-radius: 30px;
 }
 .btn:hover{
-    background-color: #df500e;
-    color: white ! important;
+    /* background-color: #df500e; */
+    color: #F7F709 ! important;
+    background:rgba(0, 0, 0, 0.774);
 }
 
 #imagemodal{

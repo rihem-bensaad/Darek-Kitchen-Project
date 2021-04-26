@@ -1,4 +1,3 @@
-<!-- <app-admin-navbar></app-admin-navbar> -->
 <div class="dash">
 
   <div class="sidebar">
@@ -71,8 +70,8 @@
                 <td>{{brand.brandName}}</td>
                 <td>{{brand.category}}</td>
                 <td><img src={{brand.logo}}></td>
-                <td><button class="btn green" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)">Update</button></td>
-                <td><button class="btn red" (click)="deleteBrand(brand)">Delete</button></td>
+                <td><button class="btn black btnblack" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)">Update</button></td>
+                <td><button class="btn F7F709 btnyellow" (click)="deleteBrand(brand)">Delete</button></td>
                 
     
       <!-- Modal -->
@@ -92,12 +91,12 @@
                 <input class="modalinput3" type="text" value={{brand.category}} formControlName="category"/>
 
                 </div>
-              <button class="btn red editbtn" (click)="updateBrand()">EDIT</button>
+              <button class="btn black editbtn" (click)="updateBrand()">EDIT</button>
                 
               </form>
+              <button type="button" class="btn black btncloseblack" data-dismiss="modal">Close</button>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               <div class="container">
       <!-- The Modal -->
       <div class="modal" id="myModal">

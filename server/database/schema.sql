@@ -51,6 +51,7 @@ CREATE TABLE user (
     location VARCHAR(255) NOT NULL
 );
 
+
 -- Traditional Food
 INSERT INTO brands ( brandName,category,logo) values ("Espace MiMa","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
 INSERT INTO brands ( brandName,category,logo) values ("Fait Maison","Traditional Food","https://im.qccdn.fr/node/decryptage-restauration-que-recouvre-la-mention-fait-maison-64043/original-42267.jpg");
