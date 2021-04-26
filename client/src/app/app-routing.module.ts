@@ -8,9 +8,9 @@ import { UserSignupComponent } from './components/user-signup/user-signup.compon
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddBrandComponent } from './components/add-brand/add-brand.component';
-import { ListUserComponent} from './components/list-user/list-user.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { GetUserComponent } from './components/get-user/get-user.component';
+import {CreateChefComponent } from './components/create-chef/create-chef.component';
 import {BrandsAdminComponent } from './components/brands-admin/brands-admin.component'
 import { LoggedHomeComponent } from './components/logged-home/logged-home.component';
 import { ManagementComponent } from './components/management/management.component';
@@ -31,9 +31,9 @@ const routes: Routes = [
 { path: 'addBrand', component: AddBrandComponent },
 { path: 'dashboard', component: AdminDashboardComponent },
 {path: 'menu', component: MenuComponent},
-{ path: 'users', component: ListUserComponent},
 {path:'getusers', component : GetUserComponent},
 {path:'getbrands',component: BrandsAdminComponent},
+{path:'createchef',component: CreateChefComponent},
 {path:'welcome',component:LoggedHomeComponent},
 {path:'manage',component: ManagementComponent},
 {path:'order',component : OrdersComponent},
