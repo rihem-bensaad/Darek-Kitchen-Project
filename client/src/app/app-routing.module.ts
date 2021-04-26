@@ -12,6 +12,7 @@ import { ListUserComponent} from './components/list-user/list-user.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { GetUserComponent } from './components/get-user/get-user.component';
 import {BrandsAdminComponent } from './components/brands-admin/brands-admin.component'
+import { LoggedHomeComponent } from './components/logged-home/logged-home.component';
 
 
 
@@ -28,7 +29,8 @@ const routes: Routes = [
 {path: 'menu', component: MenuComponent},
 { path: 'users', component: ListUserComponent},
 {path:'getusers', component : GetUserComponent},
-{path:'getbrands',component: BrandsAdminComponent}
+{path:'getbrands',component: BrandsAdminComponent},
+{path:'welcome',component:LoggedHomeComponent}
 
 
 ];

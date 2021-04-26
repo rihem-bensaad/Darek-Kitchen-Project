@@ -10,8 +10,11 @@
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent" (change)="role()" >
 		<ul class="navbar-nav ml-auto">
-		<li class="nav-item active">
+		<li class="nav-item active" *ngIf="userRole===undefined" >
 			<a class="nav-link" routerLink="" >Home</a>
+		</li>
+		<li class="nav-item active" *ngIf="userRole==='admin' || userRole==='user'  || userRole==='chef'">
+			<a class="nav-link" routerLink="welcome" >Home</a>
 		</li>
 		  <li class="nav-item">
 			<a class="nav-link" routerLink="/about">About</a>
@@ -28,7 +31,7 @@
 		<li class="nav-item" *ngIf="userRole==='admin'" >
 			<a class="nav-link" routerLink="/dashboard">Dashboard</a>
 		</li>
-		<li class="nav-item" *ngIf="userRole==='admin' || userRole==='user' " >
+		<li class="nav-item" *ngIf="userRole==='admin' || userRole==='user' || userRole==='chef' " >
 			<a class="nav-link" routerLink="" (click)="logout()"> Logout</a>
 		</li>
 		</ul>
