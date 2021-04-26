@@ -9,6 +9,7 @@ CREATE TABLE chef (
     firstName VARCHAR(55) NOT NULL,
     lastName VARCHAR(55) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) UNIQUE NOT NULL,
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL,
     imageCardId VARCHAR(255) NOT NULL
@@ -51,21 +52,28 @@ CREATE TABLE user (
     location VARCHAR(255) NOT NULL
 );
 
+
 -- Traditional Food
-INSERT INTO brands ( brandName,category,logo) values ("Dar MiMa","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("Pates Fait Maison","Traditional Food","https://i.pinimg.com/236x/ba/d5/23/bad5236544c13ffbbe784546ecfcaaa8--secret-menu-fastfood.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("Le Pirate","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Espace MiMa","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Fait Maison","Traditional Food","https://im.qccdn.fr/node/decryptage-restauration-que-recouvre-la-mention-fait-maison-64043/original-42267.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Pirate","Traditional Food","https://www.seekpng.com/png/detail/73-733097_pirate-logo-skull-and-crossbones.png");
+INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S","Traditional Food","https://pbs.twimg.com/profile_images/702199326383198209/2z5vkEie.png");
+
 -- Homemade Fast Food;
-INSERT INTO brands ( brandName,category,logo) values ("Home Burger","HomeMade Fast Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("CowBoys","HomeMade Fast Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("Faster&Cheaper","HomeMade Fast Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("Hot doggy dog","HomeMade Fast Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Papy Burger","HomeMade Fast Food","https://static.wixstatic.com/media/0259db_4af9537da28e423093cad7ee262e6032~mv2.png/v1/fit/w_2500,h_1330,al_c/0259db_4af9537da28e423093cad7ee262e6032~mv2.png");
+INSERT INTO brands ( brandName,category,logo) values ("CowBoys","HomeMade Fast Food","https://pbs.twimg.com/profile_images/1372568603501936650/WZ_u6Zsr_400x400.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Hot doggy dog","HomeMade Fast Food","https://i.pinimg.com/736x/00/ee/8c/00ee8c8f9dcf4d3b1e8587e508b7dc3a.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Streat House","HomeMade Fast Food","http://lh3.googleusercontent.com/TzGYMcbZ9HWy3zbsuP_yh3uNYapE0ZaeUsEwuE_vzwvSndxxj07CyH3i39wOVp4NumDjXIfVjGDftLi5oc3wh1ZNmjk");
+INSERT INTO brands ( brandName,category,logo) values ("Berger Home","HomeMade Fast Food","https://s3.eu-central-1.amazonaws.com/w4ve/box/shops/logo/@3x251648@3x.png");
+INSERT INTO brands ( brandName,category,logo) values ("Holy Chick","HomeMade Fast Food","https://3.bp.blogspot.com/-JcRI6gm4C5Y/WEf5ueBrreI/AAAAAAAAAGI/PsD8Pzmw2PEoUuv4ncKKWjAip4f9zcEPQCLcB/s320/13882647_182398792174241_6209154348795634606_n.jpg");
 -- Sweaty Food
-INSERT INTO brands ( brandName,category,logo) values ("Donuts&Bagels","Sweaty Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("Flavors","Sweaty Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("Chocolatine","Sweaty Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
-INSERT INTO brands ( brandName,category,logo) values ("Juice Fountain","Sweaty Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Donuts&Bagels","Sweaty Food","https://static1.squarespace.com/static/58a77322db29d65028521ddb/t/59ad4fd5cd39c3b55fa39891/1603846457585.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Flavor","Sweaty Food","https://dcassetcdn.com/design_img/2515312/609044/609044_13373251_2515312_333f8848_image.jpg");
+INSERT INTO brands ( brandName,category,logo) values ("Miss PoP cake","Sweaty Food","https://www.misspopcake.com/themes/paprika/img/logo.png?1549924073.jpg");
+
+-- Healthy food
+INSERT INTO brands ( brandName,category,logo) values ("Food Express","Healthy Food","https://dcassetcdn.com/design_img/1889677/191816/191816_10296849_1889677_9e3dc4c9_image.png");
+INSERT INTO brands ( brandName,category,logo) values ("Foundation","Healthy Food","https://i.pinimg.com/236x/ac/56/bc/ac56bca76efa388b7b6f01dbe5d900cb--coffee-logo-food-logos.jpg");
 
 -- -- Dar Zmen
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous T "", r aditionel",9,1) ;
