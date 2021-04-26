@@ -13,7 +13,8 @@ import { UserService } from '../../services/user.service';
 export class BrandsAdminComponent implements OnInit {
 
   brands: any = [];
-  
+  brandCategory: string = "";//npih
+
   brandForm = new FormGroup({
     ID_brands : new FormControl(''),
     brandName: new FormControl(''),
@@ -22,7 +23,7 @@ export class BrandsAdminComponent implements OnInit {
    });
 
   values: any = {};
-  
+
   constructor(private brandService: BrandService, private adminService: AdminService, private router: Router) { }
 
   ngOnInit(): void {
@@ -33,7 +34,7 @@ export class BrandsAdminComponent implements OnInit {
   getBrands() {
     this.brandService.getbrand().subscribe((data) => {
       this.brands = data
-      console.log('data of brands', this.brands);
+      console.log('admin brands', this.brands);
     })
   }
 
@@ -41,7 +42,7 @@ export class BrandsAdminComponent implements OnInit {
     this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
       this.getBrands()
     })
-    
+
     console.log("deleted");
   }
 

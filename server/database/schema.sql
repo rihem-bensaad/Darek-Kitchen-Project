@@ -11,7 +11,8 @@ CREATE TABLE chef (
     email VARCHAR(255) UNIQUE NOT NULL,
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL,
-    imageCardId VARCHAR(255) NOT NULL
+    imageCardId VARCHAR(255) NOT NULL,
+    FOREIGN KEY (ID_brands) REFERENCES brands(ID_brands)
 );
 
 CREATE TABLE brands (

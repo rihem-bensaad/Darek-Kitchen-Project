@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BrandService } from '../../services/brand.service';
 
 
+
 @Component({
   selector: 'app-brands',
   templateUrl: './brands.component.html',
@@ -10,12 +11,12 @@ import { BrandService } from '../../services/brand.service';
 export class BrandsComponent implements OnInit {
 
   brands: any = [];
-
+ brandCategory: string = "";
   brandName: string='';
   category: string='';
   logo: string='';
 
-  constructor(private brandService: BrandService) { }
+  constructor(public brandService: BrandService) { }
 
   ngOnInit(): void {
     this.getBrands()
@@ -24,8 +25,8 @@ export class BrandsComponent implements OnInit {
   getBrands() {
     this.brandService.getbrand().subscribe((data) => {
       this.brands = data
-      console.log('data of brands', this.brands);
+      console.log('brands component loaded', this.brands);
       })
   }
-  
+
 }

@@ -7,7 +7,7 @@ export class CartService {
   items :[]= [];
 
   addToCart(product:String) {
-    this.items.push(product);
+    // this.items.push(product);
   }
  getItems() {
     return this.items;

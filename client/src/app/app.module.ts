@@ -24,6 +24,7 @@ import { AddMenuComponent } from './components/add-menu/add-menu.component';
 import { GetUserComponent } from './components/get-user/get-user.component';
 import { BrandsAdminComponent } from './components/brands-admin/brands-admin.component';
 import { CartComponent } from './components/cart/cart.component';
+import { FilterBrandPipe } from './pipes/filter-brand.pipe';
 
 
 
@@ -47,6 +48,7 @@ import { CartComponent } from './components/cart/cart.component';
     GetUserComponent,
     BrandsAdminComponent,
     CartComponent,
+    FilterBrandPipe,
 
   ],
 
