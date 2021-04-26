@@ -1,17 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" >
   <!-- <img class="nav-logo" src="../../../assets/logo.PNG"/> -->
 	<div class="container">
-	  <a class="navbar-brand" routerLink="">Kitchen دارك</a>
-	
-
+	  <a class="navbar-brand" routerLink="" *ngIf="userRole===undefined" >Kitchen دارك</a>
+	  <a class="navbar-brand" routerLink="/welcome" *ngIf="userRole==='admin' || userRole==='user' || userRole==='chef'" >Kitchen دارك</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	  </button>
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent" (change)="role()" >
 		<ul class="navbar-nav ml-auto">
-		<li class="nav-item active">
+		<li class="nav-item active" *ngIf="userRole===undefined" >
 			<a class="nav-link" routerLink="" >Home</a>
+		</li>
+		<li class="nav-item active" *ngIf="userRole==='admin' || userRole==='user'  || userRole==='chef'">
+			<a class="nav-link" routerLink="/welcome" >Home</a>
 		</li>
 		  <li class="nav-item">
 			<a class="nav-link" routerLink="/about">About</a>
@@ -28,7 +30,10 @@
 		<li class="nav-item" *ngIf="userRole==='admin'" >
 			<a class="nav-link" routerLink="/dashboard">Dashboard</a>
 		</li>
-		<li class="nav-item" *ngIf="userRole==='admin' || userRole==='user' " >
+		<li class="nav-item" *ngIf="userRole==='chef'" >
+			<a class="nav-link" routerLink="/manage">management</a>
+		</li>
+		<li class="nav-item" *ngIf="userRole==='admin' || userRole==='user' || userRole==='chef' " >
 			<a class="nav-link" routerLink="" (click)="logout()"> Logout</a>
 		</li>
 		</ul>

@@ -50,7 +50,7 @@ export class ContactComponent implements OnInit {
     Swal.fire({
       position: 'center',
       icon: 'success',
-      title: "<h5 style='color:white; margin-bottom:2px; font-family: Poppins, sans-serif'> Your message has been sended<br> Successfully !<br>😉</h5>",
+      title: "<h5 style='color:white; margin-bottom:2px; font-family: Poppins, sans-serif'> Your message has been sent<br> Successfully !<br>😉</h5>",
       showConfirmButton: true,
       confirmButtonColor: "black",
       width:"350px",
