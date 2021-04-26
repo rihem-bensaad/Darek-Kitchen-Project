@@ -31,7 +31,7 @@
 			<a class="nav-link" routerLink="/dashboard">Dashboard</a>
 		</li>
 		<li class="nav-item" *ngIf="userRole==='chef'" >
-			<a class="nav-link" routerLink="/manage">management</a>
+			<a class="nav-link" routerLink="/manage">Management</a>
 		</li>
 		<li class="nav-item" *ngIf="userRole==='admin' || userRole==='user' || userRole==='chef' " >
 			<a class="nav-link" routerLink="" (click)="logout()"> Logout</a>
