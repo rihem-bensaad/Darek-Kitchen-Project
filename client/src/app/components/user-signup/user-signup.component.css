@@ -1,20 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 .nav{
   /* width: 100vw;
   height: 100vh; */
-
 width:90%;
 
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
-
-
-
 input {
   font-family: "Poppins", sans-serif;
 }
-
-
 
 form {
   background-color:rgba(0, 0, 0, 0.863);

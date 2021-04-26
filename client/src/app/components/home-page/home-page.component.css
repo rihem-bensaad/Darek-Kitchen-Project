@@ -47,7 +47,8 @@
 }
 .btn:hover{
     /* background-color: #df500e; */
-    color: white ! important;
+    color: #F7F709 ! important;
+    background:rgba(0, 0, 0, 0.774);
 }
 
 #imagemodal{

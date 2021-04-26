@@ -173,6 +173,7 @@ form{
 .contactForm .inputBox textarea{
 	padding: 10px 0 60px ! important;
 }
+
 @media (max-width: 991px)
 {
 	section{
@@ -220,3 +221,5 @@ form{
 	}
 
 }
+
+
