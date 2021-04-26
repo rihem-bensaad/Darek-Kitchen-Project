@@ -31,13 +31,20 @@ export class UserLoginComponent implements OnInit {
       
         localStorage.setItem('data', JSON.stringify(result))
         if(this.DecodeToken(result['token'])['role']==="user"){
-          this.router.navigate(['/welcome'])
-
-        }else{
+          this.router.navigate(['/welcome']) 
+        }
+         if(this.DecodeToken(result['token'])['role']==="chef"){
+          this.router.navigate(['/manage'])
+        }
+        if(this.DecodeToken(result['token'])['role']==="admin"){
           this.router.navigate(['/dashboard'])
         }
+        
+         
+        }
+      )}
+    }
        
-      })
-  }
-}
+  
+
 
