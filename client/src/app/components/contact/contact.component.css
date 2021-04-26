@@ -38,9 +38,10 @@ form{
 }
 .contact .content p
 {
-	font-weight: 300;
+	font-size: 18px;
+	font-weight: 500;
 	color: #fff;
-	background-color: rgba(255, 255, 255, 0.096);
+	background-color: rgba(255, 255, 255, 0.055);
 }
 .containers
 {
@@ -90,7 +91,7 @@ form{
 	
 }
 .containers p{
-	background-color: rgba(255, 255, 255, 0.103);
+	background-color: rgba(255, 255, 255, 0.055);
 	
 }
 .contactForm
@@ -148,19 +149,23 @@ form{
 .contactForm .inputBox textarea:focus ~ span,
 .contactForm .inputBox textarea:valid ~ span
 {
-	color: #571d02;
+	color: black;
 	font-size: 12px;
 	transform: translateY(-20px);
 }
 .contactForm .inputBox input[type="submit"]
 {
 	width: 100px;
-	background: #571d02;
-	color: #fff;
+	background: #F7F709;
+	color: black;
 	border: none;
 	cursor: pointer;
 	padding: 10px;
-	font-size: 18px;
+	font-size: 16px;
+}
+.contactForm .inputBox input[type="submit"]:hover
+{
+	background: #fff;
 }
 .content{
 	margin-top: 5%;
@@ -168,8 +173,13 @@ form{
 .contactForm .inputBox textarea{
 	padding: 10px 0 60px ! important;
 }
+
 @media (max-width: 991px)
 {
+	section{
+		background: url('https://format-com-cld-res.cloudinary.com/image/private/s--yU5hjwQS--/c_limit,g_center,h_1200,w_65535/fl_keep_iptc.progressive,q_95/v1/1a734fc5206bed55cf9be93c30ed8e52/RamenFeatured-1.jpg');
+		background-size: cover
+	}
 	.contact
 	{
 		padding: 50px;
@@ -209,8 +219,7 @@ form{
 	border-radius: 50%;
 	font-size: 22px;
 	}
-	
-}
 
+}
 
 
