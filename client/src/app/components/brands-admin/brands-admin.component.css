@@ -138,10 +138,17 @@ margin-right: 4%;
   color: white;
   box-shadow: none !important;
 }
+.btnblack:hover{
+  border: 2px solid #F7F709;
+}
 .btnyellow{
   background-color:#F7F709;
   box-shadow: none !important;
 }
+.btnyellow:hover{
+  border: 1px solid black;
+}
+
 
 .deletebtn{
   color: #F7F709;
@@ -149,4 +156,32 @@ margin-right: 4%;
 .btncloseblack{
   color: white;
   box-shadow: none !important;
+}
+
+.close-icon {
+	border:1px solid transparent;
+	background-color: transparent;
+	display: inline-block;
+	vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
+}
+.close-icon:after {
+	content: "X";
+	width: 15px;
+	height: 15px;
+	background-color: black;
+	z-index:1;
+	right: 35px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 2px;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+	box-shadow: 0 0 2px black;
+	cursor: pointer;
 }

@@ -112,9 +112,10 @@ label{
     margin-left: 68%;
     text-decoration: bold !important;
     box-shadow: none !important;
-  }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ======================================================================8              
+  }              
   
   p{
+    
     margin-top: -26.5% ! important;
     margin-left: 3%;
   }
@@ -123,4 +124,12 @@ label{
   }
 }
 
-
+p{
+  color:#F7F709;
+  margin-top: -12%;
+  margin-left: 3%;
+}
+a{
+  color:#F7F709 !important;
+  font-size: 30px;
+}
