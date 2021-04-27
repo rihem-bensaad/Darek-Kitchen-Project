@@ -12,3 +12,9 @@ module.exports.getmenu = (req,res)=>{
         err ? console.log(err) : res.status(201).send(result)
     })
 }
+module.exports.getMenuById = (req, res) => {
+    db.getMenuById([req.params.ID_menu],(err,result)=>{
+        err ? console.log(err) : res.status(201).send(result)
+    })
+    console.log(req.params.ID_menu,"<=====menu of brand");
+}

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { BrandService } from '../../services/brand.service';
+import { MenuService } from '../../services/menu.service';
+import {Router} from '@angular/router';
+
+
 
 
 @Component({
@@ -8,14 +12,16 @@ import { BrandService } from '../../services/brand.service';
   styleUrls: ['./brands.component.css']
 })
 export class BrandsComponent implements OnInit {
-
+  menu: any = [];
   brands: any = [];
 
+ brandCategory: string = "";
   brandName: string='';
   category: string='';
   logo: string='';
 
-  constructor(private brandService: BrandService) { }
+  constructor(public brandService: BrandService, private menuService: MenuService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getBrands()
@@ -24,8 +30,15 @@ export class BrandsComponent implements OnInit {
   getBrands() {
     this.brandService.getbrand().subscribe((data) => {
       this.brands = data
-      console.log('data of brands', this.brands);
+      console.log('brands component loaded', this.brands);
       })
   }
-  
+
+  getBrandId(ID_brands: number) {
+    this.menuService.getMenuByBrandId(ID_brands).subscribe((data) => {
+      this.menuService.menu = data
+      console.log(this.menuService.menu, " data id brand");
+      this.router.navigate(['/menu'])
+    })
+  }
 }

@@ -1,48 +1,39 @@
-
- .row{
+.row{
    position: absolute ! important;
-   background-image: url('https://format-com-cld-res.cloudinary.com/image/private/s--yU5hjwQS--/c_limit,g_center,h_1200,w_65535/fl_keep_iptc.progressive,q_95/v1/1a734fc5206bed55cf9be93c30ed8e52/RamenFeatured-1.jpg');
    background-size: cover;
    width:95.9rem
  }
- 
  .col-lg-2 {
   margin-top:5%;
   margin-left:2%;
   padding: 100px 10 20px
-  
  }
 .card-ecommerce{
   height: 0 auto;
   width: 260px ! important;
-  
 }
-
 .view{
   min-height: 160px;
-  
 }
-
 .imgBrand{
   width: 100% ! important;
   height: 60px ! important;
 }
-
 .rating {
-	direction: rtl;
-	unicode-bidi: bidi-override;
-	color: #ddd; /* Personal choice */
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  color: #ddd; /* Personal choice */
   margin-left: -23%;
   margin-top: 10%;
 }
 .rating input {
-	display: none;
+  display: none;
 }
 .rating label:hover,
 .rating label:hover ~ label,
 .rating input:checked + label,
 .rating input:checked + label ~ label {
-	color: #ffc107; /* Personal color choice. Lifted from Bootstrap 4 */
+  color: #FFC107; /* Personal color choice. Lifted from Bootstrap 4 */
 }
 a{
   color:#ffc107

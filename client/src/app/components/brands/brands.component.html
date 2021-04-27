@@ -2,7 +2,7 @@
   <!--Grid row-->
   <div class="row">
     <!--Grid column-->
-    <div class="col-lg-2 col-md-6 mb-3" *ngFor="let brand of brands">
+    <div class="col-lg-2 col-md-6 mb-3" *ngFor="let brand of brands | filterBrand : brandService.brandCategory">
       <!--Card-->
       <mdb-card  class="card-ecommerce">
         <!--Card image-->
@@ -18,13 +18,13 @@
         <!--Card content-->
         <mdb-card-body  class="text-center">
           <!--Category & Title-->
-         
+
             <h6>{{brand.category}}</h6>
-         
+
           <mdb-card-title>
-            <h4>
+            <h4 (click)="getBrandId(brand.ID_brands)">
               <strong>
-                <a href="/menu">{{brand.brandName}}</a>
+                {{brand.brandName}}
               </strong>
             </h4>
             <div class="rating" style="width: 20rem">
@@ -55,6 +55,7 @@
           </ul> -->
         </mdb-card-body>
       </mdb-card>
+      <!--Card-->
     </div>
   </div>
 </div>
