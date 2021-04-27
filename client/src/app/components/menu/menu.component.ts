@@ -13,10 +13,8 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
   console.log(this.menuService.menu, "menus from service");
-
-     this.getMenus()
+    this.getMenus()
   }
-
 
 
  getMenus() {

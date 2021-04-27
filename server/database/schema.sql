@@ -8,6 +8,7 @@ CREATE TABLE chef (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(55) NOT NULL,
     lastName VARCHAR(55) NOT NULL,
+    password VARCHAR(55) Not NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL,
@@ -127,13 +128,15 @@ INSERT INTO menu (title, image, price, ID_brands) values ("Mloukhiya", "https://
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,10);
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,10);
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,10);
+
 -- -- Chocolatine
-INSERT INTO menu (title, image, price, ID_brands) values ("Chantilly",  "", 9,11);
-INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
-INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
-INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
--- -- juice Fountain
-INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
-INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
-INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
-INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
+INSERT INTO menu (title, image, price, ID_brands) values ("Chantilly", "http://qccdn.ar-cdn.com/recipes/port500/ac2b48ec-33b4-44e3-aa68-2c37452e8d7a.jpg", 9000, 10);
+INSERT INTO menu (title, image, price, ID_brands) values ("Grewech", "https://recettes.de/images/blogs/couscous-et-puddings/griwech-griweche-gateau-algerien-au-miel.640x480.jpg", 91000 ,11);
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,2);
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,3);
+
+-- -- -- juice Fountain
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);

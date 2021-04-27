@@ -25,7 +25,8 @@ export class BrandsAdminComponent implements OnInit {
 
   values: any = {};
 
-  constructor(private brandService: BrandService, private adminService: AdminService, private router: Router, ) { }
+  constructor(private brandService: BrandService, private adminService: AdminService,
+    private router: Router,) { }
 
   ngOnInit(): void {
     this.getBrands()

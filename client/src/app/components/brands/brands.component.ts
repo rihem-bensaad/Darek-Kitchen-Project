@@ -20,7 +20,8 @@ export class BrandsComponent implements OnInit {
   category: string='';
   logo: string='';
 
-  constructor(public brandService: BrandService, private menuService: MenuService, private router : Router) { }
+  constructor(public brandService: BrandService, private menuService: MenuService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getBrands()
@@ -39,6 +40,5 @@ export class BrandsComponent implements OnInit {
       console.log(this.menuService.menu, " data id brand");
       this.router.navigate(['/menu'])
     })
-
   }
 }
