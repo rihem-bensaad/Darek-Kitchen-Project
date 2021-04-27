@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -9,10 +9,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class MenuService {
 
   menu: any = []
+  menubrand: string = "Traditional Food";
 
   constructor(private http: HttpClient) {
   }
-  getmenu() {
+  getmenu():Observable<any>{
     return this.http.get("http://localhost:3000/menu/get")
   }
   postmenu(menuObject: any) {

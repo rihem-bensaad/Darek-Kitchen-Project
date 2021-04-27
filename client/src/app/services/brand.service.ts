@@ -15,7 +15,6 @@ export class BrandService {
   }
   getbrand():Observable <any>{
     console.log("brandCategory",this.brandCategory);
-
     return this.http.get(`http://localhost:3000/brand/get`)
   }
   postbrand(brandObject: any) {
