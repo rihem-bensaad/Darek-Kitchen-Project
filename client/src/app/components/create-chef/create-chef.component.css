@@ -1,7 +1,7 @@
 .dash{
     margin-top:4.3%;
      width:100%; 
-     height:669px;
+     height:auto;
     background-color: white !important;
     background-size: cover;
     position: absolute;
@@ -18,8 +18,9 @@
       position: absolute;
       left: 0;
       top:0;
-      height: 100%;
+      height: 100rem;
       background: #0a0a0afa;
+      
   }
   a{
     color: white
@@ -170,7 +171,21 @@ border:1px solid black;
     box-shadow: none !important;
     border:3px solid #F7F709;
 }
-
+.btn2{
+    margin-bottom: 6.5%;
+    margin-left: 0.5%;
+    background-color:#F7F709;
+    box-shadow: none !important;
+    width: 70px;
+    height:30px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-size:15px;
+}
+.btn2:hover{
+    border: 1px solid black
+}
 input{
     background-color: #f0f0f0;
     color: black !important;
@@ -234,4 +249,32 @@ input{
     margin-right: -0.5%;
     
 
+}
+
+.close-icon {
+	border:1px solid transparent;
+	background-color: transparent;
+	display: inline-block;
+	vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
+}
+.close-icon:after {
+	content: "X";
+	width: 15px;
+	height: 15px;
+	background-color: black;
+	z-index:1;
+	right: 35px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 2px;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+	box-shadow: 0 0 2px black;
+	cursor: pointer;
 }

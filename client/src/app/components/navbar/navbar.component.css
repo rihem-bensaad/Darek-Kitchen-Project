@@ -113,11 +113,11 @@
     color:#F7F709 ! important;  
   }
   .navbar-brand{
-    text-decoration: underline solid 4px #F7F709;
-    background-color:rgba(255, 255, 255, 0.13);
     border-radius: 10%;
-
   }
+.navbar-brand:first-letter{
+  color:#F7F709;
+}
 
 .navbar{
   position: absolute ! important;
