@@ -27,16 +27,15 @@ export class CreateChefComponent implements OnInit {
 
   ngOnInit(): void {
     this.getChefs()
+    this.addChef()
   }
-  
+
     deleteChef(chef:any){
       this.ChefService.deleteChef(chef.ID)
       .subscribe()
       location.reload()
       }
 
-    
- 
 
   addChef() {
     this.ChefService.postFrom(this.signupForm.value)

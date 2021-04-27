@@ -9,11 +9,13 @@ import { Observable } from 'rxjs';
 export class BrandService {
 
   productData: any = []
+  brandCategory: string = "Traditional Food";
 
   constructor(private http: HttpClient) {
   }
-  getbrand() {
-    return this.http.get("http://localhost:3000/brand/get")
+  getbrand():Observable <any>{
+    console.log("brandCategory",this.brandCategory);
+    return this.http.get(`http://localhost:3000/brand/get`)
   }
   postbrand(brandObject: any) {
     return this.http.post("http://localhost:3000/brand/add", brandObject)
@@ -23,5 +25,5 @@ export class BrandService {
   //   return this.http.post('https://api.cloudinary.com/v1_1/codexmaker/image/upload', data)
   // }
 
- 
+
 }

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { BrandService } from '../../services/brand.service';
 import { AdminService } from '../../services/admin.service';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
-import { UserService } from '../../services/user.service';
+
 
 @Component({
   selector: 'app-brands-admin',
@@ -12,8 +12,10 @@ import { UserService } from '../../services/user.service';
 })
 export class BrandsAdminComponent implements OnInit {
 
+  menus: any = [];
   brands: any = [];
-  
+  brandCategory: string = "";
+
   brandForm = new FormGroup({
     ID_brands : new FormControl(''),
     brandName: new FormControl(''),
@@ -22,8 +24,9 @@ export class BrandsAdminComponent implements OnInit {
    });
 
   values: any = {};
-  
-  constructor(private brandService: BrandService, private adminService: AdminService, private router: Router) { }
+
+  constructor(private brandService: BrandService, private adminService: AdminService,
+    private router: Router,) { }
 
   ngOnInit(): void {
     this.getBrands()
@@ -33,15 +36,14 @@ export class BrandsAdminComponent implements OnInit {
   getBrands() {
     this.brandService.getbrand().subscribe((data) => {
       this.brands = data
-      console.log('data of brands', this.brands);
+      console.log('admin brands', this.brands);
     })
   }
 
   deleteBrand(brand: any) {
-    this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
-      this.getBrands()
-    })
-    
+    this.adminService.DeleteBrand(brand.ID_brands)
+    .subscribe()
+      location.reload()
     console.log("deleted");
   }
 

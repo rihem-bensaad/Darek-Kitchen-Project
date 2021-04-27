@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 .nav{
-  /* width: 100vw;
-  height: 100vh; */
 width:90%;
 
 }
@@ -26,7 +24,6 @@ form {
   margin: auto;
 }
 
-
 .title {
   font-size: 2.2rem;
   margin-bottom: 10px;
@@ -34,36 +31,6 @@ form {
   padding: 5.3%;
   color: white;
 }
-
-/* .input-field {
-  max-width: 380px;
-  width: 100%;
-  background-color: #f0f0f0;
-  margin: 17px 0;
-  height: 45px;
-  border-radius: 55px;
- 
-  grid-template-columns: 15% 85%;
-  padding: 0 0.9rem;
-
-} */
-
-
-/* .input-field input {
-  background: none;
-  outline: none;
-  border: none;
-  line-height: 1;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: black;
-} */
-/* 
-.input-field input::placeholder {
-  color: #aaa;
-  font-weight: 400;
-} */
-
 
 .btn {
   width: 120px;
@@ -73,7 +40,7 @@ form {
   height: 43px;
   border-radius: 5px;
   color: black;
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: 600;
   margin: 50px 0;
   cursor: pointer;
@@ -95,7 +62,8 @@ input{
   border-radius: 5px;
   box-shadow: 5px -4px rgba(0, 0, 0, 0.685);
   margin-left: 5%;
-  margin-bottom: -1%;
+  margin-bottom: -25% ! important;
+  margin-top: 2%;
 }
 label{
   margin-left: 4%;
@@ -105,7 +73,11 @@ label{
 .inputi{
  margin-left:3.5%;
 }
+.custom-control{
+  margin-top: 8% !important;
+  margin-left: 5% ! important;
 
+}
 @media only screen and (max-width: 500px) {
   .title{
     font-size: 1.2rem;
@@ -116,18 +88,52 @@ label{
 
   }
   form{ 
+    position:absolute ! important;
     width:90%;
     margin-left: 5%;
     padding: 1rem 1rem;
-    height: 80%;
-    margin-top: 29% ! important;
+    height:100%;
+    margin-top: 49% ! important;
+
   }
-  .btn{
-    margin-left: 49%;
-    margin-top: 5%;
+  .btn {
+    width: 60px;
+    background-color: #F7F709;
+    border: none;
+    outline: none;
+    height: 43px;
+    border-radius: 5px;
+    color: black;
+    text-transform: none;
+    font-weight: 600;
+    margin: 50px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 68%;
+    text-decoration: bold !important;
+    box-shadow: none !important;
+  }              
+  
+  p{
+    
+    margin-top: -26.5% ! important;
+    margin-left: 3%;
+  }
+  a{
+    font-size: 20px ! important;
   }
 }
 .err{
   color: red ;
   margin-left:9vh;
+}
+
+p{
+  color:#F7F709;
+  margin-top: -12%;
+  margin-left: 3%;
+}
+a{
+  color:#F7F709 !important;
+  font-size: 30px;
 }
