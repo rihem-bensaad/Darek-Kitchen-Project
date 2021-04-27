@@ -22,5 +22,10 @@ menuForm = new FormGroup({
     this.menuService.postmenu(this.menuForm.value).subscribe((data:any)=> {
       console.log(data)
     })
+   }
+  deleteMenu(menu: any) {
+    this.menuService.deletemenu(menu.ID_menu).subscribe(() => {
+      console.log("deleted");
+    })
   }
 }

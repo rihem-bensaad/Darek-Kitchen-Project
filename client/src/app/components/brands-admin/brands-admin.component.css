@@ -1,11 +1,8 @@
 .dash{
-  margin-top:4%;
+  margin-top:4.2%;
    width:100%; 
    height:669px;
   background-color: white !important;
-  --main-color: rgb(51, 2, 2);
-  --colo-dark: #1D2231;
-  --text-grey: #8390A2;
   position: absolute;
 }
 *{
@@ -20,9 +17,12 @@
     position: absolute;
     left: 0;
     top:0;
-    height: 80em;
-    background: var(--main-color);
+    height: 100em;
+    background: #0a0a0afa;
+}
 
+a{
+  color: white
 }
 .sidebar-menu{
   margin: 10px;
@@ -37,7 +37,7 @@ span{
 .sidebar-brand{
     margin-right:14%;
     height: 60px;
-    color:#fff;
+    color:#F7F709;
     
 }
 .sidebar-brand span{
@@ -59,7 +59,7 @@ margin: 0.15%;
 margin-bottom: 6.5%;
 margin-left: 0.5%;
 width: 70px;
-height:30px
+height:30px;
 }
 h5{
 margin: 1.5%
@@ -68,7 +68,7 @@ margin: 1.5%
 text-align: center ! important;
 }
 .search{
-  margin: 0.5px 1.5px;
+  margin: 1.2px 1.5px;
   width: 30% ! important;
   height: 40px ! important;
   font-size: 15px;
@@ -131,10 +131,57 @@ margin-right: 4%;
 .editbtn{
   width: 200px;
   height:35px;
+  color: white;
+  box-shadow: none !important;
 }
-.udatebtn{
-  color:green;
+.btnblack{
+  color: white;
+  box-shadow: none !important;
 }
+.btnblack:hover{
+  border: 2px solid #F7F709;
+}
+.btnyellow{
+  background-color:#F7F709;
+  box-shadow: none !important;
+}
+.btnyellow:hover{
+  border: 1px solid black;
+}
+
+
 .deletebtn{
-  color: red
+  color: #F7F709;
+}
+.btncloseblack{
+  color: white;
+  box-shadow: none !important;
+}
+
+.close-icon {
+	border:1px solid transparent;
+	background-color: transparent;
+	display: inline-block;
+	vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
+}
+.close-icon:after {
+	content: "X";
+	width: 15px;
+	height: 15px;
+	background-color: black;
+	z-index:1;
+	right: 35px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 2px;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+	box-shadow: 0 0 2px black;
+	cursor: pointer;
 }

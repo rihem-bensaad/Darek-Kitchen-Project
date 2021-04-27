@@ -1,11 +1,8 @@
 .dash{
-  margin-top:4%;
-   width:100%; 
-   height:669px;
+  margin-top:4.3%;
+   width:100%;
+   height:100%;
   background-color: white !important;
-  --main-color: rgb(51, 2, 2);
-  --colo-dark: #1D2231;
-  --text-grey: #8390A2;
   position: absolute;
 }
 *{
@@ -20,9 +17,12 @@
     position: absolute;
     left: 0;
     top:0;
-    height: 100%;
-    background: var(--main-color);
+    height: 100em;
+    background: #0a0a0afa;
 
+}
+a{
+  color: white  ;
 }
 .sidebar-menu{
   margin: 10px;
@@ -37,8 +37,8 @@ span{
 .sidebar-brand{
     margin-right:14%;
     height: 60px;
-    color:#fff;
-    
+    color:#F7F709;
+
 }
 .sidebar-brand span{
   display: inline-block;
@@ -115,7 +115,6 @@ height:200px !important;
 border: 1px solid grey ! important;
 }
 label{
-/* margin-left: 13%; */
 margin-right: 10%;
 font-size: 16px;
 }
@@ -123,31 +122,7 @@ font-size: 16px;
 text-align: center;
 margin-right: 4%;
 }
-.modal{
-  text-align: center;
-  margin: 8% 50%;
-  width: 100%;
-}
 
-.modalinput{
-  margin-right: 13%;
-}
-.imgmodal{
-  margin-top: 0.5%;
-  width: 200px !important;
-  height:200px !important;
-  border: 1px solid grey ! important;
-}
-label{
-  /* margin-left: 13%; */
-  margin-right: 10%;
-  font-size: 16px;
-  
-}
-.label3{
-  text-align: center;
-  margin-right: 4%;
-}
 .editbtn{
   width: 200px;
   height:35px;

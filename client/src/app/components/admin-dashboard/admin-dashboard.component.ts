@@ -13,6 +13,7 @@ import { UserService } from '../../services/user.service';
 })
 export class AdminDashboardComponent implements OnInit {
   users: any = [];
+  brandCategory: string = "";
 
   brands: any = [];
   brandForm = new FormGroup({
@@ -24,7 +25,7 @@ export class AdminDashboardComponent implements OnInit {
 
   values: any = {};
   showMyContainer: boolean = false;
-  
+
   constructor(private brandService: BrandService, private adminService: AdminService,private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
@@ -35,7 +36,7 @@ export class AdminDashboardComponent implements OnInit {
   getBrands() {
     this.brandService.getbrand().subscribe((data) => {
       this.brands = data
-      console.log('data of brands', this.brands);
+      console.log('get from dashboard', this.brands);
     })
   }
 
