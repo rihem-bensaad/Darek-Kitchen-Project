@@ -8,7 +8,7 @@ CREATE TABLE chef (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(55) NOT NULL,
     lastName VARCHAR(55) NOT NULL,
-    password VARCHAR(55) Not NULL,
+    password VARCHAR(255) Not NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL,
