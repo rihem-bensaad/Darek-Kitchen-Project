@@ -78,7 +78,7 @@ INSERT INTO brands ( brandName,category,logo) values ("Foundation","Healthy Food
 
 -- -- Dar zmen
 INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "https://www.196flavors.com/wp-content/uploads/2018/03/couscous-tunisien-1-FP-500x500.jpg",9600, 1) ;
-INSERT INTO menu (title, image, price, ID_brands) values ("Ojja",  "https://www.mesinspirationsculinaires.com/wp-content/uploads/2018/08/ojja-tunisienne-merguez-et-oeufs-1.jpg",6500, 1) ;
+INSERT INTO menu (title, image, price, ID_brands) values ("Ojja", "https://www.mesinspirationsculinaires.com/wp-content/uploads/2018/08/ojja-tunisienne-merguez-et-oeufs-1.jpg",6500, 1) ;
 INSERT INTO menu (title, image, price, ID_brands) values ("Makarouna", "https://pbs.twimg.com/media/EWM97HvXYAAIwuk.jpg",10450, 1);
 INSERT INTO menu (title, image, price, ID_brands) values ("Mloukhiya", "https://assets.afcdn.com/recipe/20180727/81606_w1024h1024c1cx355cy250.jpg", 18000, 1);
 

@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
 setInterval(()=>{
   this.role()
-},500)
+},100)
   }
   DecodeToken(token: string): any {
       return jwt_decode(token);

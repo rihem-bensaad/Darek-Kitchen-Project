@@ -11,15 +11,15 @@ import { UserService } from '../../services/user.service'
 export class UserSignupComponent implements OnInit {
 
   signupForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-    phoneNumber: new FormControl(''),
-    location: new FormControl(''),
+    firstName: new FormControl(['',[Validators.required]]),
+    lastName: new FormControl(['',[Validators.required]]),
+    email: new FormControl(['',[Validators.required, Validators.email]]),
+    password: new FormControl(['',[Validators.required, Validators.minLength(8)]]),
+    phoneNumber: new FormControl(['',[Validators.required]]),
+    location: new FormControl(['',[Validators.required]]),
   });
 
-
+  
 
 
   constructor(private userService: UserService, private router: Router) { }

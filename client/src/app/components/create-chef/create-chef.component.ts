@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChefService } from '../../services/chef.service';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
+import { ResourceLoader } from '@angular/compiler';
 
 
 
@@ -27,6 +28,24 @@ export class CreateChefComponent implements OnInit {
   ngOnInit(): void {
     this.getChefs()
   }
+  
+    deleteChef(chef:any){
+      this.ChefService.deleteChef(chef.ID)
+      .subscribe()
+      location.reload()
+      }
+
+    
+ 
+
+  addChef() {
+    this.ChefService.postFrom(this.signupForm.value)
+      .subscribe(() => {
+        location.reload()
+      })
+  }
+
+
   getChefs() {
     this.ChefService.getChef().subscribe((data) => {
       this.chefs = data
