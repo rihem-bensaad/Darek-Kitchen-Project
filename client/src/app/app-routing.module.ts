@@ -20,7 +20,6 @@ import { PlateComponent } from './components/plate/plate.component';
 
 
 
-
 const routes: Routes = [
 {path:'',component:HomePageComponent},
 {path:'brands', component: BrandsComponent },

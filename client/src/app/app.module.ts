@@ -22,6 +22,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { AddMenuComponent } from './components/add-menu/add-menu.component';
 import { GetUserComponent } from './components/get-user/get-user.component';
 import { BrandsAdminComponent } from './components/brands-admin/brands-admin.component';
+import { CartComponent } from './components/cart/cart.component';
+import { FilterBrandPipe } from './pipes/filter-brand.pipe';
 import { CreateChefComponent } from './components/create-chef/create-chef.component';
 import { LoggedHomeComponent } from './components/logged-home/logged-home.component';
 import { ManagementComponent } from './components/management/management.component';
@@ -49,6 +51,8 @@ import { PlateComponent } from './components/plate/plate.component';
     AddMenuComponent,
     GetUserComponent,
     BrandsAdminComponent,
+    CartComponent,
+    FilterBrandPipe,
     CreateChefComponent,
     LoggedHomeComponent,
     ManagementComponent,

@@ -1,37 +1,14 @@
-<!-- <div class="nav" *ngFor="let brand of brands">
-  <div class='card1'>
-  <div class="card">
-  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-    <img src="{{brand.logo}}" class="img-fluid"/>
-    <a href="#!">
-      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-    </a>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">{{brand.brandName}}</h5>
-    <h4>{{brand.category}}</h4>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
-    <p class="card-text">
-      </p>
-    </div>
-  </div>
-</div>
-</div>
--->
 <div class="myrow">
   <!--Grid row-->
   <div class="row">
     <!--Grid column-->
-    <div class="col-lg-2 col-md-6 mb-3" *ngFor="let brand of brands">
+    <div class="col-lg-2 col-md-6 mb-3" *ngFor="let brand of brands | filterBrand : brandService.brandCategory">
       <!--Card-->
       <mdb-card  class="card-ecommerce">
         <!--Card image-->
         <div class="view view-cascade overlay waves-light" mdbWavesEffect>
           <a routerLink="menu/{{brand.ID_brands}}">
-          <div class="imgBrand"><mdb-card-img href="/menu" src="{{brand.logo}}" alt="sample photo"></mdb-card-img></div>
+          <div class="imgBrand"  ><mdb-card-img  href="/menu" src="{{brand.logo}}" alt="sample photo"></mdb-card-img ></div>
           </a>
           <a>
             <div class="mask rgba-white-slight"></div>
@@ -41,13 +18,13 @@
         <!--Card content-->
         <mdb-card-body  class="text-center">
           <!--Category & Title-->
-         
+
             <h6>{{brand.category}}</h6>
-         
+
           <mdb-card-title>
-            <h4>
+            <h4 (click)="getBrandId(brand.ID_brands)">
               <strong>
-                <a href="/menu">{{brand.brandName}}</a>
+                {{brand.brandName}}
               </strong>
             </h4>
             <div class="rating" style="width: 20rem">
@@ -78,6 +55,7 @@
           </ul> -->
         </mdb-card-body>
       </mdb-card>
+      <!--Card-->
     </div>
   </div>
 </div>
