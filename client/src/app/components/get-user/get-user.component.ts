@@ -22,7 +22,7 @@ export class GetUserComponent implements OnInit {
     this.adminService.DeleteUser(brand.ID_user).subscribe(() => {
       this.getusers()
     })
-    console.log("deleted");
+    console.log("deleted")
   }
 }
 
