@@ -16,6 +16,9 @@ export class MenuService {
   getmenu():Observable<any>{
     return this.http.get("http://localhost:3000/menu/get")
   }
+  getMenuByBrandId(ID_brands:Number){
+    return this.http.get("http://localhost:3000/menu/get/" + ID_brands)
+  }
   postmenu(menuObject: any) {
     return this.http.post("http://localhost:3000/menu/post", menuObject)
   }

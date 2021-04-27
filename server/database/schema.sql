@@ -9,11 +9,9 @@ CREATE TABLE chef (
     firstName VARCHAR(55) NOT NULL,
     lastName VARCHAR(55) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) UNIQUE NOT NULL,
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL,
-    imageCardId VARCHAR(255) NOT NULL,
-    FOREIGN KEY (ID_brands) REFERENCES brands(ID_brands)
+    imageCardId VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE brands (
@@ -53,7 +51,6 @@ CREATE TABLE user (
     location VARCHAR(255) NOT NULL
 );
 
-
 -- Traditional Food
 INSERT INTO brands ( brandName,category,logo) values ("Espace MiMa","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
 INSERT INTO brands ( brandName,category,logo) values ("Fait Maison","Traditional Food","https://im.qccdn.fr/node/decryptage-restauration-que-recouvre-la-mention-fait-maison-64043/original-42267.jpg");
@@ -78,7 +75,7 @@ INSERT INTO brands ( brandName,category,logo) values ("Foundation","Healthy Food
 
 -- -- Dar zmen
 INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "https://www.196flavors.com/wp-content/uploads/2018/03/couscous-tunisien-1-FP-500x500.jpg",9600, 1) ;
-INSERT INTO menu (title, image, price, ID_brands) values ("Ojja", "https://www.mesinspirationsculinaires.com/wp-content/uploads/2018/08/ojja-tunisienne-merguez-et-oeufs-1.jpg",6500, 1) ;
+INSERT INTO menu (title, image, price, ID_brands) values ("Ojja",  "https://www.mesinspirationsculinaires.com/wp-content/uploads/2018/08/ojja-tunisienne-merguez-et-oeufs-1.jpg",6500, 1) ;
 INSERT INTO menu (title, image, price, ID_brands) values ("Makarouna", "https://pbs.twimg.com/media/EWM97HvXYAAIwuk.jpg",10450, 1);
 INSERT INTO menu (title, image, price, ID_brands) values ("Mloukhiya", "https://assets.afcdn.com/recipe/20180727/81606_w1024h1024c1cx355cy250.jpg", 18000, 1);
 
@@ -131,12 +128,12 @@ INSERT INTO menu (title, image, price, ID_brands) values ("Mloukhiya", "https://
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,10);
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,10);
 -- -- Chocolatine
--- INSERT INTO menu (title, image, price, ID_brands) values ("Chantilly  "", 9,11);
--- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
--- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
--- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
+INSERT INTO menu (title, image, price, ID_brands) values ("Chantilly",  "", 9,11);
+INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
+INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
+INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,11);
 -- -- juice Fountain
--- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
--- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
--- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
--- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
+INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
+INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
+INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
+INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);

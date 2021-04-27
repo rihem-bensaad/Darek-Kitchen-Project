@@ -45,9 +45,9 @@
             <h6>{{brand.category}}</h6>
 
           <mdb-card-title>
-            <h4>
+            <h4 (click)="getBrandId(brand.ID_brands)">
               <strong>
-                <a href="/menu">{{brand.brandName}}</a>
+                {{brand.brandName}}
               </strong>
             </h4>
             <div class="rating" style="width: 20rem">
