@@ -38,10 +38,9 @@ export class BrandsAdminComponent implements OnInit {
   }
 
   deleteBrand(brand: any) {
-    this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
-      this.getBrands()
-    })
-    
+    this.adminService.DeleteBrand(brand.ID_brands)
+    .subscribe()
+      location.reload()
     console.log("deleted");
   }
 
