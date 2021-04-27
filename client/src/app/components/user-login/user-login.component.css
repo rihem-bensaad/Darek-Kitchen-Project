@@ -96,7 +96,7 @@ form {
   height: 49px;
   border-radius: 12px;
   color: black;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
@@ -108,8 +108,9 @@ label{
   margin-top:12%
 }
 
-.btn:hover {
-  color: white;
+.btn:after {
+  background: black ! important
+  
 }
 @media only screen and (max-width: 500px) {
 form{

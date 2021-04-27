@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { BrandService } from '../../services/brand.service';
 import { AdminService } from '../../services/admin.service';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
-import { UserService } from '../../services/user.service';
+
 
 @Component({
   selector: 'app-brands-admin',
@@ -41,10 +41,9 @@ export class BrandsAdminComponent implements OnInit {
   }
 
   deleteBrand(brand: any) {
-    this.adminService.DeleteBrand(brand.ID_brands).subscribe(() => {
-      this.getBrands()
-    })
-
+    this.adminService.DeleteBrand(brand.ID_brands)
+    .subscribe()
+      location.reload()
     console.log("deleted");
   }
 
