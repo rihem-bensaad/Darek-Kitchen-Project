@@ -17,22 +17,22 @@
             <li>
                 <a href="/getbrands"><span class="las la-clipboard-list"></span>
                 <span>Update Brands</span></a>
-            </li>   
+            </li>
             <li>
                 <a href="/createchef"><span class="las la-landmark"></span>
                 <span>Create chef account</span></a>
             </li>
 
-            
+
         </ul>
     </div>
 </div>
 
 <div class="main-content">
 <header>
-    
+
     <form class="text-center" [formGroup]="signupForm" >
-        
+
         <h4 class="h4 mb-4"><i class="fas fa-users la-lg"></i><br>Create a new Chef Account</h4>
 
         <div class="form-row mb-4">
@@ -52,26 +52,26 @@
         <!-- Password -->
         <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" formControlName="password">
         <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-          
+
         </small>
 
         <!-- Phone number -->
         <input type="text" id="defaultRegisterFormPhoneNumber" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="phoneNumber">
         <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-          
+
         </small>
 
          <!-- Location -->
          <input type="text" id="defaultRegisterFormLocation" class="form-control" placeholder="Location" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="location">
          <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-           
+
          </small>
 
          <!-- ID Cart Image -->
-         
-         <input type="file" id="defaultRegisterFormImageCardId" class="form-control" placeholder="Upload your ID card" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="imageCardId">
+
+         <input type="file" name="image" id="defaultRegisterFormImageCardId" class="form-control" placeholder="Upload your ID card" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="imageCardId">
          <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-           
+
          </small>
 
         <!-- Sign up button -->
@@ -93,9 +93,9 @@
                 </form>
             </div>
   </header>
-  
+
   <div class="row">
-    
+
     <table class="table">
         <tr>
         <th><i class="fa fa-user fa-lg" aria-hidden="true"></i><strong>First Name</strong> </th>

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ChefService } from '../../services/chef.service';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
 import { ResourceLoader } from '@angular/compiler';
-
+// import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
