@@ -19,6 +19,7 @@ import { AddPlateComponent } from './components/add-plate/add-plate.component';
 import { PlateComponent } from './components/plate/plate.component';
 import { ChefPlatesComponent } from './components/chef-plates/chef-plates.component';
 import { BagComponent } from './components/bag/bag.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 
@@ -41,7 +42,8 @@ const routes: Routes = [
 {path:'addplate',component:AddPlateComponent},
 {path:'plate',component:PlateComponent},
 {path:'chefplates',component:ChefPlatesComponent},
-{path:'bag',component:BagComponent},
+  { path: 'bag', component: BagComponent },
+{path:'cart', component: CartComponent}
 
 ];
 

@@ -1,9 +1,6 @@
 DROP DATABASE IF EXISTS darekitchen;
-
 CREATE DATABASE darekitchen;
-
 USE darekitchen;
-
 CREATE TABLE chef (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(55) NOT NULL,
@@ -14,14 +11,12 @@ CREATE TABLE chef (
     location VARCHAR(255) NOT NULL,
     imageCardId VARCHAR(255) NOT NULL
 );
-
 CREATE TABLE brands (
     ID_brands INT AUTO_INCREMENT PRIMARY KEY,
     brandName VARCHAR(255) NOT NULL,
     category VARCHAR(255) NOT NULL,
     logo VARCHAR(255) NOT NULL
 );
-
 CREATE TABLE menu (
     ID_menu INT AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
@@ -32,7 +27,6 @@ CREATE TABLE menu (
     PRIMARY KEY (ID_menu)
     -- FOREIGN KEY (ID_brands) REFERENCES brands(ID_brands)
 );
-
 CREATE TABLE admin (
     ID INT AUTO_INCREMENT,
     userName VARCHAR(55) NOT NULL,
@@ -40,7 +34,6 @@ CREATE TABLE admin (
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (ID)
 );
-
 CREATE TABLE user (
     ID_user INT AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(55) NOT NULL,
@@ -50,13 +43,11 @@ CREATE TABLE user (
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL
 );
-
 -- Traditional Food
 INSERT INTO brands ( brandName,category,logo) values ("Espace MiMa","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
 INSERT INTO brands ( brandName,category,logo) values ("Fait Maison","Traditional Food","https://im.qccdn.fr/node/decryptage-restauration-que-recouvre-la-mention-fait-maison-64043/original-42267.jpg");
 INSERT INTO brands ( brandName,category,logo) values ("EL PRATA","Traditional Food","https://logopond.com/logos/f53415b25befdad90e6636d973bc4eb7.png");
 INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S","Traditional Food","https://pbs.twimg.com/profile_images/702199326383198209/2z5vkEie.png");
-
 -- Homemade Fast Food;
 -- INSERT INTO brands ( brandName,category,logo) values ("Papy Burger","HomeMade Fast Food","https://static.wixstatic.com/media/0259db_4af9537da28e423093cad7ee262e6032~mv2.png/v1/fit/w_2500,h_1330,al_c/0259db_4af9537da28e423093cad7ee262e6032~mv2.png");
 -- INSERT INTO brands ( brandName,category,logo) values ("CowBoys","HomeMade Fast Food","https://pbs.twimg.com/profile_images/1372568603501936650/WZ_u6Zsr_400x400.jpg");
