@@ -97,9 +97,22 @@
 td{
   color:white;
 }
+.btn{
+  height:30px;
+  margin-top: 0px;
+  align-self: center;
+  border-radius: 5px;
+}
+.quantityy{
+  margin-top: 0px;
+  border-radius: 3px;
+}
+.plus{
+  margin-top: -6px;
+}
 
 .cart .table tbody tr td .counter input{
-  width: 60px;
+  width: 50px;
   text-align: center;
   height: 32px;
   outline:none;
