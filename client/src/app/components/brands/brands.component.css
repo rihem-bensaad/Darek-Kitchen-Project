@@ -35,6 +35,7 @@
 .rating input:checked + label ~ label {
   color: #FFC107; /* Personal color choice. Lifted from Bootstrap 4 */
 }
-a{
-  color:#ffc107
+h4{
+  color:#ffc107 ;
+  cursor: pointer;
 }

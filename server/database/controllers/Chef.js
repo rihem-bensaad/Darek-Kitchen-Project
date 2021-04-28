@@ -13,9 +13,11 @@ const mysql = require('mysql');
 const chefLogin= function(email,callback) {
     let syntax = `SELECT * from chef where email="${email}"`
     connection.query(syntax,(err,results)=> {
-return err ? callback(err,null) :callback(null,results) ;
+return err ? callback(err,null) : callback(null,results) ;
     })
 }
+
+
 
 
 
