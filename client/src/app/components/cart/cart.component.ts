@@ -16,7 +16,6 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.getmenu();
   }
-
     getmenu() {
     this.menuService.getmenu().subscribe((data) => {
       this.menus = data
