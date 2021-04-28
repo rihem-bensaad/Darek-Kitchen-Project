@@ -1,4 +1,10 @@
 a{
     color: white;
     text-decoration: none;
+  }
+.container-fluid{
+  background: white !important;
+  margin-top: 4%;
+  text-align: center
+
 }
