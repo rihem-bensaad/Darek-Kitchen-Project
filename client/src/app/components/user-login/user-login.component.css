@@ -108,9 +108,8 @@ label{
   margin-top:12%
 }
 
-.btn:after {
-  background: black ! important
-  
+.btn:hover {
+  text-decoration: underline;
 }
 @media only screen and (max-width: 500px) {
 form{
