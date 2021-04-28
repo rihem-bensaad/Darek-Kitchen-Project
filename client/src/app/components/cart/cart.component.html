@@ -1,41 +1,68 @@
-<div class="container-fluid" >
-    <div class="row product">
-        <div class="col-md-2" >
-             Image
-        </div>
-        <div class="col-lg-2" >
-            Menu Title
-        </div>
-        <div class="col-md-2"  >
-            price
-        </div>
-        <div class="col-md-2"  >
-            delete
-        </div>
+<!---Hero Section-->
+<section id="hero">
+<div class="hero-container">
+    <div class="hero-logo">
+        <h1 class="font-weight-bold">Cart Products</h1>
     </div>
-    <div *ngFor="let menu of menus"  >
-       <div class="row product" >
-            <div class="col-md-2">
-                <img src="{{menu.image}}"  />
-            </div>
-            <div class="col-md-2" >
-             <p>{{menu.title}} </p>
-            </div>
-            <div class="col-md-2"  >
-                <p>{{menu.price}} DT </p>
-            </div>
-            <div class="col-md-2"  >
-                <!-- <button  type="button" (click)="this.deleteFromCart(product._id)"></i></button> -->
-            </div>
-        </div>
     </div>
-<!-- </div> -->
-<div class="container-fluid" >
-    <div class="row justify-content-end">
-        <div class="col-2" >
-                <div >
-                    Total : {{total}} Dt
-                </div>
-        </div>
+</section>
+<!---End of Hero Section-->
+<!--Cart Section-->
+<section class="mt-5">
+<div class="container">
+    <div class="cart">
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr >
+                    <th scope="col"class="text-white">Product</th>
+                    <th scope="col"class="text-white">Price</th>
+                    <th scope="col"class="text-white">Quantity</th>
+                    <th scope="col"class="text-white">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="main">
+                            <div class="d-flex">
+             <!--W=145 H=98--> <img src=""alt="">
+                            </div>
+                            <div class="des">
+                                <p>lorem ipsum</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <h6>$20.00</h6>
+                    </td>
+                    <td>
+                        <div class="counter">
+                            <i class="fas fa-plus"></i>
+                            <input class="input-number"type="text"
+                            value="1"min="0"max="10">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </td>
+                    <td>
+                        <h6>$20.00</h6>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
     </div>
+    </div>
+</div>
+</section>
+<div class="col-lg-4 offset-lg-4">
+<div class="checkout">
+    <ul>
+        <li class="subtotal">subtotal
+            <span>$60.00</span>
+        </li>
+        <li class="cart-total">Total
+        <span>$60.00</span></li>
+    </ul>
+    <a href="#"class="proceed-btn">Proceed to Checkout</a>
 </div>
