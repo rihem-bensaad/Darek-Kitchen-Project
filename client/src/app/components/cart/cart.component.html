@@ -22,19 +22,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr *ngFor="let menu of menus">
                     <td>
                         <div class="main">
                             <div class="d-flex">
              <!--W=145 H=98--> <img src=""alt="">
                             </div>
                             <div class="des">
-                                <p>lorem ipsum</p>
+                                <p>{{menu.title}}</p>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <h6>$20.00</h6>
+                        <h6>{{menu.price}} DT</h6>
                     </td>
                     <td>
                         <div class="counter">
