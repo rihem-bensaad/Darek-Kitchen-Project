@@ -26,6 +26,51 @@
     </div>
 </div>
 
+<form  [formGroup]="menuForm">
+
+    <h2 class="title">ADD Menu</h2>
+
+    <div class="input-field">
+        <input type="text" placeholder="Menu Title"  formControlName="title"/>
+    </div>
+
+    <div class="input-field">
+      <input type="text" placeholder="Image Menu"  formControlName="image"/>
+    </div>
+
+    <div class="input-field">
+        <input type="text" placeholder="description"  formControlName="description"/>
+      </div>
+
+    <div class="input-field">
+      <input type="text" placeholder="Price Menu"  formControlName="price"/>
+    </div>
+
+    <button class="btn solid" (click)="addMenu()">Add Menu</button>
+
+  </form>
+<div class="row">
+    
+    <table class="table">
+        <tr>
+        <th><i class="fa fa-user fa-lg" aria-hidden="true"></i><strong>Plate Name</strong> </th>
+        <th><i class="fas fa-user-circle fa-lg"></i><strong>Description</strong> </th>
+        <th><i class="fas fa-envelope fa-lg"></i><strong>Price</strong> </th>
+        <th><i class="fas fa-phone-volume fa-lg"></i><strong>Plate image </strong> </th>
+        <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
+    </tr>
+
+    <tr *ngFor="let menu of menus">
+        <td>{{menu.title}}</td>
+        <td>{{menu.description}}</td>
+        <td>{{menu.price}}</td>
+        <td>{{menu.image}}</td>
+        <td><button id="deletebtn" class="btn2 F7F709 btnyellow"  (click)="deleteMenu(menu)">delete</button></td>
+    </tr>
+    </table>
+</div>
+
+
 
 
 

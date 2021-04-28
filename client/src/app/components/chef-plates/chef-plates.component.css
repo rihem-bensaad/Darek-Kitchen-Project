@@ -1,0 +1,41 @@
+.row{
+    position: absolute ! important;
+    background-size: cover;
+    width:95.9rem
+  }
+  .col-lg-2 {
+   margin-top:5%;
+   margin-left:2%;
+   padding: 100px 10 20px
+  }
+ .card-ecommerce{
+   height: 0 auto;
+   width: 260px ! important;
+ }
+ .view{
+   min-height: 160px;
+ }
+ .imgBrand{
+   width: 100% ! important;
+   height: 60px ! important;
+ }
+ .rating {
+   direction: rtl;
+   unicode-bidi: bidi-override;
+   color: #ddd; /* Personal choice */
+   margin-left: -23%;
+   margin-top: 10%;
+ }
+ .rating input {
+   display: none;
+ }
+ .rating label:hover,
+ .rating label:hover ~ label,
+ .rating input:checked + label,
+ .rating input:checked + label ~ label {
+   color: #FFC107; /* Personal color choice. Lifted from Bootstrap 4 */
+ }
+ h4{
+   color:#ffc107 ;
+   cursor: pointer;
+ }
