@@ -18,9 +18,9 @@
           <!--Card content-->
           <mdb-card-body  class="text-center">
             <!--Category & Title-->
-  
+
               <h6>{{menu.description}}</h6>
-  
+
             <mdb-card-title>
               <h4 >
                 <strong>
@@ -34,6 +34,7 @@
                 <input id="rating-2" type="radio" name="rating" value="2"/><label for="rating-2"><i class="fas fa-lg fa-star"></i></label>
                 <input id="rating-1" type="radio" name="rating" value="1"/><label for="rating-1"><i class="fas fa-lg fa-star"></i></label>
               </div>
+              <button class="btn yellow" (click)="addToCart(menu.product)">add to cart</button>
             </mdb-card-title>
             <!--Rating-->
             <!-- <ul class="rating">
