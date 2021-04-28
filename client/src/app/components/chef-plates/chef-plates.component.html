@@ -1,0 +1,61 @@
+<div class="myrow">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-3" *ngFor="let menu of menus" >
+        <!--Card-->
+        <mdb-card  class="card-ecommerce">
+          <!--Card image-->
+          <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+            <a >
+            <div class="imgBrand"  ><mdb-card-img src="{{menu.image}}"  alt="sample photo"></mdb-card-img ></div>
+            </a>
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <!--Card image-->
+          <!--Card content-->
+          <mdb-card-body  class="text-center">
+            <!--Category & Title-->
+  
+              <h6>{{menu.description}}</h6>
+  
+            <mdb-card-title>
+              <h4 >
+                <strong>
+                {{menu.title}}
+                </strong>
+              </h4>
+              <div class="rating" style="width: 20rem">
+                <input id="rating-5" type="radio" name="rating" value="5"/><label for="rating-5"><i class="fas fa-lg fa-star"></i></label>
+                <input id="rating-4" type="radio" name="rating" value="4" checked /><label for="rating-4"><i class="fas fa-lg fa-star"></i></label>
+                <input id="rating-3" type="radio" name="rating" value="3"/><label for="rating-3"><i class="fas fa-lg fa-star"></i></label>
+                <input id="rating-2" type="radio" name="rating" value="2"/><label for="rating-2"><i class="fas fa-lg fa-star"></i></label>
+                <input id="rating-1" type="radio" name="rating" value="1"/><label for="rating-1"><i class="fas fa-lg fa-star"></i></label>
+              </div>
+            </mdb-card-title>
+            <!--Rating-->
+            <!-- <ul class="rating">
+              <li>
+                <mdb-icon fas icon="star"></mdb-icon>
+              </li>
+              <li>
+                <mdb-icon fas icon="star"></mdb-icon>
+              </li>
+              <li>
+                <mdb-icon fas icon="star"></mdb-icon>
+              </li>
+              <li>
+                <mdb-icon fas icon="star"></mdb-icon>
+              </li>
+              <li>
+                <mdb-icon fas icon="star"></mdb-icon>
+              </li>
+            </ul> -->
+          </mdb-card-body>
+        </mdb-card>
+        <!--Card-->
+      </div>
+    </div>
+  </div>

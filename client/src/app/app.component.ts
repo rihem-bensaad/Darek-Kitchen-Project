@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import jwt_decode from "jwt-decode";
+
 
 
 @Component({
@@ -9,16 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'darek-kitchen';
-//   logged = false;
   
-//   DecodeToken(token: string): any {
-//     return jwt_decode(token);
-//     }
-
-// loggedIn(){
-//   if(this.DecodeToken(localStorage['token'])['role']==="user")
-// this.logged = true
-
-// }  
-
 }

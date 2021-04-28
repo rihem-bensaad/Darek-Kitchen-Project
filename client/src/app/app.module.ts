@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,12 +22,16 @@ import { MenuComponent } from './components/menu/menu.component';
 import { AddMenuComponent } from './components/add-menu/add-menu.component';
 import { GetUserComponent } from './components/get-user/get-user.component';
 import { BrandsAdminComponent } from './components/brands-admin/brands-admin.component';
+import { CartComponent } from './components/cart/cart.component';
+import { FilterBrandPipe } from './pipes/filter-brand.pipe';
 import { CreateChefComponent } from './components/create-chef/create-chef.component';
 import { LoggedHomeComponent } from './components/logged-home/logged-home.component';
 import { ManagementComponent } from './components/management/management.component';
 import { AddPlateComponent } from './components/add-plate/add-plate.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { PlateComponent } from './components/plate/plate.component';
+import { ChefPlatesComponent } from './components/chef-plates/chef-plates.component';
+import { BagComponent } from './components/bag/bag.component';
 
 
 
@@ -49,12 +53,16 @@ import { PlateComponent } from './components/plate/plate.component';
     AddMenuComponent,
     GetUserComponent,
     BrandsAdminComponent,
+    CartComponent,
+    FilterBrandPipe,
     CreateChefComponent,
     LoggedHomeComponent,
     ManagementComponent,
     AddPlateComponent,
     OrdersComponent,
     PlateComponent,
+    ChefPlatesComponent,
+    BagComponent,
 
   ],
 
@@ -64,7 +72,6 @@ import { PlateComponent } from './components/plate/plate.component';
     HttpClientModule,
     ReactiveFormsModule,
     MDBBootstrapModule.forRoot(),
-    HttpClientModule,
     IvyCarouselModule,
 
   ],
