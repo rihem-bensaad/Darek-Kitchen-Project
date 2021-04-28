@@ -15,13 +15,13 @@ export class CreateChefComponent implements OnInit {
   chefs: any = [];
 
   signupForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-    phoneNumber: new FormControl(''),
-    location: new FormControl(''),
-    imageCardId: new FormControl('')
+    firstName: new FormControl('',[Validators.required]),
+    lastName: new FormControl('',[Validators.required]),
+    email: new FormControl('',[Validators.required]),
+    password: new FormControl('',[Validators.required]),
+    phoneNumber: new FormControl('',[Validators.required]),
+    location: new FormControl('',[Validators.required]),
+    imageCardId: new FormControl('',[Validators.required])
   });
 
   constructor(private ChefService: ChefService) { }
@@ -31,7 +31,7 @@ export class CreateChefComponent implements OnInit {
     this.addChef()
   }
 
-    deleteChef(chef:any){
+     deleteChef(chef:any){
       this.ChefService.deleteChef(chef.ID)
       .subscribe()
       location.reload()

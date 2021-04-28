@@ -26,10 +26,11 @@ CREATE TABLE menu (
     ID_menu INT AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
     image VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NOT NULL,
     price INT NOT NULL,
-    ID_brands INT,
-    PRIMARY KEY (ID_menu),
-    FOREIGN KEY (ID_brands) REFERENCES brands(ID_brands)
+    -- ID_brands INT,
+    PRIMARY KEY (ID_menu)
+    -- FOREIGN KEY (ID_brands) REFERENCES brands(ID_brands)
 );
 
 
@@ -75,10 +76,10 @@ INSERT INTO brands ( brandName,category,logo) values ("Food Express","Healthy Fo
 INSERT INTO brands ( brandName,category,logo) values ("Foundation","Healthy Food","https://i.pinimg.com/236x/ac/56/bc/ac56bca76efa388b7b6f01dbe5d900cb--coffee-logo-food-logos.jpg");
 
 -- -- Dar zmen
-INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "https://www.196flavors.com/wp-content/uploads/2018/03/couscous-tunisien-1-FP-500x500.jpg",9600, 1) ;
-INSERT INTO menu (title, image, price, ID_brands) values ("Ojja",  "https://www.mesinspirationsculinaires.com/wp-content/uploads/2018/08/ojja-tunisienne-merguez-et-oeufs-1.jpg",6500, 1) ;
-INSERT INTO menu (title, image, price, ID_brands) values ("Makarouna", "https://pbs.twimg.com/media/EWM97HvXYAAIwuk.jpg",10450, 1);
-INSERT INTO menu (title, image, price, ID_brands) values ("Mloukhiya", "https://assets.afcdn.com/recipe/20180727/81606_w1024h1024c1cx355cy250.jpg", 18000, 1);
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "https://www.196flavors.com/wp-content/uploads/2018/03/couscous-tunisien-1-FP-500x500.jpg",9600, 1) ;
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Ojja",  "https://www.mesinspirationsculinaires.com/wp-content/uploads/2018/08/ojja-tunisienne-merguez-et-oeufs-1.jpg",6500, 1) ;
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Makarouna", "https://pbs.twimg.com/media/EWM97HvXYAAIwuk.jpg",10450, 1);
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Mloukhiya", "https://assets.afcdn.com/recipe/20180727/81606_w1024h1024c1cx355cy250.jpg", 18000, 1);
 
 -- -- Pates Fait Maison
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Spaguetti  "", C arbonara",7,2);
@@ -130,8 +131,8 @@ INSERT INTO menu (title, image, price, ID_brands) values ("Mloukhiya", "https://
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,10);
 
 -- -- Chocolatine
-INSERT INTO menu (title, image, price, ID_brands) values ("Chantilly", "http://qccdn.ar-cdn.com/recipes/port500/ac2b48ec-33b4-44e3-aa68-2c37452e8d7a.jpg", 9000, 10);
-INSERT INTO menu (title, image, price, ID_brands) values ("Grewech", "https://recettes.de/images/blogs/couscous-et-puddings/griwech-griweche-gateau-algerien-au-miel.640x480.jpg", 91000 ,11);
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Chantilly", "http://qccdn.ar-cdn.com/recipes/port500/ac2b48ec-33b4-44e3-aa68-2c37452e8d7a.jpg", 9000, 10);
+-- INSERT INTO menu (title, image, price, ID_brands) values ("Grewech", "https://recettes.de/images/blogs/couscous-et-puddings/griwech-griweche-gateau-algerien-au-miel.640x480.jpg", 91000 ,11);
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,2);
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,3);
 

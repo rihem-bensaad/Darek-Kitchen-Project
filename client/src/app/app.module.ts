@@ -30,6 +30,8 @@ import { ManagementComponent } from './components/management/management.componen
 import { AddPlateComponent } from './components/add-plate/add-plate.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { PlateComponent } from './components/plate/plate.component';
+import { ChefPlatesComponent } from './components/chef-plates/chef-plates.component';
+import { BagComponent } from './components/bag/bag.component';
 
 
 
@@ -59,6 +61,8 @@ import { PlateComponent } from './components/plate/plate.component';
     AddPlateComponent,
     OrdersComponent,
     PlateComponent,
+    ChefPlatesComponent,
+    BagComponent,
 
   ],
 
