@@ -57,6 +57,9 @@
 
   .nav-link {
     padding: .2rem 1rem;
+    font-size: 17px;
+    
+    
   }
 
   .nav-link.active,.nav-link:focus{
