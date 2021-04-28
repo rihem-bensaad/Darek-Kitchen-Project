@@ -19,9 +19,22 @@ export class ChefPlatesComponent implements OnInit {
       this.menus = data
     })
   }
-addToCart(plate:string) {
+  
+  addToCart(plate:string) {
     this.cartService.addToCart(plate);
-    window.alert('Your plate has been added to the cart!');
+  window.alert('Your plate has been added to the cart!');
   }
+
+  plus(plate: string) {
+    //add new item
+    this.addToCart(plate)
+  }
+
+  // add2cart(type: string, plate: string) {
+  //   if (type === 'plus') {
+  //     this.cart.menu.push(plate);
+  //     this.cart.cart = this.cartService.cart+1
+  //   }
+  //   }
 
 }

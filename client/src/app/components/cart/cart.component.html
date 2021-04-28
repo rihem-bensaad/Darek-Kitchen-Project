@@ -10,18 +10,11 @@
             price
         </div>
         <div class="col-md-2"  >
-            Brand
-        </div>
-        <div class="col-md-2"  >
             delete
         </div>
-
     </div>
     <div *ngFor="let menu of menus"  >
-
-
-
-        <div class="row product" >
+       <div class="row product" >
             <div class="col-md-2">
                 <img src="{{menu.image}}"  />
             </div>
@@ -32,29 +25,17 @@
                 <p>{{menu.price}} DT </p>
             </div>
             <div class="col-md-2"  >
-                <!-- <button class="btn btn-info" type="button" (click) ="this.decremntQuant(product._id)" >-</button><input disabled value={{product.quantity}}  ><button class="btn btn-info" type="button" style="margin-left: 5px;" (click) ="this.incrementquant(product._id)" >+</button> -->
-            </div>
-            <div class="col-md-2"  >
                 <!-- <button  type="button" (click)="this.deleteFromCart(product._id)"></i></button> -->
             </div>
-
         </div>
-
     </div>
-
 <!-- </div> -->
 <div class="container-fluid" >
     <div class="row justify-content-end">
         <div class="col-2" >
                 <div >
-                    Total : 100 Dt
+                    Total : {{total}} Dt
                 </div>
-
-                <!-- <div>
-                    <a routerLink={{redirect}}>
-                     <button type="button" class="btn btn-primary" routerLink={{redirect}} ><a routerLink={{redirect}} > Continue </a></button>
-                    </a>
-                </div> -->
         </div>
     </div>
 </div>

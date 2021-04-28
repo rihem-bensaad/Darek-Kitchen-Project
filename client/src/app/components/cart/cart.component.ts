@@ -7,12 +7,19 @@ import { MenuService } from '../../services/menu.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-   menus: any = [];
-   menu = this.menuService.getmenu();
+  menus: any = [];
+  total: number = 0;
+  menu = this.menuService.getmenu();
 
   constructor(private menuService: MenuService) { }
 
   ngOnInit(): void {
+    this.getmenu();
   }
 
+    getmenu() {
+    this.menuService.getmenu().subscribe((data) => {
+      this.menus = data
+    })
+  }
 }
