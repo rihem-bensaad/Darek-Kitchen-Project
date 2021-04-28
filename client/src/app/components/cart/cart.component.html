@@ -17,19 +17,19 @@
         </div>
 
     </div>
-    <!-- <div *ngFor="let product of products; let i = index" > -->
+    <div *ngFor="let menu of menus"  >
 
 
 
         <div class="row product" >
             <div class="col-md-2">
-               image: <img src=""  />
+                <img src="{{menu.image}}"  />
             </div>
             <div class="col-md-2" >
-             <p>title: </p>
+             <p>{{menu.title}} </p>
             </div>
             <div class="col-md-2"  >
-                <!-- <p>{{product.price}} DT </p> -->
+                <p>{{menu.price}} DT </p>
             </div>
             <div class="col-md-2"  >
                 <!-- <button class="btn btn-info" type="button" (click) ="this.decremntQuant(product._id)" >-</button><input disabled value={{product.quantity}}  ><button class="btn btn-info" type="button" style="margin-left: 5px;" (click) ="this.incrementquant(product._id)" >+</button> -->

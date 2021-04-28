@@ -19,9 +19,9 @@ export class ChefPlatesComponent implements OnInit {
       this.menus = data
     })
   }
-addToCart(product:string) {
-    this.cartService.addToCart(product);
-    window.alert('Your product has been added to the cart!');
+addToCart(plate:string) {
+    this.cartService.addToCart(plate);
+    window.alert('Your plate has been added to the cart!');
   }
 
 }
