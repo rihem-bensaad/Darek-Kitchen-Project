@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BrandService } from '../../services/brand.service';
 import { AdminService } from '../../services/admin.service';
+import { MenuService } from '../../services/menu.service';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
 
 
@@ -24,12 +25,12 @@ export class BrandsAdminComponent implements OnInit {
    });
 
   values: any = {};
-
+  
   constructor(private brandService: BrandService, private adminService: AdminService,
-    private router: Router,) { }
-
+    private router: Router,private menuService: MenuService) { }
+    filterTerm!: string;
   ngOnInit(): void {
-    this.getBrands()
+    this.getmenu()
 
   }
 
@@ -56,7 +57,18 @@ export class BrandsAdminComponent implements OnInit {
         location.reload()
       })
   }
+  
 
+  getmenu() {
+    this.menuService.getmenu().subscribe((data) => {
+      this.menus = data
+    })
+  }
+  deleteMenu(menu: any) {
+    this.menuService.deletemenu(menu.ID_menu)
+    .subscribe() 
+     location.reload()
+  }
   getvalues(data: any) {
     this.brandForm.setValue(data)
   }
