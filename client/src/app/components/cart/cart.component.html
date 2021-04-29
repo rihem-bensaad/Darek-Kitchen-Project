@@ -21,23 +21,23 @@
                     <th scope="col"class="text-white">Total</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr *ngFor="let menu of menus">
-                    <td>
+            <tbody *ngIf="cartItem.length === 0 ">
+                <tr *ngIf="cartItem.length > 0 ">
+                    <td *ngFor='let item of cartItem'>
                         <div class="main">
                             <div class="d-flex">
                             <img src="" alt="">
                             </div>
                             <div class="des">
-                                <p>{{menu.title}}</p>
+                                <p></p>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <h6>{{menu.price}} DT</h6>
+                        <h6> DT</h6>
                     </td>
                     <td>
-                        <div class="counter">                            
+                        <div class="counter">
                                 <div class="def-number-input number-input safari_only mb-0">
                                 <span onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
                                             class="btn btn-yellow"><div class="plus">-</div></span>
@@ -45,11 +45,11 @@
                                 <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
                                             class="btn btn-yellow"><div class="plus">+</div></span>
                                         </div>
-                                    
+
                         </div>
                     </td>
                     <td>
-                        <h6>$20.00</h6>
+                        <h6>{{1100 | currency}}</h6>
                     </td>
                 </tr>
 
@@ -63,10 +63,10 @@
 <div class="checkout">
     <ul>
         <li class="subtotal">subtotal
-            <span>$60.00</span>
+            <span>{{1100 | currency}}</span>
         </li>
         <li class="cart-total">Total
-        <span>$60.00</span></li>
+        <span>{{1100 | currency}}</span></li>
     </ul>
     <a href="#"class="proceed-btn">Proceed to Checkout</a>
 </div>

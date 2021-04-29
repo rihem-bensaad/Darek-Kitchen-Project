@@ -8,17 +8,20 @@ import { MenuService } from '../../services/menu.service';
 })
 export class CartComponent implements OnInit {
   menus: any = [];
-  total: number = 0;
+  cartTotal = 0;
   menu = this.menuService.getmenu();
+  cartItem = []
 
   constructor(private menuService: MenuService) { }
 
   ngOnInit(): void {
     this.getmenu();
+
   }
     getmenu() {
     this.menuService.getmenu().subscribe((data) => {
       this.menus = data
     })
-  }
+    }
+
 }
