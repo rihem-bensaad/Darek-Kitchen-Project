@@ -11,7 +11,7 @@
                 <span>My Virtual Kitchen</span></a>
             </li>
             <li >
-                <a  href="/addplate"  ><span class="las la-clipboard-list" ></span>
+                <a  href="/addplate" ><span class="la la-cutlery la-lg"></span>
                 <span>Add Plates</span></a>
             </li>
             <li>
@@ -27,9 +27,10 @@
 </div>
 
 <form  [formGroup]="menuForm">
+
     
-    <h2 class="title">Create Plate</h2>
-    <i class="bi bi-egg-fried"></i>
+    <h2 class="title"><i class="fas fa-bars"></i> Create Plate</h2>
+
     <div class="input-field">
         <label><b>Photo :</b></label>
         <input id="inpimage" type="text" placeholder="Image Menu"  formControlName="image"/>
@@ -51,17 +52,17 @@
       <input id="inpprice" type="text" placeholder="Price Menu"  formControlName="price"/>
     </div>
 
-    <button id="addbtn" class="btn" (click)="addMenu()">ADD</button>
+    <button id="addbtn" class="btn" (click)="addMenu()"><b>ADD</b></button>
 
   </form>
 <div class="row">
     
     <table class="table">
         <tr>
-        <th><i class="fa fa-user fa-lg" aria-hidden="true"></i><strong>Plate Name</strong> </th>
-        <th><i class="fas fa-user-circle fa-lg"></i><strong>Location</strong> </th>
-        <th><i class="fas fa-envelope fa-lg"></i><strong>Price</strong> </th>
-        <th><i class="fas fa-phone-volume fa-lg"></i><strong>Plate image </strong> </th>
+        <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
+        <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
+        <th><i class="fas fa-dollar-sign fa-lg"></i><strong>Price</strong> </th>
+        <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong> </th>
         <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
     </tr>
 
