@@ -32,7 +32,7 @@
 
       <div class="search-wrapper">
         <form>
-            <input class="search" type="text" placeholder="Type here to search..." />
+            <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
             <button class="close-icon" type="reset"></button>
         </form>
     </div>
@@ -50,7 +50,7 @@
         <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
     </tr>
 
-    <tr *ngFor="let user of users">
+    <tr *ngFor="let user of users| filter:filterTerm">
         <td>{{user.firstName}}</td>
         <td>{{user.lastName}}</td>
         <td>{{user.email}}</td>

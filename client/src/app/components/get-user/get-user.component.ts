@@ -9,7 +9,7 @@ import { AdminService } from '../../services/admin.service';
 export class GetUserComponent implements OnInit {
   users: any = [];
   constructor(private userService: UserService , private adminService: AdminService) { }
-
+  filterTerm!: string;
   ngOnInit(): void {
     this.getusers()
   }

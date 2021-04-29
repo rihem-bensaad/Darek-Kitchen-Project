@@ -4,7 +4,8 @@ import { BrandService } from '../../services/brand.service';
 import { AdminService } from '../../services/admin.service';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
 import { UserService } from '../../services/user.service';
-
+import {ChefService} from '../../services/chef.service'
+import {MenuService} from '../../services/menu.service'
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -14,6 +15,8 @@ import { UserService } from '../../services/user.service';
 export class AdminDashboardComponent implements OnInit {
   users: any = [];
   brandCategory: string = "";
+  chefs: any = []
+  menus : any = []
 
   brands: any = [];
   brandForm = new FormGroup({
@@ -26,17 +29,29 @@ export class AdminDashboardComponent implements OnInit {
   values: any = {};
   showMyContainer: boolean = false;
 
-  constructor(private brandService: BrandService, private adminService: AdminService,private userService: UserService, private router: Router) { }
+  constructor(private brandService: BrandService, private adminService: AdminService,private userService: UserService, private router: Router,private ChefService: ChefService,private menuService : MenuService) { }
 
   ngOnInit(): void {
     this.getBrands()
     this.getusers()
+    this.getChefs()
+    this.getmenu()
   }
 
   getBrands() {
     this.brandService.getbrand().subscribe((data) => {
       this.brands = data
       console.log('get from dashboard', this.brands);
+    })
+  }
+  getChefs() {
+    this.ChefService.getChef().subscribe((data) => {
+      this.chefs = data
+    })
+  }
+  getmenu() {
+    this.menuService.getmenu().subscribe((data) => {
+      this.menus = data
     })
   }
 
