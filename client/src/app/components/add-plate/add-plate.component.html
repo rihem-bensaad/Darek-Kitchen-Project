@@ -27,30 +27,31 @@
 </div>
 
 <form  [formGroup]="menuForm">
-
-    <h5 class="title">ADD Menu</h5>
+    
+    <h2 class="title">Create Plate</h2>
+    <i class="bi bi-egg-fried"></i>
     <div class="input-field">
-        <label>Image</label>
-      <input type="text" placeholder="Image Menu"  formControlName="image"/>
+        <label><b>Photo :</b></label>
+        <input id="inpimage" type="text" placeholder="Image Menu"  formControlName="image"/>
     </div>
 
     <div class="input-field">
-        <label>Title</label>
+        <label><b>Title :</b></label>
         <input type="text" placeholder="Menu Title"  formControlName="title"/>
     </div>
 
 
     <div class="input-field">
-        <label>Location</label>
-        <input type="text" placeholder="location"  formControlName="location"/>
+        <label><b>Location :</b></label>
+        <input id="inplocation"type="text" placeholder="location"  formControlName="location"/>
       </div>
 
     <div class="input-field">
-        <label>Price</label>
-      <input type="text" placeholder="Price Menu"  formControlName="price"/>
+        <label><b>Price :</b></label>
+      <input id="inpprice" type="text" placeholder="Price Menu"  formControlName="price"/>
     </div>
 
-    <button class="btn solid" (click)="addMenu()">Add Menu</button>
+    <button id="addbtn" class="btn" (click)="addMenu()">ADD</button>
 
   </form>
 <div class="row">
@@ -68,8 +69,8 @@
         <td>{{menu.title}}</td>
         <td>{{menu.location}}</td>
         <td>{{menu.price}}</td>
-        <td>{{menu.image}}</td>
-        <td><button id="deletebtn" class="btn2 F7F709 btnyellow"  (click)="deleteMenu(menu)">delete</button></td>
+        <td><img src="{{menu.image}}"></td>
+        <td><button id="deletebtn" class="btn"  (click)="deleteMenu(menu)">delete</button></td>
     </tr>
     </table>
 </div>
