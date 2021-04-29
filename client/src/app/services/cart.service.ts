@@ -24,5 +24,7 @@ export class CartService {
     console.log(product);
     this.subject.next(product);
   }
-
+  getMsg() {
+    return this.subject.asObservable()
+  }
 }
