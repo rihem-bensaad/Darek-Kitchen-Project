@@ -42,3 +42,9 @@ module.exports.cheflogin = (req,res,callback)=>{
     })
 }
 
+module.exports.getChefbylocation = (req,res)=>{
+    db.getChefbyLocation([req.params.location],(err,result)=>{
+        err ? console.log(err) : res.status(201).send(result)
+    })
+}
+

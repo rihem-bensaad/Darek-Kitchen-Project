@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
+import { ChefService} from '../../services/chef.service';
+
 @Component({
   selector: 'app-chef-plates',
   templateUrl: './chef-plates.component.html',
@@ -7,7 +9,8 @@ import { MenuService } from '../../services/menu.service';
 })
 export class ChefPlatesComponent implements OnInit {
   menus : any = []
-  constructor(private menuService: MenuService) { }
+  filterTerm!: string;
+  constructor(private menuService: MenuService , private chefService : ChefService) { }
 
   ngOnInit(): void {
     this.getmenu()
@@ -18,4 +21,6 @@ export class ChefPlatesComponent implements OnInit {
       this.menus = data
     })
   }
+
+
 }
