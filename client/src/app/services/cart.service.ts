@@ -20,9 +20,9 @@ export class CartService {
   }
 
   constructor() { }
-  sendMsg(product: String) {
-    console.log(product);
-    this.subject.next(product);
+  sendMsg(menu: String) {
+    console.log(menu);
+    this.subject.next(menu);
   }
   getMsg() {
     return this.subject.asObservable()
