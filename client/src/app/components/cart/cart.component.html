@@ -21,20 +21,20 @@
                     <th scope="col"class="text-white">Total</th>
                 </tr>
             </thead>
-            <tbody *ngIf="cartItem.length === 0 ">
-                <tr *ngIf="cartItem.length > 0 ">
-                    <td *ngFor='let item of cartItem'>
+            <tbody>
+                <tr *ngFor="let menu of menus ">
+                    <td>
                         <div class="main">
                             <div class="d-flex">
                             <img src="" alt="">
                             </div>
                             <div class="des">
-                                <p></p>
+                                <p>{{menu.title}}</p>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <h6> DT</h6>
+                        <h6> {{menu.price}}DT</h6>
                     </td>
                     <td>
                         <div class="counter">

@@ -7,11 +7,15 @@ import { CartService } from '../../services/cart.service';
   styleUrls: ['./chef-plates.component.css']
 })
 export class ChefPlatesComponent implements OnInit {
-  menus : any = []
-  constructor(private menuService: MenuService, private cartService: CartService) { }
+  menus: any
+  cartItem:any = []
+  constructor(private menuService: MenuService, private cartService: CartService, private msg: CartService) { }
 
   ngOnInit(): void {
     this.getmenu()
+       this.msg.getMsg().subscribe((data) => {
+        this.menus = data
+    })
   }
 
   getmenu() {
@@ -19,16 +23,28 @@ export class ChefPlatesComponent implements OnInit {
       this.menus = data
     })
   }
-  
-  addToCart(plate:string) {
-    this.cartService.addToCart(plate);
+
+  addToCart() {
+    this.cartService.addToCart(this.menus.ID_menu);
+    console.log(this.menus);
+    console.log(this.menus.ID_menu);
+
+
   window.alert('Your plate has been added to the cart!');
   }
 
-  plus(plate: string) {
-    //add new item
-    this.addToCart(plate)
-  }
+
+//  getBrandId(ID_brands: number) {
+//     this.menuService.getMenuByBrandId(ID_brands).subscribe((data) => {
+//       this.menuService.menu = data
+//       console.log(this.menuService.menu, " data id brand");
+//       this.router.navigate(['/menu'])
+//     })
+//   }
+
+
+
+
 
   // add2cart(type: string, plate: string) {
   //   if (type === 'plus') {

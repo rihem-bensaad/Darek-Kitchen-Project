@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
-import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -9,24 +8,29 @@ import { CartService } from '../../services/cart.service';
 })
 export class CartComponent implements OnInit {
   menus: any = [];
-  cartTotal = 0;
+  total: number = 0;
   menu = this.menuService.getmenu();
   cartItem = []
 
-  constructor(private menuService: MenuService , private msg: CartService) { }
+  constructor(public menuService: MenuService ) { }
 
   ngOnInit(): void {
-    this.getmenu();
-
-    this.msg.getMsg().subscribe(menu => {
-      console.log(menu);
-    })
 
   }
-    getmenu() {
-    this.menuService.getmenu().subscribe((data) => {
+
+  getmenuById(ID_menu: number) {
+      console.log(ID_menu);
+
+    this.menuService.getmenuById(ID_menu).subscribe((data) => {
       this.menus = data
     })
     }
 
+//  calcTotal(items) {
+//     let total = 0;
+//     items.forEach((item) => {
+//         total += (item.price * item.quantity);
+//     });
+//    this.total = total;
+//   }
 }
