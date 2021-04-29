@@ -39,3 +39,20 @@
    color:#ffc107 ;
    cursor: pointer;
  }
+.search-wrapper{
+text-align: center ! important;
+margin-top:6%
+ }
+ .search{
+  border-radius: 13px;
+  width: 40vh;
+  height: 2.5rem;
+  outline: none;
+ }
+ .price{
+   font-family: Book Antiqua;
+ }
+ .location{
+  float:right;
+  font-weight: 600;
+ }

@@ -76,5 +76,5 @@ module.exports={
     deleteChef,
     updateBrand,
     createChef,
-    getChef
+    getChef,
 }
