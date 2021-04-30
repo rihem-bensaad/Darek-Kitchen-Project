@@ -9,15 +9,19 @@ import { OrdersService} from '../../services/orders.service';
 })
 export class CartComponent implements OnInit {
   menus: any = [];
-  total: number = 0;
   menu = this.menuService.getmenu();
   cartItem : any = this.ordersService.orders
 
   constructor(public menuService: MenuService, public ordersService: OrdersService) { }
 
   ngOnInit(): void {
-    this.Cartetails()
 
+  }
+
+
+  getorders() {
+    var retrievedObject = localStorage.getItem('myObject');
+  console.log('retrievedObject: ', JSON.parse(retrievedObject));
   }
 
 
@@ -28,25 +32,6 @@ export class CartComponent implements OnInit {
       this.menus = data
     })
 }
-
-//  calcTotal(items) {
-//     let total = 0;
-//     items.forEach((item) => {
-//         total += (item.price * item.quantity);
-//     });
-//    this.total = total;
-//   }
-getCartDetails:any=[]
-
-  Cartetails() {
-    if (localStorage.getItem('localCart')) {
-      // this.getCartDetails = JSON.parse(localStorage.getItem('localCart'));
-      console.log(this.getCartDetails);
-
-    }
-
-    }
-
 
 }
 

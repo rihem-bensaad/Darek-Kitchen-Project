@@ -12,8 +12,8 @@ import { OrdersService } from '../../services/orders.service';
 export class ChefPlatesComponent implements OnInit {
   menus: any
   cartItem:any = []
-  // menus : any = []
   filterTerm!: string;
+  data : any = this.ordersService.orders
   constructor(private menuService: MenuService , private msg: CartService, private ordersService:OrdersService) { }
 
   ngOnInit(): void {
@@ -39,8 +39,11 @@ export class ChefPlatesComponent implements OnInit {
     })
     if (exist) {
       this.ordersService.orders.push(mymenu)
+      this.ordersService.totalPrice = this.ordersService.totalPrice + mymenu.price
+      localStorage.setItem('MyObject', JSON.stringify(this.ordersService.orders));
     }
     console.log(this.ordersService.orders);
+
   }
 
 

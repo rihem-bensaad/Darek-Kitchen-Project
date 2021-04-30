@@ -42,7 +42,7 @@
                                 <div class="def-number-input number-input safari_only mb-0">
                                 <span onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
                                             class="btn btn-yellow"><div class="plus">-</div></span>
-                                <input class="quantityy" min="0"  name="quantity" value="1" type="number">
+                                <input class="quantityy" min="1"  name="quantity" value="1" type="number">
                                 <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
                                             class="btn btn-yellow"><div class="plus">+</div></span>
                                         </div>
@@ -50,7 +50,7 @@
                         </div>
                     </td>
                     <td>
-                        <h6>{{1100 | currency}}</h6>
+                        <h6>{{item.price | currency}}</h6>
                     </td>
                 </tr>
 
@@ -63,11 +63,9 @@
 <div class="col-lg-4 offset-lg-4">
 <div class="checkout">
     <ul>
-        <li class="subtotal">subtotal
-        <span>$60.00</span>
-        </li>
+
         <li class="cart-total">Total
-        <span>{{1100 | currency}}</span></li>
+        <span>{{ordersService.totalPrice | currency}}</span></li>
     </ul>
     <a href="#"class="proceed-btn">Proceed to Checkout</a>
 </div>
