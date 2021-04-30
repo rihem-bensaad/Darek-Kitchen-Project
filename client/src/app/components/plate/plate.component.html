@@ -26,6 +26,29 @@
     </div>
 </div>
 
+<div class="row">
+    
+    <table class="table">
+        <tr>
+        <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
+        <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
+        <th><i class="fas fa-dollar-sign fa-lg"></i><strong>Price</strong> </th>
+        <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong> </th>
+        <th><i class="fas fa-edit fa-lg"></i><strong>Update</strong> </th>
+    </tr>
+
+    <tr *ngFor="let menu of menus">
+        <td>{{menu.title}}</td>
+        <td>{{menu.location}}</td>
+        <td>{{menu.price}}</td>
+        <td><img src="{{menu.image}}"></td>
+        <td><button id="updatebtn" class="btn">Update</button></td>
+    </tr>
+    </table>
+</div>
+
+
+
 
 
 

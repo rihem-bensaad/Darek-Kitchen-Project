@@ -1,8 +1,12 @@
-<div class="search-wrapper">
-  <form>
-    <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
-  </form>
-</div>
+<div class="main">
+  
+  <!-- Actual search box -->
+  <div class="form-group has-search">
+    <span class="fa fa-search form-control-feedback"></span>
+    <input type="search" class="form-control" autocomplete="off" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
+  </div>
+  </div>
+
 <div class="myrow">
     <!--Grid row-->
      <div class="row">
@@ -28,14 +32,14 @@
               
   
             <mdb-card-title>
-              <h4 >
+              <h4 class="menuname">
                 <strong>
                 {{menu.title}}
                 </strong>
                
               </h4>
-              <b><p class="price">{{menu.price}}TND</p></b>
-              <h6 class="location">{{menu.location}}</h6>
+              <b><p class="price">{{menu.price}} TND</p></b>
+              <h6 class="location"><i class="fas fa-map-marker-alt"></i> {{menu.location}}</h6>
             
 
               <!-- <div class="rating" style="width: 20rem">
