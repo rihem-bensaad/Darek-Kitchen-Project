@@ -17,7 +17,7 @@ export class PlateComponent implements OnInit {
     title: new FormControl(''),
     location: new FormControl(''),
     price: new FormControl(''),
-    image: new FormControl('')
+    image: new FormControl(''),
    });
 
   constructor(private menuService: MenuService , private ChefService: ChefService) { }
