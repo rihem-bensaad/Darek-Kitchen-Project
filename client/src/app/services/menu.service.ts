@@ -19,9 +19,24 @@ export class MenuService {
   }
   getmenuById(ID_menu:Number):Observable<any>{
     return this.http.get("http://localhost:3000/menu/get/" + ID_menu).pipe(
-      map(result => {
-        console.log(result)
-        return result
+      map((result: any = []) => {
+        let cartItems: any = [];
+
+        for (let item of result) {
+          let productExists = false;
+
+          for (let i in cartItems) {
+            if (cartItems[i].productId === item.menu.ID_menu) {
+              cartItems[i].qty++;
+              productExists = true;
+              break;
+            }
+          }
+          if (!productExists) {
+            cartItems.push(item.ID_menu, item.menu)
+          }
+        }
+        return cartItems;
       })
     )
   }
