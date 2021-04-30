@@ -10,28 +10,32 @@ import { OrdersService} from '../../services/orders.service';
 export class CartComponent implements OnInit {
   menus: any = [];
   menu = this.menuService.getmenu();
-  cartItem : any = this.ordersService.orders
+  cartItem : any = []
 
   constructor(public menuService: MenuService, public ordersService: OrdersService) { }
 
   ngOnInit(): void {
 
+    this.getorders()
   }
 
 
-  getorders() {
-    var retrievedObject = localStorage.getItem('myObject');
-  console.log('retrievedObject: ', JSON.parse(retrievedObject));
+ getorders() {
+    const mydata = localStorage.getItem('MyObject')
+   this.cartItem = mydata
+    JSON.parse(this.cartItem)
+    console.log(this.cartItem, 'jjjjjjjj')
+
   }
 
 
 
-  getmenuById(ID_menu: number) {
-      console.log(ID_menu);
-    this.menuService.getmenuById(ID_menu).subscribe((data) => {
-      this.menus = data
-    })
-}
+//   getmenuById(ID_menu: number) {
+//       console.log(ID_menu);
+//     this.menuService.getmenuById(ID_menu).subscribe((data) => {
+//       this.menus = data
+//     })
+// }
 
 }
 

@@ -42,7 +42,7 @@ export class ChefPlatesComponent implements OnInit {
       this.ordersService.totalPrice = this.ordersService.totalPrice + mymenu.price
       localStorage.setItem('MyObject', JSON.stringify(this.ordersService.orders));
     }
-    console.log(this.ordersService.orders);
+    console.log(localStorage,'ttttttttttttttt');
 
   }
 
