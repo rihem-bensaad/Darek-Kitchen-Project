@@ -28,4 +28,12 @@ const deletemenu = function(params,id,callback){
     })
 }
 
-module.exports = {getMenu,postMenu,deletemenu}
+const updateMenu = function(params,id,callback){
+    let syntax =`UPDATE menu SET title=?,image=?, location=?, price=? WHERE ID_menu=${id}`
+    connection.query(syntax,params,(err,result)=>{
+        return err ? callback(err,null) : callback(null,result)
+    })  
+    }
+    
+
+module.exports = {getMenu,postMenu,deletemenu,updateMenu}
