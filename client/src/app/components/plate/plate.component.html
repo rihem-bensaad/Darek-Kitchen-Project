@@ -26,12 +26,18 @@
     </div>
 </div>
 
-<div class="search-wrapper">
-  <form>
-  <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}"  />
-  <button class="close-icon" type="reset"></button>
-  </form>
-</div>
+<div class="main-content">
+  <header>
+      
+    <div class="search-wrapper">
+      <form>
+        <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
+        <button class="close-icon" type="reset"></button>
+      </form>
+    </div>
+
+
+  </header>
 <div class="row">
     
     <table class="table">

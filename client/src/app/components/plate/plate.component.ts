@@ -21,8 +21,8 @@ export class PlateComponent implements OnInit {
    });
 
   constructor(private menuService: MenuService , private ChefService: ChefService) { }
-  filterTerm!: string;
   values: any = {};
+  filterTerm!: string;
   
   ngOnInit(): void {
     this.getmenu()
