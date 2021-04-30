@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class OrdersService {
   orders: any[] = [];
   totalPrice: number = 0
+  total : number = 0
 
 
   constructor() { }

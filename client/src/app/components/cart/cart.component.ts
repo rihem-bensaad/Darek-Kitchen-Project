@@ -8,24 +8,27 @@ import { OrdersService} from '../../services/orders.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  menus: any = [];
-  menu = this.menuService.getmenu();
+  // menus: any = [];
+  // menu = this.menuService.getmenu();
   cartItem : any = []
 
   constructor(public menuService: MenuService, public ordersService: OrdersService) { }
 
   ngOnInit(): void {
-
     this.getorders()
+    console.log(this.cartItem,'cart itemmmmmmmmmmmm');
+
   }
 
 
- getorders() {
-    const mydata = localStorage.getItem('MyObject')
-   this.cartItem = mydata
-    JSON.parse(this.cartItem)
-    console.log(this.cartItem, 'jjjjjjjj')
-
+  getorders() {
+    if (localStorage.getItem('MyObject') === null) {
+        localStorage.setItem('MyObject', '');
+    } else {
+      this.cartItem = localStorage.getItem('MyObject')
+      this.cartItem = JSON.parse(this.cartItem )
+     }
+    // console.log(this.cartItem, 'jjjjjjjj')
   }
 
 

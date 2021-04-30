@@ -14,7 +14,7 @@ export class ChefPlatesComponent implements OnInit {
   cartItem:any = []
   filterTerm!: string;
   data : any = this.ordersService.orders
-  constructor(private menuService: MenuService , private msg: CartService, private ordersService:OrdersService) { }
+  constructor(private menuService: MenuService , private msg: CartService, public ordersService:OrdersService) { }
 
   ngOnInit(): void {
     this.getmenu()
@@ -30,22 +30,30 @@ export class ChefPlatesComponent implements OnInit {
   }
 
   addToCart(mymenu: any) {
-    var exist = true;
-    this.ordersService.orders.forEach((order) => {
-      console.log(order, "order");
-      if (mymenu.ID_menu == order.ID_menu) {
-        exist = false
-      }
-    })
-    if (exist) {
+
+    if (localStorage.getItem('MyObject') === null) {
       this.ordersService.orders.push(mymenu)
       this.ordersService.totalPrice = this.ordersService.totalPrice + mymenu.price
       localStorage.setItem('MyObject', JSON.stringify(this.ordersService.orders));
+    } else {
+      var notexist = true;
+      var data = localStorage.getItem('MyObject')
+    JSON.parse(data || '{}').forEach((order:any) => {
+      console.log(order, "order");
+      if (mymenu.ID_menu == order.ID_menu) {
+        notexist = false
+      }
+    })
+      if (notexist) {
+        this.ordersService.orders = JSON.parse(data || '{}')
+        this.ordersService.orders.push(mymenu)
+        this.ordersService.totalPrice = this.ordersService.totalPrice + mymenu.price
+        localStorage.setItem('MyObject', JSON.stringify(this.ordersService.orders));
+      }
     }
-    console.log(localStorage,'ttttttttttttttt');
-
+    console.log(localStorage,'localStorage');
   }
-
+ 
 
 //  getBrandId(ID_brands: number) {
 //     this.menuService.getMenuByBrandId(ID_brands).subscribe((data) => {
@@ -54,18 +62,4 @@ export class ChefPlatesComponent implements OnInit {
 //       this.router.navigate(['/menu'])
 //     })
 //   }
-
-
-
-
-
-  // add2cart(type: string, plate: string) {
-  //   if (type === 'plus') {
-  //     this.cart.menu.push(plate);
-  //     this.cart.cart = this.cartService.cart+1
-  //   }
-  //   }
-
-
-
 }
