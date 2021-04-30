@@ -15,13 +15,15 @@ export class PlateComponent implements OnInit {
  menuForm = new FormGroup({
     ID_menu : new FormControl(''),
     title: new FormControl(''),
-    image: new FormControl(''),
+    location: new FormControl(''),
     price: new FormControl(''),
-    location: new FormControl('')
+    image: new FormControl('')
    });
 
   constructor(private menuService: MenuService , private ChefService: ChefService) { }
   filterTerm!: string;
+  values: any = {};
+  
   ngOnInit(): void {
     this.getmenu()
   }
@@ -32,13 +34,17 @@ export class PlateComponent implements OnInit {
     })
   }
 updateMenu() {
-  this.menuService.updateMenu(this.menuForm.value.ID_brands, this.menuForm.value)
+  this.menuService.updateMenu(this.menuForm.value.ID_menu, this.menuForm.value)
   
   .subscribe(()=> {
     location.reload()
   })
 }
 
-
+getvalues(data: any) {
+  this.menuForm.setValue(data)
 }
+}
+
+
 
