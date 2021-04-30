@@ -23,5 +23,10 @@ module.exports.getMenuById = (req, res) => {
     db.getMenuById([req.params.ID_menu],(err,result)=>{
         err ? console.log(err) : res.status(201).send(result)
     })
-    console.log(req.params.ID_menu,"<=====menu of brand");
+}
+
+module.exports.updateMenu = (req,res) => {
+    db.updateMenu([req.body.title,req.body.image,req.body.location,req.body.price],req.params.id,(err,result)=>{
+        err ? console.log(err) : res.status(201).send(result)
+    })
 }

@@ -25,4 +25,7 @@ export class MenuService {
   deletemenu(ID_menu:Number) {
     return this.http.delete("http://localhost:3000/menu/delete/"+ ID_menu)
   }
+  updateMenu(ID_menu:Number , MenuObj : any){
+    return this.http.put('http://localhost:3000/menu/update/'+ ID_menu , MenuObj)
+  }
 }
