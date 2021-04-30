@@ -20,4 +20,8 @@ export class ChefService {
   deleteChef(ID :Number) {
     return this.http.delete('http://localhost:3000/admin/removechef/' + ID )
   }
+
+  getChefbylocation(location : String) {
+    return this.http.get('http://localhost:3000/chef/getlocation/' + location )
+  }
 }

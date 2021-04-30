@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -16,8 +17,13 @@ export class MenuService {
   getmenu():Observable<any>{
     return this.http.get("http://localhost:3000/menu/get")
   }
-  getmenuById(ID_menu:Number){
-    return this.http.get("http://localhost:3000/menu/get/" + ID_menu)
+  getmenuById(ID_menu:Number):Observable<any>{
+    return this.http.get("http://localhost:3000/menu/get/" + ID_menu).pipe(
+      map(result => {
+        console.log(result)
+        return result
+      })
+    )
   }
   getMenuByBrandId(ID_brands:Number){
     return this.http.get("http://localhost:3000/menu/get/" + ID_brands)

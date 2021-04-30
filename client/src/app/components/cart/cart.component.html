@@ -22,20 +22,21 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let menu of menus ">
+                <tr *ngFor="let getCartDetail of getCartDetails ">
                     <td>
                         <div class="main">
                             <div class="d-flex">
-                            <img src="" alt="">
+                            <img src="https://i2.wp.com/www.leconomistemaghrebin.com/wp-content/uploads/2019/12/BK-1024x512.jpg?fit=980%2C490&ssl=1" alt="">
                             </div>
                             <div class="des">
-                                <p>{{menu.title}}</p>
+                                <p>{{getCartDetail.title}}</p>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <h6> {{menu.price}}DT</h6>
+                        <h6> {{getCartDetail.price}}DT</h6>
                     </td>
+
                     <td>
                         <div class="counter">
                                 <div class="def-number-input number-input safari_only mb-0">
@@ -63,7 +64,7 @@
 <div class="checkout">
     <ul>
         <li class="subtotal">subtotal
-            <span>{{1100 | currency}}</span>
+        <span>$60.00</span>
         </li>
         <li class="cart-total">Total
         <span>{{1100 | currency}}</span></li>

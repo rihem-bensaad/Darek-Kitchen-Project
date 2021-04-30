@@ -1,8 +1,14 @@
+<div class="search-wrapper">
+  <form>
+    <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
+  </form>
+</div>
 <div class="myrow">
     <!--Grid row-->
-    <div class="row">
+     <div class="row">
       <!--Grid column-->
-      <div class="col-lg-2 col-md-6 mb-3" *ngFor="let menu of menus" >
+      <div class="col-lg-2 col-md-6 mb-3" *ngFor="let menu of menus | filter:filterTerm">
+
         <!--Card-->
         <mdb-card  class="card-ecommerce">
           <!--Card image-->
@@ -19,14 +25,18 @@
           <mdb-card-body  class="text-center">
             <!--Category & Title-->
 
-              <h6>{{menu.description}}</h6>
+
 
             <mdb-card-title>
               <h4 >
                 <strong>
                 {{menu.title}}
                 </strong>
+
               </h4>
+              <h6>{{menu.location}}</h6>
+
+
               <div class="rating" style="width: 20rem">
                 <input id="rating-5" type="radio" name="rating" value="5"/><label for="rating-5"><i class="fas fa-lg fa-star"></i></label>
                 <input id="rating-4" type="radio" name="rating" value="4" checked /><label for="rating-4"><i class="fas fa-lg fa-star"></i></label>

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 import { CartService } from '../../services/cart.service';
+import { ChefService } from '../../services/chef.service';
+
+
 @Component({
   selector: 'app-chef-plates',
   templateUrl: './chef-plates.component.html',
@@ -9,7 +12,9 @@ import { CartService } from '../../services/cart.service';
 export class ChefPlatesComponent implements OnInit {
   menus: any
   cartItem:any = []
-  constructor(private menuService: MenuService, private cartService: CartService, private msg: CartService) { }
+  // menus : any = []
+  filterTerm!: string;
+  constructor(private menuService: MenuService , private msg: CartService) { }
 
   ngOnInit(): void {
     this.getmenu()
@@ -25,7 +30,7 @@ export class ChefPlatesComponent implements OnInit {
   }
 
   addToCart() {
-    this.cartService.addToCart(this.menus.ID_menu);
+    this.menuService.getmenuById(this.menus.ID_menu)
     console.log(this.menus);
     console.log(this.menus.ID_menu);
 
@@ -52,5 +57,7 @@ export class ChefPlatesComponent implements OnInit {
   //     this.cart.cart = this.cartService.cart+1
   //   }
   //   }
+
+
 
 }

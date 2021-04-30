@@ -15,6 +15,7 @@ export class CartComponent implements OnInit {
   constructor(public menuService: MenuService ) { }
 
   ngOnInit(): void {
+    this.Cartetails()
 
   }
 
@@ -33,4 +34,17 @@ export class CartComponent implements OnInit {
 //     });
 //    this.total = total;
 //   }
+getCartDetails:any=[]
+
+  Cartetails() {
+    if (localStorage.getItem('localCart')) {
+      // this.getCartDetails = JSON.parse(localStorage.getItem('localCart'));
+      console.log(this.getCartDetails);
+
+    }
+
+    }
+
+
 }
+

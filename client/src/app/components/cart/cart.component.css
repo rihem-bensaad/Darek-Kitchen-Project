@@ -1,3 +1,4 @@
+/*==========Hero Section===========*/
 #hero{
   display:table;
   width: 100%;
@@ -159,4 +160,8 @@ td{
 }
 .container{
   margin-top: -23% ! important;
+}
+img{
+  width: 160px;
+  height: 80px;
 }
