@@ -26,6 +26,18 @@
     </div>
 </div>
 
+<div class="main-content">
+  <header>
+      
+    <div class="search-wrapper">
+      <form>
+        <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
+        <button class="close-icon" type="reset"></button>
+      </form>
+    </div>
+
+
+  </header>
 <div class="row">
     
     <table class="table">
@@ -42,7 +54,48 @@
         <td>{{menu.location}}</td>
         <td>{{menu.price}}</td>
         <td><img src="{{menu.image}}"></td>
-        <td><button id="updatebtn" class="btn">Update</button></td>
+        <td><button class="btn black btnblack" data-toggle="modal" data-target="#myModal" (click)="getvalues(menu)">Update</button></td>
+        
+
+        <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          
+          <div class="modal-content">
+            <div class="modal-body">
+              <form [formGroup]="menuForm" >
+                <img src={{menu.image}} class="imgmodal" formControlName="image"   >
+                <div class="modalinput">
+                <label><strong>Image :</strong></label>
+                <input class="modalinput1" type="text" value={{menu.image}} formControlName="image"/><br>
+                <label><strong>Plate Name :</strong></label>
+                <input class="modalinput2" type="text"  value={{menu.title}} formControlName="title"/><br>
+                <label class="label3"><strong>Price :</strong></label>
+                <input class="modalinput3" type="text" value={{menu.price}} formControlName="price"/>
+                <label class="label3"><strong>Location :</strong></label>
+                <input class="modalinput3" type="text" value={{menu.location}} formControlName="location"/>
+                </div>
+              <button class="btn black editbtn" (click)="updateMenu()">EDIT</button>
+                
+              </form>
+              <button type="button" class="btn black btncloseblack" data-dismiss="modal">Close</button>
+            </div>
+            <div class="modal-footer">
+              <div class="container">
+      <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+         
+           
+          </div>
+        </div>
+      </div>
+    </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </tr>
     </table>
 </div>
