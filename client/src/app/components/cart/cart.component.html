@@ -22,19 +22,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let getCartDetail of getCartDetails ">
+                <tr *ngFor="let item of cartItem ">
                     <td>
                         <div class="main">
                             <div class="d-flex">
-                            <img src="https://i2.wp.com/www.leconomistemaghrebin.com/wp-content/uploads/2019/12/BK-1024x512.jpg?fit=980%2C490&ssl=1" alt="">
+                            <img src={{item.image}} alt="">
                             </div>
                             <div class="des">
-                                <p>{{getCartDetail.title}}</p>
+                                <p>{{item.title}}</p>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <h6> {{getCartDetail.price}}DT</h6>
+                        <h6> {{item.price}}DT</h6>
                     </td>
 
                     <td>

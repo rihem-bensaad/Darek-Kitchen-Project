@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 import { CartService } from '../../services/cart.service';
-import { ChefService } from '../../services/chef.service';
+import { OrdersService } from '../../services/orders.service';
 
 
 @Component({
@@ -14,7 +14,7 @@ export class ChefPlatesComponent implements OnInit {
   cartItem:any = []
   // menus : any = []
   filterTerm!: string;
-  constructor(private menuService: MenuService , private msg: CartService) { }
+  constructor(private menuService: MenuService , private msg: CartService, private ordersService:OrdersService) { }
 
   ngOnInit(): void {
     this.getmenu()
@@ -29,13 +29,18 @@ export class ChefPlatesComponent implements OnInit {
     })
   }
 
-  addToCart() {
-    this.menuService.getmenuById(this.menus.ID_menu)
-    console.log(this.menus);
-    console.log(this.menus.ID_menu);
-
-
-  window.alert('Your plate has been added to the cart!');
+  addToCart(mymenu: any) {
+    var exist = true;
+    this.ordersService.orders.forEach((order) => {
+      console.log(order, "order");
+      if (mymenu.ID_menu == order.ID_menu) {
+        exist = false
+      }
+    })
+    if (exist) {
+      this.ordersService.orders.push(mymenu)
+    }
+    console.log(this.ordersService.orders);
   }
 
 
