@@ -48,10 +48,10 @@ span{
   font-size: 10px;
 }
 img{
-width: 130px !important;
+width: 100px !important;
 height:60px !important;
-border: 1px solid grey ! important;
 }
+
 .card-single{
 margin: 0.15%;
 }

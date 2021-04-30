@@ -1,7 +1,8 @@
 .row{
     position: absolute ! important;
     background-size: cover;
-    width:95.9rem
+    width:95.9rem;
+    margin-top: -5%;
   }
   .col-lg-2 {
    margin-top:5%;
@@ -19,41 +20,66 @@
    width: 100% ! important;
    height: 60px ! important;
  }
- .rating {
-   direction: rtl;
-   unicode-bidi: bidi-override;
-   color: #ddd; /* Personal choice */
-   margin-left: -23%;
-   margin-top: 10%;
- }
- .rating input {
-   display: none;
- }
- .rating label:hover,
- .rating label:hover ~ label,
- .rating input:checked + label,
- .rating input:checked + label ~ label {
-   color: #FFC107; /* Personal color choice. Lifted from Bootstrap 4 */
- }
- h4{
+
+ .menuname{
    color:#ffc107 ;
    cursor: pointer;
  }
-.search-wrapper{
-text-align: center ! important;
-margin-top:6%
- }
- .search{
-  border-radius: 13px;
-  width: 40vh;
-  height: 2.5rem;
-  outline: none;
- }
- .price{
+.price{
    font-family: Book Antiqua;
  }
  .location{
   float:right;
   font-weight: 600;
   font-family: Georgia;
+  margin-top: 2%;
+  margin-bottom:-5%;
  }
+
+
+/* Styles for wrapping the search box */
+
+.main {
+  width: 50%;
+  margin: 50px auto;
+  margin-top:5%;
+  text-align: center ! important;
+  margin-right: 10% ! important;
+}
+
+
+
+.has-search .form-control {
+  padding-left: 1.575rem;
+  border-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 50vh;
+  height: 45px;
+  outline: none ! important;
+  box-shadow: none;
+}
+::placeholder{
+  color: #aaa;
+  font-family: Georgia;
+}
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 0.80rem;
+  height: 2.875rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+  margin-left: 0.5%;
+}
+
+.form-control::-webkit-search-cancel-button{
+  position:relative;
+  cursor:pointer ! important; 
+  
+}
