@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
 import { MenuService } from '../../services/menu.service';
 import { ChefService } from '../../services/chef.service';
 
@@ -11,6 +12,13 @@ import { ChefService } from '../../services/chef.service';
 export class PlateComponent implements OnInit {
   chefs: any = [];
   menus: any = [];
+ menuForm = new FormGroup({
+    ID_menu : new FormControl(''),
+    title: new FormControl(''),
+    image: new FormControl(''),
+    price: new FormControl(''),
+    location: new FormControl('')
+   });
 
   constructor(private menuService: MenuService , private ChefService: ChefService) { }
   filterTerm!: string;
@@ -23,5 +31,14 @@ export class PlateComponent implements OnInit {
       this.menus = data
     })
   }
+updateMenu() {
+  this.menuService.updateMenu(this.menuForm.value.ID_brands, this.menuForm.value)
+  
+  .subscribe(()=> {
+    location.reload()
+  })
+}
+
+
 }
 
