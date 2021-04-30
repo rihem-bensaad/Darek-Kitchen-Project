@@ -32,11 +32,14 @@ export class PlateComponent implements OnInit {
     })
   }
 updateMenu() {
-  this.menuService.updateMenu(this.menuForm.value.ID_brands, this.menuForm.value)
+  this.menuService.updateMenu(this.menuForm.value.ID_menu, this.menuForm.value)
   
   .subscribe(()=> {
     location.reload()
   })
+}
+getvalues(data: any) {
+  this.menuForm.setValue(data)
 }
 
 
