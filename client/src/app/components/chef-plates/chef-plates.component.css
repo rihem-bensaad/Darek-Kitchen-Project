@@ -83,3 +83,15 @@
   cursor:pointer ! important; 
   
 }
+
+.btn-buy{
+  background:#F7F709;
+  float: left;
+  font-weight: 600;
+  font-family: Georgia;
+  outline:none !important;
+  box-shadow: none;
+}
+.btn-buy:hover{
+text-decoration:underline;
+}
