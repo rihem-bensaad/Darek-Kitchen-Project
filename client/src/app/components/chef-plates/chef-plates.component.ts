@@ -32,7 +32,10 @@ export class ChefPlatesComponent implements OnInit {
     if (localStorage.getItem('MyObject') === null) {
       this.ordersService.orders.push(mymenu)
       this.ordersService.totalPrice = this.ordersService.totalPrice + mymenu.price
+      this.total+=this.ordersService.totalPrice
       localStorage.setItem('MyObject', JSON.stringify(this.ordersService.orders));
+      localStorage.setItem('MyObject', JSON.stringify(this.total));
+
     } else {
       var notexist = true;
       var data = localStorage.getItem('MyObject')
@@ -51,8 +54,6 @@ export class ChefPlatesComponent implements OnInit {
     }
     console.log(localStorage,'localStorage');
   }
-
-
 
 //  getBrandId(ID_brands: number) {
 //     this.menuService.getMenuByBrandId(ID_brands).subscribe((data) => {
