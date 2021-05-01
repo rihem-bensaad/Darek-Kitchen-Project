@@ -58,8 +58,14 @@
   .nav-link {
     padding: .2rem 1rem;
     font-size: 17px;
+  }
+  @media (max-width: 968px) {
     
-    
+    .nav-link {
+      padding: .2rem 1rem;
+      font-size: 10px;
+      display: inline-block;
+    }
   }
 
   .nav-link.active,.nav-link:focus{
