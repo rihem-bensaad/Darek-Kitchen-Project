@@ -9,7 +9,6 @@
       background-attachment: fixed;
   }
 }
-
 #hero .hero-logo{
   margin: 20px;
   max-width: 100%;
@@ -34,14 +33,12 @@
       line-height: 36px;
   }
 }
-
 @media (max-width: 768px){
   #hero h2{
       font-size: 24px;
       line-height: 26px;
       margin-bottom: 30px;
   }
-  
 }
 .cart .table{
   margin-bottom: 30px;
@@ -109,7 +106,6 @@ td{
 .plus{
   margin-top: -6px;
 }
-
 .cart .table tbody tr td .counter input{
   width: 50px;
   text-align: center;
@@ -118,8 +114,8 @@ td{
   box-shadow: none;
 }
 .checkout ul{
-  border: 2px solid #ebebeb;
-  background: #f3f3f3;
+  border: 2px solid #EBEBEB;
+  background: #F3F3F3;
   padding-left:25px;
   padding-right:25px;
   padding-top:16px;
@@ -147,7 +143,7 @@ td{
 }
 .checkout ul li.cart-total span{
   color:black;
-  background-color:#F7F709; 
+  background-color:#F7F709;
 }
 .checkout ul li span{
   float:right;
@@ -162,7 +158,6 @@ td{
   display: block;
   text-align: center;
 }
-
 .container{
   margin-top: -23% ! important;
 }

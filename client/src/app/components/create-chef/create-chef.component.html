@@ -72,7 +72,7 @@
 
          <!-- ID Cart Image -->
 
-         <input type="file" name="image" id="defaultRegisterFormImageCardId" class="form-control" placeholder="Upload your ID card" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="imageCardId">
+         <input type="file" (change)="onFileSelected($event)" name="image" id="defaultRegisterFormImageCardId" class="form-control" placeholder="Upload your ID card" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="imageCardId">
          <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
 
          </small>
@@ -80,14 +80,7 @@
         <!-- Sign up button -->
         <button class="btn" type="submit" (click)="addChef()" >Create</button>
 
-    <!--  <hr> -->
-
-        <!-- Terms of service -->
-        <!-- <p>By clicking
-          <em>Sign up</em> you agree to our
-          <a href="" target="_blank">terms of service</a>
-
-      </p> -->
+    
     </form>
             <div class="search-wrapper">
                 <form>

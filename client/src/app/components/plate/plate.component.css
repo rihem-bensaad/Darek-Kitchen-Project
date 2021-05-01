@@ -42,10 +42,7 @@
   }
   .sidebar-brand span{
     display: inline-block;
-  }
-  .main-content{
-    
-  }  
+  } 
   .btn {
   margin-bottom: 6.5%;
   margin-left: 0.5%;
@@ -133,7 +130,7 @@
     color: white;
     box-shadow: none !important;
   }
-  .btnblack:hover{
+  .btnblack::before{
     border: 2px solid #F7F709;
   }
   .btncloseblack{
@@ -180,5 +177,4 @@
     box-shadow: 0 0 2px black;
     cursor: pointer;
   }
-  
   
