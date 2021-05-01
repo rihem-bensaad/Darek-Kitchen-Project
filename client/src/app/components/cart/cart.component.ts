@@ -20,8 +20,6 @@ export class CartComponent implements OnInit {
     // console.log(this.cartItem,'cart itemmmmmmmmmmmm');
 
   }
-
-
   getorders() {
     if (localStorage.getItem('MyObject') === null) {
         localStorage.setItem('MyObject', '');
