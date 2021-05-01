@@ -11,7 +11,6 @@ import { OrdersService } from '../../services/orders.service';
 })
 export class ChefPlatesComponent implements OnInit {
   menus: any
-  total : number = 0;
   cartItem:any = []
   filterTerm!: string;
   data : any = this.ordersService.orders
@@ -32,10 +31,7 @@ export class ChefPlatesComponent implements OnInit {
     if (localStorage.getItem('MyObject') === null) {
       this.ordersService.orders.push(mymenu)
       this.ordersService.totalPrice = this.ordersService.totalPrice + mymenu.price
-      this.total+=this.ordersService.totalPrice
       localStorage.setItem('MyObject', JSON.stringify(this.ordersService.orders));
-      localStorage.setItem('MyObject', JSON.stringify(this.total));
-
     } else {
       var notexist = true;
       var data = localStorage.getItem('MyObject')
