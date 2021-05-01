@@ -52,12 +52,23 @@
 #imagemodal{
   margin-top: 5%;
 }
-@media (max-width: 500px){
+@media (max-width: 600px){
     h1{
         font-size:30px ! important;
     }
     h5{
         font-size:15px ! important;
+    }
+    .slider{
+      margin-top:3.5%;
+    }
+    .container{
+      margin-top: -11%;
+      height:25px;
+      position: relative;
+    }
+    .reg{
+      margin-left: -30%;
     }
 }
 

@@ -57,16 +57,6 @@
   margin-top: 5%;
 }
 
-
-@media (max-width: 500px){
-    h1{
-        font-size:30px ! important;
-    }
-    h5{
-        font-size:15px ! important;
-    }
-
-}
 agm-map{
     height:300px;
     width: 900px;
@@ -128,3 +118,14 @@ agm-map{
   .social-icon p a:hover i{ 
     color:#fff;
   }
+
+  @media (max-width: 900px){
+    h1{
+        font-size:30px ! important;
+    }
+    h5{
+        font-size:15px ! important;
+    }
+    
+
+}
