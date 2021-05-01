@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms'
 import { ResourceLoader } from '@angular/compiler';
 // import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
 import { ToastrService } from 'ngx-toastr';
+import {HttpClient} from '@angular/common/http'
 
 
 @Component({
@@ -13,6 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class CreateChefComponent implements OnInit {
   chefs: any = [];
+  selectedFile = null;
 
   signupForm = new FormGroup({
     firstName: new FormControl('',[Validators.required]),
@@ -24,13 +26,20 @@ export class CreateChefComponent implements OnInit {
     imageCardId: new FormControl('',[Validators.required])
   });
 
-  constructor(private ChefService: ChefService) { }
+  constructor(private ChefService: ChefService, private http : HttpClient) { }
 
   ngOnInit(): void {
     this.getChefs()
     this.addChef()
   }
+    onFileSelected(event : any){
+      console.log(event);
+      this.selectedFile = event.target.files[0] 
+    }
 
+    onUpload(){
+      
+    }
      deleteChef(chef:any){
       this.ChefService.deleteChef(chef.ID)
       .subscribe()
