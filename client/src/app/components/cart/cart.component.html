@@ -1,60 +1,72 @@
-<div class="container-fluid" >
-    <div class="row product">
-        <div class="col-md-2" >
-             Image
-        </div>
-        <div class="col-lg-2" >
-            Menu Title
-        </div>
-        <div class="col-md-2"  >
-            price
-        </div>
-        <div class="col-md-2"  >
-            Brand
-        </div>
-        <div class="col-md-2"  >
-            delete
-        </div>
-
+<!---Hero Section-->
+<section id="hero">
+<div class="hero-container">
+    <div class="hero-logo">
+        <h1 class="font-weight-bold">Cart Products</h1>
     </div>
-    <!-- <div *ngFor="let product of products; let i = index" > -->
-
-
-
-        <div class="row product" >
-            <div class="col-md-2">
-               image: <img src=""  />
-            </div>
-            <div class="col-md-2" >
-             <p>title: </p>
-            </div>
-            <div class="col-md-2"  >
-                <!-- <p>{{product.price}} DT </p> -->
-            </div>
-            <div class="col-md-2"  >
-                <!-- <button class="btn btn-info" type="button" (click) ="this.decremntQuant(product._id)" >-</button><input disabled value={{product.quantity}}  ><button class="btn btn-info" type="button" style="margin-left: 5px;" (click) ="this.incrementquant(product._id)" >+</button> -->
-            </div>
-            <div class="col-md-2"  >
-                <!-- <button  type="button" (click)="this.deleteFromCart(product._id)"></i></button> -->
-            </div>
-
-        </div>
-
     </div>
+</section>
+<!---End of Hero Section-->
+<!--Cart Section-->
+<section class="mt-5">
+<div class="container">
+    <div class="cart">
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr >
+                    <th scope="col"class="text-white">Product</th>
+                    <th scope="col"class="text-white">Price</th>
+                    <th scope="col"class="text-white">Quantity</th>
+                    <th scope="col"class="text-white">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of cartItem " >
 
-<!-- </div> -->
-<div class="container-fluid" >
-    <div class="row justify-content-end">
-        <div class="col-2" >
-                <div >
-                    Total : 100 Dt
-                </div>
+                    <td>
+                        <div class="main">
+                            <div class="d-flex">
+                            <img src={{item.image}} alt="">
+                            </div>
+                            <div class="des">
+                                <p>{{item.title}}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <h6> {{item.price}}DT</h6>
+                    </td>
 
-                <!-- <div>
-                    <a routerLink={{redirect}}>
-                     <button type="button" class="btn btn-primary" routerLink={{redirect}} ><a routerLink={{redirect}} > Continue </a></button>
-                    </a>
-                </div> -->
-        </div>
+                    <td>
+                        <div class="counter">
+                                <div class="def-number-input number-input safari_only mb-0">
+                                <span onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                            class="btn btn-yellow"><div class="plus">-</div></span>
+                                <input class="quantityy" min="1"  name="quantity" value="1" type="number">
+                                <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                            class="btn btn-yellow"><div class="plus">+</div></span>
+                                        </div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <h6>{{item.price | currency}}</h6>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
     </div>
+    </div>
+</div>
+</section>
+<div class="col-lg-4 offset-lg-4">
+<div class="checkout">
+    <ul>
+
+        <li class="cart-total">Total
+        <span>{{ordersService.totalPrice | currency}}</span></li>
+    </ul>
+    <a href="#"class="proceed-btn">Proceed to Checkout</a>
 </div>

@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,10 +32,11 @@ import { AddPlateComponent } from './components/add-plate/add-plate.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { PlateComponent } from './components/plate/plate.component';
 import { ChefPlatesComponent } from './components/chef-plates/chef-plates.component';
-import { BagComponent } from './components/bag/bag.component';
 
-
-
+import { AgmCoreModule } from '@agm/core';
+import { FilterPipe } from './pipes/filter.pipe';
+import { HighlightDirective } from './pipes/highlight.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -62,8 +64,8 @@ import { BagComponent } from './components/bag/bag.component';
     OrdersComponent,
     PlateComponent,
     ChefPlatesComponent,
-    BagComponent,
-
+    FilterPipe,
+    HighlightDirective
   ],
 
   imports: [
@@ -71,12 +73,18 @@ import { BagComponent } from './components/bag/bag.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MDBBootstrapModule.forRoot(),
-    HttpClientModule,
+    MDBBootstrapModule,
     IvyCarouselModule,
-
+    Ng2SearchPipeModule,
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCd5u5gpZZmsYjRJmOEL8B6DuCKL40pE5M',
+      libraries: ['places']
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

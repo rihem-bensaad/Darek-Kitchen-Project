@@ -17,6 +17,13 @@ return err ? callback(err,null) : callback(null,results) ;
     })
 }
 
+const getChefbyLocation= function(location,callback) {
+    let syntax = `SELECT * FROM chef where location=${"location"}`
+    connection.query(syntax,(err,results)=>{
+        return err ? callback(err,null) : callback(null,results);
+    })
+}
+
 
 
 
@@ -24,5 +31,6 @@ return err ? callback(err,null) : callback(null,results) ;
 
 module.exports = {
     // createChef,
-    chefLogin
+    chefLogin , 
+    getChefbyLocation
 }

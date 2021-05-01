@@ -115,18 +115,11 @@
   border: 1px solid grey ! important;
   }
   label{
-  margin-right: 10%;
+  
   font-size: 16px;
   }
-  .label3{
-  text-align: center;
-  margin-right: 4%;
-  }
   
-  .editbtn{
-    width: 200px;
-    height:35px;
-  }
+
   .well{
     text-align: center;
     min-height: 20px;
@@ -144,6 +137,8 @@
   
   }
   form{
-    margin-left:30%;
-
+    text-align: center;
+  }
+  .input-field{
+    text-align: center;
   }

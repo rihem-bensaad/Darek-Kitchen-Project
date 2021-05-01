@@ -1,6 +1,7 @@
 DROP DATABASE IF EXISTS darekitchen;
 CREATE DATABASE darekitchen;
 USE darekitchen;
+
 CREATE TABLE chef (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(55) NOT NULL,
@@ -21,7 +22,7 @@ CREATE TABLE menu (
     ID_menu INT AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
     image VARCHAR(255) NOT NULL,
-    description VARCHAR(255) NOT NULL,
+    location VARCHAR(255) NOT NULL,
     price INT NOT NULL,
     -- ID_brands INT,
     PRIMARY KEY (ID_menu)
@@ -43,6 +44,14 @@ CREATE TABLE user (
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL
 );
+
+
+CREATE TABLE detailOrder (
+
+)
+
+
+
 -- Traditional Food
 INSERT INTO brands ( brandName,category,logo) values ("Espace MiMa","Traditional Food","https://www.monlabel.net/media/k2/items/cache/4ddc75f1698994d05cf43f2316d7d33a_M.jpg");
 INSERT INTO brands ( brandName,category,logo) values ("Fait Maison","Traditional Food","https://im.qccdn.fr/node/decryptage-restauration-que-recouvre-la-mention-fait-maison-64043/original-42267.jpg");
@@ -55,6 +64,7 @@ INSERT INTO brands ( brandName,category,logo) values ("GRANNY'S","Traditional Fo
 -- INSERT INTO brands ( brandName,category,logo) values ("Streat House","HomeMade Fast Food","http://lh3.googleusercontent.com/TzGYMcbZ9HWy3zbsuP_yh3uNYapE0ZaeUsEwuE_vzwvSndxxj07CyH3i39wOVp4NumDjXIfVjGDftLi5oc3wh1ZNmjk");
 INSERT INTO brands ( brandName,category,logo) values ("Berger Home","HomeMade Fast Food","https://s3.eu-central-1.amazonaws.com/w4ve/box/shops/logo/@3x251648@3x.png");
 INSERT INTO brands ( brandName,category,logo) values ("Holy Chick","HomeMade Fast Food","https://3.bp.blogspot.com/-JcRI6gm4C5Y/WEf5ueBrreI/AAAAAAAAAGI/PsD8Pzmw2PEoUuv4ncKKWjAip4f9zcEPQCLcB/s320/13882647_182398792174241_6209154348795634606_n.jpg");
+
 -- Sweaty Food
 INSERT INTO brands ( brandName,category,logo) values ("Donuts&Bagels","Sweaty Food","https://static1.squarespace.com/static/58a77322db29d65028521ddb/t/59ad4fd5cd39c3b55fa39891/1603846457585.jpg");
 INSERT INTO brands ( brandName,category,logo) values ("Flavor","Sweaty Food","https://dcassetcdn.com/design_img/2515312/609044/609044_13373251_2515312_333f8848_image.jpg");

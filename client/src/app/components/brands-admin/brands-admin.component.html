@@ -31,20 +31,20 @@
 
     <div class="main-content">
         <header>
-            
+
           <div class="search-wrapper">
             <form>
               <input class="search" type="text" placeholder="Type here to search..." />
               <button class="close-icon" type="reset"></button>
             </form>
           </div>
-    
+
 
         </header>
 
         <div class="card-single" >
           <div class="row">
-    
+
             <table class="table">
                 <tr>
                 <th><i class="far fa-copyright fa-lg"></i><strong>Brand Name</strong> </th>
@@ -53,19 +53,19 @@
                 <th><i class="fas fa-edit fa-lg udatebtn"></i><strong>Update</strong> </th>
                 <th><i id="deleteicon" class="fas fa-minus-circle fa-lg deletebtn"></i><strong>Delete</strong> </th>
             </tr>
-        
+
             <tr *ngFor="let brand of brands">
                 <td>{{brand.brandName}}</td>
                 <td>{{brand.category}}</td>
                 <td><img src={{brand.logo}}></td>
                 <td><button class="btn black btnblack" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)">Update</button></td>
                 <td><button class="btn F7F709 btnyellow" (click)="deleteBrand(brand)">Delete</button></td>
-                
-    
+
+
       <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
-          
+
           <div class="modal-content">
             <div class="modal-body">
               <form [formGroup]="brandForm" >
@@ -80,7 +80,7 @@
 
                 </div>
               <button class="btn black editbtn" (click)="updateBrand()">EDIT</button>
-                
+
               </form>
               <button type="button" class="btn black btncloseblack" data-dismiss="modal">Close</button>
             </div>
@@ -90,8 +90,8 @@
       <div class="modal" id="myModal">
         <div class="modal-dialog">
           <div class="modal-content">
-         
-           
+
+
           </div>
         </div>
       </div>
@@ -102,13 +102,12 @@
       </div>
     </tr>
   </table>
-            
+
         </div>
         </div>
     <div>
         <span class="las la-google-wallet"></span>
     </div>
-     
+
     </div>
     </div>
- 
