@@ -20,9 +20,9 @@ export class ChefPlatesComponent implements OnInit {
   ngOnInit(): void {
     
     this.getmenu()
-       this.msg.getMsg().subscribe((data) => {
-        this.menus = data
-    })
+    //    this.msg.getMsg().subscribe((data) => {
+    //     this.menus = data
+    // })
   }
 
   getmenu() {
