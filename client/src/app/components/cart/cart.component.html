@@ -24,7 +24,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let item of cartItem " >
-
+                  <div>{{getTotal(item)}}</div>
                     <td>
                         <div class="main">
                             <div class="d-flex">
@@ -38,7 +38,6 @@
                     <td>
                         <h6> {{item.price}},000 TND</h6>
                     </td>
-
                     <td>
                         <div class="counter">
                                 <div class="def-number-input number-input safari_only mb-0">
@@ -48,7 +47,6 @@
                                 <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
                                             class="btn btn-yellow"><div class="plus">+</div></span>
                                         </div>
-
                         </div>
                     </td>
                     <td>
@@ -66,9 +64,8 @@
 <div class="col-lg-4 offset-lg-4">
 <div class="checkout">
     <ul>
-
         <li class="cart-total">Total
-        <span>{{ordersService.totalPrice | currency}}</span></li>
+        <span>{{ total | currency}}</span></li>
     </ul>
     <a href="#"class="proceed-btn">Confirm your Order</a>
 </div>

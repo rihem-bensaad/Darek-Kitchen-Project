@@ -11,6 +11,7 @@ import { OrdersService } from '../../services/orders.service';
 })
 export class ChefPlatesComponent implements OnInit {
   menus: any
+  // total : number = 0;
   cartItem:any = []
   filterTerm!: string;
   data : any = this.ordersService.orders
@@ -25,19 +26,29 @@ export class ChefPlatesComponent implements OnInit {
       this.menus = data
     })
   }
-
   addToCart(mymenu: any) {
 
     if (localStorage.getItem('MyObject') === null) {
       this.ordersService.orders.push(mymenu)
       this.ordersService.totalPrice = this.ordersService.totalPrice + mymenu.price
+      this.ordersService.total += this.ordersService.totalPrice
       localStorage.setItem('MyObject', JSON.stringify(this.ordersService.orders));
+      localStorage.setItem('MyObject', JSON.stringify(this.ordersService.total));
+
     } else {
       var notexist = true;
-      var data = localStorage.getItem('MyObject')
+      var data = localStorage.getItem('MyObject');
+      var tot = localStorage.getItem('MyObject');
+
     JSON.parse(data || '{}').forEach((order:any) => {
       console.log(order, "order");
       if (mymenu.ID_menu == order.ID_menu) {
+        notexist = false
+      }
+    })
+    JSON.parse(tot || '{}').forEach((tot:any) => {
+      console.log(tot, "total");
+      if (mymenu.ID_menu == tot.ID_menu) {
         notexist = false
       }
     })
@@ -46,6 +57,12 @@ export class ChefPlatesComponent implements OnInit {
         this.ordersService.orders.push(mymenu)
         this.ordersService.totalPrice = this.ordersService.totalPrice + mymenu.price
         localStorage.setItem('MyObject', JSON.stringify(this.ordersService.orders));
+      }
+      if (notexist) {
+        this.ordersService.total = JSON.parse(tot || '{}')
+        this.ordersService.totalPrice = this.ordersService.totalPrice + mymenu.price
+        this.ordersService.total +=  this.ordersService.totalPrice
+        localStorage.setItem('MyObject', JSON.stringify(this.ordersService.total));
       }
     }
     console.log(localStorage,'localStorage');
