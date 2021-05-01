@@ -18,7 +18,7 @@ export class ChefPlatesComponent implements OnInit {
   constructor(private menuService: MenuService , private msg: CartService, public ordersService:OrdersService) { }
 
   ngOnInit(): void {
-    
+    this.getmenu()
   }
 
   getmenu() {
