@@ -185,3 +185,7 @@ margin-right: 4%;
 	box-shadow: 0 0 2px black;
 	cursor: pointer;
 }
+
+td{
+  font-weight: 500;
+}

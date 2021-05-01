@@ -161,14 +161,12 @@ cursor: pointer;
 margin-left: 5%;
 text-decoration: bold !important;
 box-shadow: none !important;
-border:1px solid black;
 }
 
 .btn:hover {
-    color:#F7F709;
-    background: black ! important;
-    box-shadow: none !important;
-    border:3px solid #F7F709;
+  text-decoration:underline;
+  box-shadow: none !important;
+  border:1px solid black;
 }
 .btn2{
     margin-bottom: 6.5%;
@@ -183,7 +181,8 @@ border:1px solid black;
     font-size:15px;
 }
 .btn2:hover{
-    border: 1px solid black
+    border: 1px solid black;
+    text-decoration:underline;
 }
 input{
     background-color: #f0f0f0;
@@ -278,3 +277,6 @@ input{
 	cursor: pointer;
 }
 
+td{
+  font-weight: 500;
+}
