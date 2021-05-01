@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
+  subject = new Subject();
   items :[]= [];
 
   addToCart(product:String) {
@@ -18,4 +20,12 @@ export class CartService {
   }
 
   constructor() { }
+  sendMsg(menu: String) {
+    console.log(menu);
+    this.subject.next(menu);
+  }
+  getMsg() {
+    return this.subject.asObservable()
+  }
+  
 }
