@@ -96,9 +96,13 @@
   outline:none !important;
   box-shadow: none;
   width: 100%;
-  margin-top: 8%;
+  margin-top: 18%;
+  margin-bottom: -4%;
   font-size:14px
 }
 .btn-buy:hover{
 text-decoration:underline;
+}
+.plusicon{
+  font-size: 12px ! important;
 }
