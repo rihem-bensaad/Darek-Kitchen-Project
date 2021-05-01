@@ -10,7 +10,8 @@ import { OrdersService} from '../../services/orders.service';
 export class CartComponent implements OnInit {
   // menus: any = [];
   // menu = this.menuService.getmenu();
-  cartItem : any = []
+  cartItem: any = []
+  total: number = 0
 
   constructor(public menuService: MenuService, public ordersService: OrdersService) { }
 
@@ -28,7 +29,6 @@ export class CartComponent implements OnInit {
       this.cartItem = localStorage.getItem('MyObject')
       this.cartItem = JSON.parse(this.cartItem )
      }
-    // console.log(this.cartItem, 'jjjjjjjj')
   }
 
 

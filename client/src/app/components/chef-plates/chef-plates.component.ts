@@ -11,12 +11,14 @@ import { OrdersService } from '../../services/orders.service';
 })
 export class ChefPlatesComponent implements OnInit {
   menus: any
+  total : number = 0;
   cartItem:any = []
   filterTerm!: string;
   data : any = this.ordersService.orders
   constructor(private menuService: MenuService , private msg: CartService, public ordersService:OrdersService) { }
 
   ngOnInit(): void {
+    
     this.getmenu()
        this.msg.getMsg().subscribe((data) => {
         this.menus = data
@@ -53,7 +55,8 @@ export class ChefPlatesComponent implements OnInit {
     }
     console.log(localStorage,'localStorage');
   }
- 
+
+
 
 //  getBrandId(ID_brands: number) {
 //     this.menuService.getMenuByBrandId(ID_brands).subscribe((data) => {
