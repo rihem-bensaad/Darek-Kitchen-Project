@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
   }
 
 
- getMenus() {
+getMenus() {
     this.menuService.getmenu().subscribe((data) => {
       this.menus = data
       console.log('data of menus', this.menus);

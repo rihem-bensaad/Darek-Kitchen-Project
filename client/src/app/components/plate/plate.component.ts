@@ -15,13 +15,15 @@ export class PlateComponent implements OnInit {
  menuForm = new FormGroup({
     ID_menu : new FormControl(''),
     title: new FormControl(''),
-    image: new FormControl(''),
+    location: new FormControl(''),
     price: new FormControl(''),
-    location: new FormControl('')
+    image: new FormControl(''),
    });
 
   constructor(private menuService: MenuService , private ChefService: ChefService) { }
+  values: any = {};
   filterTerm!: string;
+  
   ngOnInit(): void {
     this.getmenu()
   }
@@ -42,6 +44,7 @@ getvalues(data: any) {
   this.menuForm.setValue(data)
 }
 
-
 }
+
+
 
