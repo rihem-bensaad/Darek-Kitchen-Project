@@ -11,7 +11,7 @@ export class CartComponent implements OnInit {
   // menus: any = [];
   // menu = this.menuService.getmenu();
   cartItem: any = []
-  total: number = 0
+  total: number = 0 
 
   constructor(public menuService: MenuService, public ordersService: OrdersService) { }
 
@@ -25,7 +25,11 @@ export class CartComponent implements OnInit {
         localStorage.setItem('MyObject', '');
     } else {
       this.cartItem = localStorage.getItem('MyObject')
-      this.cartItem = JSON.parse(this.cartItem )
+      this.cartItem = JSON.parse(this.cartItem)
+      for (var i = 0; i < this.cartItem.length; i++){
+        this.total +=  this.cartItem[i].price
+        console.log(this.total,"total total")
+      }
      }
   }
 
