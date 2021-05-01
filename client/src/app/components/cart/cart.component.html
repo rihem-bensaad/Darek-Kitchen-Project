@@ -19,6 +19,7 @@
                     <th scope="col"class="text-white">Price</th>
                     <th scope="col"class="text-white">Quantity</th>
                     <th scope="col"class="text-white">Total</th>
+                    <th scope="col"class="text-white">Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -53,6 +54,7 @@
                     <td>
                         <h6>{{item.price}},000 TND</h6>
                     </td>
+                    <td><button class="btn btndel"><i class="far fa-trash-alt"></i></button></td>
                 </tr>
 
             </tbody>
@@ -68,6 +70,6 @@
         <li class="cart-total">Total
         <span>{{ordersService.totalPrice | currency}}</span></li>
     </ul>
-    <a href="#"class="proceed-btn">Proceed to Checkout</a>
+    <a href="#"class="proceed-btn">Confirm your Order</a>
 </div>
 </div>
