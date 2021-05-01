@@ -27,7 +27,8 @@ export class CreateChefComponent implements OnInit {
   });
 
   constructor(private ChefService: ChefService, private http : HttpClient) { }
-
+  filterTerm!: string;
+  
   ngOnInit(): void {
     this.getChefs()
     this.addChef()
