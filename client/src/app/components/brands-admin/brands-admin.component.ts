@@ -12,7 +12,7 @@ import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms'
   styleUrls: ['./brands-admin.component.css']
 })
 export class BrandsAdminComponent implements OnInit {
-
+  total : number = 0;
   menus: any = [];
   brands: any = [];
   brandCategory: string = "";
