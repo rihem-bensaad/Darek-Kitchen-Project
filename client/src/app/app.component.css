@@ -5,11 +5,13 @@ body{
 }
 .main-container{
     width: 100vw;
-    height: 100vh;
+    height: 1000px;
     background-image: url('https://format-com-cld-res.cloudinary.com/image/private/s--yU5hjwQS--/c_limit,g_center,h_1200,w_65535/fl_keep_iptc.progressive,q_95/v1/1a734fc5206bed55cf9be93c30ed8e52/RamenFeatured-1.jpg');
     background-size: cover;
-    max-width: 100%;
+    min-width: 100%;
+    min-height:100%;
     overflow: hidden;
+   
 
 }
 img {

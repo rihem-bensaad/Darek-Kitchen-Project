@@ -32,7 +32,6 @@ import { AddPlateComponent } from './components/add-plate/add-plate.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { PlateComponent } from './components/plate/plate.component';
 import { ChefPlatesComponent } from './components/chef-plates/chef-plates.component';
-import { BagComponent } from './components/bag/bag.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { FilterPipe } from './pipes/filter.pipe';
@@ -65,10 +64,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     OrdersComponent,
     PlateComponent,
     ChefPlatesComponent,
-    BagComponent,
     FilterPipe,
     HighlightDirective
-
   ],
 
   imports: [
@@ -77,7 +74,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HttpClientModule,
     ReactiveFormsModule,
     MDBBootstrapModule,
-    IvyCarouselModule, 
+    IvyCarouselModule,
     Ng2SearchPipeModule,
     FormsModule,
     AgmCoreModule.forRoot({
@@ -86,7 +83,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     })
   ],
   providers: [],
-  
+
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]
 })

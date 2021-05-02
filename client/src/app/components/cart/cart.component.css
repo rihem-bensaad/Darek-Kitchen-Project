@@ -1,15 +1,14 @@
 /*==========Hero Section===========*/
 #hero{
   display:table;
-  width: 100%;
-  height: 60vh;
+  min-width: 100%;
+  min-height: 60vh;
 }
 @media (min-width: 1024px){
   #hero{
       background-attachment: fixed;
   }
 }
-
 #hero .hero-logo{
   margin: 20px;
   max-width: 100%;
@@ -34,14 +33,12 @@
       line-height: 36px;
   }
 }
-
 @media (max-width: 768px){
   #hero h2{
       font-size: 24px;
       line-height: 26px;
       margin-bottom: 30px;
   }
-  
 }
 .cart .table{
   margin-bottom: 30px;
@@ -78,11 +75,15 @@
 }
 .cart .table tbody tr td h6{
   font-size:16px;
-  color:white ! important;
+  color:black ! important;
   margin-bottom: 0px;
 }
 .cart .table tbody tr td .counter{
   margin-bottom:0px;
+}
+tbody{
+  background-color:white;
+  
 }
 .counter i{
   border: 1px solid #000;
@@ -109,7 +110,6 @@ td{
 .plus{
   margin-top: -6px;
 }
-
 .cart .table tbody tr td .counter input{
   width: 50px;
   text-align: center;
@@ -118,8 +118,8 @@ td{
   box-shadow: none;
 }
 .checkout ul{
-  border: 2px solid #ebebeb;
-  background: #f3f3f3;
+  border: 2px solid #EBEBEB;
+  background: #F3F3F3;
   padding-left:25px;
   padding-right:25px;
   padding-top:16px;
@@ -147,7 +147,7 @@ td{
 }
 .checkout ul li.cart-total span{
   color:black;
-  background-color:#F7F709; 
+  background-color:#F7F709;
 }
 .checkout ul li span{
   float:right;
@@ -162,11 +162,14 @@ td{
   display: block;
   text-align: center;
 }
-
 .container{
   margin-top: -23% ! important;
 }
 img{
   width: 160px;
   height: 80px;
+}
+.btndel:hover{
+  background-color: black;
+  color: white;
 }

@@ -45,14 +45,31 @@
 			<a class="nav-link" routerLink="/dashboard">Dashboard</a>
 		</li>
 		<li class="nav-item" *ngIf="userRole==='chef'" >
-			<a class="nav-link" routerLink="/manage">Management</a>
+			<a class="nav-link" routerLink="/addplate">Management</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" routerLink="/cart" *ngIf="userRole==='user'"> My Bag </a>
-		  </li>
+			<a class="nav-link" routerLink="/cart" *ngIf="userRole==='user'">
+				<div class="cart_icon">
+				  <i class="fas fa-shopping-cart "></i>
+				  <!-- <div class="cart_value">
+					2
+				  </div> -->
+				</div>
+			</a>
+			</li>
 		<li class="nav-item" *ngIf="userRole==='admin' || userRole==='user' || userRole==='chef' " >
-			<a class="nav-link" routerLink="" (click)="logout()"> Logout</a>
+      <a class="nav-link" routerLink="" (click)="logout()"> Logout</a>
 		</li>
+    <!-- <li class="nav-item">
+      <a class="nav-link" routerLink="/cart" *ngIf="userRole==='user'">
+          <div class="cart_icon">
+            <i class="fas fa-shopping-cart"></i>
+         <div class="cart_value">
+              2
+            </div> -->
+          <!-- </div>
+      </a>
+      </li> --> 
 
 		</ul>
 	</div>

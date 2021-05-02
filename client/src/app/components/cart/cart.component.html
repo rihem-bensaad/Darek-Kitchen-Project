@@ -14,46 +14,48 @@
     <div class="table-responsive">
         <table class="table">
             <thead class="thead-dark">
-                <tr>
+                <tr >
                     <th scope="col"class="text-white">Product</th>
                     <th scope="col"class="text-white">Price</th>
                     <th scope="col"class="text-white">Quantity</th>
                     <th scope="col"class="text-white">Total</th>
+                    <th scope="col"class="text-white">Delete</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr *ngFor="let item of cartItem " >
                     <td>
                         <div class="main">
                             <div class="d-flex">
-                            <img src="https://i2.wp.com/www.leconomistemaghrebin.com/wp-content/uploads/2019/12/BK-1024x512.jpg?fit=980%2C490&ssl=1" alt="">
+                            <img src={{item.image}} alt="">
                             </div>
                             <div class="des">
-                                <p>lorem ipsum</p>
+                                <p>{{item.title}}</p>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <h6>$20.00</h6>
+                        <h6> {{item.price}},000 TND</h6>
                     </td>
-                    
+
                     <td>
-                        <div class="counter">                            
+                        <div class="counter">
                                 <div class="def-number-input number-input safari_only mb-0">
                                 <span onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
                                             class="btn btn-yellow"><div class="plus">-</div></span>
-                                <input class="quantityy" min="0"  name="quantity" value="1" type="number">
+                                <input class="quantityy" min="1"  name="quantity" value="1" type="number">
                                 <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
                                             class="btn btn-yellow"><div class="plus">+</div></span>
                                         </div>
-                                    
+
                         </div>
-                    </td>   
-                    <td>
-                        <h6>$20.00</h6>
                     </td>
+                    <td>
+                        <h6>{{item.price}},000 TND</h6>
+                    </td>
+                    <td><button class="btn btndel"><i class="far fa-trash-alt"></i></button></td>
                 </tr>
-            
+
             </tbody>
         </table>
     </div>
@@ -63,12 +65,10 @@
 <div class="col-lg-4 offset-lg-4">
 <div class="checkout">
     <ul>
-        <li class="subtotal">subtotal
-        <span>$60.00</span>
-        </li>
+
         <li class="cart-total">Total
-        <span>$60.00</span></li>
+        <span>{{ total | currency}}</span></li>
     </ul>
-    <a href="#"class="proceed-btn">Proceed to Checkout</a>
+    <a href="#"class="proceed-btn">Confirm your Order</a>
 </div>
 </div>
