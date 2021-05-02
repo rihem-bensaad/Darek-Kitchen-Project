@@ -33,8 +33,10 @@ export class CartComponent implements OnInit {
 
   getTotal(price: number) {
     return this.total += price
-
-}
+  }
+  deleteItem(ele: any) {
+    localStorage.removeItem(ele)
+  }
 
 //   getmenuById(ID_menu: number) {
 //       console.log(ID_menu);
