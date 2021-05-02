@@ -24,7 +24,6 @@
             </thead>
             <tbody>
                 <tr *ngFor="let item of cartItem " >
-
                     <td>
                         <div class="main">
                             <div class="d-flex">
@@ -68,7 +67,7 @@
     <ul>
 
         <li class="cart-total">Total
-        <span>{{ordersService.totalPrice | currency}}</span></li>
+        <span>{{ total | currency}}</span></li>
     </ul>
     <a href="#"class="proceed-btn">Confirm your Order</a>
 </div>

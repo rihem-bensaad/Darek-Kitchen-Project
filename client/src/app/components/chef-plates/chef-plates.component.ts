@@ -14,11 +14,14 @@ export class ChefPlatesComponent implements OnInit {
   total : number = 0;
   cartItem:any = []
   filterTerm!: string;
-  data : any = this.ordersService.orders
+  // data : any = this.ordersService.orders
   constructor(private menuService: MenuService , private msg: CartService, public ordersService:OrdersService) { }
 
   ngOnInit(): void {
     this.getmenu()
+    //    this.msg.getMsg().subscribe((data) => {
+    //     this.menus = data
+    // })
   }
 
   getmenu() {
