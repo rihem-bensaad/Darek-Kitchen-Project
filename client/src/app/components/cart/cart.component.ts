@@ -25,15 +25,14 @@ export class CartComponent implements OnInit {
     }
     else {
       this.cartItem = localStorage.getItem('MyObject')
-      // this.total = localStorage.getItem('MyObject')
       this.cartItem = JSON.parse(this.cartItem)
-      // this.total = JSON.parse(this.total)
      }
   }
 
   getTotal(price: number) {
     return this.total += price
   }
+
   deleteItem(ele: any) {
     localStorage.removeItem(ele)
   }
