@@ -2,7 +2,7 @@ const connection = require ('../config.js')
 const mysql = require('mysql');
 
 
-const createUser= function(params,callback) {
+const createUser= function(params,callback) { 
     let syntax = 'INSERT into user (firstName,lastName,email,password,phoneNumber,location) values (?,?,?,?,?,?)'
     connection.query(syntax,params,(err,results)=>{
         return err ? callback(err,null) : callback(null,results);
