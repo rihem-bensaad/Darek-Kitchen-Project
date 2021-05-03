@@ -15,7 +15,7 @@ const getMenu = function(callback){
 // }
 
 const postMenu = function(params,callback){
-    let syntax = "INSERT INTO menu (title, image, location , price, description) values (?,?,?,?)"
+    let syntax = "INSERT INTO menu (title, image, location , price, description) values (?,?,?,?,?)"
     connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })
@@ -29,7 +29,7 @@ const deletemenu = function(params,id,callback){
 }
 
 const updateMenu = function(params,id,callback){
-    let syntax =`UPDATE menu SET title=?,image=?, location=?, price=? WHERE ID_menu=${id}`
+    let syntax =`UPDATE menu SET title=?,image=?, location=?, price=?, description=? WHERE ID_menu=${id}`
     connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })  
