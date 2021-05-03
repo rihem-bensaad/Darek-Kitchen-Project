@@ -25,6 +25,7 @@ export class ChefPlatesComponent implements OnInit {
       this.menus = data
     })
   }
+  
   addToCart(mymenu: any) {
 
     if (localStorage.getItem('MyObject') === null) {
