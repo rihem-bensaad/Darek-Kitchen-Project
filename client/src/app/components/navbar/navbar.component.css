@@ -82,7 +82,9 @@
     color: #fff;
   }
 
-
+a:active {
+  background-color: #F7F709;
+}
 
 
 
@@ -117,10 +119,7 @@
 
   }
 
-   .nav-link:hover{
-    border-bottom: 4px solid #F7F709;
-    color:#F7F709 ! important;
-  }
+ 
   .navbar-brand{
     border-radius: 10%;
   }
