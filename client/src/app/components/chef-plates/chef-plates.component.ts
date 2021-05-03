@@ -11,10 +11,9 @@ import { OrdersService } from '../../services/orders.service';
 })
 export class ChefPlatesComponent implements OnInit {
   menus: any
-  total : number = 0;
   cartItem:any = []
   filterTerm!: string;
-  data : any = this.ordersService.orders
+  total : number = 0
   constructor(private menuService: MenuService , private msg: CartService, public ordersService:OrdersService) { }
 
   ngOnInit(): void {
@@ -26,7 +25,7 @@ export class ChefPlatesComponent implements OnInit {
       this.menus = data
     })
   }
-
+  
   addToCart(mymenu: any) {
 
     if (localStorage.getItem('MyObject') === null) {
@@ -35,7 +34,7 @@ export class ChefPlatesComponent implements OnInit {
       localStorage.setItem('MyObject', JSON.stringify(this.ordersService.orders));
     } else {
       var notexist = true;
-      var data = localStorage.getItem('MyObject')
+      var data = localStorage.getItem('MyObject');
     JSON.parse(data || '{}').forEach((order:any) => {
       console.log(order, "order");
       if (mymenu.ID_menu == order.ID_menu) {
@@ -51,8 +50,6 @@ export class ChefPlatesComponent implements OnInit {
     }
     console.log(localStorage,'localStorage');
   }
-
-
 
 //  getBrandId(ID_brands: number) {
 //     this.menuService.getMenuByBrandId(ID_brands).subscribe((data) => {
