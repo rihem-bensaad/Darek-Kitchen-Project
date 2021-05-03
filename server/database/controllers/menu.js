@@ -15,7 +15,7 @@ const getMenu = function(callback){
 // }
 
 const postMenu = function(params,callback){
-    let syntax = "INSERT INTO menu (title, image, location , price) values (?,?,?,?)"
+    let syntax = "INSERT INTO menu (title, image, location , price, description) values (?,?,?,?)"
     connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })

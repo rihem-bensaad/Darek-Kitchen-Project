@@ -24,7 +24,7 @@ CREATE TABLE menu (
     image VARCHAR(255) NOT NULL,
     location VARCHAR(255) NOT NULL,
     price INT NOT NULL,
-    description VARCHAR(255) NOT NULL,
+    description VARCHAR(555) NOT NULL,
     -- ID_brands INT,
     PRIMARY KEY (ID_menu)
     -- FOREIGN KEY (ID_brands) REFERENCES brands(ID_brands)
