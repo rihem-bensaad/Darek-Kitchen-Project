@@ -16,6 +16,7 @@
             <thead class="thead-dark">
                 <tr >
                     <th scope="col"class="text-white">Product</th>
+                    <th scope="col"class="text-white">Title</th>
                     <th scope="col"class="text-white">Price</th>
                     <th scope="col"class="text-white">Quantity</th>
                     <th scope="col"class="text-white">Total</th>
@@ -29,15 +30,14 @@
                             <div class="d-flex">
                             <img src={{item.image}} alt="">
                             </div>
-                            <div class="des">
-                                <p>{{item.title}}</p>
-                            </div>
                         </div>
+                    </td>
+                     <td>
+                        <h6>{{item.title}}</h6>
                     </td>
                     <td>
                         <h6> {{item.price}},000 TND</h6>
                     </td>
-
                     <td>
                         <div class="counter">
                                 <div class="def-number-input number-input safari_only mb-0">
@@ -47,13 +47,12 @@
                                 <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
                                             class="btn btn-yellow"><div class="plus">+</div></span>
                                         </div>
-
                         </div>
                     </td>
                     <td>
                         <h6>{{item.price}},000 TND</h6>
                     </td>
-                    <td><button class="btn btndel"><i class="far fa-trash-alt"></i></button></td>
+                    <td><button class="btn btndel" (click)="deleteItem(item.ID_menu)"><i class="far fa-trash-alt"></i></button></td>
                 </tr>
 
             </tbody>
@@ -65,7 +64,6 @@
 <div class="col-lg-4 offset-lg-4">
 <div class="checkout">
     <ul>
-
         <li class="cart-total">Total
         <span>{{ total | currency}}</span></li>
     </ul>
