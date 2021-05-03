@@ -10,6 +10,8 @@ const chef = require('./routers/ChefRouter')
 const User = require('./routers/user.js');
 const user = require('./routers/UserRouter.js');
 
+
+
 const brand = require('./routers/brandRouter')
 const admin = require('./routers/adminRouter')
 const auth = require('./routers/authRouter')
@@ -28,7 +30,7 @@ app.use('/admin',admin)
 app.use('/chef',chef);
 app.use('/user', User);
 app.use('/userr', user);
-app.use('/login',auth)
+app.use('/login',auth);
 app.use('/brand', brand);
 app.post('/email', (req,res)=>{
     const{subject, email, message} = req.body
@@ -44,7 +46,6 @@ app.post('/email', (req,res)=>{
         }
     }); 
 });
-
 
 
 app.listen(port, () => {
