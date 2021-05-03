@@ -17,7 +17,8 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.getorders()
-    console.log(this.cartItem,'cart itemmmmmmmmmmmm');
+    // console.log(this.cartItem,'cart itemmmmmmmmmmmm');
+
   }
   getorders() {
     if (localStorage.getItem('MyObject') === null ) {
@@ -26,15 +27,19 @@ export class CartComponent implements OnInit {
     else {
       this.cartItem = localStorage.getItem('MyObject')
       this.cartItem = JSON.parse(this.cartItem)
+      for (var i = 0; i < this.cartItem.length; i++){
+        this.total +=  this.cartItem[i].price
+        console.log(this.total,"total total")
+      }
      }
   }
 
-  getTotal(price: number) {
-    return this.total += price
-  }
 
-  deleteItem(ele: any) {
-    localStorage.removeItem(ele)
+ async deleteItem(key:any) {
+   this.cartItem = await localStorage.getItem('MyObject')
+   const data = JSON.parse(this.cartItem).filter((e: any) => e.ID_menu !== key)
+   localStorage.setItem('MyObject', JSON.stringify(data))
+   this.getorders()
   }
 
 //   getmenuById(ID_menu: number) {

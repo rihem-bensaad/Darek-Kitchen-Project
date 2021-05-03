@@ -40,10 +40,10 @@ updateMenu() {
     location.reload()
   })
 }
-
 getvalues(data: any) {
   this.menuForm.setValue(data)
 }
+
 }
 
 

@@ -6,10 +6,10 @@
 
     <div class="sidebar-menu">
         <ul>
-            <li>
+            <!-- <li>
                 <a href="/manage"><span class="las la-igloo"></span>
                 <span>My Virtual Kitchen</span></a>
-            </li>
+            </li> -->
             <li >
                 <a  href="/addplate"  ><span class="la la-cutlery la-lg"></span>
                 <span>Add Plates</span></a>
@@ -49,7 +49,7 @@
         <th><i class="fas fa-edit fa-lg"></i><strong>Update</strong> </th>
     </tr>
 
-    <tr *ngFor="let menu of menus">
+    <tr *ngFor="let menu of menus | filter:filterTerm">
         <td>{{menu.title}}</td>
         <td>{{menu.location}}</td>
         <td>{{menu.price}}</td>

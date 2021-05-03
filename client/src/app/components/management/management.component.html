@@ -1,4 +1,4 @@
-<!-- <app-admin-navbar></app-admin-navbar> -->
+<!-- <app-admin-navbar></app-admin-navbar>
 <div class="dash">
 
     <div class="sidebar">
@@ -33,24 +33,24 @@
         <header>
 
 
-        <div class="card-single" >
+        <div class="card-single" *ngfor="let chef of chefs" >
           <div class="panel-body">
             <div class="col-md">
               <div class="well dash-box">
                 <h2><span></span> Name</h2>
-                <h4>dar zmen</h4>
+                <h4>{{chef.name}}</h4>
               </div>
             </div>
             <div class="col-md">
               <div class="well dash-box">
-                <h2><span></span>Category</h2>
-                <h4>Traditional Food</h4>
+                <h2><span></span>Cooks in the platform</h2>
+                <h4>{{chef.length-1}}</h4>
               </div>
             </div>
             <div class="col-md">
               <div class="well dash-box">
-                <h2><span></span>Rating average</h2>
-                <h4>4 stars</h4>
+                <h2><span></span>Your Location</h2>
+                <h4>{{chef.location}}</h4>
               </div>
             </div>
             <div class="col-md">
@@ -67,4 +67,4 @@
     </div>
 
  
-
+ -->

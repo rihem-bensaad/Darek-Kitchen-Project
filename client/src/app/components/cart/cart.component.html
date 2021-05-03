@@ -24,7 +24,6 @@
             </thead>
             <tbody>
                 <tr *ngFor="let item of cartItem " >
-                  <div>{{getTotal(item)}}</div>
                     <td>
                         <div class="main">
                             <div class="d-flex">
@@ -52,7 +51,7 @@
                     <td>
                         <h6>{{item.price}},000 TND</h6>
                     </td>
-                    <td><button class="btn btndel"><i class="far fa-trash-alt"></i></button></td>
+                    <td><button class="btn btndel" (click)="deleteItem(item.ID_menu)"><i class="far fa-trash-alt"></i></button></td>
                 </tr>
 
             </tbody>
