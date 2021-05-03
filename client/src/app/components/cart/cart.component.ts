@@ -17,10 +17,10 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.getorders()
-    // console.log(this.cartItem,'cart itemmmmmmmmmmmm');
-
   }
+  
   getorders() {
+    this.total=0
     if (localStorage.getItem('MyObject') === null ) {
         localStorage.setItem('MyObject', '');
     }
