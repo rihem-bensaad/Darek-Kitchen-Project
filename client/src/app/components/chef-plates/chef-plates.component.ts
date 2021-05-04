@@ -12,7 +12,8 @@ export class ChefPlatesComponent implements OnInit {
   menus: any
   cartItem:any = []
   filterTerm!: string;
-  total : number = 0
+  total: number = 0;
+  quantity: number = 0;
   constructor(private menuService: MenuService , public ordersService:OrdersService) { }
 
   ngOnInit(): void {

@@ -44,8 +44,8 @@ export class CartComponent implements OnInit {
   }
 
 
-  incrementquant(id:string) {
-  
+  incrementquant(id: string) {
+    console.log(id);
   }
 
   decremntQuant(id:string) {
