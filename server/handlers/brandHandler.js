@@ -2,6 +2,7 @@ const db = require('../database/controllers/brands')
 const mysql = require('mysql');
 
 
+
 module.exports.getBrands = (req,res)=>{
     db.getBrands((err,result)=>{
         err ? console.log(err) : res.status(201).send(result)
