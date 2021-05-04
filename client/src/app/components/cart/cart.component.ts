@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.getorders()
   }
-  
+
   getorders() {
     this.total=0
     if (localStorage.getItem('MyObject') === null ) {
@@ -40,6 +40,15 @@ export class CartComponent implements OnInit {
    const data = JSON.parse(this.cartItem).filter((e: any) => e.ID_menu !== key)
    localStorage.setItem('MyObject', JSON.stringify(data))
    this.getorders()
+  }
+
+
+  incrementquant(id:string) {
+
+  }
+
+  decremntQuant(id:string) {
+
   }
 
 //   getmenuById(ID_menu: number) {
