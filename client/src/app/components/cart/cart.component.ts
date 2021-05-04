@@ -12,6 +12,7 @@ export class CartComponent implements OnInit {
   menu = this.menuService.getmenu();
   cartItem: any = []
   total: number = 0
+  quantity: number = 1
 
   constructor(public menuService: MenuService, public ordersService: OrdersService) { }
 
@@ -44,7 +45,7 @@ export class CartComponent implements OnInit {
 
 
   incrementquant(id:string) {
-
+  
   }
 
   decremntQuant(id:string) {
