@@ -1,10 +1,9 @@
 .dash{
   margin-top:4.2%;
-   width:100%; 
-   height:669px;
+   width: 100%;
+   min-height:auto;
   background-color: white !important;
-  background-size: cover;
-  position: absolute;
+  position:absolute;
 }
 *{
   padding: 0;
@@ -15,11 +14,11 @@
 }
 .sidebar{
     width: 280px;
-    position: absolute;
     left: 0;
     top:0;
-    height: 100vh;
+    height: 100%;
     background: #0a0a0afa;
+    position: absolute;
 }
 a{
   color: white
@@ -44,7 +43,7 @@ span{
   display: inline-block;
 }
 .main-content{
-  margin-left: 345px;
+  margin-left: 290px;
   font-size: 10px;
 }
 img{
@@ -139,11 +138,20 @@ margin-right: 4%;
 }
 
 .btnyellow{
-  background-color:#F7F709;
-  box-shadow: none !important;
+  margin-bottom: 6.5%;
+    margin-left: 0.5%;
+    background-color:#F7F709;
+    box-shadow: none !important;
+    width: 70px;
+    height:30px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-size:15px;
 }
 .btnyellow:hover{
   border: 1px solid black;
+  text-decoration: underline 0.5px;
 }
 
 
@@ -173,4 +181,8 @@ margin-right: 4%;
 	font-size: 12px;
 	box-shadow: 0 0 2px black;
 	cursor: pointer;
+}
+
+td{
+  font-weight: 450;
 }

@@ -8,8 +8,8 @@ import { OrdersService} from '../../services/orders.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  // menus: any = [];
-  // menu = this.menuService.getmenu();
+  menus: any = [];
+  menu = this.menuService.getmenu();
   cartItem: any = []
   total: number = 0
 
@@ -17,19 +17,30 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.getorders()
-    console.log(this.cartItem,'cart itemmmmmmmmmmmm');
-
   }
+  
   getorders() {
-    if (localStorage.getItem('MyObject') === null) {
+    this.total=0
+    if (localStorage.getItem('MyObject') === null ) {
         localStorage.setItem('MyObject', '');
-    } else {
+    }
+    else {
       this.cartItem = localStorage.getItem('MyObject')
-      this.cartItem = JSON.parse(this.cartItem )
+      this.cartItem = JSON.parse(this.cartItem)
+      for (var i = 0; i < this.cartItem.length; i++){
+        this.total +=  this.cartItem[i].price
+        console.log(this.total,"total total")
+      }
      }
   }
 
 
+ async deleteItem(key:any) {
+   this.cartItem = await localStorage.getItem('MyObject')
+   const data = JSON.parse(this.cartItem).filter((e: any) => e.ID_menu !== key)
+   localStorage.setItem('MyObject', JSON.stringify(data))
+   this.getorders()
+  }
 
 //   getmenuById(ID_menu: number) {
 //       console.log(ID_menu);

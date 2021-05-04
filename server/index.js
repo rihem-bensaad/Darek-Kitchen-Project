@@ -1,4 +1,7 @@
 const express = require('express');
+const upload = require('./config/multerconfig')
+const cloudinary = require('./config/cloudinaryconfig');
+const fs = require('fs')
 const handlers = require('./handlers');
 const app = express();
 const port = 3000;
@@ -9,6 +12,8 @@ const menu = require('./routers/menuRouter.js');
 const chef = require('./routers/ChefRouter')
 const User = require('./routers/user.js');
 const user = require('./routers/UserRouter.js');
+
+
 
 const brand = require('./routers/brandRouter')
 const admin = require('./routers/adminRouter')
@@ -22,13 +27,38 @@ app.use(express.static(__dirname + '/../client/dist/darek-kitchen'));
 app.use(express.urlencoded({
     extended: false
 }));
+app.use('/upload-images', upload.array('image'), async (req, res) => {
+
+    const uploader = async (path) => await cloudinary.uploads(path, 'Images');
+  
+    if (req.method === 'POST') {
+      const urls = []
+      const files = req.files;
+      for (const file of files) {
+        const { path } = file;
+        const newPath = await uploader(path)
+        urls.push(newPath)
+        fs.unlinkSync(path)
+      }
+  
+      res.status(200).json({
+        message: 'images uploaded successfully',
+        data: urls
+      })
+  
+    } else {
+      res.status(405).json({
+        err: `${req.method} method not allowed`
+      })
+    }
+  })
 
 app.use('/menu', menu);
 app.use('/admin',admin)
 app.use('/chef',chef);
 app.use('/user', User);
 app.use('/userr', user);
-app.use('/login',auth)
+app.use('/login',auth);
 app.use('/brand', brand);
 app.post('/email', (req,res)=>{
     const{subject, email, message} = req.body
@@ -44,7 +74,6 @@ app.post('/email', (req,res)=>{
         }
     }); 
 });
-
 
 
 app.listen(port, () => {
