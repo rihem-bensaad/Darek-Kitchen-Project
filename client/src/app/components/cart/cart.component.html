@@ -33,26 +33,29 @@
                         </div>
                     </td>
                      <td>
-                        <h6 class="mytitle">{{item.title}}</h6>
+                      <h6 class="mytitle">{{item.title}}</h6>
                     </td>
                     <td>
-                        <h6> {{item.price}},000 TND</h6>
+                      <h6> {{item.price}},000 TND</h6>
                     </td>
                     <td>
                         <div class="counter">
-                                <div class="def-number-input number-input safari_only mb-0">
-                                <span onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                                            class="btn btn-"><div class="plus">-</div></span>
-                                <input class="quantityy" min="1"  name="quantity" value="1" type="number">
-                                <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                                            class="btn btn-"><div class="plus">+</div></span>
-                                        </div>
+                          <div class="def-number-input number-input safari_only mb-0">
+                            <span (onclick)="incrementquant(item)"
+                            class="btn btn-"><div class="plus">-</div>
+                          </span>
+                            <input class="quantityy" min="1"  name="quantity" value="1" type="number">
+                              <span (onclick)="decremntQuant(item)"
+                              class="btn btn-"><div class="plus">+</div>
+                            </span>
+                          </div>
                         </div>
                     </td>
                     <td>
-                        <h6>{{item.price}},000 TND</h6>
+                      <h6>{{item.price}},000 TND</h6>
                     </td>
-                    <td><button class="btn btndel" (click)="deleteItem(item.ID_menu)"><i class="far fa-trash-alt"></i></button></td>
+                    <td>
+                      <button class="btn btndel" (click)="deleteItem(item.ID_menu)"><i class="far fa-trash-alt"></i></button></td>
                 </tr>
 
             </tbody>
