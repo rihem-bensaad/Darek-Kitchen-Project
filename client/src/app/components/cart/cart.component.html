@@ -39,8 +39,8 @@
                       <h6> {{item.price}},000 TND</h6>
                     </td>
                     <td>
-                      <select >
-                        <option>{{item.quantity}}</option>
+                      <select>
+                        <option  *ngFor="let a of item.quantity ">{{a}}</option>
                       </select>
                     </td>
                     <td>

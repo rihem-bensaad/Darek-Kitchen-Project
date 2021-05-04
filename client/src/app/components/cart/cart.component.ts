@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
   cartItem: any = []
   total: number = 0
   quantity: number = 1
-
+  range : any = []
   constructor(public menuService: MenuService, public ordersService: OrdersService) { }
 
   ngOnInit(): void {
@@ -29,6 +29,11 @@ export class CartComponent implements OnInit {
       this.cartItem = localStorage.getItem('MyObject')
       this.cartItem = JSON.parse(this.cartItem)
       for (var i = 0; i < this.cartItem.length; i++){
+        let r = []
+        for (let j = 1; j <= this.cartItem[i].quantity; j++){
+          r.push(j)
+        }
+        this.cartItem[i].quantity = r
         this.total +=  this.cartItem[i].price
         console.log(this.total,"total total")
       }
