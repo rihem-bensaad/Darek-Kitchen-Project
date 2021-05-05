@@ -39,12 +39,12 @@
                       <h6> {{item.price}},000 TND</h6>
                     </td>
                     <td>
-                      <select>
-                        <option  *ngFor="let a of item.quantity ">{{a}}</option>
+                      <select (change)="getQuantity($event.target,item)">
+                        <option  *ngFor="let a of item.quantity " >{{a}}</option>
                       </select>
                     </td>
                     <td>
-                      <h6>{{item.price}},000 TND</h6>
+                      <h6>{{item.total}},000 TND</h6>
                     </td>
                     <td>
                       <button class="btn btndel" (click)="deleteItem(item.ID_menu)"><i class="far fa-trash-alt"></i></button></td>
@@ -57,10 +57,10 @@
 </section>
 <div class="col-lg-4 offset-lg-4">
 <div class="checkout">
-    <ul>
-        <li class="cart-total">Total
-        <span>{{ total | currency}}</span></li>
-    </ul>
+    <!-- <ul *ngFor="let item of cartItem ">
+        <li class="cart-total" *ngFor="let a of item.quantity ">Total
+        <span>{{ item.total | currency}}</span></li>
+    </ul> -->
     <a href="#"class="proceed-btn">Confirm your Order</a>
 </div>
 </div>

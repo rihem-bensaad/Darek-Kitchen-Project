@@ -11,7 +11,7 @@ export class CartComponent implements OnInit {
   menus: any = [];
   menu = this.menuService.getmenu();
   cartItem: any = []
-  total: number = 0
+  total: number = 1
   quantity: number = 1
   range : any = []
   constructor(public menuService: MenuService, public ordersService: OrdersService) { }
@@ -32,6 +32,7 @@ export class CartComponent implements OnInit {
         let r = []
         for (let j = 1; j <= this.cartItem[i].quantity; j++){
           r.push(j)
+          this.cartItem[i]['total']=this.cartItem[i].price
         }
         this.cartItem[i].quantity = r
         this.total +=  this.cartItem[i].price
@@ -49,20 +50,21 @@ export class CartComponent implements OnInit {
   }
 
 
-  incrementquant(id: string) {
-    console.log(id);
-  }
-
-  decremntQuant(id:string) {
-
-  }
-
 //   getmenuById(ID_menu: number) {
 //       console.log(ID_menu);
 //     this.menuService.getmenuById(ID_menu).subscribe((data) => {
 //       this.menus = data
 //     })
 // }
-
+  getQuantity(quantity:any, item: any) {
+    this.cartItem.map((itemm:any) => {
+      if (itemm.title == item.title) {
+        itemm.total = Number(quantity.value) * Number(item.price)
+        return itemm
+      } else {
+        return itemm
+        }
+    })
+}
 }
 
