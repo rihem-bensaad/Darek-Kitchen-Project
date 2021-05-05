@@ -56,6 +56,7 @@ export class CartComponent implements OnInit {
 //       this.menus = data
 //     })
 // }
+
   getQuantity(quantity: any, item: any) {
     this.cartItem.map((itemm: any) => {
       if (itemm.title == item.title) {
@@ -65,9 +66,9 @@ export class CartComponent implements OnInit {
         return itemm
       }
     })
-    this.total = this.cartItem.reduce((accumulator: any, element: any) => {
+    this.total = this.cartItem.reduce((accumulator: any, element: any) =>
       (accumulator + element.total), 0
-    })
+    )
 
 }
 }
