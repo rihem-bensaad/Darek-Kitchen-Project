@@ -29,12 +29,12 @@ export class CartComponent implements OnInit {
       this.cartItem = localStorage.getItem('MyObject')
       this.cartItem = JSON.parse(this.cartItem)
       for (var i = 0; i < this.cartItem.length; i++){
-        let r = []
+        let arr = []
         for (let j = 1; j <= this.cartItem[i].quantity; j++){
-          r.push(j)
+          arr.push(j)
           this.cartItem[i]['total']=this.cartItem[i].price
         }
-        this.cartItem[i].quantity = r
+        this.cartItem[i].quantity = arr
         this.total +=  this.cartItem[i].price
         console.log(this.total,"total total")
       }
@@ -56,15 +56,19 @@ export class CartComponent implements OnInit {
 //       this.menus = data
 //     })
 // }
-  getQuantity(quantity:any, item: any) {
-    this.cartItem.map((itemm:any) => {
+  getQuantity(quantity: any, item: any) {
+    this.cartItem.map((itemm: any) => {
       if (itemm.title == item.title) {
         itemm.total = Number(quantity.value) * Number(item.price)
         return itemm
       } else {
         return itemm
-        }
+      }
     })
+    this.total = this.cartItem.reduce((accumulator: any, element: any) => {
+      (accumulator + element.total), 0
+    })
+
 }
 }
 
