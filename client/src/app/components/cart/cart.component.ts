@@ -40,7 +40,7 @@ export class CartComponent implements OnInit {
           }
         }
         if (this.cartItem[i].quantity instanceof Array  ) {
-          
+
         } else {
            this.cartItem[i].quantity = arr
         }
@@ -64,10 +64,7 @@ export class CartComponent implements OnInit {
 
 
   getQuantity(quantity: any, item: any) {
-     console.log(item,'item');
-
     localStorage.setItem('Quantity', JSON.stringify(item.total))
-
     this.quantity=1
     this.cartItem = this.cartItem.map((itemm: any) => {
       if (itemm.title == item.title) {
@@ -90,9 +87,6 @@ export class CartComponent implements OnInit {
     this.total = this.cartItem.reduce((accumulator: any, element: any) => (accumulator + element.total), 0)
     localStorage.setItem('MyObject', JSON.stringify(this.cartItem))
     localStorage.setItem('total',JSON.stringify(this.total))
-
   }
-
-
 }
 
