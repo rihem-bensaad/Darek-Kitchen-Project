@@ -11,7 +11,7 @@ export class CartComponent implements OnInit {
   menus: any = [];
   menu = this.menuService.getmenu();
   cartItem: any = []
-  total: number = 1
+  total: any = 1
   quantity: number = 1
   range : any = []
   constructor(public menuService: MenuService, public ordersService: OrdersService) { }
@@ -20,25 +20,37 @@ export class CartComponent implements OnInit {
     this.getorders()
   }
 
+
   getorders() {
     this.total=0
     if (localStorage.getItem('MyObject') === null ) {
         localStorage.setItem('MyObject', '');
     }
     else {
+
       this.cartItem = localStorage.getItem('MyObject')
       this.cartItem = JSON.parse(this.cartItem)
       for (var i = 0; i < this.cartItem.length; i++){
         let arr = []
         for (let j = 1; j <= this.cartItem[i].quantity; j++){
           arr.push(j)
-          this.cartItem[i]['total']=this.cartItem[i].price
+          this.cartItem[i]['total'] = this.cartItem[i].price
+          if (!this.cartItem[i]['qty']) {
+            this.cartItem[i]['qty'] = 1;
+          }
         }
-        this.cartItem[i].quantity = arr
-        this.total +=  this.cartItem[i].price
+        if (this.cartItem[i].quantity instanceof Array  ) {
+          
+        } else {
+           this.cartItem[i].quantity = arr
+        }
         console.log(this.total,"total total")
+        this.total +=  this.cartItem[i].price
       }
-     }
+      localStorage.setItem('MyObject', JSON.stringify(this.cartItem))
+      this.total = localStorage.getItem('total')
+      this.total = Number( JSON.parse(this.total))
+    }
   }
 
 
@@ -52,19 +64,35 @@ export class CartComponent implements OnInit {
 
 
   getQuantity(quantity: any, item: any) {
-    localStorage.setItem('Quantity', JSON.stringify(item))
-    localStorage.getItem('Quantity')
+     console.log(item,'item');
 
-     this.quantity=1
-       this.cartItem.map((itemm: any) => {
-         if (itemm.title == item.title) {
-           itemm.total = Number(quantity.value) * Number(item.price)
-           return itemm
-         } else {
-           return itemm
-         }
-       })
+    localStorage.setItem('Quantity', JSON.stringify(item.total))
+
+    this.quantity=1
+    this.cartItem = this.cartItem.map((itemm: any) => {
+      if (itemm.title == item.title) {
+        itemm.total = Number(quantity.value) * Number(item.price)
+        itemm.qty = quantity.value
+        const qq = [quantity.value]
+        itemm.quantity.forEach((e: any) => {
+          if (e == quantity.value) {
+
+          } else {
+            qq.push(e)
+          }
+        })
+        item.quantity = qq;
+        return itemm
+      } else {
+        return itemm
+      }
+    })
     this.total = this.cartItem.reduce((accumulator: any, element: any) => (accumulator + element.total), 0)
-}
+    localStorage.setItem('MyObject', JSON.stringify(this.cartItem))
+    localStorage.setItem('total',JSON.stringify(this.total))
+
+  }
+
+
 }
 
