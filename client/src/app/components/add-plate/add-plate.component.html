@@ -40,10 +40,10 @@
         <label><b>Title :</b></label>
         <input type="text" placeholder="Menu Title"  formControlName="title"/>
     </div>
-    
+
     <div class="input-field">
-        <label><b>Title :</b></label>
-        <input type="text" placeholder="Menu Title"  formControlName="title"/>
+        <label><b>Description :</b></label>
+        <input type="text" placeholder="Plate Description"  formControlName="description"/>
     </div>
 
     <div class="input-field">
@@ -64,6 +64,7 @@
     <table class="table">
         <tr>
         <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
+        <th><i class="fas fa-file fa-lg"></i><strong>Plate Description</strong> </th>
         <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
         <th><i class="fas fa-dollar-sign fa-lg"></i><strong>Price</strong> </th>
         <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong> </th>
@@ -72,6 +73,7 @@
 
     <tr *ngFor="let menu of menus">
         <td>{{menu.title}}</td>
+        <td>{{menu.description}}</td>
         <td>{{menu.location}}</td>
         <td>{{menu.price}}</td>
         <td><img src="{{menu.image}}"></td>

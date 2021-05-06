@@ -13,6 +13,7 @@ import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms'
 export class AddPlateComponent implements OnInit {
   menuForm = new FormGroup({
     title: new FormControl(''),
+    description: new FormControl(''),
     image: new FormControl(''),
     location: new FormControl(''),
     price: new FormControl('')
