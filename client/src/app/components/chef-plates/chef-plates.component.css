@@ -3,12 +3,12 @@
     background-size: cover;
     width:95.9rem;
     margin-top: -3.2%;
-    background: rgb(0, 0, 0);
+    background-image: url('https://format-com-cld-res.cloudinary.com/image/private/s--yU5hjwQS--/c_limit,g_center,h_1200,w_65535/fl_keep_iptc.progressive,q_95/v1/1a734fc5206bed55cf9be93c30ed8e52/RamenFeatured-1.jpg');
   }
   .col-lg-2 {
    margin-top:5%;
    margin-left:2%;
-   padding: 100px 10 20px
+   padding: 100px 10 20px;
   }
  .card-ecommerce{
    height: 0 auto;
