@@ -1,15 +1,15 @@
-<div class="main">
-
-  <!-- Actual search box -->
-  <div class="form-group has-search">
-    <span class="fa fa-search form-control-feedback"></span>
-    <input type="search" class="form-control" autocomplete="off" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
-  </div>
-  </div>
 
 <div class="myrow">
-    <!--Grid row-->
-     <div class="row">
+  <!--Grid row-->
+  <div class="main">
+    
+    <!-- Actual search box -->
+    <div class="form-group has-search">
+      <span class="fa fa-search form-control-feedback"></span>
+      <input type="search" class="form-control" autocomplete="off" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
+    </div>
+    </div>
+  <div class="row">
       <!--Grid column-->
       <div class="col-lg-2 col-md-6 mb-3" *ngFor="let menu of menus | filter:filterTerm">
 

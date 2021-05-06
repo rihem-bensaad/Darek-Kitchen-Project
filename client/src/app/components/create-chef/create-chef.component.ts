@@ -39,56 +39,10 @@ export class CreateChefComponent implements OnInit {
 ngOnInit(): void {
     this.getChefs()
     this.addChef()
-    // const uploaderOptions: FileUploaderOptions = {
-    //   url: `https://api.cloudinary.com/v1_1/${this.cloudinary.config().cloud_name}/upload`,
-    //   // Upload files automatically upon addition to upload queue
-    //   autoUpload: true,
-    //   // Use xhrTransport in favor of iframeTransport
-    //   isHTML5: true,
-    //   // Calculate progress independently for each uploaded file
-    //   removeAfterUpload: true,
-    //   // XHR request headers
-    //   headers: [
-    //     {
-    //       name: 'X-Requested-With',
-    //       value: 'XMLHttpRequest'
-    //     }
-    //   ]
-    // };
 
-
-
-    // this.uploader = new FileUploader(uploaderOptions);
-
-    // this.uploader.onBuildItemForm = (fileItem: any, form: FormData): any => {
-    //   // Add Cloudinary unsigned upload preset to the upload form
-    //   form.append('upload_preset', this.cloudinary.config().upload_preset);
-
-    //   // Add file to upload
-    //   form.append('file', fileItem);
-
-    //   // Use default "withCredentials" value for CORS requests
-    //   fileItem.withCredentials = false;
-    //   return { fileItem, form };
-    // };
   }
-    // onFileSelected(event : any){
-    //   console.log(event);
-    //   this.selectedFile = <File>event.target.files[0] 
-    // }
-    // onUpload(){
-    //   const fd = new FormData();
-    //   fd.append('image', this.selectedFile, this.selectedFile.name);
-    //   this.http.post('/', fd)
-    //   .subscribe(res => {
-    //     console.log(res);
-        
-    //   })
-    // }
-    
 
-  
-     deleteChef(chef:any){
+      deleteChef(chef:any){
       this.ChefService.deleteChef(chef.ID)
       .subscribe()
       location.reload()

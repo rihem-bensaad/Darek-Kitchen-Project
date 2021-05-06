@@ -2,7 +2,8 @@
     position: absolute ! important;
     background-size: cover;
     width:95.9rem;
-    margin-top: -5%;
+    margin-top: -3.2%;
+    background: rgb(0, 0, 0);
   }
   .col-lg-2 {
    margin-top:5%;
@@ -12,8 +13,8 @@
  .card-ecommerce{
    height: 0 auto;
    width: 260px ! important;
-   background: rgba(0, 0, 0, 0.651);
-   border: 2px solid black;
+   background: black;
+   border: 1.5px solid rgba(255, 255, 255, 0.205);
  }
  .view{
    min-height: 160px;
@@ -35,6 +36,7 @@
  .descrip{
   font-family: Book Antiqua;
    color:white;
+   
  }
 
  .location{
