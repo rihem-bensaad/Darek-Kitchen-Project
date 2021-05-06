@@ -8,8 +8,9 @@ export class ChefService {
   userData : any = []
   constructor(private http: HttpClient) {
   }
-  postFrom(data: any) {
-    return this.http.post('http://localhost:3000/admin/createchef', data)
+  postFrom(data: any,urlPic : any) {
+    return this.http.post('http://localhost:3000/admin/createchef', {...data,urlPic})
+    
   }
   loginChef(data:any) {
     return this.http.post('http://localhost:3000/chef/login', data)
