@@ -4,7 +4,8 @@ const mysql = require('mysql');
 const cloud = require('cloudinary')
 
 module.exports.postmenu = (req, res) => {
-db.postMenu([req.body.title, req.body.image ,req.body.location, req.body.price, req.body.description],(err,result)=>{
+    let x = req.body
+db.postMenu([x.title, x.image ,x.location, x.price, x.description],(err,result)=>{
     err ? console.log(err) : res.status(201).send("posted")
 })
 }
@@ -16,7 +17,8 @@ module.exports.getmenu = (req,res)=>{
 }
 
 module.exports.deletemenu = (req,res)=>{
-    db.deletemenu([req.body.title,req.body.image,req.body.location,req.body.price],req.params.id,(err,result)=>{
+    let x = req.body
+    db.deletemenu([x.title,x.image,x.location,x.price],req.params.id,(err,result)=>{
         err ? console.log(err) : res.status(201).send("menu deleted")
 
     })
@@ -29,7 +31,8 @@ module.exports.getMenuById = (req, res) => {
 }
 
 module.exports.updateMenu = (req,res) => {
-    db.updateMenu([req.body.title,req.body.image,req.body.location,req.body.price],req.params.id,(err,result)=>{
+    let x = req.body
+    db.updateMenu([x.title,x.image,x.location,x.price, x.description],req.params.id,(err,result)=>{
         err ? console.log(err) : res.status(201).send(result)
     })
 }

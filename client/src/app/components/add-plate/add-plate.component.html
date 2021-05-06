@@ -38,22 +38,22 @@
 
     <div class="input-field">
         <label><b>Title :</b></label>
-        <input type="text" placeholder="Menu Title"  formControlName="title"/>
+        <input type="text" maxlength="15" placeholder="Menu Title"  formControlName="title"/>
     </div>
 
     <div class="input-field">
         <label><b>Description :</b></label>
-        <input type="text" id="inpdescription" placeholder="Plate Description"  formControlName="description"/>
+        <input type="text" maxlength="25" id="inpdescription" placeholder="Plate Description"  formControlName="description"/>
     </div>
 
     <div class="input-field">
         <label><b>Location :</b></label>
-        <input id="inplocation"type="text" placeholder="location"  formControlName="location"/>
+        <input id="inplocation" type="text" maxlength="10" placeholder="location"  formControlName="location"/>
       </div>
 
     <div class="input-field">
         <label><b>Price :</b></label>
-      <input id="inpprice" type="text" placeholder="Price Menu"  formControlName="price"/>
+      <input id="inpprice" type="text" placeholder="Price Menu" maxlength="4" formControlName="price"/>
     </div>
 
     <button id="addbtn" class="btn" (click)="addMenu()"><b>ADD</b></button>
