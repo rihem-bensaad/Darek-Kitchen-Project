@@ -1,9 +1,11 @@
 .dash{
   margin-top:4.3%;
-   width:100%;
-   height:100%;
+  
+  width:100%;
+  min-height:100%;
   background-color: white !important;
-  position: absolute;
+  background-size: cover;
+  
 }
 *{
   padding: 0;
@@ -17,8 +19,10 @@
     position: absolute;
     left: 0;
     top:0;
-    height: 100em;
+    height:91%;
     background: #0a0a0afa;
+    margin-bottom:2% ! important;
+    margin-top:4%
 
 }
 a{

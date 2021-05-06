@@ -14,7 +14,7 @@ import {HttpClient} from '@angular/common/http'
 })
 export class CreateChefComponent implements OnInit {
   chefs: any = [];
-  selectedFile = null;
+  selectedFile : any = null;
 
   signupForm = new FormGroup({
     firstName: new FormControl('',[Validators.required]),
@@ -27,18 +27,25 @@ export class CreateChefComponent implements OnInit {
   });
 
   constructor(private ChefService: ChefService, private http : HttpClient) { }
-
+  filterTerm!: string;
+  
   ngOnInit(): void {
     this.getChefs()
     this.addChef()
   }
     onFileSelected(event : any){
       console.log(event);
-      this.selectedFile = event.target.files[0] 
+      this.selectedFile = <File>event.target.files[0] 
     }
 
     onUpload(){
-      
+      const fd = new FormData();
+      fd.append('image', this.selectedFile, this.selectedFile.name);
+      this.http.post('/', fd)
+      .subscribe(res => {
+        console.log(res);
+        
+      })
     }
      deleteChef(chef:any){
       this.ChefService.deleteChef(chef.ID)

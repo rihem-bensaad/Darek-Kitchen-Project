@@ -12,6 +12,8 @@
  .card-ecommerce{
    height: 0 auto;
    width: 260px ! important;
+   background: rgba(0, 0, 0, 0.651);
+   border: 2px solid black;
  }
  .view{
    min-height: 160px;
@@ -22,11 +24,12 @@
  }
 
  .menuname{
-   color:#ffc107 ;
+   color:white;
    cursor: pointer;
  }
 .price{
    font-family: Book Antiqua;
+   color:#F7F709;
  }
  .location{
   float:right;
@@ -34,8 +37,14 @@
   font-family: Georgia;
   margin-top: 2%;
   margin-bottom:-5%;
+  color: white;
  }
-
+.quantity{
+  color:white;
+}
+.description{
+  color: gray;
+}
 
 /* Styles for wrapping the search box */
 
@@ -80,18 +89,29 @@
 
 .form-control::-webkit-search-cancel-button{
   position:relative;
-  cursor:pointer ! important; 
-  
+  cursor:pointer ! important;
+
 }
 
 .btn-buy{
   background:#F7F709;
   float: left;
-  font-weight: 600;
+  font-weight: 500;
   font-family: Georgia;
   outline:none !important;
   box-shadow: none;
+  width: 80%;
+  margin-left:10%;
+  margin-top: 18%;
+  margin-bottom: -5%;
+  font-size:14px
+}
+.btn-buy:active{
+  background-color: #f7f70936;
 }
 .btn-buy:hover{
 text-decoration:underline;
+}
+.plusicon{
+  font-size: 12px ! important;
 }

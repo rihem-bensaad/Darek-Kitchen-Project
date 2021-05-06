@@ -12,7 +12,10 @@ export class AddMenuComponent implements OnInit {
 menuForm = new FormGroup({
     title: new FormControl(''),
     image: new FormControl(''),
-    price: new FormControl('')
+    price: new FormControl(''),
+    description: new FormControl(''),
+    quantity: new FormControl(''),
+
   });
   constructor(private menuService: MenuService, private router: Router) { }
 

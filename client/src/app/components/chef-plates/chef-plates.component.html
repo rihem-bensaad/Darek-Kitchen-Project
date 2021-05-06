@@ -39,10 +39,11 @@
 
             </h4>
 
-              <b><p class="price">{{menu.description}}</p></b>
+              <b><p class="description">{{menu.description | slice: 0:70}}...</p></b>
               <b><p class="price">{{menu.price}} TND</p></b>
               <h6 class="location"><i class="fas fa-map-marker-alt"></i> {{menu.location}}</h6>
-              <button class="btn btn-buy" (click)="addToCart(menu)">Buy</button>
+              <h6 class="quantity"> Quantity: {{menu.quantity}}</h6>
+              <button class="btn btn-buy" (click)="addToCart(menu)"><i class="fas fa-plus plusicon"></i> Add to cart</button>
 
               <!-- <div class="rating" style="width: 20rem">
                 <input id="rating-5" type="radio" name="rating" value="5"/><label for="rating-5"><i class="fas fa-lg fa-star"></i></label>
