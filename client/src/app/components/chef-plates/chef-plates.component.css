@@ -26,12 +26,17 @@
 
  .menuname{
    color:white;
-   cursor: pointer;
+
  }
 .price{
    font-family: Book Antiqua;
    color:#F7F709;
  }
+ .descrip{
+  font-family: Book Antiqua;
+   color:white;
+ }
+
  .location{
   float:right;
   font-weight: 600;

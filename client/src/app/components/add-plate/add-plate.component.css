@@ -74,6 +74,9 @@
   input{
     width:300px
   }
+  #inpdescription{
+    margin-right: 5% ! important;
+  }
   #inplocation{
     margin-right: 3%;
   }
