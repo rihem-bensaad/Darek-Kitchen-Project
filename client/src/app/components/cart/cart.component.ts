@@ -50,26 +50,21 @@ export class CartComponent implements OnInit {
   }
 
 
-//   getmenuById(ID_menu: number) {
-//       console.log(ID_menu);
-//     this.menuService.getmenuById(ID_menu).subscribe((data) => {
-//       this.menus = data
-//     })
-// }
 
   getQuantity(quantity: any, item: any) {
-    this.cartItem.map((itemm: any) => {
-      if (itemm.title == item.title) {
-        itemm.total = Number(quantity.value) * Number(item.price)
-        return itemm
-      } else {
-        return itemm
-      }
-    })
-    this.total = this.cartItem.reduce((accumulator: any, element: any) =>
-      (accumulator + element.total), 0
-    )
+    localStorage.setItem('Quantity', JSON.stringify(item))
+    localStorage.getItem('Quantity')
 
+     this.quantity=1
+       this.cartItem.map((itemm: any) => {
+         if (itemm.title == item.title) {
+           itemm.total = Number(quantity.value) * Number(item.price)
+           return itemm
+         } else {
+           return itemm
+         }
+       })
+    this.total = this.cartItem.reduce((accumulator: any, element: any) => (accumulator + element.total), 0)
 }
 }
 
