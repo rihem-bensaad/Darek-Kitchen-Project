@@ -24,6 +24,7 @@ CREATE TABLE menu (
     image VARCHAR(255) NOT NULL,
     location VARCHAR(255) NOT NULL, 
     price INT NOT NULL,
+    description VARCHAR(555) NOT NULL,
     -- ID_brands INT,
     PRIMARY KEY (ID_menu)
     -- FOREIGN KEY (ID_brands) REFERENCES brands(ID_brands)
@@ -44,11 +45,6 @@ CREATE TABLE user (
     phoneNumber INT NOT NULL,
     location VARCHAR(255) NOT NULL
 );
-
-
-CREATE TABLE detailOrder (
-
-)
 
 
 
@@ -132,3 +128,18 @@ INSERT INTO brands ( brandName,category,logo) values ("Foundation","Healthy Food
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
 -- INSERT INTO menu (title, image, price, ID_brands) values ("Couscous", "", 9 ,12);
+
+
+
+  --  "title":"Tajin",
+  --   "image":"https://www.196flavors.com/wp-content/uploads/2018/03/tajine-el-bey-3.jpg",
+  --   "location": "Sousse",
+  --   "description":"This Moroccan dish having its origin in Berber cuisine, but also very widespread in traditional Maghreb cuisine",
+  --   "price": 12
+
+
+  --  "title":"Mlewi",
+  --   "image":"https://1.bp.blogspot.com/-VT4MZ9BggJs/XnCGadcmwGI/AAAAAAAAgNY/kMNzGHycI1I_zyC3RLrTaRkgzRrEAj4XQCLcBGAsYHQ/s1600/90020401_216144062835727_2104574493761470464_n.jpg",
+  --   "location": "Mestir",
+  --   "description":"The ingredients: 300 g fine semolina 200 g flour lukewarm water 2 tbsp olive oil salt.",
+  --   "price": 18 
