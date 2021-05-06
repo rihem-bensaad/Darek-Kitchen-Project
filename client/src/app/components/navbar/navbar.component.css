@@ -1,15 +1,4 @@
-.carousel-item {
-    height: 100vh;
-    min-height: 300px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-  }
-
-  .nav-logo{
+.nav-logo{
     width: 78px;
   }
   .carousel-caption {
@@ -89,51 +78,7 @@ a:active {
 
 
 
-  /* ignore the code below */
-
-
-  .link-area
-  {
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    padding:15px;
-    border-radius:40px;
-    background:tomato;
-  }
-  .link-area a
-  {
-    text-decoration:none;
-    color:#fff;
-    font-size:25px;
-  }
-
-  .nav-log{
-    width: 46px !important;
-    height: 44px !important;
-     padding: 0px;
-  margin: 0px;
-  text-align: center;
-  display:inline-block;
-  vertical-align:top;
-
-  }
-
- 
-  .navbar-brand{
-    border-radius: 10%;
-  }
-.navbar-brand:first-letter{
-  color:#F7F709;
-}
-
-.navbar{
-  position: absolute ! important;
-
-}
-
-/* -------------------------------------------------------- */
-
+  
 .dropbtn {
   color: white;
   padding: 16px;

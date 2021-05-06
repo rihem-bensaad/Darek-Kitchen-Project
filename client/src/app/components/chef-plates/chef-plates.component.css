@@ -20,7 +20,8 @@
  }
  .imgBrand{
    width: 100% ! important;
-   height: 60px ! important;
+   max-height: 230px ! important;
+   min-height: 80px ! important;
  }
 
  .menuname{
@@ -69,6 +70,7 @@
   color: #aaa;
   font-family: Georgia;
 }
+
 .has-search .form-control-feedback {
   position: absolute;
   z-index: 2;
@@ -81,6 +83,7 @@
   color: #aaa;
   margin-left: 0.5%;
 }
+
 
 .form-control::-webkit-search-cancel-button{
   position:relative;
