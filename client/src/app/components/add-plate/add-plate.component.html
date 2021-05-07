@@ -33,7 +33,7 @@
 
     <div class="input-field">
         <label><b>Photo :</b></label>
-        <input id="inpimage" type="text" placeholder="Image Menu"  formControlName="image"/>
+        <input id="inpimage" type="file" placeholder="Image Menu" #imageInput (change)="cloudy(imageInput)"  formControlName="image"/>
     </div>
 
     <div class="input-field">
@@ -50,6 +50,7 @@
         <label><b>Location :</b></label>
         <input id="inplocation" type="text" maxlength="10" placeholder="location"  formControlName="location"/>
       </div>
+      
 
     <div class="input-field">
         <label><b>Price :</b></label>

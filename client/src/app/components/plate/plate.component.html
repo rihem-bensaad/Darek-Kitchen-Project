@@ -58,7 +58,7 @@
         <td>{{menu.price}}</td>
         <td>{{menu.quantity}}</td>
         <td><img src="{{menu.image}}"></td>
-        <td><button class="btn black btnblack" data-toggle="modal" data-target="#myModal" (click)="getvalues(menu)">Update</button></td>
+        <td><button class="btn black btnblack" data-toggle="modal" data-target="#myModal" (click)="getvalues(menu)"  >Update</button></td>
         
 
         <!-- Modal -->
@@ -70,8 +70,8 @@
               <form [formGroup]="menuForm" >
                 <img src={{menu.image}} class="imgmodal" formControlName="image"   >
                 <div class="modalinput">
-                <label><strong>Image :</strong></label>
-                <input class="modalinput1" type="text" value={{menu.image}} formControlName="image"/><br>
+                <!-- <label><strong>Image :</strong></label> -->
+                <!-- <input class="modalinput1" type="file" #imageInput (change)="cloudy(imageInput)" value={{menu.image}} formControlName="image"/><br> -->
                 <label><strong>Plate Name :</strong></label>
                 <input class="modalinput2" type="text"  value={{menu.title}} formControlName="title"/><br>
                 <label><strong>Plate Description :</strong></label>

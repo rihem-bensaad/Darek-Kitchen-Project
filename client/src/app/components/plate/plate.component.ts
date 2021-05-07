@@ -22,7 +22,7 @@ export class PlateComponent implements OnInit {
     image: new FormControl(''),
    });
 
-  constructor(private menuService: MenuService , private ChefService: ChefService) { }
+  constructor(private menuService: MenuService , private ChefService: ChefService ) { }
   values: any = {};
   filterTerm!: string;
   

@@ -84,9 +84,10 @@ module.exports.updateBrand = (req,res)=>{
 }
 
 module.exports.addChef = (req,res)=>{
-            db.addChef([req.body.firstName, req.body.lastName,req.body.email,hash,req.body.phoneNumber,req.body.location,req.body.imageCardId],(err,result)=>{
+            db.addChef([req.body.firstName, req.body.lastName,req.body.email,hash,req.body.phoneNumber,req.body.location,req.body.urlPic],(err,result)=>{
                 err ? console.log(err) : res.status(201).send(result)
         })
+        console.log(req.body.urlPic)
   }
  
 
@@ -97,13 +98,12 @@ module.exports.addChef = (req,res)=>{
 }
 
 module.exports.createChef = (req,res)=>{
-    
     bcrypt.genSalt(10,function(err,salt){
         bcrypt.hash(req.body.password,salt,function(err,hash){
             db.createChef([req.body.firstName, req.body.lastName,req.body.email,hash,req.body.phoneNumber,req.body.location,req.body.urlPic],(err,result)=>{
                 err ? console.log(err) : res.status(201).send(result)
         })
     })
-
+ 
 })
 }

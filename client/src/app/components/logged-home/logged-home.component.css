@@ -18,7 +18,7 @@
     font-size: 70px;
     font-weight: 900;
     line-height: 1.2;
-    color: #F7F709;
+    color: #DEB28F;
 
 }
 .h5{
@@ -41,7 +41,7 @@
     letter-spacing: 0em;
     border-radius: 0em;
     padding: 0.8em 1.8em;
-    background: #F7F709 ;
+    background: #DEB28F ;
     border-color: transparent;
     color: #1F1A1E !important;
     box-shadow: none !important;
@@ -49,7 +49,7 @@
 }
 .btn:hover{
     /* background-color: #df500e; */
-    color: #F7F709 ! important;
+    color: #DEB28F ! important;
     background:rgba(0, 0, 0, 0.774);
 }
 
@@ -66,9 +66,9 @@ agm-map{
 .cover{
     position: fixed;
     z-index: 0;
-    width: 100rem;
-    background: #F7F709;
-    margin-top: 1.5%;
+    width: 100%;
+    background: #DEB28F;
+    margin-top: 45.3%;
   }
   .phone{
     z-index: 1;
@@ -113,7 +113,7 @@ agm-map{
   }
   .social-icon p a:hover{
     background: black;
-    color: #F7F709;
+    color: #DEB28F;
   }
   .social-icon p a:hover i{ 
     color:#fff;

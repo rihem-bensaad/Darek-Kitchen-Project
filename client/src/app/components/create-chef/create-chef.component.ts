@@ -33,7 +33,7 @@ export class CreateChefComponent implements OnInit {
     imageCardId: new FormControl('',[Validators.required])
   });
 
-  constructor(private ChefService: ChefService, private http : HttpClient ,   private cloudinary: Cloudinary,private zone: NgZone , ) { }
+  constructor(private ChefService: ChefService, private http : HttpClient ,   private cloudinary: Cloudinary,private zone: NgZone  ) { }
   filterTerm!: string;
   
 ngOnInit(): void {

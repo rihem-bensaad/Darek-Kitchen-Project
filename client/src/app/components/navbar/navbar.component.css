@@ -20,7 +20,7 @@
   }
 
   .navbar-light .navbar-brand {
-    color: #fff;
+    color: black;
     font-size: 25px;
     text-transform: uppercase;
     font-weight: bold;
@@ -29,15 +29,15 @@
   }
 
   .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
-    color: #fff;
+    color: black;
   }
 
   .navbar-light .navbar-nav .nav-link {
-    color: #fff;
+    color: black;
   }
 
   .navbar-toggler {
-    background: #fff;
+    background: black;
   }
 
   .navbar-nav {
@@ -47,6 +47,8 @@
   .nav-link {
     padding: .2rem 1rem;
     font-size: 17px;
+    font-weight: 1000;
+  
   }
   @media (max-width: 968px) {
     
@@ -58,7 +60,7 @@
   }
 
   .nav-link.active,.nav-link:focus{
-    color: #fff;
+    color: #DEB28F;
   }
 
   .navbar-toggler {
@@ -68,11 +70,11 @@
   }
 
   .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: #fff;
+    color: orange;
   }
 
 a:active {
-  background-color: #F7F709;
+  background-color: #DEB28F;
 }
 
 
@@ -113,7 +115,7 @@ a:active {
     border-radius: 10%;
   }
 .navbar-brand:first-letter{
-  color:#F7F709;
+  color:#DEB28F
 }
 
 .navbar{
@@ -151,7 +153,7 @@ a:active {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: yellow;}
+.dropdown-content a:hover {background-color: #4C884B;}
 
 .dropdown:hover .dropdown-content {display: block;}
 

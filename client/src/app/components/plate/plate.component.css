@@ -37,7 +37,7 @@
   .sidebar-brand{
       margin-right:14%;
       height: 60px;
-      color:#F7F709;
+      color:#DEB28F;
       
   }
   .sidebar-brand span{
@@ -96,7 +96,7 @@
     margin-top: -0.3%;
   }
   .btn{
-    background-color: #F7F709;
+    background-color: #DEB28F;
     border: none;
     box-shadow: none ! important;
   }
@@ -136,7 +136,7 @@
     box-shadow: none !important;
   }
   .btnblack::before{
-    border: 2px solid #F7F709;
+    border: 2px solid #DEB28F;
   }
   .btncloseblack{
     color: white;
