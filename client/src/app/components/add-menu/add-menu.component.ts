@@ -9,17 +9,22 @@ import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms'
   styleUrls: ['./add-menu.component.css']
 })
 export class AddMenuComponent implements OnInit {
+  urlPic :any
+
 menuForm = new FormGroup({
     title: new FormControl(''),
     image: new FormControl(''),
-    price: new FormControl('')
+    price: new FormControl(''),
+    description: new FormControl(''),
+    quantity: new FormControl(''),
+
   });
   constructor(private menuService: MenuService, private router: Router) { }
 
   ngOnInit(): void {
   }
    addMenu() {
-    this.menuService.postmenu(this.menuForm.value).subscribe((data:any)=> {
+    this.menuService.postmenu(this.menuForm.value,this.urlPic).subscribe((data:any)=> {
       console.log(data)
     })
    }

@@ -37,7 +37,7 @@
   .sidebar-brand{
       margin-right:14%;
       height: 60px;
-      color:#F7F709;
+      color:#DEB28F;
       
   }
   .sidebar-brand span{
@@ -56,6 +56,9 @@
   font-size: 16px;
   padding: 0;
   margin-right: 5%;
+  }
+  td{
+    font-weight: 480;
   }
   
   form{
@@ -93,15 +96,16 @@
     margin-top: -0.3%;
   }
   .btn{
-    background-color: #F7F709;
+    background-color: #DEB28F;
     border: none;
     box-shadow: none ! important;
   }
 
   .modal{
     text-align: center;
-    margin: 5% 23%;
+    margin: 4.5% 23%;
     width: 100%;
+    height:88%;
   }
   .modalinput{
     margin-right: 13%;
@@ -111,9 +115,7 @@
     width: 300px !important;
     height:250px !important;
     border: 0.5px solid grey ! important;
-    margin-right:13%
-    }
-  
+  }
   .editbtn{
     width: 300px;
     height:35px;
@@ -123,6 +125,9 @@
     margin-left: -13% ! important;
 
   }
+  .btnblack:hover{
+    text-decoration:underline 0.5px white ! important;
+  }
   .btncloseblack{
     margin-left:4% !important;
   }
@@ -131,7 +136,7 @@
     box-shadow: none !important;
   }
   .btnblack::before{
-    border: 2px solid #F7F709;
+    border: 2px solid #DEB28F;
   }
   .btncloseblack{
     color: white;

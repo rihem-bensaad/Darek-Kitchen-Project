@@ -37,6 +37,9 @@ import { AgmCoreModule } from '@agm/core';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HighlightDirective } from './pipes/highlight.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { CloudinaryModule, CloudinaryConfiguration } from '@cloudinary/angular-5.x';
+import { Cloudinary } from 'cloudinary-core';
+import {SocketioService } from './services/socketio.service'
 
 @NgModule({
   declarations: [
@@ -80,9 +83,11 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCd5u5gpZZmsYjRJmOEL8B6DuCKL40pE5M',
       libraries: ['places']
-    })
+    }),
+    CloudinaryModule.forRoot({Cloudinary}, { cloud_name: 'rbktn11' } as CloudinaryConfiguration),
+
   ],
-  providers: [],
+  providers: [SocketioService],
 
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]

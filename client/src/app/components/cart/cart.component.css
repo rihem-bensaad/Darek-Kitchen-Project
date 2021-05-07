@@ -1,3 +1,11 @@
+.my-cart{
+  position: absolute;
+  margin: center center ! important;
+  width: 100%;
+  background-image: url('https://format-com-cld-res.cloudinary.com/image/private/s--yU5hjwQS--/c_limit,g_center,h_1200,w_65535/fl_keep_iptc.progressive,q_95/v1/1a734fc5206bed55cf9be93c30ed8e52/RamenFeatured-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /*==========Hero Section===========*/
 #hero{
   display:table;
@@ -25,7 +33,7 @@
   font-weight: bold;
   line-height: 48px;
   text-transform: uppercase;
-  color: #F7F709;
+  color: #DEB28F;
 }
 @media (max-width: 768px){
   #hero h1{
@@ -49,7 +57,7 @@
   font-size:16px;
   font-weight: bold;
   border-bottom:0px;
-  background: #F7F709;
+  background: #DEB28F;
   color: black !important;
 }
 .cart .table thead tr td{
@@ -102,7 +110,7 @@ td{
   height:29.5px;
   margin-top: 5px;
   border-radius: 5px;
-  background-color:#F7F709
+  background-color:#DEB28F
 }
 .btn:active{
   background-color: #f7f7095d;
@@ -152,7 +160,7 @@ td{
 }
 .checkout ul li.cart-total span{
   color:black;
-  background-color:#F7F709;
+  background-color:#DEB28F;
 }
 .checkout ul li span{
   float:right;

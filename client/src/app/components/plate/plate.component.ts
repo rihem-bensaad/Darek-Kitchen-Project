@@ -15,12 +15,14 @@ export class PlateComponent implements OnInit {
  menuForm = new FormGroup({
     ID_menu : new FormControl(''),
     title: new FormControl(''),
+    description: new FormControl(''),
     location: new FormControl(''),
     price: new FormControl(''),
+    quantity: new FormControl(''),
     image: new FormControl(''),
    });
 
-  constructor(private menuService: MenuService , private ChefService: ChefService) { }
+  constructor(private menuService: MenuService , private ChefService: ChefService ) { }
   values: any = {};
   filterTerm!: string;
   

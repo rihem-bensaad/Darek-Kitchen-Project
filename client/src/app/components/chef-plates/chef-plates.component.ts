@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
-import { CartService } from '../../services/cart.service';
 import { OrdersService } from '../../services/orders.service';
 
 
@@ -13,8 +12,9 @@ export class ChefPlatesComponent implements OnInit {
   menus: any
   cartItem:any = []
   filterTerm!: string;
-  total : number = 0
-  constructor(private menuService: MenuService , private msg: CartService, public ordersService:OrdersService) { }
+  total: number = 0;
+  quantity: number = 0;
+  constructor(private menuService: MenuService , public ordersService:OrdersService) { }
 
   ngOnInit(): void {
     this.getmenu()
@@ -25,7 +25,7 @@ export class ChefPlatesComponent implements OnInit {
       this.menus = data
     })
   }
-  
+
   addToCart(mymenu: any) {
 
     if (localStorage.getItem('MyObject') === null) {
