@@ -92,7 +92,9 @@ cloudy(link:any){
     .subscribe()
     location.reload()
     }
-    confirmBox(brand : any){
+
+
+    confirmBox(chef : any){
       Swal.fire({
         title: 'Are you sure want to remove?',
         text: 'You will not be able to recover this file!',
@@ -105,21 +107,21 @@ cloudy(link:any){
         cancelButtonText: 'No, keep it'
       }).then((result) => {      
         if (result.value) {
-          this.adminService.DeleteUser(brand.ID_user)
+          this.ChefService.deleteChef(chef.ID)
           .subscribe() 
           Swal.fire({
             title:'Deleted!',
-            text:'This User has been deleted.',
+            text:'This Chef has been deleted.',
             icon:'success',
             iconColor: '#DEB28F',
             confirmButtonColor:'#DEB28F',
             width:'350px',
           })
-          this.getusers()
+          this.getChefs()
         } else if (result.dismiss === Swal.DismissReason.cancel) {
           Swal.fire({
             title:'Cancelled',
-            text:'This User is safe :)',
+            text:'This Chef is safe :)',
             icon:'error',
             width:'350px',
             iconColor: '#DEB28F',
