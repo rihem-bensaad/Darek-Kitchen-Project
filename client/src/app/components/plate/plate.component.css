@@ -57,6 +57,9 @@
   padding: 0;
   margin-right: 5%;
   }
+  td{
+    font-weight: 480;
+  }
   
   form{
     text-align: center;
@@ -100,8 +103,9 @@
 
   .modal{
     text-align: center;
-    margin: 5% 23%;
+    margin: 4.5% 23%;
     width: 100%;
+    height:88%;
   }
   .modalinput{
     margin-right: 13%;
@@ -122,6 +126,9 @@
     margin-top:3%;
     margin-left: -13% ! important;
 
+  }
+  .btnblack:hover{
+    text-decoration:underline 0.5px white ! important;
   }
   .btncloseblack{
     margin-left:4% !important;

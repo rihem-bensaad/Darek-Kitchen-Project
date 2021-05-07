@@ -15,8 +15,10 @@ export class PlateComponent implements OnInit {
  menuForm = new FormGroup({
     ID_menu : new FormControl(''),
     title: new FormControl(''),
+    description: new FormControl(''),
     location: new FormControl(''),
     price: new FormControl(''),
+    quantity: new FormControl(''),
     image: new FormControl(''),
    });
 

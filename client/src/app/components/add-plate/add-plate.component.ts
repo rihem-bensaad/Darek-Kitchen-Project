@@ -16,7 +16,8 @@ export class AddPlateComponent implements OnInit {
     description: new FormControl(''),
     image: new FormControl(''),
     location: new FormControl(''),
-    price: new FormControl('')
+    price: new FormControl(''),
+    quantity: new FormControl(''),
   });
 
   menus : any = []

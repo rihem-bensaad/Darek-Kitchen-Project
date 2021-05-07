@@ -86,6 +86,9 @@
   #inpprice{
     margin-right:0.5%;
   }
+  #inpquantity{
+    margin-right: 3%;
+  }
   
   img{
     width: 100px ! important;

@@ -55,6 +55,10 @@
         <label><b>Price :</b></label>
       <input id="inpprice" type="text" placeholder="Price Menu" maxlength="4" formControlName="price"/>
     </div>
+    <div class="input-field">
+        <label><b>Quantity :</b></label>
+      <input id="inpquantity" type="text" placeholder="Price Menu" maxlength="3" formControlName="quantity"/>
+    </div>
 
     <button id="addbtn" class="btn" (click)="addMenu()"><b>ADD</b></button>
 
@@ -64,9 +68,10 @@
     <table class="table">
         <tr>
         <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
-        <th><i class="fas fa-file fa-lg"></i><strong>Plate Description</strong> </th>
+        <th><i class="fas fa-mortar-pestle fa-lg"></i><strong>Plate Description</strong> </th>
         <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
         <th><i class="fas fa-dollar-sign fa-lg"></i><strong>Price</strong> </th>
+        <th><i class="fas fa-sort-numeric-up fa-lg"></i><strong>Quantity</strong> </th>
         <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong> </th>
         <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
     </tr>
@@ -76,6 +81,7 @@
         <td>{{menu.description}}</td>
         <td>{{menu.location}}</td>
         <td>{{menu.price}}</td>
+        <td>{{menu.quantity}}</td>
         <td><img src="{{menu.image}}"></td>
         <td><button id="deletebtn" class="btn"  (click)="deleteMenu(menu)">delete</button></td>
     </tr>
