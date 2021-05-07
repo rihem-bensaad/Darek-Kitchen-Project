@@ -87,6 +87,7 @@ export class CartComponent implements OnInit {
     this.total = this.cartItem.reduce((accumulator: any, element: any) => (accumulator + element.total), 0)
     localStorage.setItem('MyObject', JSON.stringify(this.cartItem))
     localStorage.setItem('total',JSON.stringify(this.total))
+    this.getorders()
   }
 }
 
