@@ -21,11 +21,7 @@
               <div class="err" *ngIf="shouldShowEmailRequiredError()">Email Required</div>
             </div>
 
-            <div class="fields">
-              <label><i class="fas fa-key fa-lg"></i></label>
-              <input type="password" placeholder="Password*" id='password' formControlName="password"/>
-              <div class="err" [ngClass]="signupForm.controls['password'].hasError('required') || signupForm.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'" >Must contain at least 8 characters.</div>
-            </div>
+           
             <div class="fields">
               <label><i class="fas fa-phone fa-lg"></i></label>
               <input type="tel" placeholder="PhoneNumber*" id='phoneNumber' formControlName="phoneNumber"/>
@@ -36,6 +32,12 @@
               <label class='inputi'><i class="fas fa-map-marked-alt fa-lg"></i></label>
               <input type="text" placeholder="Location*" id='location' formControlName="location"/>
               <div class="err" *ngIf="shouldShowLocationRequiredError()">Location Required</div>
+            </div>
+
+            <div class="fields">
+              <label><i class="fas fa-key fa-lg"></i></label>
+              <input type="password" placeholder="Password*" id='password' formControlName="password"/>
+              <div class="err" [ngClass]="signupForm.controls['password'].hasError('required') || signupForm.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'" >Must contain at least 8 characters.</div>
             </div>
 
             <!-- Newsletter -->

@@ -1,5 +1,5 @@
 .dash{
-    margin-top:4.3%;
+    margin-top:4.2%;
      width:100%; 
      height:auto;
     background-color: white !important;
@@ -112,11 +112,11 @@
     width:60px;
   }
   #deletebtn:hover{
-    border: 1px solid black;
-    text-decoration: underline;
+    border: 0.5px solid black;
+    text-decoration: 0.5px solid underline;
   }
   #deletebtn:active{
-    background: #f7f70963
+    background: #deb38f7e
   }
   #addbtn{
     width: 24.80%;
@@ -124,7 +124,6 @@
     height:31px;
   }
   #addbtn:hover{
-    background-color: black;
-    color: white;
-    border: 2px solid #DEB28F;
+    text-decoration: 0.5px solid underline;
+    border: 0.5px solid black;
   }
