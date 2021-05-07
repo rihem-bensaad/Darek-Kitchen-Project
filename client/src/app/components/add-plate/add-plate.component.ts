@@ -84,6 +84,8 @@ if (files && file) {
       showCancelButton: true,
       confirmButtonText: 'Yes, delete it!',
       confirmButtonColor:'#DEB28F',
+      background: "black",
+      backdrop: "#deb38f93",
       cancelButtonText: 'No, keep it'
     }).then((result) => {      
       if (result.value) {
@@ -94,6 +96,7 @@ if (files && file) {
           text:'Your Plate has been deleted.',
           icon:'success',
           iconColor: '#DEB28F',
+          background: "black",
           confirmButtonColor:'#DEB28F',
           width:'350px',
         })
@@ -105,6 +108,7 @@ if (files && file) {
           icon:'error',
           width:'350px',
           iconColor: '#DEB28F',
+          background: "black",
           confirmButtonColor:'#DEB28F',
         })
       }

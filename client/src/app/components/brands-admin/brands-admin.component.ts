@@ -80,6 +80,8 @@ export class BrandsAdminComponent implements OnInit {
       showCancelButton: true,
       confirmButtonText: 'Yes, delete it!',
       confirmButtonColor:'#DEB28F',
+      background:"black",
+      backdrop: "#deb38f93",
       cancelButtonText: 'No, keep it'
     }).then((result) => {      
       if (result.value) {
@@ -90,6 +92,7 @@ export class BrandsAdminComponent implements OnInit {
           text:'This Plate has been deleted.',
           icon:'success',
           iconColor: '#DEB28F',
+          background:"black",
           confirmButtonColor:'#DEB28F',
           width:'350px',
         })
@@ -101,6 +104,7 @@ export class BrandsAdminComponent implements OnInit {
           icon:'error',
           width:'350px',
           iconColor: '#DEB28F',
+          background:"black",
           confirmButtonColor:'#DEB28F',
         })
       }

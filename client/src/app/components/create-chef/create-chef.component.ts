@@ -104,6 +104,8 @@ cloudy(link:any){
         showCancelButton: true,
         confirmButtonText: 'Yes, delete it!',
         confirmButtonColor:'#DEB28F',
+        background:"black",
+        backdrop: "#deb38f93",
         cancelButtonText: 'No, keep it'
       }).then((result) => {      
         if (result.value) {
@@ -114,6 +116,7 @@ cloudy(link:any){
             text:'This Chef has been deleted.',
             icon:'success',
             iconColor: '#DEB28F',
+            background:"black",
             confirmButtonColor:'#DEB28F',
             width:'350px',
           })
@@ -124,6 +127,7 @@ cloudy(link:any){
             text:'This Chef is safe :)',
             icon:'error',
             width:'350px',
+            background:"black",
             iconColor: '#DEB28F',
             confirmButtonColor:'#DEB28F',
           })
