@@ -28,7 +28,7 @@ export class BrandsAdminComponent implements OnInit {
   
   constructor(private brandService: BrandService, private adminService: AdminService,
     private router: Router,private menuService: MenuService) { }
-    
+
     filterTerm!: string;
   ngOnInit(): void {
     this.getmenu()
@@ -87,7 +87,7 @@ export class BrandsAdminComponent implements OnInit {
         .subscribe() 
         Swal.fire({
           title:'Deleted!',
-          text:'Your Plate has been deleted.',
+          text:'This Plate has been deleted.',
           icon:'success',
           iconColor: '#DEB28F',
           confirmButtonColor:'#DEB28F',
@@ -97,7 +97,7 @@ export class BrandsAdminComponent implements OnInit {
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
           title:'Cancelled',
-          text:'Your Plate is safe :)',
+          text:'This Plate is safe :)',
           icon:'error',
           width:'350px',
           iconColor: '#DEB28F',

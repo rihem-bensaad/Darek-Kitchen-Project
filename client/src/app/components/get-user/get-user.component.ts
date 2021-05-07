@@ -10,7 +10,6 @@ import Swal from 'sweetalert2';
 })
 export class GetUserComponent implements OnInit {
   users: any = [];
-  brand: any = [];
   
   constructor(private userService: UserService , private adminService: AdminService) { }
   filterTerm!: string;
@@ -28,7 +27,7 @@ export class GetUserComponent implements OnInit {
     })
     console.log("deleted")
   }
-  confirmBox(menu : any){
+  confirmBox(brand : any){
     Swal.fire({
       title: 'Are you sure want to remove?',
       text: 'You will not be able to recover this file!',
@@ -45,7 +44,7 @@ export class GetUserComponent implements OnInit {
         .subscribe() 
         Swal.fire({
           title:'Deleted!',
-          text:'Your Plate has been deleted.',
+          text:'This User has been deleted.',
           icon:'success',
           iconColor: '#DEB28F',
           confirmButtonColor:'#DEB28F',
@@ -55,7 +54,7 @@ export class GetUserComponent implements OnInit {
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
           title:'Cancelled',
-          text:'Your Plate is safe :)',
+          text:'This User is safe :)',
           icon:'error',
           width:'350px',
           iconColor: '#DEB28F',
