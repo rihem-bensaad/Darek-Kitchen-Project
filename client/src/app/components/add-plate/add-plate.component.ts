@@ -100,7 +100,7 @@ if (files && file) {
           confirmButtonColor:'#DEB28F',
           width:'350px',
         })
-        location.reload()
+        this.getmenu()
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
           title:'Cancelled',
