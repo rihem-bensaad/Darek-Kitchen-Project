@@ -4,7 +4,7 @@ import { BrandService } from '../../services/brand.service';
 import { AdminService } from '../../services/admin.service';
 import { MenuService } from '../../services/menu.service';
 import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-brands-admin',
@@ -28,6 +28,7 @@ export class BrandsAdminComponent implements OnInit {
   
   constructor(private brandService: BrandService, private adminService: AdminService,
     private router: Router,private menuService: MenuService) { }
+    
     filterTerm!: string;
   ngOnInit(): void {
     this.getmenu()
@@ -68,6 +69,42 @@ export class BrandsAdminComponent implements OnInit {
     this.menuService.deletemenu(menu.ID_menu)
     .subscribe() 
      location.reload()
+  }
+  confirmBox(menu : any){
+    Swal.fire({
+      title: 'Are you sure want to remove?',
+      text: 'You will not be able to recover this file!',
+      width:'350px',
+      iconColor: '#DEB28F',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      confirmButtonColor:'#DEB28F',
+      cancelButtonText: 'No, keep it'
+    }).then((result) => {      
+      if (result.value) {
+        this.menuService.deletemenu(menu.ID_menu)
+        .subscribe() 
+        Swal.fire({
+          title:'Deleted!',
+          text:'Your Plate has been deleted.',
+          icon:'success',
+          iconColor: '#DEB28F',
+          confirmButtonColor:'#DEB28F',
+          width:'350px',
+        })
+        location.reload()
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire({
+          title:'Cancelled',
+          text:'Your Plate is safe :)',
+          icon:'error',
+          width:'350px',
+          iconColor: '#DEB28F',
+          confirmButtonColor:'#DEB28F',
+        })
+      }
+    })
   }
   getvalues(data: any) {
     this.brandForm.setValue(data)
