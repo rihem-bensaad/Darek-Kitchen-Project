@@ -72,39 +72,37 @@ label{
   margin-left: 5% ! important;
 
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 260px) and (max-width: 709px) {
   .title{
     font-size: 1.2rem;
-   
-  text-align: center;
- 
-  color: white;
-
+    text-align: center;
+    color: white;
   }
   form{
     position:absolute ! important;
     width:90%;
     margin-left: 5%;
     padding: 1rem 1rem;
-    height: 100%;
+    height: auto;
     margin-top: 49% ! important;
   }
   .btn {
-    width: 60px;
+    width: 70px;
     background-color: #DEB28F;
     border: none;
     outline: none;
-    height: 43px;
-    border-radius: 5px;
+    height: 33px;
+    border-radius: 3px;
     color: black;
     text-transform: none;
-    font-weight: 600;
-    margin: 50px 0;
+    font-weight: 700;
+    margin: 30px 0;
     cursor: pointer;
     transition: 0.5s;
-    margin-left: 68%;
+    margin-left: 70%;
     text-decoration: bold !important;
     box-shadow: none !important;
+    font-size: 12px;
   }              
   
   p{
@@ -114,6 +112,91 @@ label{
   }
   a{
     font-size: 20px ! important;
+  }
+}
+
+@media only screen and (min-width: 710px) and (max-width:899px) {
+  .title{
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+  }
+  form{
+    position:absolute ! important;
+    width:90%;
+    margin-left: 5%;
+    padding: 1rem 1rem;
+    height: 70%;
+    margin-top: 20% ! important;
+  }
+  .btn {
+    width: 70px;
+    background-color: #DEB28F;
+    border: none;
+    outline: none;
+    height: 33px;
+    border-radius: 3px;
+    color: black;
+    text-transform: none;
+    font-weight: 700;
+    margin: 30px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 70%;
+    text-decoration: bold !important;
+    box-shadow: none !important;
+    font-size: 12px;
+  }              
+  
+  p{
+    
+    margin-top: -26.5% ! important;
+    margin-left: 3%;
+  }
+  a{
+    font-size: 10px ! important;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width:1000px) {
+  .title{
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+  }
+  form{
+    position:absolute ! important;
+    width:90%;
+    margin-left: 5%;
+    padding: 1rem 1rem;
+    height: 70%;
+    margin-top: 20% ! important;
+  }
+  .btn {
+    width: 80px;
+    background-color: #DEB28F;
+    border: none;
+    outline: none;
+    height: 35px;
+    border-radius: 3px;
+    color: black;
+    text-transform: none;
+    font-weight: 700;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 80%;
+    text-decoration: bold !important;
+    box-shadow: none !important;
+    font-size: 15px;
+  }              
+  
+  p{
+    
+    margin-top: -26.5% ! important;
+    margin-left: 3%;
+  }
+  a{
+    font-size: 10px ! important;
   }
 }
 .err{
@@ -137,4 +220,47 @@ a{
 }
 #phoneNumber{
   margin-top: -20%;
+}
+
+@media only screen and (min-width: 451px) and (max-width:709) {
+  .title{
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+  }
+  form{
+    position:absolute ! important;
+    width:90%;
+    margin-left: 5%;
+    padding: 1rem 1rem;
+    height: 70%;
+    margin-top: 30% ! important;
+  }
+  .btn {
+    width: 70px;
+    background-color: #DEB28F;
+    border: none;
+    outline: none;
+    height: 33px;
+    border-radius: 3px;
+    color: black;
+    text-transform: none;
+    font-weight: 700;
+    margin: 30px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 70%;
+    text-decoration: bold !important;
+    box-shadow: none !important;
+    font-size: 12px;
+  }              
+  
+  p{
+    
+    margin-top: -26.5% ! important;
+    margin-left: 3%;
+  }
+  a{
+    font-size: 10px ! important;
+  }
 }

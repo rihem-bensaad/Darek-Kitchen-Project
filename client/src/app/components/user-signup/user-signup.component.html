@@ -39,7 +39,6 @@
               <div class="err" [ngClass]="signupForm.controls['password'].hasError('required') || signupForm.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'" >Must contain at least 8 characters.</div>
             </div>
 
-     
             <button class="btn solid" (click)="postFrom()">Signup</button>
             <p>Or sign up with :</p>
             <a type="button" class="light-blue-text mx-2">
