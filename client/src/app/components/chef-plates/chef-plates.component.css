@@ -39,7 +39,12 @@
   margin-bottom:-5%;
   color: white;
  }
-
+.quantity{
+  color:white;
+}
+.description{
+  color: gray;
+}
 
 /* Styles for wrapping the search box */
 
@@ -84,8 +89,8 @@
 
 .form-control::-webkit-search-cancel-button{
   position:relative;
-  cursor:pointer ! important; 
-  
+  cursor:pointer ! important;
+
 }
 
 .btn-buy{
