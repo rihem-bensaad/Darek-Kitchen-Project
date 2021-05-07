@@ -15,7 +15,7 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr >
-                    <th scope="col"class="text-white">Product</th>
+                    <th scope="col"class="text-white">Item</th>
                     <th scope="col"class="text-white">Title</th>
                     <th scope="col"class="text-white">Price</th>
                     <th scope="col"class="text-white">Quantity</th>
@@ -33,28 +33,22 @@
                         </div>
                     </td>
                      <td>
-                        <h6 class="mytitle">{{item.title}}</h6>
+                      <h6 class="mytitle">{{item.title}}</h6>
                     </td>
                     <td>
-                        <h6> {{item.price}},000 TND</h6>
+                      <h6> {{item.price}},000 TND</h6>
                     </td>
                     <td>
-                        <div class="counter">
-                                <div class="def-number-input number-input safari_only mb-0">
-                                <span onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                                            class="btn btn-"><div class="plus">-</div></span>
-                                <input class="quantityy" min="1"  name="quantity" value="1" type="number">
-                                <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                                            class="btn btn-"><div class="plus">+</div></span>
-                                        </div>
-                        </div>
+                      <select (change)="getQuantity($event.target,item)" name="item.qty">
+                        <option  *ngFor="let a of item.quantity " >{{a}}</option>
+                      </select>
                     </td>
                     <td>
-                        <h6>{{item.price}},000 TND</h6>
+                      <h6 >{{item.total}},000 TND</h6>
                     </td>
-                    <td><button class="btn btndel" (click)="deleteItem(item.ID_menu)"><i class="far fa-trash-alt"></i></button></td>
+                    <td>
+                      <button class="btn btndel" (click)="deleteItem(item.ID_menu)"><i class="far fa-trash-alt"></i></button></td>
                 </tr>
-
             </tbody>
         </table>
     </div>
@@ -64,8 +58,9 @@
 <div class="col-lg-4 offset-lg-4">
 <div class="checkout">
     <ul>
-        <li class="cart-total">Total
-        <span>{{ total | currency}}</span></li>
+        <li class="cart-total" >Total:
+        <span>{{ total }},000 TND</span>
+      </li>
     </ul>
     <a href="#"class="proceed-btn">Confirm your Order</a>
 </div>

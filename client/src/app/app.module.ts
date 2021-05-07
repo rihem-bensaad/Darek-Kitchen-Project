@@ -39,7 +39,7 @@ import { HighlightDirective } from './pipes/highlight.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { CloudinaryModule, CloudinaryConfiguration } from '@cloudinary/angular-5.x';
 import { Cloudinary } from 'cloudinary-core';
-
+import {SocketioService } from './services/socketio.service'
 
 @NgModule({
   declarations: [
@@ -87,7 +87,7 @@ import { Cloudinary } from 'cloudinary-core';
     CloudinaryModule.forRoot({Cloudinary}, { cloud_name: 'rbktn11' } as CloudinaryConfiguration),
 
   ],
-  providers: [],
+  providers: [SocketioService],
 
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]

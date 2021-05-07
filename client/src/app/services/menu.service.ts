@@ -19,8 +19,8 @@ export class MenuService {
   getMenuByBrandId(ID_brands:Number){
     return this.http.get("http://localhost:3000/menu/get/" + ID_brands)
   }
-  postmenu(menuObject: any) {
-    return this.http.post("http://localhost:3000/menu/post", menuObject)
+  postmenu(menuObject: any,urlPic : any) {
+    return this.http.post("http://localhost:3000/menu/post", {...menuObject,urlPic})
   }
   deletemenu(ID_menu:Number) {
     return this.http.delete("http://localhost:3000/menu/delete/"+ ID_menu)

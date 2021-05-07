@@ -8,6 +8,7 @@ export class OrdersService {
   totalPrice: number = 0
   total: number = 0
   totalOrders: number = 0;
+  quantity: number = 1;
 
 
   constructor() { }

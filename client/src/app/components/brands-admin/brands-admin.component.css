@@ -37,7 +37,7 @@ span{
 .sidebar-brand{
     margin-right:14%;
     height: 60px;
-    color:#F7F709;
+    color:#DEB28F;
     
 }
 .sidebar-brand span{
@@ -139,12 +139,12 @@ margin-right: 4%;
   box-shadow: none !important;
 }
 .btnblack:hover{
-  border: 2px solid #F7F709;
+  border: 2px solid #DEB28F;
 }
 .btnyellow{
   margin-bottom: 6.5%;
     margin-left: 0.5%;
-    background-color:#F7F709;
+    background-color:#DEB28F;
     box-shadow: none !important;
     width: 70px;
     height:30px;
@@ -160,7 +160,7 @@ margin-right: 4%;
 
 
 .deletebtn{
-  color: #F7F709;
+  color: #DEB28F;
 }
 .btncloseblack{
   color: white;
