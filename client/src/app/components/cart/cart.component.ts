@@ -78,7 +78,7 @@ export class CartComponent implements OnInit {
             qq.push(e)
           }
         })
-        item.quantity = qq;
+        item.quantity = qq
         return itemm
       } else {
         return itemm
@@ -89,5 +89,5 @@ export class CartComponent implements OnInit {
     localStorage.setItem('total',JSON.stringify(this.total))
     this.getorders()
   }
-}
+ }
 

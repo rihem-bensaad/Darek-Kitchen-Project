@@ -1,0 +1,34 @@
+import { Injectable } from '@angular/core';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { Observable } from 'rxjs';
+import {map, tap, take} from 'rxjs/operators';
+import {Router} from '@angular/router';
+import { AuthenticationService } from '../services/authentication.service';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class GuardGuard implements CanActivate {
+
+  constructor(
+    private authenticationService: AuthenticationService,
+    private router: Router,
+  ) {}
+
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean  {
+
+    // if (!this.authenticationService.login()) {
+    //   var x = this.authenticationService.login
+    //   console.log(x,"xxxxxxxxxxxxxxxxxxxxxxx");
+
+    //       alert('You are not allowed to view this page');
+    //       this.router.navigate(['/login']);
+    //         //redirect to login/home page etc
+    //         //return false to cancel the navigation
+    //         // return false;
+    //     }
+        return true;
+  }
+}

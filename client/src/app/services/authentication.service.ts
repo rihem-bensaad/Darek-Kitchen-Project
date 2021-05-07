@@ -7,16 +7,22 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthenticationService {
+
+  curentUserService: any;
+
   constructor(private http: HttpClient) {}
-   login(data:any) {
+  login(data:any) {
     return this.http.post("http://localhost:3000/login", data)
   }
 //   public isAuthenticated(): boolean {
 //     const token : any = localStorage.getItem('token');
 //     return !this.jwtHelper.isTokenExpired(token);
-  
+
 // }
   isloggedIn() {
-    return !!localStorage.getItem('data')
+    this.curentUserService = localStorage.getItem('data')
+    console.log("cuuuuuuuuuuuuuuuuuuuuuuu",this.curentUserService);
+    return !!localStorage.getItem('data');
+
   }
 }

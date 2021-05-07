@@ -12,7 +12,7 @@ import { OrdersService} from '../../services/orders.service';
 })
 export class NavbarComponent implements OnInit {
   userRole: any;
-  totalOrders: number = 0
+  totalOrders: any = 0
 
 
   constructor(private router: Router, private brandService: BrandService,
@@ -55,6 +55,6 @@ role(){
 
 
   ordres() {
-    
+
   }
 }
