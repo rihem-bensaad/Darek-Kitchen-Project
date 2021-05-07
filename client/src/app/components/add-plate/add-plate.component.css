@@ -74,6 +74,9 @@
   input{
     width:300px
   }
+  #inpdescription{
+    margin-right: 5% ! important;
+  }
   #inplocation{
     margin-right: 3%;
   }
@@ -82,6 +85,9 @@
   }
   #inpprice{
     margin-right:0.5%;
+  }
+  #inpquantity{
+    margin-right: 3%;
   }
   
   img{
@@ -94,6 +100,9 @@
     margin-left: 19%;
     margin-top: -3.5%;
   }
+  td{
+    font-weight: 480;
+  }
   .btn{
     background-color: #DEB28F;
     border: none;
@@ -104,6 +113,10 @@
   }
   #deletebtn:hover{
     border: 1px solid black;
+    text-decoration: underline;
+  }
+  #deletebtn:active{
+    background: #f7f70963
   }
   #addbtn{
     width: 24.80%;

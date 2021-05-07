@@ -19,9 +19,11 @@ export class AddPlateComponent implements OnInit {
   urlPic !: any 
   menuForm = new FormGroup({
     title: new FormControl(''),
+    description: new FormControl(''),
     image: new FormControl(''),
     location: new FormControl(''),
-    price: new FormControl('')
+    price: new FormControl(''),
+    quantity: new FormControl(''),
   });
  
   menus : any = []
