@@ -16,7 +16,8 @@
     font-size: 70px;
     font-weight: 900;
     line-height: 1.2;
-    color: #F7F709;
+    color: #DEB28F;
+    /* background : rgba(0, 0, 0, 0.801)  */
 }
 .h5{
     margin-bottom: 85px;
@@ -24,6 +25,7 @@
     font-size: 25px;
     font-weight: 500;
     color: whitesmoke;
+    background : rgba(0, 0, 0, 0.801) 
 }
 .btn{
     margin-left: 30px;
@@ -37,7 +39,7 @@
     letter-spacing: 0em;
     border-radius: 0em;
     padding: 0.8em 1.8em;
-    background: #F7F709 ;
+    background: #DEB28F ;
     border-color: transparent;
     color: #1F1A1E !important;
     box-shadow: none !important;
@@ -47,7 +49,7 @@
   background-color: rgb(255, 255, 255);
 }
 .btn:hover{
-    color: #F7F709 ! important;
+    color: #DEB28F ! important;
     background:rgba(0, 0, 0, 0.774);
 }
 #imagemodal{
@@ -78,7 +80,7 @@
     position: relative;
     z-index: 0;
     width: 100%;
-    background: #F7F709;
+    background: #DEB28F;
     margin-top: 1.3%;
   }
   .phone{
@@ -124,7 +126,7 @@
   }
   .social-icon p a:hover{
     background: black;
-    color: #F7F709;
+    color: #DEB28F;
   }
   .social-icon p a:hover i{ 
     color:#fff;

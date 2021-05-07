@@ -37,7 +37,7 @@
   .sidebar-brand{
       margin-right:14%;
       height: 60px;
-      color:#F7F709;
+      color:#DEB28F;
       
   }
   .sidebar-brand span{
@@ -89,18 +89,13 @@
     height: 60px ! important;
     cursor: pointer !important;
   }
-  img:hover{
-    width: 60% ! important;
-    height:30% ! important;
-    float: right;
-  }
   .table{
     width: 100%;
     margin-left: 19%;
     margin-top: -3.5%;
   }
   .btn{
-    background-color: #F7F709;
+    background-color: #DEB28F;
     border: none;
     box-shadow: none ! important;
   }
@@ -118,5 +113,5 @@
   #addbtn:hover{
     background-color: black;
     color: white;
-    border: 2px solid #F7F709;
+    border: 2px solid #DEB28F;
   }

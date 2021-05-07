@@ -35,7 +35,7 @@ form {
 
 .btn {
   width: 120px;
-  background-color: #F7F709;
+  background-color: #DEB28F;
   border: none;
   outline: none;
   height: 43px;
@@ -97,7 +97,7 @@ label{
   }
   .btn {
     width: 60px;
-    background-color: #F7F709;
+    background-color: #DEB28F;
     border: none;
     outline: none;
     height: 43px;
@@ -128,11 +128,11 @@ label{
 }
 
 p{
-  color:#F7F709;
+  color:#DEB28F;
   margin-top: -12%;
   margin-left: 3%;
 }
 a{
-  color:#F7F709 !important;
+  color:#DEB28F !important;
   font-size: 30px;
 }

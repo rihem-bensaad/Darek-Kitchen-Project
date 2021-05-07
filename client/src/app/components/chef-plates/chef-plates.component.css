@@ -29,7 +29,7 @@
  }
 .price{
    font-family: Book Antiqua;
-   color:#F7F709;
+   color:#DEB28F;
  }
  .location{
   float:right;
@@ -94,7 +94,7 @@
 }
 
 .btn-buy{
-  background:#F7F709;
+  background:#DEB28F;
   float: left;
   font-weight: 500;
   font-family: Georgia;
