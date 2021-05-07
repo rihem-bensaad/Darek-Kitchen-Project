@@ -42,7 +42,7 @@ setInterval(()=>{
 }
 role(){
   const dataUser = (JSON.parse(localStorage.data).token)
-       console.log(dataUser)
+      //  console.log(dataUser)
   if(this.DecodeToken(dataUser)['role']==='user'){
     this.userRole='user'
   }else if(this.DecodeToken(dataUser)['role']==='admin'){

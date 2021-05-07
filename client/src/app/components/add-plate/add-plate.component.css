@@ -89,11 +89,6 @@
     height: 60px ! important;
     cursor: pointer !important;
   }
-  img:hover{
-    width: 60% ! important;
-    height:30% ! important;
-    float: right;
-  }
   .table{
     width: 100%;
     margin-left: 19%;

@@ -9,6 +9,8 @@ import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms'
   styleUrls: ['./add-menu.component.css']
 })
 export class AddMenuComponent implements OnInit {
+  urlPic :any
+
 menuForm = new FormGroup({
     title: new FormControl(''),
     image: new FormControl(''),
@@ -19,7 +21,7 @@ menuForm = new FormGroup({
   ngOnInit(): void {
   }
    addMenu() {
-    this.menuService.postmenu(this.menuForm.value).subscribe((data:any)=> {
+    this.menuService.postmenu(this.menuForm.value,this.urlPic).subscribe((data:any)=> {
       console.log(data)
     })
    }
