@@ -1,8 +1,9 @@
+
 /*==========Hero Section===========*/
 #hero{
   display:table;
   min-width: 100%;
-  min-height: 60vh;
+  min-height: 22vh;
 }
 @media (min-width: 1024px){
   #hero{
@@ -21,7 +22,7 @@
   vertical-align: middle;
 }
 #hero h1{
-  margin: -185px 0 10px 0;
+  margin: -5px 0 10px 0;
   font-weight: bold;
   line-height: 48px;
   text-transform: uppercase;
@@ -43,6 +44,7 @@
 .cart .table{
   margin-bottom: 30px;
   border-bottom: 1px solid #fff;
+  position: relative;
 }
 .cart .table thead tr th{
   border-top:0px;
@@ -51,6 +53,7 @@
   border-bottom:0px;
   background: #DEB28F;
   color: black !important;
+  
 }
 .cart .table thead tr td{
   padding-top:30px;
@@ -124,7 +127,7 @@ td{
 }
 .checkout ul{
   border: 2px solid #EBEBEB;
-  background: #F3F3F3;
+  background: #DEB28F;
   padding-left:25px;
   padding-right:25px;
   padding-top:16px;
@@ -168,7 +171,9 @@ td{
   text-align: center;
 }
 .container{
-  margin-top: -23% ! important;
+  margin-top:-4%;
+  position: absolute;
+  margin-left: 12.5%;
 }
 img{
   width: 160px;

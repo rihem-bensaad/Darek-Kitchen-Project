@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms'
 import { FileUploader, FileUploaderOptions, ParsedResponseHeaders } from 'ng2-file-upload';
 import { Cloudinary } from '@cloudinary/angular-5.x';
 import { HttpClient } from '@angular/common/http';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-plate',
@@ -19,9 +19,11 @@ export class AddPlateComponent implements OnInit {
   urlPic !: any 
   menuForm = new FormGroup({
     title: new FormControl(''),
+    description: new FormControl(''),
     image: new FormControl(''),
     location: new FormControl(''),
-    price: new FormControl('')
+    price: new FormControl(''),
+    quantity: new FormControl(''),
   });
  
   menus : any = []
@@ -72,6 +74,47 @@ if (files && file) {
     .subscribe() 
      location.reload()
   }
+  confirmBox(menu : any){
+    Swal.fire({
+      title: 'Are you sure want to remove?',
+      text: 'You will not be able to recover this file!',
+      width:'350px',
+      iconColor: '#DEB28F',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      confirmButtonColor:'#DEB28F',
+      background: "black",
+      backdrop: "#deb38f93",
+      cancelButtonText: 'No, keep it'
+    }).then((result) => {      
+      if (result.value) {
+        this.menuService.deletemenu(menu.ID_menu)
+        .subscribe() 
+        Swal.fire({
+          title:'Deleted!',
+          text:'Your Plate has been deleted.',
+          icon:'success',
+          iconColor: '#DEB28F',
+          background: "black",
+          confirmButtonColor:'#DEB28F',
+          width:'350px',
+        })
+        this.getmenu()
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire({
+          title:'Cancelled',
+          text:'Your Plate is safe :)',
+          icon:'error',
+          width:'350px',
+          iconColor: '#DEB28F',
+          background: "black",
+          confirmButtonColor:'#DEB28F',
+        })
+      }
+    })
+  }
+
 
   getmenu() {
     this.menuService.getmenu().subscribe((data) => {

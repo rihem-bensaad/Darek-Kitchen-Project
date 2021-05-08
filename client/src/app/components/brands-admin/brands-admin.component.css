@@ -68,12 +68,12 @@ margin: 1.5%
 text-align: center ! important;
 }
 .search{
-  margin: 1.2px 1.5px;
+  margin: 0.5px 1.5px;
   width: 30% ! important;
   height: 40px ! important;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
-  border-radius:5px !important;
+  border-radius:3px !important;
   }
 
 .modalinput1{
@@ -197,4 +197,7 @@ margin-right: 4%;
 
 td{
   font-weight: 450;
+}
+table{
+  margin-top: -0.15%;
 }

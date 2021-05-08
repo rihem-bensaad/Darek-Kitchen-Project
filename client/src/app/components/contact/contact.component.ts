@@ -33,7 +33,7 @@ export class ContactComponent implements OnInit {
     if(this.contactForm.value.email.length === 0 || this.contactForm.value.message.length === 0 || this.contactForm.value.subject.length === 0){
       Swal.fire({
         icon: 'error',
-        title: "<h5 style='color:#F7F709; margin-bottom:2px;font-family: Poppins, sans-serif'>Oops...<br> Please fill all the<br> form !</h5>",
+        title: "<h5 style='color:#DEB28F; margin-bottom:2px;font-family: Poppins, sans-serif'>Oops...<br> Please fill all the<br> form !</h5>",
         width:"350px",
         background:"black",
         backdrop: "rgba(0, 0, 0, 0.685)",
@@ -42,8 +42,8 @@ export class ContactComponent implements OnInit {
         allowEnterKey: true,
         iconColor: '#fff',
         showConfirmButton: true,
-        buttonsStyling: false,
-        
+        buttonsStyling: true,
+        confirmButtonColor:'#DEB28F'
       })
     } else{ 
       this.handleSubmit()
@@ -52,15 +52,15 @@ export class ContactComponent implements OnInit {
       icon: 'success',
       title: "<h5 style='color:white; margin-bottom:2px; font-family: Poppins, sans-serif'> Your message has been sent<br> Successfully !<br>😉</h5>",
       showConfirmButton: true,
-      confirmButtonColor: "black",
+      confirmButtonColor:'#DEB28F',
       width:"350px",
       background:"black",
-      backdrop: "#f7f70938",
+      backdrop: "#deb38f93",
       allowOutsideClick: true,
       allowEscapeKey: true,
       allowEnterKey: true,
-      iconColor: '#F7F709',
-      buttonsStyling: false,
+      iconColor: '#DEB28F',
+      buttonsStyling: true
       
     })
     this.contactForm.setValue({email: '', subject: '', message: ''})

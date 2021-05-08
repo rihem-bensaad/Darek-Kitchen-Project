@@ -1,5 +1,5 @@
 .slider{
-    width: 100vw;
+    width: 100%;
     height: auto;
     margin-top:-5%;
     max-width: 100%;
@@ -12,8 +12,8 @@
     height: 100vh;
 }
 .h1{
-    margin-bottom: 30px;
-    margin-top:1px;
+    
+    margin-top: -10%;
     font-family: playfair display,serif;
     font-size: 70px;
     font-weight: 900;
@@ -22,12 +22,12 @@
 
 }
 .h5{
-    margin-bottom: 85px;
+   
     font-family: playfair display,serif;
     font-size: 25px;
     font-weight: 500;
     color: whitesmoke;
-    background-color:rgba(255, 255, 255, 0.089)
+    background : rgba(0, 0, 0, 0.801) 
 }
 .btn{
     margin-left: 30px;
@@ -64,7 +64,7 @@ agm-map{
     margin-top: -18%;
 }
 .cover{
-    position: relative;
+    position: fixed;
     z-index: 0;
     width: 100%;
     background: #DEB28F;
@@ -126,6 +126,5 @@ agm-map{
     h5{
         font-size:15px ! important;
     }
-    
-
+  
 }

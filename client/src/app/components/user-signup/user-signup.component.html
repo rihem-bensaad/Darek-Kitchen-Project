@@ -22,11 +22,6 @@
             </div>
 
             <div class="fields">
-              <label><i class="fas fa-key fa-lg"></i></label>
-              <input type="password" placeholder="Password*" id='password' formControlName="password"/>
-              <div class="err" [ngClass]="signupForm.controls['password'].hasError('required') || signupForm.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'" >Must contain at least 8 characters.</div>
-            </div>
-            <div class="fields">
               <label><i class="fas fa-phone fa-lg"></i></label>
               <input type="tel" placeholder="PhoneNumber*" id='phoneNumber' formControlName="phoneNumber"/>
               <div class="err" *ngIf="shouldShowPhoneNumberRequiredError()">Phone Number Required</div>
@@ -38,14 +33,18 @@
               <div class="err" *ngIf="shouldShowLocationRequiredError()">Location Required</div>
             </div>
 
-            <!-- Newsletter -->
-       <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
-          <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
-        </div>
+            <div class="fields">
+              <label><i class="fas fa-key fa-lg"></i></label>
+              <input type="password" placeholder="Password*" id='password' formControlName="password"/>
+              <div class="err" [ngClass]="signupForm.controls['password'].hasError('required') || signupForm.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'" >Must contain at least 8 characters.</div>
+            </div>
+
             <button class="btn solid" (click)="postFrom()">Signup</button>
             <p>Or sign up with :</p>
             <a type="button" class="light-blue-text mx-2">
               <i class="fab fa-google"></i>
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
             </a>
           </form>

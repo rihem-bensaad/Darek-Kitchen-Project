@@ -1,20 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
-
-.nav{
-width:90%;
-
-}
-
 input {
   font-family: "Poppins", sans-serif;
 }
 
 form {
-  background-color:rgba(0, 0, 0, 0.863);
-  border-radius: 3%;
-  box-shadow: 6px -4px rgb(0, 0, 0);
+  background-color:rgba(0, 0, 0, 0.801);
+  border-radius: 2%;
   width: 30%;
-  margin-top: 8% ! important;
+  margin-top: 4.2% ! important;
   padding: 0rem 0rem;
   transition: all 0.2s 0.7s;
   overflow: hidden;
@@ -29,7 +21,7 @@ form {
   font-size: 2.2rem;
   margin-bottom: 10px;
   text-align: center;
-  padding: 5.3%;
+  padding: 3.3%;
   color: white;
 }
 
@@ -46,7 +38,7 @@ form {
   margin: 50px 0;
   cursor: pointer;
   transition: 0.5s;
-  margin-left: 68%;
+  margin-left: 65%;
   text-decoration: bold !important;
   box-shadow: none !important;
 }
@@ -54,16 +46,17 @@ form {
 .btn:hover {
   text-decoration: underline;
 }
+.btn:active{
+  color: #deb38f46;
+}
 
 input{
   min-width: 80%;
   background-color: #f0f0f0;
-  height: 35px;
+  height: 33px;
   border-radius: 5px;
-  box-shadow: 5px -4px rgba(0, 0, 0, 0.685);
   margin-left: 5%;
-
-  margin-top: 1%;
+  margin-top: 0%;
 }
 label{
   margin-left: 4%;
@@ -72,45 +65,44 @@ label{
 }
 .inputi{
  margin-left:3.5%;
+ margin-top: 1%;
 }
 .custom-control{
   margin-top: 8% !important;
   margin-left: 5% ! important;
 
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 260px) and (max-width: 709px) {
   .title{
     font-size: 1.2rem;
-   
-  text-align: center;
- 
-  color: white;
-
+    text-align: center;
+    color: white;
   }
   form{
     position:absolute ! important;
     width:90%;
     margin-left: 5%;
     padding: 1rem 1rem;
-    height: 100%;
+    height: auto;
     margin-top: 49% ! important;
   }
   .btn {
-    width: 60px;
+    width: 70px;
     background-color: #DEB28F;
     border: none;
     outline: none;
-    height: 43px;
-    border-radius: 5px;
+    height: 33px;
+    border-radius: 3px;
     color: black;
     text-transform: none;
-    font-weight: 600;
-    margin: 50px 0;
+    font-weight: 700;
+    margin: 30px 0;
     cursor: pointer;
     transition: 0.5s;
-    margin-left: 68%;
+    margin-left: 70%;
     text-decoration: bold !important;
     box-shadow: none !important;
+    font-size: 12px;
   }              
   
   p{
@@ -122,9 +114,96 @@ label{
     font-size: 20px ! important;
   }
 }
+
+@media only screen and (min-width: 710px) and (max-width:899px) {
+  .title{
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+  }
+  form{
+    position:absolute ! important;
+    width:90%;
+    margin-left: 5%;
+    padding: 1rem 1rem;
+    height: 70%;
+    margin-top: 20% ! important;
+  }
+  .btn {
+    width: 70px;
+    background-color: #DEB28F;
+    border: none;
+    outline: none;
+    height: 33px;
+    border-radius: 3px;
+    color: black;
+    text-transform: none;
+    font-weight: 700;
+    margin: 30px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 70%;
+    text-decoration: bold !important;
+    box-shadow: none !important;
+    font-size: 12px;
+  }              
+  
+  p{
+    
+    margin-top: -26.5% ! important;
+    margin-left: 3%;
+  }
+  a{
+    font-size: 10px ! important;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width:1000px) {
+  .title{
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+  }
+  form{
+    position:absolute ! important;
+    width:90%;
+    margin-left: 5%;
+    padding: 1rem 1rem;
+    height: 70%;
+    margin-top: 20% ! important;
+  }
+  .btn {
+    width: 80px;
+    background-color: #DEB28F;
+    border: none;
+    outline: none;
+    height: 35px;
+    border-radius: 3px;
+    color: black;
+    text-transform: none;
+    font-weight: 700;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 80%;
+    text-decoration: bold !important;
+    box-shadow: none !important;
+    font-size: 15px;
+  }              
+  
+  p{
+    
+    margin-top: -26.5% ! important;
+    margin-left: 3%;
+  }
+  a{
+    font-size: 10px ! important;
+  }
+}
 .err{
-  font-size: 10px;
+  font-size: 11px;
   margin-left:9vh;
+  font-weight: 700;
+  color: #DEB28F;
 }
 
 p{
@@ -135,4 +214,53 @@ p{
 a{
   color:#DEB28F !important;
   font-size: 30px;
+}
+.fields{
+  padding:10px
+}
+#phoneNumber{
+  margin-top: -20%;
+}
+
+@media only screen and (min-width: 451px) and (max-width:709) {
+  .title{
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+  }
+  form{
+    position:absolute ! important;
+    width:90%;
+    margin-left: 5%;
+    padding: 1rem 1rem;
+    height: 70%;
+    margin-top: 30% ! important;
+  }
+  .btn {
+    width: 70px;
+    background-color: #DEB28F;
+    border: none;
+    outline: none;
+    height: 33px;
+    border-radius: 3px;
+    color: black;
+    text-transform: none;
+    font-weight: 700;
+    margin: 30px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 70%;
+    text-decoration: bold !important;
+    box-shadow: none !important;
+    font-size: 12px;
+  }              
+  
+  p{
+    
+    margin-top: -26.5% ! important;
+    margin-left: 3%;
+  }
+  a{
+    font-size: 10px ! important;
+  }
 }
