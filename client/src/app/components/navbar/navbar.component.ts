@@ -6,7 +6,7 @@ import { OrdersService} from '../../services/orders.service';
 
 @Component({
   selector: 'app-navbar',
-  changeDetection : ChangeDetectionStrategy.OnPush ,
+  changeDetection : ChangeDetectionStrategy.Default ,
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
