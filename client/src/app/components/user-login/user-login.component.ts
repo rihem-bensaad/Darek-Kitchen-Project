@@ -27,8 +27,8 @@ export class UserLoginComponent implements OnInit {
 
   postFrom() {
     this.authService.login(this.loginForm.value)
+    
       .subscribe((result : any) => {
-      
         localStorage.setItem('data', JSON.stringify(result))
         if(this.DecodeToken(result['token'])['role']==="user"){
           this.router.navigate(['/welcome']) 
@@ -40,9 +40,10 @@ export class UserLoginComponent implements OnInit {
           this.router.navigate(['/dashboard'])
         }
         
-         
         }
+        
       )}
+     
     }
        
   

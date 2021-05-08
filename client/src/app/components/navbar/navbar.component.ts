@@ -6,7 +6,7 @@ import { OrdersService} from '../../services/orders.service';
 
 @Component({
   selector: 'app-navbar',
-  changeDetection : ChangeDetectionStrategy.Default ,
+  changeDetection : ChangeDetectionStrategy.OnPush ,
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
@@ -51,8 +51,10 @@ role(){
 }else if(this.DecodeToken(dataUser)['role']===undefined){
   this.userRole = undefined
 }
-  }
 
+
+  }
+  
 
   // ordres() {
 
