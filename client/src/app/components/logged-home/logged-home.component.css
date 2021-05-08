@@ -1,5 +1,5 @@
 .slider{
-    width: 100vw;
+    width: 100%;
     height: auto;
     margin-top:-5%;
     max-width: 100%;
@@ -12,22 +12,22 @@
     height: 100vh;
 }
 .h1{
-    margin-bottom: 30px;
-    margin-top:1px;
+    
+    margin-top: -10%;
     font-family: playfair display,serif;
     font-size: 70px;
     font-weight: 900;
     line-height: 1.2;
-    color: #F7F709;
+    color: #DEB28F;
 
 }
 .h5{
-    margin-bottom: 85px;
+   
     font-family: playfair display,serif;
     font-size: 25px;
     font-weight: 500;
     color: whitesmoke;
-    background-color:rgba(255, 255, 255, 0.089)
+    background : rgba(0, 0, 0, 0.801) 
 }
 .btn{
     margin-left: 30px;
@@ -41,7 +41,7 @@
     letter-spacing: 0em;
     border-radius: 0em;
     padding: 0.8em 1.8em;
-    background: #F7F709 ;
+    background: #DEB28F ;
     border-color: transparent;
     color: #1F1A1E !important;
     box-shadow: none !important;
@@ -49,7 +49,7 @@
 }
 .btn:hover{
     /* background-color: #df500e; */
-    color: #F7F709 ! important;
+    color: #DEB28F ! important;
     background:rgba(0, 0, 0, 0.774);
 }
 
@@ -64,10 +64,10 @@ agm-map{
     margin-top: -18%;
 }
 .cover{
-    position: relative;
+    position: fixed;
     z-index: 0;
     width: 100%;
-    background: #F7F709;
+    background: #DEB28F;
     margin-top: 45.3%;
   }
   .phone{
@@ -113,7 +113,7 @@ agm-map{
   }
   .social-icon p a:hover{
     background: black;
-    color: #F7F709;
+    color: #DEB28F;
   }
   .social-icon p a:hover i{ 
     color:#fff;
@@ -126,6 +126,5 @@ agm-map{
     h5{
         font-size:15px ! important;
     }
-    
-
+  
 }

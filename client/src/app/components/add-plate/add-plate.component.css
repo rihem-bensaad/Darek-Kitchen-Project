@@ -1,5 +1,5 @@
 .dash{
-    margin-top:4.3%;
+    margin-top:4.2%;
      width:100%; 
      height:auto;
     background-color: white !important;
@@ -37,7 +37,7 @@
   .sidebar-brand{
       margin-right:14%;
       height: 60px;
-      color:#F7F709;
+      color:#DEB28F;
       
   }
   .sidebar-brand span{
@@ -74,6 +74,9 @@
   input{
     width:300px
   }
+  #inpdescription{
+    margin-right: 5% ! important;
+  }
   #inplocation{
     margin-right: 3%;
   }
@@ -83,24 +86,25 @@
   #inpprice{
     margin-right:0.5%;
   }
+  #inpquantity{
+    margin-right: 3%;
+  }
   
   img{
     width: 100px ! important;
     height: 60px ! important;
     cursor: pointer !important;
   }
-  img:hover{
-    width: 60% ! important;
-    height:30% ! important;
-    float: right;
-  }
   .table{
     width: 100%;
     margin-left: 19%;
     margin-top: -3.5%;
   }
+  td{
+    font-weight: 480;
+  }
   .btn{
-    background-color: #F7F709;
+    background-color: #DEB28F;
     border: none;
     box-shadow: none ! important;
   }
@@ -108,7 +112,11 @@
     width:60px;
   }
   #deletebtn:hover{
-    border: 1px solid black;
+    border: 0.5px solid black;
+    text-decoration: 0.5px solid underline;
+  }
+  #deletebtn:active{
+    background: #deb38f7e
   }
   #addbtn{
     width: 24.80%;
@@ -116,7 +124,6 @@
     height:31px;
   }
   #addbtn:hover{
-    background-color: black;
-    color: white;
-    border: 2px solid #F7F709;
+    text-decoration: 0.5px solid underline;
+    border: 0.5px solid black;
   }

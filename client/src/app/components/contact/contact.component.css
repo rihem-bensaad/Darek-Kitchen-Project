@@ -1,4 +1,3 @@
-
 form{
     
     color: #ffff;
@@ -34,13 +33,15 @@ form{
 {
 	font-size: 36px;
 	font-weight: 500;
-	color: #F7F709;
+	color: #DEB28F;
+	
 }
 .contact .content p
 {
 	font-size: 18px;
 	font-weight: 500;
-	color: #fff;
+	color: black
+
 	
 }
 .containers
@@ -79,20 +80,18 @@ form{
 	display: flex;
 	margin-left: 20px;
 	font-size: 16px;
-	color: #fff;
+	color: black;
 	flex-direction: column;
-	font-weight: 300;
+	font-weight: 500;
 	
 }
 .containers .info .box .text h3
 {
 	font-weight: 500;
-	color: #F7F709;
+	color: #deb38f;
 	
 }
-.containers p{
 
-}
 .contactForm
 {
 	width: 40%;
@@ -146,14 +145,14 @@ form{
 .contactForm .inputBox textarea:focus ~ span,
 .contactForm .inputBox textarea:valid ~ span
 {
-	color: #F7F709;
+	color: #DEB28F;
 	font-size: 12px;
 	transform: translateY(-20px);
 }
 .contactForm .inputBox input[type="submit"]
 {
 	width: 100px;
-	background: #F7F709;
+	background: #DEB28F;
 	color: black;
 	border: none;
 	cursor: pointer;
@@ -174,11 +173,12 @@ form{
 @media (max-width: 991px)
 {
 	section{
-		background: url('https://format-com-cld-res.cloudinary.com/image/private/s--yU5hjwQS--/c_limit,g_center,h_1200,w_65535/fl_keep_iptc.progressive,q_95/v1/1a734fc5206bed55cf9be93c30ed8e52/RamenFeatured-1.jpg');
+		
 		background-size: cover
 	}
 	.contact
 	{
+		margin-top: 34%;
 		padding: 50px;
 		position: absolute ! important;
 	}
@@ -203,7 +203,7 @@ form{
 		font-size: 18px ! important;
 	}
 	.containers h3{
-		font-size: 15px;
+		font-size: 18px;
 	}
 	.containers p{
 		font-size: 10px;

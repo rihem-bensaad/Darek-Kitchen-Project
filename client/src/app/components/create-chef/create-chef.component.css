@@ -37,7 +37,7 @@
   .sidebar-brand{
       margin-right:14%;
       height: 60px;
-      color:#F7F709;
+      color:#DEB28F;
   }
 
   .sidebar-brand span{
@@ -128,7 +128,7 @@ h4{
   }
 
   #deleteicon{
-    color: #F7F709;
+    color: #DEB28F;
   }
 
 
@@ -149,7 +149,7 @@ text-align: left;
 }
 .btn {
 width: 1120px;
-background-color: #F7F709 ! important;
+background-color: #DEB28F ! important;
 border: none;
 outline: none;
 height: 37px;
@@ -171,7 +171,7 @@ box-shadow: none !important;
 .btn2{
     margin-bottom: 6.5%;
     margin-left: 0.5%;
-    background-color:#F7F709;
+    background-color:#DEB28F;
     box-shadow: none !important;
     width: 70px;
     height:30px;
@@ -210,7 +210,7 @@ input{
     position: center ! important;
 }
 ::-webkit-file-upload-button{
-    background: #F7F709 ! important;
+    background: #DEB28F ! important;
     cursor: pointer !important;
 
 }

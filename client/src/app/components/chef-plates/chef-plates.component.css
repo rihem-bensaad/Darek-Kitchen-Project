@@ -2,35 +2,45 @@
     position: absolute ! important;
     background-size: cover;
     width:95.9rem;
-    margin-top: -5%;
+    margin-top: -3.2%;
+    overflow:hidden ! important;
+    /* background-image: url('https://format-com-cld-res.cloudinary.com/image/private/s--yU5hjwQS--/c_limit,g_center,h_1200,w_65535/fl_keep_iptc.progressive,q_95/v1/1a734fc5206bed55cf9be93c30ed8e52/RamenFeatured-1.jpg'); */
   }
   .col-lg-2 {
-   margin-top:5%;
+   margin-top:1%;
    margin-left:2%;
-   padding: 100px 10 20px
+   padding: 100px 10 20px;
   }
  .card-ecommerce{
    height: 0 auto;
    width: 260px ! important;
-   background: rgba(0, 0, 0, 0.651);
-   border: 2px solid black;
+   background: rgb(0, 0, 0);
+   border: 1.5px solid rgba(255, 255, 255, 0.205);
  }
  .view{
    min-height: 160px;
  }
  .imgBrand{
    width: 100% ! important;
-   height: 60px ! important;
+   max-height: 230px ! important;
+   min-height: 80px ! important;
+  
  }
 
  .menuname{
    color:white;
-   cursor: pointer;
+
  }
 .price{
    font-family: Book Antiqua;
-   color:#F7F709;
+   color:#DEB28F;
  }
+ .descrip{
+  font-family: Book Antiqua;
+   color:white;
+   
+ }
+
  .location{
   float:right;
   font-weight: 600;
@@ -51,7 +61,7 @@
 .main {
   width: 50%;
   margin: 50px auto;
-  margin-top:5%;
+  margin-top:4.1%;
   text-align: center ! important;
   margin-right: 10% ! important;
 }
@@ -67,13 +77,14 @@
   border-bottom-left-radius: 4px;
   width: 50vh;
   height: 45px;
-  outline: none ! important;
+  outline: none;
   box-shadow: none;
 }
 ::placeholder{
   color: #aaa;
   font-family: Georgia;
 }
+
 .has-search .form-control-feedback {
   position: absolute;
   z-index: 2;
@@ -87,6 +98,7 @@
   margin-left: 0.5%;
 }
 
+
 .form-control::-webkit-search-cancel-button{
   position:relative;
   cursor:pointer ! important;
@@ -94,7 +106,7 @@
 }
 
 .btn-buy{
-  background:#F7F709;
+  background:#DEB28F;
   float: left;
   font-weight: 500;
   font-family: Georgia;
@@ -107,7 +119,7 @@
   font-size:14px
 }
 .btn-buy:active{
-  background-color: #f7f70936;
+  background-color: #deb38f41;
 }
 .btn-buy:hover{
 text-decoration:underline;
