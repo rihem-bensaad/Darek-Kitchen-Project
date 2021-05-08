@@ -42,8 +42,8 @@ export class ContactComponent implements OnInit {
         allowEnterKey: true,
         iconColor: '#fff',
         showConfirmButton: true,
-        buttonsStyling: false,
-        
+        buttonsStyling: true,
+        confirmButtonColor:'#DEB28F'
       })
     } else{ 
       this.handleSubmit()
@@ -52,7 +52,7 @@ export class ContactComponent implements OnInit {
       icon: 'success',
       title: "<h5 style='color:white; margin-bottom:2px; font-family: Poppins, sans-serif'> Your message has been sent<br> Successfully !<br>😉</h5>",
       showConfirmButton: true,
-      confirmButtonColor: "black",
+      confirmButtonColor:'#DEB28F',
       width:"350px",
       background:"black",
       backdrop: "#deb38f93",
@@ -60,7 +60,7 @@ export class ContactComponent implements OnInit {
       allowEscapeKey: true,
       allowEnterKey: true,
       iconColor: '#DEB28F',
-      buttonsStyling: false,
+      buttonsStyling: true
       
     })
     this.contactForm.setValue({email: '', subject: '', message: ''})

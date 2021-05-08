@@ -4,6 +4,7 @@ import { Component, OnInit, Input , NgZone } from '@angular/core';
 import { FileUploader, FileUploaderOptions, ParsedResponseHeaders } from 'ng2-file-upload';
 import { Cloudinary } from '@cloudinary/angular-5.x';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -42,11 +43,6 @@ ngOnInit(): void {
 
   }
 
-      deleteChef(chef:any){
-      this.ChefService.deleteChef(chef.ID)
-      .subscribe()
-      location.reload()
-      }
       _handleReaderLoaded(readerEvt:any) {
         var binaryString = readerEvt.target.result;
                this.base64textString= btoa(binaryString);
@@ -85,11 +81,57 @@ cloudy(link:any){
       })
   }
 
-
   getChefs() {
     this.ChefService.getChef().subscribe((data) => {
       this.chefs = data
     })
   }
   
+  deleteChef(chef:any){
+    this.ChefService.deleteChef(chef.ID)
+    .subscribe()
+    location.reload()
+    }
+
+
+    confirmBox(chef : any){
+      Swal.fire({
+        title: 'Are you sure want to remove?',
+        text: 'You will not be able to recover this file!',
+        width:'350px',
+        iconColor: '#DEB28F',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        confirmButtonColor:'#DEB28F',
+        background:"black",
+        backdrop: "#deb38f93",
+        cancelButtonText: 'No, keep it'
+      }).then((result) => {      
+        if (result.value) {
+          this.ChefService.deleteChef(chef.ID)
+          .subscribe() 
+          Swal.fire({
+            title:'Deleted!',
+            text:'This Chef has been deleted.',
+            icon:'success',
+            iconColor: '#DEB28F',
+            background:"black",
+            confirmButtonColor:'#DEB28F',
+            width:'350px',
+          })
+          this.getChefs()
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire({
+            title:'Cancelled',
+            text:'This Chef is safe :)',
+            icon:'error',
+            width:'350px',
+            background:"black",
+            iconColor: '#DEB28F',
+            confirmButtonColor:'#DEB28F',
+          })
+        }
+      })
+    }
 }
