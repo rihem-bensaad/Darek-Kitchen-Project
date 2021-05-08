@@ -25,9 +25,7 @@ export class GuardGuard implements CanActivate {
 
           alert('You are not allowed to view this page');
           this.router.navigate(['/login']);
-            //redirect to login/home page etc
-            //return false to cancel the navigation
-            // return false;
+            return false;
         }
         return true;
   }
