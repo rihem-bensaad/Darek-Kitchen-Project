@@ -31,7 +31,7 @@ const routes: Routes = [
 {path:'contact',component:ContactComponent},
 {path:'userSignup',component:UserSignupComponent},
 { path: 'addBrand', component: AddBrandComponent },
-// { path: 'dashboard', component: AdminDashboardComponent, canActivate: [GuardGuard] },
+{ path: 'dashboard', component: AdminDashboardComponent, canActivate: [GuardGuard] },
 {path: 'menu', component: MenuComponent},
 {path:'getusers', component : GetUserComponent},
 {path:'getbrands',component: BrandsAdminComponent},
@@ -42,9 +42,9 @@ const routes: Routes = [
 {path:'addplate',component:AddPlateComponent},
 {path:'plate',component:PlateComponent},
 {path:'chefplates',component:ChefPlatesComponent},
-  { path: 'cart', component: CartComponent },
-  // { path: '', pathMatch: 'full', redirectTo: '/login' },
-  // {path:'**', redirectTo:'/login'},
+{ path: 'cart', component: CartComponent },
+{ path: '', pathMatch: 'full', redirectTo: '/login' },
+{ path:'**', redirectTo:'/login'},
 
 ];
 

@@ -19,16 +19,16 @@ export class GuardGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean  {
 
-    // if (!this.authenticationService.login()) {
-    //   var x = this.authenticationService.login
-    //   console.log(x,"xxxxxxxxxxxxxxxxxxxxxxx");
+    if (!this.authenticationService.isloggedIn()) {
+      var x = this.authenticationService.isloggedIn()
+      console.log(x,"xxxxxxxxxxxxxxxxxxxxxxx");
 
-    //       alert('You are not allowed to view this page');
-    //       this.router.navigate(['/login']);
-    //         //redirect to login/home page etc
-    //         //return false to cancel the navigation
-    //         // return false;
-    //     }
+          alert('You are not allowed to view this page');
+          this.router.navigate(['/login']);
+            //redirect to login/home page etc
+            //return false to cancel the navigation
+            // return false;
+        }
         return true;
   }
 }
