@@ -52,11 +52,5 @@ role(){
   this.userRole = undefined
 }
 
-
   }
-  
-
-  // ordres() {
-
-  // }
 }
