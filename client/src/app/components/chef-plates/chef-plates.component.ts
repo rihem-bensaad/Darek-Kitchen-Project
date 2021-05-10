@@ -36,7 +36,6 @@ export class ChefPlatesComponent implements OnInit {
       var notexist = true;
       var data = localStorage.getItem('MyObject');
     JSON.parse(data || '{}').forEach((order:any) => {
-      console.log(order, "order");
       if (mymenu.ID_menu == order.ID_menu) {
         notexist = false
       }
@@ -48,7 +47,6 @@ export class ChefPlatesComponent implements OnInit {
         localStorage.setItem('MyObject', JSON.stringify(this.ordersService.orders));
       }
     }
-    console.log(localStorage,'localStorage');
   }
 
 //  getBrandId(ID_brands: number) {

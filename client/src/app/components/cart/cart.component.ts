@@ -17,7 +17,8 @@ export class CartComponent implements OnInit {
   constructor(public menuService: MenuService, public ordersService: OrdersService) { }
 
   ngOnInit(): void {
-    this.getorders()
+    this.getorders(),
+      this.deleteItem
   }
 
 
@@ -44,7 +45,6 @@ export class CartComponent implements OnInit {
         } else {
            this.cartItem[i].quantity = arr
         }
-        console.log(this.total,"total total")
         this.total +=  this.cartItem[i].price
       }
       localStorage.setItem('MyObject', JSON.stringify(this.cartItem))
@@ -87,7 +87,7 @@ export class CartComponent implements OnInit {
     this.total = this.cartItem.reduce((accumulator: any, element: any) => (accumulator + element.total), 0)
     localStorage.setItem('MyObject', JSON.stringify(this.cartItem))
     localStorage.setItem('total',JSON.stringify(this.total))
-    this.getorders()
+    // this.getorders()
   }
  }
 
