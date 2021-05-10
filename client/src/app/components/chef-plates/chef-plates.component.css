@@ -7,48 +7,46 @@
     /* background-image: url('https://format-com-cld-res.cloudinary.com/image/private/s--yU5hjwQS--/c_limit,g_center,h_1200,w_65535/fl_keep_iptc.progressive,q_95/v1/1a734fc5206bed55cf9be93c30ed8e52/RamenFeatured-1.jpg'); */
   }
   .col-lg-2 {
-   margin-top:1%;
-   margin-left:2%;
-   padding: 100px 10 20px;
+  margin-top:1%;
+  margin-left:2%;
+  padding: 100px 10 20px;
   }
- .card-ecommerce{
-   height: 0 auto;
-   width: 260px ! important;
-   background: rgb(0, 0, 0);
-   border: 1.5px solid rgba(255, 255, 255, 0.205);
- }
- .view{
-   min-height: 160px;
- }
- .imgBrand{
-   width: 100% ! important;
-   max-height: 230px ! important;
-   min-height: 80px ! important;
+.card-ecommerce{
+  height: 100%;
+  width: 280px ! important;
+  background: rgb(0, 0, 0);
+  border: 1.5px solid rgba(255, 255, 255, 0.205);
+}
+.view{
+  min-height: 160px;
+}
 
- }
+.imgCart{
+  max-height:279px ! important;
+  min-height:279px ! important;
+}
 
- .menuname{
-   color:white;
+.menuname{
+  color:white;
 
- }
+}
 .price{
-   font-family: Book Antiqua;
-   color:#DEB28F;
- }
- .descrip{
   font-family: Book Antiqua;
-   color:white;
+  color:#DEB28F;
+}
+.descrip{
+  font-family: Book Antiqua;
+  color:white;
+}
 
- }
-
- .location{
+.location{
   float:right;
   font-weight: 600;
   font-family: Georgia;
   margin-top: 2%;
   margin-bottom:-5%;
   color: white;
- }
+}
 .quantity{
   color:white;
 }

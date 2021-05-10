@@ -40,21 +40,18 @@ export class NavbarComponent implements OnInit {
 
 
 }
-role(){
-  const dataUser = (JSON.parse(localStorage.data).token)
-  if(this.DecodeToken(dataUser)['role']==='user'){
-    this.userRole='user'
-  }else if(this.DecodeToken(dataUser)['role']==='admin'){
-    this.userRole = 'admin'
-  }else if(this.DecodeToken(dataUser)['role']==='chef'){
-   this.userRole = 'chef'
-}else if(this.DecodeToken(dataUser)['role']===undefined){
-  this.userRole = undefined
-}
-  }
+  role() {
+    const dataUser = (JSON.parse(localStorage.data).token)
+    if (this.DecodeToken(dataUser)['role'] === 'user') {
+      this.userRole = 'user'
+    } else if (this.DecodeToken(dataUser)['role'] === 'admin') {
+      this.userRole = 'admin'
+    } else if (this.DecodeToken(dataUser)['role'] === 'chef') {
+      this.userRole = 'chef'
+    } else if (this.DecodeToken(dataUser)['role'] === undefined) {
+      this.userRole = undefined
+    }
 
-
-  ordres() {
 
   }
 }
