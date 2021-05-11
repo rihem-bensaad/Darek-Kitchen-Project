@@ -12,11 +12,22 @@ const menu = require('./routers/menuRouter.js');
 const chef = require('./routers/ChefRouter')
 const User = require('./routers/user.js');
 const user = require('./routers/UserRouter.js');
-
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
 const brand = require('./routers/brandRouter')
 const admin = require('./routers/adminRouter')
 const auth = require('./routers/authRouter')
+io.on('connection', function(socket) {
+  console.log('new connection');
+
+  socket.on('add-customer', function(customer) {
+    io.emit('notification', {
+      message: 'new customer',
+      customer: customer
+    });
+  });
+});
 
 app.use(cors());
 app.use(helmet());
