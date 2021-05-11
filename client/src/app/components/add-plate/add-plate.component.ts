@@ -25,13 +25,13 @@ export class AddPlateComponent implements OnInit {
     price: new FormControl(''),
     quantity: new FormControl(''),
   });
- 
+  chef_id !: number 
   menus : any = []
+  id : any = localStorage.getItem('id');
   constructor(private menuService: MenuService, private router: Router, private http : HttpClient ,   private cloudinary: Cloudinary ) { }
 
   ngOnInit(): void {
-    this.getmenu()
-   
+   this.getMenuByChef(this.id)
   }
   _handleReaderLoaded(readerEvt:any) {
     var binaryString = readerEvt.target.result;
@@ -63,9 +63,8 @@ if (files && file) {
 }
 
    addMenu() {
-    this.menuService.postmenu(this.menuForm.value,this.urlPic)
+    this.menuService.postmenu(this.menuForm.value,this.urlPic,this.id)
     .subscribe()
-    
       location.reload()
    }
 
@@ -100,7 +99,8 @@ if (files && file) {
           confirmButtonColor:'#DEB28F',
           width:'350px',
         })
-        this.getmenu()
+        // this.getmenu()
+        this.getMenuByChef(this.id)
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
           title:'Cancelled',
@@ -116,11 +116,15 @@ if (files && file) {
   }
 
 
-  getmenu() {
-    this.menuService.getmenu().subscribe((data) => {
-      this.menus = data
-    })
-  }
- 
+  // getmenu() {
+  //   this.menuService.getmenu().subscribe((data) => {
+  //     this.menus = data
+  //   })
+  // }
+ getMenuByChef(id:any){
+   this.menuService.getMenuBychef(id).subscribe((data) => {
+     this.menus = data
+   }) 
+ }
 
 }
