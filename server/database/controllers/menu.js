@@ -7,15 +7,16 @@ const getMenu = function(callback){
         return err ? callback(err,null) : callback(null,result)
     })
 }
-// const getMenuById = function(ID_brands,callback){
-//     let syntax = `SELECT * from menu where ID_brands="${ID_brands}"`
-//     connection.query(syntax,(err,result)=>{
-//         return err ? callback(err,null) : callback(null,result)
-//     })
-// }
+
+const getMenuById = function(id,callback){
+    let syntax = `SELECT * from menu where ID="${id}"`
+    connection.query(syntax,(err,result)=>{
+        return err ? callback(err,null) : callback(null,result)
+    })
+}
 
 const postMenu = function(params,callback){
-    let syntax = "INSERT INTO menu (title, image, location , price, description, quantity) values (?,?,?,?,?,?)"
+    let syntax = "INSERT INTO menu (title, image, location , price, description, quantity, ID) values (?,?,?,?,?,?,?)"
     connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })
@@ -36,4 +37,4 @@ const updateMenu = function(params,id,callback){
     }
     
 
-module.exports = {getMenu,postMenu,deletemenu,updateMenu}
+module.exports = {getMenu,postMenu,deletemenu,updateMenu,getMenuById}
