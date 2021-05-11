@@ -5,8 +5,9 @@ const jwt = require('jsonwebtoken');
 
 
 module.exports.cheflogin = (req,res,callback)=>{
-    
+    var ID ;
     db.chefLogin(req.body.email,(err,result)=>{
+        ID = result[0].ID
         if (result.length===0){
             callback()
         }
@@ -22,13 +23,15 @@ module.exports.cheflogin = (req,res,callback)=>{
                   const token = jwt.sign({
                       email : req.body.email,
                       userId: req.params.id,
-                      role : "chef"
+                      role : "chef",
+                      
                   }, 'secret', function(err,token){
+                      
                       res.status(200).json({
                          
                           message : " authentication sucessful !",
-                          token : token
-                          
+                          token : token,
+                          userId : ID
                       })
                   })
               }else{
