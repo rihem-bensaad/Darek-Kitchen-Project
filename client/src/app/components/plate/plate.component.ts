@@ -66,6 +66,3 @@ getvalues(data: any) {
 }
 
 }
-
-
-

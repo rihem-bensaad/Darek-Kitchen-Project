@@ -1,69 +1,69 @@
 <div class="dash">
-  <div class="sidebar">
-    <div class="sidebar-brand">
-        <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
-    </div>
-    <div class="sidebar-menu">
-        <ul>
-            <li>
-                <a href="/dashboard"><span class="las la-igloo"></span>
-                <span>Dashboard</span></a>
-            </li>
-            <li >
-                <a  href="/getusers"  ><span class="las la-users"></span>
-                <span>My Users</span></a>
-            </li>
-            <li>
-                <a href="/getbrands"><span class="la la-bell-slash"></span>
-                <span>Delete Plate</span></a>
-            </li>
-
-           <li>
-                <a href="/createchef"><span class="las la-landmark"></span>
-                <span>Create chef account</span></a>
-            </li>
-
-        </ul>
-    </div>
-</div>
-
-<div class="main-content">
-  <header>
-
-      <div class="search-wrapper">
-        <form>
-            <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
-            <!-- <button class="close-icon" type="reset"></button> -->
-        </form>
-    </div>
-
-  </header>
-
-  <div class="row">
-
-    <table class="table">
-        <tr>
-        <th><i class="fa fa-user fa-lg" aria-hidden="true"></i><strong>First Name</strong> </th>
-        <th><i class="fas fa-user-circle fa-lg"></i><strong>Last Name</strong> </th>
-        <th><i class="fas fa-envelope fa-lg"></i><strong>Email</strong> </th>
-        <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
-        <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
-    </tr>
-
-    <tr *ngFor="let user of users| filter:filterTerm">
-        <td>{{user.firstName}}</td>
-        <td>{{user.lastName}}</td>
-        <td>{{user.email}}</td>
-        <td>{{user.location}}</td>
-        <td><button id="deletebtn" class="btn F7F709 btnyellow" (click)="confirmBox(user)">delete</button></td>
+    <div class="sidebar">
+      <div class="sidebar-brand">
+          <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
+      </div>
+      <div class="sidebar-menu">
+          <ul>
+              <li>
+                  <a href="/dashboard"><span class="las la-igloo"></span>
+                  <span>Dashboard</span></a>
+              </li>
+              <li >
+                  <a  href="/getusers"  ><span class="las la-users"></span>
+                  <span>My Users</span></a>
+              </li>
+              <li>
+                  <a href="/getbrands"><span class="la la-bell-slash"></span>
+                  <span>Delete Plate</span></a>
+              </li>
+  
+             <li>
+                  <a href="/createchef"><span class="las la-landmark"></span>
+                  <span>Create chef account</span></a>
+              </li>
+  
+          </ul>
+      </div>
+  </div>
+  
+  <div class="main-content">
+    <header>
+  
+        <div class="search-wrapper">
+          <form>
+              <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
+              <!-- <button class="close-icon" type="reset"></button> -->
+          </form>
+      </div>
+  
+    </header>
+  
+    <div class="row">
+  
+      <table class="table">
+          <tr>
+          <th><i class="fa fa-user fa-lg" aria-hidden="true"></i><strong>First Name</strong> </th>
+          <th><i class="fas fa-user-circle fa-lg"></i><strong>Last Name</strong> </th>
+          <th><i class="fas fa-envelope fa-lg"></i><strong>Email</strong> </th>
+          <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
+          <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
       </tr>
-    </table>
-</div>
-
-
-<div>
-  <span class="las la-google-wallet"></span>
-</div>
-
-</div>
-</div>
+  
+      <tr *ngFor="let user of users| filter:filterTerm">
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.location}}</td>
+          <td><button id="deletebtn" class="btn F7F709 btnyellow" (click)="confirmBox(user)">delete</button></td>
+        </tr>
+      </table>
+  </div>
+  
+  
+  <div>
+    <span class="las la-google-wallet"></span>
+  </div>
+  
+  </div>
+  </div>

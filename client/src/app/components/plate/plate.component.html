@@ -1,114 +1,100 @@
 <div class="dash">
-<div class="sidebar">
-    <div class="sidebar-brand">
-        <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
-    </div>
-
-    <div class="sidebar-menu">
-        <ul>
-            <li >
-                <a  href="/addplate"  ><span class="la la-cutlery la-lg"></span>
-                <span>Add Plates</span></a>
-            </li>
-            <li>
-                <a href="/plate"><span class="las la-clipboard-list"></span>
-                <span>Update Plates</span> </a>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-<div class="main-content">
-  <header>
-      
-    <div class="search-wrapper">
-      <form>
-        <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
-        <button class="close-icon" type="reset"></button>
-      </form>
-    </div>
-
-
-  </header>
-<div class="row">
-    
-    <table class="table">
-        <tr>
-        <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
-        <th><i class="fas fa-mortar-pestle fa-lg"></i><strong>Plate Description</strong> </th>
-        <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
-        <th><i class="fas fa-dollar-sign fa-lg"></i><strong>Price</strong> </th>
-        <th><i class="fas fa-sort-numeric-up fa-lg"></i><strong>Quantity</strong> </th>
-        <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong></th>
-        <th><i class="fas fa-edit fa-lg"></i><strong>Update</strong> </th>
-    </tr>
-
-    <tr *ngFor="let menu of menus | filter:filterTerm">
-        <td>{{menu.title}}</td>
-        <td>{{menu.description}}</td>
-        <td>{{menu.location}}</td>
-        <td>{{menu.price}}</td>
-        <td>{{menu.quantity}}</td>
-        <td><img src="{{menu.image}}"></td>
-        <td><button class="btn black btnblack" data-toggle="modal" data-target="#myModal" (click)="getvalues(menu)">Update</button></td>
+  <div class="sidebar">
+      <div class="sidebar-brand">
+          <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
+      </div>
+  
+      <div class="sidebar-menu">
+          <ul>
+              <li >
+                  <a  href="/addplate"  ><span class="la la-cutlery la-lg"></span>
+                  <span>Add Plates</span></a>
+              </li>
+              <li>
+                  <a href="/plate"><span class="las la-clipboard-list"></span>
+                  <span>Update Plates</span> </a>
+              </li>
+              
+          </ul>
+      </div>
+  </div>
+  
+  <div class="main-content">
+    <header>
         
-
-        <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
+      <div class="search-wrapper">
+        <form>
+          <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
+          <button class="close-icon" type="reset"></button>
+        </form>
+      </div>
+  
+  
+    </header>
+  <div class="row">
+      
+      <table class="table">
+          <tr>
+          <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
+          <th><i class="fas fa-mortar-pestle fa-lg"></i><strong>Plate Description</strong> </th>
+          <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
+          <th><i class="fas fa-dollar-sign fa-lg"></i><strong>Price</strong> </th>
+          <th><i class="fas fa-sort-numeric-up fa-lg"></i><strong>Quantity</strong> </th>
+          <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong></th>
+          <th><i class="fas fa-edit fa-lg"></i><strong>Update</strong> </th>
+      </tr>
+  
+      <tr *ngFor="let menu of menus | filter:filterTerm">
+          <td>{{menu.title}}</td>
+          <td>{{menu.description}}</td>
+          <td>{{menu.location}}</td>
+          <td>{{menu.price}}</td>
+          <td>{{menu.quantity}}</td>
+          <td><img src="{{menu.image}}"></td>
+          <td><button class="btn black btnblack" data-toggle="modal" data-target="#myModal" (click)="getvalues(menu)">Update</button></td>
           
-          <div class="modal-content">
-            <div class="modal-body">
-              <form [formGroup]="menuForm" >
-                <img src={{menu.image}} class="imgmodal" formControlName="image"   >
-                <div class="modalinput">
-                <label><strong>Plate Name :</strong></label>
-                <input class="modalinput2" type="text" maxlength="20" value={{menu.title}} formControlName="title"/><br>
-                <label><strong>Plate Description :</strong></label>
-                <input class="modalinput2" type="text" maxlength="25"  value={{menu.description}} formControlName="description"/><br>
-                <label class="label3"><strong>Price :</strong></label>
-                <input class="modalinput3" type="text" maxlength="5" value={{menu.price}} formControlName="price"/>
-                <label class="label3"><strong>Quantity :</strong></label>
-                <input class="modalinput3" type="text" maxlength="5" value={{menu.quantity}} formControlName="quantity"/>
-                <label class="label3"><strong>Location :</strong></label>
-                <input class="modalinput3" type="text" maxlength="15" value={{menu.location}} formControlName="location"/>
-                </div>
-              <button class="btn black editbtn" (click)="updateMenu()">EDIT</button>
-                
-              </form>
-              <button type="button" class="btn black btncloseblack" data-dismiss="modal">Close</button>
+  
+          <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            
+            <div class="modal-content">
+              <div class="modal-body">
+                <form [formGroup]="menuForm" >
+                  <img src={{menu.image}} class="imgmodal" formControlName="image"   >
+                  <div class="modalinput">
+                  <label><strong>Plate Name :</strong></label>
+                  <input class="modalinput2" type="text" maxlength="20" value={{menu.title}} formControlName="title"/><br>
+                  <label><strong>Plate Description :</strong></label>
+                  <input class="modalinput2" type="text" maxlength="25"  value={{menu.description}} formControlName="description"/><br>
+                  <label class="label3"><strong>Price :</strong></label>
+                  <input class="modalinput3" type="text" maxlength="5" value={{menu.price}} formControlName="price"/>
+                  <label class="label3"><strong>Quantity :</strong></label>
+                  <input class="modalinput3" type="text" maxlength="5" value={{menu.quantity}} formControlName="quantity"/>
+                  <label class="label3"><strong>Location :</strong></label>
+                  <input class="modalinput3" type="text" maxlength="15" value={{menu.location}} formControlName="location"/>
+                  </div>
+                <button class="btn black editbtn" (click)="updateMenu()">EDIT</button>
+                  
+                </form>
+                <button type="button" class="btn black btncloseblack" data-dismiss="modal">Close</button>
+              </div>
+              <div class="modal-footer">
+                <div class="container">
+        <!-- The Modal -->
+      <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content"> 
             </div>
-            <div class="modal-footer">
-              <div class="container">
-      <!-- The Modal -->
-    <div class="modal" id="myModal">
-        <div class="modal-dialog">
-          <div class="modal-content"> 
           </div>
         </div>
       </div>
-    </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </tr>
-    </table>
-</div>
+      </tr>
+      </table>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
+  </div>

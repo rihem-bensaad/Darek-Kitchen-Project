@@ -1,89 +1,89 @@
 <!--Sidebar-->
 
 <div class="dash">
-<div class="sidebar">
-    <div class="sidebar-brand">
-        <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
-    </div>
-
-    <div class="sidebar-menu">
-        <ul>
-            <li >
-                <a  href="/addplate" ><span class="la la-cutlery la-lg"></span>
-                <span>Add Plates</span></a>
-            </li>
-            <li>
-                <a href="/plate"><span class="las la-clipboard-list"></span>
-                <span>Update Plates</span> </a>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-<!--Chef Add Plate Form-->
-
-<form  [formGroup]="menuForm" >
-
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
+        </div>
     
-    <h2 class="title"><i class="fas fa-bars"></i> Create Plate</h2>
-
-    <div class="input-field">
-        <label><b>Photo :</b></label>
-        <input id="inpimage" type="file" placeholder="Image Menu" #imageInput (change)="cloudy(imageInput)"  formControlName="image"/>
+        <div class="sidebar-menu">
+            <ul>
+                <li >
+                    <a  href="/addplate" ><span class="la la-cutlery la-lg"></span>
+                    <span>Add Plates</span></a>
+                </li>
+                <li>
+                    <a href="/plate"><span class="las la-clipboard-list"></span>
+                    <span>Update Plates</span> </a>
+                </li>
+                
+            </ul>
+        </div>
     </div>
-
-    <div class="input-field">
-        <label><b>Title :</b></label>
-        <input type="text" maxlength="15" placeholder="Menu Title"  formControlName="title"/>
-    </div>
-
-    <div class="input-field">
-        <label><b>Description :</b></label>
-        <input type="text" maxlength="25" id="inpdescription" placeholder="Plate Description"  formControlName="description"/>
-    </div>
-
-    <div class="input-field">
-        <label><b>Location :</b></label>
-        <input id="inplocation" type="text" maxlength="10" placeholder="location"  formControlName="location"/>
-      </div>
-      
-
-    <div class="input-field">
-        <label><b>Price :</b></label>
-      <input id="inpprice" type="text" placeholder="Price Menu" maxlength="4" formControlName="price"/>
-    </div>
-    <div class="input-field">
-        <label><b>Quantity :</b></label>
-      <input id="inpquantity" type="text" placeholder="Price Menu" maxlength="3" formControlName="quantity"/>
-    </div>
-<!--Add Plate Button-->
-    <button id="addbtn" class="btn" (click)="addMenu()"><b>ADD</b></button>
-
-  </form>
-<div class="row">
     
-    <table class="table">
-        <tr>
-        <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
-        <th><i class="fas fa-mortar-pestle fa-lg"></i><strong>Plate Description</strong> </th>
-        <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
-        <th><i class="fas fa-dollar-sign fa-lg"></i><strong>Price</strong> </th>
-        <th><i class="fas fa-sort-numeric-up fa-lg"></i><strong>Quantity</strong> </th>
-        <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong> </th>
-        <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
-    </tr>
-
-    <tr *ngFor="let menu of menus">
-        <td>{{menu.title}}</td>
-        <td>{{menu.description}}</td>
-        <td>{{menu.location}}</td>
-        <td>{{menu.price}}</td>
-        <td>{{menu.quantity}}</td>
-        <td><img src="{{menu.image}}"></td>
-        <td><button id="deletebtn" class="btn"  (click)="confirmBox(menu)">delete</button></td>
-    </tr>
-    </table>
-</div>
-
-</div>
+    <!--Chef Add Plate Form-->
+    
+    <form  [formGroup]="menuForm" >
+    
+        
+        <h2 class="title"><i class="fas fa-bars"></i> Create Plate</h2>
+    
+        <div class="input-field">
+            <label><b>Photo :</b></label>
+            <input id="inpimage" type="file" placeholder="Image Menu" #imageInput (change)="cloudy(imageInput)"  formControlName="image"/>
+        </div>
+    
+        <div class="input-field">
+            <label><b>Title :</b></label>
+            <input type="text" maxlength="15" placeholder="Menu Title"  formControlName="title"/>
+        </div>
+    
+        <div class="input-field">
+            <label><b>Description :</b></label>
+            <input type="text" maxlength="25" id="inpdescription" placeholder="Plate Description"  formControlName="description"/>
+        </div>
+    
+        <div class="input-field">
+            <label><b>Location :</b></label>
+            <input id="inplocation" type="text" maxlength="10" placeholder="location"  formControlName="location"/>
+          </div>
+          
+    
+        <div class="input-field">
+            <label><b>Price :</b></label>
+          <input id="inpprice" type="text" placeholder="Price Menu" maxlength="4" formControlName="price"/>
+        </div>
+        <div class="input-field">
+            <label><b>Quantity :</b></label>
+          <input id="inpquantity" type="text" placeholder="Price Menu" maxlength="3" formControlName="quantity"/>
+        </div>
+    <!--Add Plate Button-->
+        <button id="addbtn" class="btn" (click)="addMenu()"><b>ADD</b></button>
+    
+      </form>
+    <div class="row">
+        
+        <table class="table">
+            <tr>
+            <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
+            <th><i class="fas fa-mortar-pestle fa-lg"></i><strong>Plate Description</strong> </th>
+            <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
+            <th><i class="fas fa-dollar-sign fa-lg"></i><strong>Price</strong> </th>
+            <th><i class="fas fa-sort-numeric-up fa-lg"></i><strong>Quantity</strong> </th>
+            <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong> </th>
+            <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
+        </tr>
+    
+        <tr *ngFor="let menu of menus">
+            <td>{{menu.title}}</td>
+            <td>{{menu.description}}</td>
+            <td>{{menu.location}}</td>
+            <td>{{menu.price}}</td>
+            <td>{{menu.quantity}}</td>
+            <td><img src="{{menu.image}}"></td>
+            <td><button id="deletebtn" class="btn"  (click)="confirmBox(menu)">delete</button></td>
+        </tr>
+        </table>
+    </div>
+    
+    </div>

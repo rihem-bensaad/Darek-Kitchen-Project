@@ -1,128 +1,128 @@
 .slider{
-    width: 100%;
-    height: auto;
-    margin-top:-5%;
-    max-width: 100%;
-    overflow: hidden;
-    position: absolute;
+  width: 100%;
+  height: auto;
+  margin-top:-5%;
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
 
 }
 .slider-content{
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 .h1{
-    
-    margin-top: -10%;
-    font-family: playfair display,serif;
-    font-size: 70px;
-    font-weight: 900;
-    line-height: 1.2;
-    color: #DEB28F;
+  
+  margin-top: -10%;
+  font-family: playfair display,serif;
+  font-size: 70px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #DEB28F;
 
 }
 .h5{
-    font-family: playfair display,serif;
-    font-size: 25px;
-    font-weight: 500;
-    color: whitesmoke;
-    background : rgba(0, 0, 0, 0.801) 
+  font-family: playfair display,serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: whitesmoke;
+  background : rgba(0, 0, 0, 0.801) 
 }
 .btn{
-    margin-left: 30px;
-    margin-bottom: 60px;
-    font-family: Georgia, serif;
-    font-size: 18px;
-    line-height: 1.2!important;
-    font-weight: 700;
-    font-style: normal;
-    text-transform: none;
-    letter-spacing: 0em;
-    border-radius: 0em;
-    padding: 0.8em 1.8em;
-    background: #DEB28F ;
-    border-color: transparent;
-    color: #1F1A1E !important;
-    box-shadow: none !important;
-    border-radius: 30px;
+  margin-left: 30px;
+  margin-bottom: 60px;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.2!important;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0em;
+  border-radius: 0em;
+  padding: 0.8em 1.8em;
+  background: #DEB28F ;
+  border-color: transparent;
+  color: #1F1A1E !important;
+  box-shadow: none !important;
+  border-radius: 30px;
 }
 .btn:hover{
-    color: #DEB28F ! important;
-    background:rgba(0, 0, 0, 0.774);
+  color: #DEB28F ! important;
+  background:rgba(0, 0, 0, 0.774);
 }
 
 #imagemodal{
-  margin-top: 5%;
+margin-top: 5%;
 }
 
 agm-map{
-    height:300px;
-    width: 900px;
-    margin-left: 22% ! important;
-    margin-top: -18%;
+  height:300px;
+  width: 900px;
+  margin-left: 22% ! important;
+  margin-top: -18%;
 }
 .cover{
-    position: fixed;
-    z-index: 0;
-    width: 100%;
-    background: #DEB28F;
-    margin-top: 45.3%;
-  }
-  .phone{
-    z-index: 1;
-    font-weight: 200;
-  }
-  .phone i{
-    color: #000;
-  }
-  .phone a{
-    color:#000;
-    font-size: 13px;
-    font-weight: bold;
-  }
-  .reg{
-    width: 50%;
-    text-align:right;
-  }
-  .reg a{
-    color:#000;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: bold;
-  }
-  .social-icon{
-    display: inline-block;
-    width: 50%;
-    
-  }
-  .social-icon p{
-    display:block;
-    width: 100%;
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  background: #DEB28F;
+  margin-top: 45.3%;
+}
+.phone{
+  z-index: 1;
+  font-weight: 200;
+}
+.phone i{
+  color: #000;
+}
+.phone a{
+  color:#000;
+  font-size: 13px;
+  font-weight: bold;
+}
+.reg{
+  width: 50%;
+  text-align:right;
+}
+.reg a{
+  color:#000;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
+.social-icon{
+  display: inline-block;
+  width: 50%;
   
+}
+.social-icon p{
+  display:block;
+  width: 100%;
+
+}
+.social-icon p a{
+  height: 30px;
+  margin-right: 10px;
+  color: black
+}
+.social-icon p a i{
+  font-size: 13px;
+  color: #000;
+}
+.social-icon p a:hover{
+  background: black;
+  color: #DEB28F;
+}
+.social-icon p a:hover i{ 
+  color:#fff;
+}
+
+@media (max-width: 900px){
+  h1{
+      font-size:30px ! important;
   }
-  .social-icon p a{
-    height: 30px;
-    margin-right: 10px;
-    color: black
-  }
-  .social-icon p a i{
-    font-size: 13px;
-    color: #000;
-  }
-  .social-icon p a:hover{
-    background: black;
-    color: #DEB28F;
-  }
-  .social-icon p a:hover i{ 
-    color:#fff;
+  h5{
+      font-size:15px ! important;
   }
 
-  @media (max-width: 900px){
-    h1{
-        font-size:30px ! important;
-    }
-    h5{
-        font-size:15px ! important;
-    }
-  
 }
