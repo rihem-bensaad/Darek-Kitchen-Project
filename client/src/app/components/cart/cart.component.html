@@ -1,68 +1,68 @@
 
 <!---Hero Section-->
 <section id="hero">
-<div class="hero-container">
-    <div class="hero-logo">
-        <h1 class="font-weight-bold">Cart Products</h1>
-    </div>
-    </div>
-</section>
-<!---End of Hero Section-->
-<!--Cart Section-->
-<section class="mt-5">
-<div class="container">
-    <div class="cart">
-    <div class="table-responsive">
-        <table class="table">
-            <thead class="thead-dark">
-                <tr >
-                    <th scope="col"class="text-white">Plate Image</th>
-                    <th scope="col"class="text-white">Title</th>
-                    <th scope="col"class="text-white">Price</th>
-                    <th scope="col"class="text-white">Quantity</th>
-                    <th scope="col"class="text-white">Total</th>
-                    <th scope="col"class="text-white">Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let item of cartItem ">
-                    <td>
-                        <div class="main">
-                            <div class="d-flex">
-                            <img src={{item.image}} alt="">
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                      <h6 class="mytitle">{{item.title}}</h6>
-                    </td>
-                    <td>
-                      <h6> {{item.price}},000 TND</h6>
-                    </td>
-                    <td>
-                      <select (change)="getQuantity($event.target,item)" name="item.qty" >
-                        <option  *ngFor="let a of item.quantity" >{{a}}</option>
-                      </select>
-                    </td>
-                    <td>
-                      <h6 >{{item.total}},000 TND</h6>
-                    </td>
-                    <td>
-                      <button class="btn btndel" (click)="deleteItem(item.ID_menu)"><i class="far fa-trash-alt"></i></button></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    </div>
-    <div class="col-lg-4 offset-lg-4">
-    <div class="checkout">
-        <ul>
-            <li class="cart-total" >Total:
-            <span>{{ total }},000 TND</span>
-          </li>
-        </ul>
-        <a href="/welcome"class="proceed-btn">Confirm your Order</a>
-    </div>
-    </div>
-</div>
-</section>
+  <div class="hero-container">
+      <div class="hero-logo">
+          <h1 class="font-weight-bold">Cart Products</h1>
+      </div>
+      </div>
+  </section>
+  <!---End of Hero Section-->
+  <!--Cart Section-->
+  <section class="mt-5">
+  <div class="container">
+      <div class="cart">
+      <div class="table-responsive">
+          <table class="table">
+              <thead class="thead-dark">
+                  <tr >
+                      <th scope="col"class="text-white">Plate Image</th>
+                      <th scope="col"class="text-white">Title</th>
+                      <th scope="col"class="text-white">Price</th>
+                      <th scope="col"class="text-white">Quantity</th>
+                      <th scope="col"class="text-white">Total</th>
+                      <th scope="col"class="text-white">Delete</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let item of cartItem ">
+                      <td>
+                          <div class="main">
+                              <div class="d-flex">
+                              <img src={{item.image}} alt="">
+                              </div>
+                          </div>
+                      </td>
+                      <td>
+                        <h6 class="mytitle">{{item.title}}</h6>
+                      </td>
+                      <td>
+                        <h6> {{item.price}},000 TND</h6>
+                      </td>
+                      <td>
+                        <select (change)="getQuantity($event.target,item)" name="item.qty">
+                          <option  *ngFor="let a of item.quantity " >{{a}}</option>
+                        </select>
+                      </td>
+                      <td>
+                        <h6 >{{item.total}},000 TND</h6>
+                      </td>
+                      <td>
+                        <button class="btn btndel" (click)="deleteItem(item.ID_menu)"><i class="far fa-trash-alt"></i></button></td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      </div>
+      <div class="col-lg-4 offset-lg-4">
+      <div class="checkout">
+          <ul>
+              <li class="cart-total" >Total:
+              <span>{{ total }},000 TND</span>
+            </li>
+          </ul>
+          <a href="/welcome"class="proceed-btn">Confirm your Order</a>
+      </div>
+      </div>
+  </div>
+  </section>

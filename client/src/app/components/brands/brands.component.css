@@ -1,41 +1,41 @@
 .row{
-   position: absolute ! important;
-   background-size: cover;
-   width:95.9rem
- }
- .col-lg-2 {
-  margin-top:5%;
-  margin-left:2%;
-  padding: 100px 10 20px
- }
+  position: absolute ! important;
+  background-size: cover;
+  width:95.9rem
+}
+.col-lg-2 {
+ margin-top:5%;
+ margin-left:2%;
+ padding: 100px 10 20px
+}
 .card-ecommerce{
-  height: 0 auto;
-  width: 260px ! important;
+ height: 0 auto;
+ width: 260px ! important;
 }
 .view{
-  min-height: 160px;
+ min-height: 160px;
 }
 .imgBrand{
-  width: 100% ! important;
-  height: 60px ! important;
+ width: 100% ! important;
+ height: 60px ! important;
 }
 .rating {
-  direction: rtl;
-  unicode-bidi: bidi-override;
-  color: #ddd; /* Personal choice */
-  margin-left: -23%;
-  margin-top: 10%;
+ direction: rtl;
+ unicode-bidi: bidi-override;
+ color: #ddd; /* Personal choice */
+ margin-left: -23%;
+ margin-top: 10%;
 }
 .rating input {
-  display: none;
+ display: none;
 }
 .rating label:hover,
 .rating label:hover ~ label,
 .rating input:checked + label,
 .rating input:checked + label ~ label {
-  color: #DEB28F; /* Personal color choice. Lifted from Bootstrap 4 */
+ color: #DEB28F; /* Personal color choice. Lifted from Bootstrap 4 */
 }
 h4{
-  color:#DEB28F ;
-  cursor: pointer;
+ color:#DEB28F ;
+ cursor: pointer;
 }

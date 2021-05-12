@@ -1,52 +1,51 @@
 <!--All PLates for Admin and Chefs-->
 <div class="myrow">
-    <!--Grid row-->
-    <div class="main">
-      
-      <!-- Actual search box -->
-      <div class="form-group has-search">
-        <span class="fa fa-search form-control-feedback"></span>
-        <input type="search" class="form-control" autocomplete="off" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
-      </div>
-      </div>
-    <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-2 col-md-6 mb-3" *ngFor="let menu of menus | filter:filterTerm">
-  
-          <!--Card-->
-          <mdb-card  class="card-ecommerce">
-            <!--Card image-->
+  <!--Grid row-->
+  <div class="main">
+    
+    <!-- Actual search box -->
+    <div class="form-group has-search">
+      <span class="fa fa-search form-control-feedback"></span>
+      <input type="search" class="form-control" autocomplete="off" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
+    </div>
+    </div>
+  <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-3" *ngFor="let menu of menus | filter:filterTerm">
+
+        <!--Card-->
+        <mdb-card  class="card-ecommerce">
+          <!--Card image-->
+          
+          
+          <img class="imgCart" src="{{menu.image}}"  alt="sample photo">
+          <!--Card image-->
+          <!--Card content-->
+          <mdb-card-body  class="text-center">
+            <!--Category & Title-->
+
+
+
+            <mdb-card-title>
+              <h4 class="menuname">
+                <strong>
+                {{menu.title}}
+              </strong>
+
+            </h4>
+
+              <b><p class="descrip">{{menu.description}}</p></b>
+              <b><p class="price">{{menu.price}} TND/pc</p></b>
+              <p class="quantity">{{menu.quantity}} pcs. available</p>
+              <h6 class="location"><i class="fas fa-map-marker-alt"></i> {{menu.location}}</h6>
             
+
             
-            <img class="imgCart" src="{{menu.image}}"  alt="sample photo">
-            <!--Card image-->
-            <!--Card content-->
-            <mdb-card-body  class="text-center">
-              <!--Category & Title-->
-  
-  
-  
-              <mdb-card-title>
-                <h4 class="menuname">
-                  <strong>
-                  {{menu.title}}
-                </strong>
-  
-              </h4>
-  
-                <b><p class="descrip">{{menu.description}}</p></b>
-                <b><p class="price">{{menu.price}} TND/pc</p></b>
-                <p class="quantity">{{menu.quantity}} pcs. available</p>
-                <h6 class="location"><i class="fas fa-map-marker-alt"></i> {{menu.location}}</h6>
-              
-  
-              
-              </mdb-card-title>
-            
-            </mdb-card-body>
-          </mdb-card>
-          <!--Card-->
-        </div>
+            </mdb-card-title>
+          
+          </mdb-card-body>
+        </mdb-card>
+        <!--Card-->
       </div>
     </div>
-  
+  </div>

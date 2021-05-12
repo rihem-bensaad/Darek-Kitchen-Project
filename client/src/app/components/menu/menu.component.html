@@ -1,31 +1,32 @@
 <body>
-<section id="our_menu" class="pt-5 pb-5" >
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="page_title text-center mb-4">
-          <h1>My Menu</h1>
+  <section id="our_menu" class="pt-5 pb-5" >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page_title text-center mb-4">
+            <h1>My Menu</h1>
+          </div>
         </div>
       </div>
-    </div>
-    <div *ngFor="let menu of menuService.menu">
-			<div class="row">
-				<div class="tab-content col-lg-12" id="myTabContent">
-					<div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="single_menu">
-									<img src={{menu.image}} alt="burger">
-									<div class="menu_content">
-										<h4>{{menu.title}}  <span>{{menu.price}} TND</span></h4>
-                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-
-
-                    <button>
-                        Add to cart
-											<!-- <i class="fa fa-bullhorn" aria-hidden="true"></i> -->
-											<i class="fas fa-shopping-bag"  aria-hidden="true"></i>
-                    </button>
+      <div *ngFor="let menu of menuService.menu">
+        <div class="row">
+          <div class="tab-content col-lg-12" id="myTabContent">
+            <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="single_menu">
+                    <img src={{menu.image}} alt="burger">
+                    <div class="menu_content">
+                      <h4>{{menu.title}}  <span>{{menu.price}} TND</span></h4>
+                      <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+  
+  
+                      <button>
+                          Add to cart
+                        <!-- <i class="fa fa-bullhorn" aria-hidden="true"></i> -->
+                        <i class="fas fa-shopping-bag"  aria-hidden="true"></i>
+                      </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -34,18 +35,17 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</body>
-
-
-<ng-template>
-  <button  class="btn btn-secondary" style="font-weight: 200;color: white;background-color:#e1b12c;border: #e1b12c;margin-bottom: 100px;" >
-    In Cart <i class="fas fa-check"></i>
-  </button>
-</ng-template>
-<ng-template >
-  <button  class="btn btn-success" style="font-weight: 200;color: white;margin-bottom: 100px;">
-    Add To Cart <i class="fa fa-cart-plus"></i>
-  </button>
-</ng-template>
+    </section>
+  </body>
+  
+  
+  <ng-template>
+    <button  class="btn btn-secondary" style="font-weight: 200;color: white;background-color:#e1b12c;border: #e1b12c;margin-bottom: 100px;" >
+      In Cart <i class="fas fa-check"></i>
+    </button>
+  </ng-template>
+  <ng-template >
+    <button  class="btn btn-success" style="font-weight: 200;color: white;margin-bottom: 100px;">
+      Add To Cart <i class="fa fa-cart-plus"></i>
+    </button>
+  </ng-template>

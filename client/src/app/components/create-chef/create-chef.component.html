@@ -1,124 +1,124 @@
 <div class="dash">
-  <div class="sidebar">
-    <div class="sidebar-brand">
-        <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
-    </div>
-
-    <div class="sidebar-menu">
-        <ul>
-            <li>
-                <a href="/dashboard"><span class="las la-igloo"></span>
-                <span>Dashboard</span></a>
-            </li>
-            <li >
-                <a  href="/getusers"  ><span class="las la-users"></span>
-                <span>My Users</span></a>
-            </li>
-            <li>
-                <a href="/getbrands"><span class="la la-bell-slash"></span>
-                <span>Delete Plate</span></a>
-            </li>
-            <li>
-                <a href="/createchef"><span class="las la-landmark"></span>
-                <span>Create chef account</span></a>
-            </li>
-
-
-        </ul>
-    </div>
-</div>
-
-<div class="main-content">
-<header>
-
-    <form class="text-center" [formGroup]="signupForm" >
-
-        <h4 class="h4 mb-4"><i class="fas fa-users la-lg"></i><br>Create a new Chef Account</h4>
-
-        <div class="form-row mb-4">
-          <div class="col col1">
-            <!-- First name -->
-            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First Name" formControlName="firstName">
-
-          </div>
-          <div class="col col2">
-            <!-- Last name -->
-            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last Name" formControlName="lastName">
-
-          </div>
-        </div>
-
-        <!-- E-mail -->
-        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" formControlName="email">
-
-
-        <!-- Password -->
-        <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" formControlName="password">
-
-        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-
-        </small>
-
-        <!-- Phone number -->
-        <input type="text" id="defaultRegisterFormPhoneNumber" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="phoneNumber">
-        <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-
-        </small>
-
-         <!-- Location -->
-         <input type="text" id="defaultRegisterFormLocation" class="form-control" placeholder="Location" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="location">
-         <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-         </small>
-
-         <!-- ID Cart Image -->
-
-         <input type="file" #imageInput (change)="cloudy(imageInput)"   id="defaultRegisterFormimageCardId" class="form-control" placeholder="imageCardId" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="imageCardId">
-         <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-
-         </small>
-
-        <!-- Sign up button -->
-        <button class="btn" type="submit"  (click)="addChef()"> Create </button>
-
-    
-    </form>
-            <div class="search-wrapper">
-                <form>
-                <input class="search" type="text" placeholder="Type here to search..."[(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
-                <!-- <button class="close-icon" type="reset"></button> -->
-                </form>
+    <div class="sidebar">
+      <div class="sidebar-brand">
+          <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
+      </div>
+  
+      <div class="sidebar-menu">
+          <ul>
+              <li>
+                  <a href="/dashboard"><span class="las la-igloo"></span>
+                  <span>Dashboard</span></a>
+              </li>
+              <li >
+                  <a  href="/getusers"  ><span class="las la-users"></span>
+                  <span>My Users</span></a>
+              </li>
+              <li>
+                  <a href="/getbrands"><span class="la la-bell-slash"></span>
+                  <span>Delete Plate</span></a>
+              </li>
+              <li>
+                  <a href="/createchef"><span class="las la-landmark"></span>
+                  <span>Create chef account</span></a>
+              </li>
+  
+  
+          </ul>
+      </div>
+  </div>
+  
+  <div class="main-content">
+  <header>
+  
+      <form class="text-center" [formGroup]="signupForm" >
+  
+          <h4 class="h4 mb-4"><i class="fas fa-users la-lg"></i><br>Create a new Chef Account</h4>
+  
+          <div class="form-row mb-4">
+            <div class="col col1">
+              <!-- First name -->
+              <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First Name" formControlName="firstName">
+  
             </div>
-  </header>
-
-  <div class="row">
-
-    <table class="table">
-        <tr>
-        <th><i class="fa fa-user fa-lg" aria-hidden="true"></i><strong>First Name</strong> </th>
-        <th><i class="fas fa-user-circle fa-lg"></i><strong>Last Name</strong> </th>
-        <th><i class="fas fa-envelope fa-lg"></i><strong>Email</strong> </th>
-        <th><i class="fas fa-phone-volume fa-lg"></i><strong>Phone </strong> </th>
-        <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
-        <th><i class="fas fa-image fa-lg"></i><strong>Photo</strong> </th>
-        <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
-    </tr>
-
-    <tr *ngFor="let chef of chefs | filter:filterTerm">
-        <td>{{chef.firstName}}</td>
-        <td>{{chef.lastName}}</td>
-        <td>{{chef.email}}</td>
-        <td>{{chef.phoneNumber}}</td>
-        <td>{{chef.location}}</td>
-        <td><img src="{{chef.imageCardId}}"></td>
-        <td><button id="deletebtn" class="btn2 F7F709 btnyellow"  (click)="confirmBox(chef)">delete</button></td>
-    </tr>
-    </table>
-</div>
-
-
-<div>
-<span class="las la-google-wallet"></span>
-</div>
-
-</div>
-</div>
+            <div class="col col2">
+              <!-- Last name -->
+              <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last Name" formControlName="lastName">
+  
+            </div>
+          </div>
+  
+          <!-- E-mail -->
+          <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" formControlName="email">
+  
+  
+          <!-- Password -->
+          <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" formControlName="password">
+  
+          <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+  
+          </small>
+  
+          <!-- Phone number -->
+          <input type="text" id="defaultRegisterFormPhoneNumber" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="phoneNumber">
+          <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+  
+          </small>
+  
+           <!-- Location -->
+           <input type="text" id="defaultRegisterFormLocation" class="form-control" placeholder="Location" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="location">
+           <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+           </small>
+  
+           <!-- ID Cart Image -->
+  
+           <input type="file" #imageInput (change)="cloudy(imageInput)"   id="defaultRegisterFormimageCardId" class="form-control" placeholder="imageCardId" aria-describedby="defaultRegisterFormPhoneHelpBlock" formControlName="imageCardId">
+           <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+  
+           </small>
+  
+          <!-- Sign up button -->
+          <button class="btn" type="submit"  (click)="addChef()"> Create </button>
+  
+      
+      </form>
+              <div class="search-wrapper">
+                  <form>
+                  <input class="search" type="text" placeholder="Type here to search..."[(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
+                  <!-- <button class="close-icon" type="reset"></button> -->
+                  </form>
+              </div>
+    </header>
+  
+    <div class="row">
+  
+      <table class="table">
+          <tr>
+          <th><i class="fa fa-user fa-lg" aria-hidden="true"></i><strong>First Name</strong> </th>
+          <th><i class="fas fa-user-circle fa-lg"></i><strong>Last Name</strong> </th>
+          <th><i class="fas fa-envelope fa-lg"></i><strong>Email</strong> </th>
+          <th><i class="fas fa-phone-volume fa-lg"></i><strong>Phone </strong> </th>
+          <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
+          <th><i class="fas fa-image fa-lg"></i><strong>Photo</strong> </th>
+          <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
+      </tr>
+  
+      <tr *ngFor="let chef of chefs | filter:filterTerm">
+          <td>{{chef.firstName}}</td>
+          <td>{{chef.lastName}}</td>
+          <td>{{chef.email}}</td>
+          <td>{{chef.phoneNumber}}</td>
+          <td>{{chef.location}}</td>
+          <td><img src="{{chef.imageCardId}}"></td>
+          <td><button id="deletebtn" class="btn2 F7F709 btnyellow"  (click)="confirmBox(chef)">delete</button></td>
+      </tr>
+      </table>
+  </div>
+  
+  
+  <div>
+  <span class="las la-google-wallet"></span>
+  </div>
+  
+  </div>
+  </div>

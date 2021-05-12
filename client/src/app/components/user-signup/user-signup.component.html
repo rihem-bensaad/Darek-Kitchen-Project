@@ -1,44 +1,43 @@
+<form [formGroup]="signupForm" class="sign-in-form">
+  <h2 class="title">Signup Now</h2>
 
-    <form [formGroup]="signupForm" class="sign-in-form">
-    <h2 class="title">Signup Now</h2>
 
+  <div class="fields"  >
+  <label> <i class="fas fa-user-alt fa-lg"></i> </label>
+            <input type="text" placeholder="FirstName*" id='firstName'  formControlName="firstName"/>
+            <div class="err" *ngIf="shouldShowFirstNameRequiredError()">First Name Required</div>
+          </div>
 
-    <div class="fields"  >
-    <label> <i class="fas fa-user-alt fa-lg"></i> </label>
-              <input type="text" placeholder="FirstName*" id='firstName'  formControlName="firstName"/>
-              <div class="err" *ngIf="shouldShowFirstNameRequiredError()">First Name Required</div>
-            </div>
+          <div class="fields">
+            <label> <i class="fas fa-user-circle fa-lg"></i></label>
+            <input type="text" placeholder="LastName*" id='lastName' formControlName="lastName"/>
+            <div class="err" *ngIf="shouldShowLastNameRequiredError()">Last Name Required</div>
+          </div>
 
-            <div class="fields">
-              <label> <i class="fas fa-user-circle fa-lg"></i></label>
-              <input type="text" placeholder="LastName*" id='lastName' formControlName="lastName"/>
-              <div class="err" *ngIf="shouldShowLastNameRequiredError()">Last Name Required</div>
-            </div>
+          <div class="fields">
+            <label><i class="fas fa-envelope fa-lg"></i></label>
+            <input type="email" placeholder="Email*" id='email' formControlName="email"/>
+            <div class="err" *ngIf="shouldShowEmailRequiredError()">Email Required</div>
+          </div>
 
-            <div class="fields">
-              <label><i class="fas fa-envelope fa-lg"></i></label>
-              <input type="email" placeholder="Email*" id='email' formControlName="email"/>
-              <div class="err" *ngIf="shouldShowEmailRequiredError()">Email Required</div>
-            </div>
+          <div class="fields">
+            <label><i class="fas fa-phone fa-lg"></i></label>
+            <input type="tel" placeholder="PhoneNumber*" id='phoneNumber' formControlName="phoneNumber"/>
+            <div class="err" *ngIf="shouldShowPhoneNumberRequiredError()">Phone Number Required</div>
+          </div>
 
-            <div class="fields">
-              <label><i class="fas fa-phone fa-lg"></i></label>
-              <input type="tel" placeholder="PhoneNumber*" id='phoneNumber' formControlName="phoneNumber"/>
-              <div class="err" *ngIf="shouldShowPhoneNumberRequiredError()">Phone Number Required</div>
-            </div>
+          <div class="fields">
+            <label class='inputi'><i class="fas fa-map-marked-alt fa-lg"></i></label>
+            <input type="text" placeholder="Location*" id='location' formControlName="location"/>
+            <div class="err" *ngIf="shouldShowLocationRequiredError()">Location Required</div>
+          </div>
 
-            <div class="fields">
-              <label class='inputi'><i class="fas fa-map-marked-alt fa-lg"></i></label>
-              <input type="text" placeholder="Location*" id='location' formControlName="location"/>
-              <div class="err" *ngIf="shouldShowLocationRequiredError()">Location Required</div>
-            </div>
+          <div class="fields">
+            <label><i class="fas fa-key fa-lg"></i></label>
+            <input type="password" placeholder="Password*" id='password' formControlName="password"/>
+            <div class="err" [ngClass]="signupForm.controls['password'].hasError('required') || signupForm.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'" >Must contain at least 8 characters.</div>
+          </div>
 
-            <div class="fields">
-              <label><i class="fas fa-key fa-lg"></i></label>
-              <input type="password" placeholder="Password*" id='password' formControlName="password"/>
-              <div class="err" [ngClass]="signupForm.controls['password'].hasError('required') || signupForm.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'" >Must contain at least 8 characters.</div>
-            </div>
-
-            <button class="btn solid" (click)="postFrom()">Signup</button>
-            
-          </form>
+          <button class="btn solid" (click)="postFrom()">Signup</button>
+          
+        </form>
