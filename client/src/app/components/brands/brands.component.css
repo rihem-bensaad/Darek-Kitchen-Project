@@ -33,9 +33,9 @@
 .rating label:hover ~ label,
 .rating input:checked + label,
 .rating input:checked + label ~ label {
-  color: #FFC107; /* Personal color choice. Lifted from Bootstrap 4 */
+  color: #DEB28F; /* Personal color choice. Lifted from Bootstrap 4 */
 }
 h4{
-  color:#ffc107 ;
+  color:#DEB28F ;
   cursor: pointer;
 }

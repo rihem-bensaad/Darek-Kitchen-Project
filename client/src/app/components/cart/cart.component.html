@@ -1,3 +1,4 @@
+
 <!---Hero Section-->
 <section id="hero">
 <div class="hero-container">
@@ -39,8 +40,8 @@
                       <h6> {{item.price}},000 TND</h6>
                     </td>
                     <td>
-                      <select (change)="getQuantity($event.target,item)" name="item.qty">
-                        <option  *ngFor="let a of item.quantity " >{{a}}</option>
+                      <select (change)="getQuantity($event.target,item)" name="item.qty" >
+                        <option  *ngFor="let a of item.quantity" >{{a}}</option>
                       </select>
                     </td>
                     <td>
@@ -53,15 +54,15 @@
         </table>
     </div>
     </div>
+    <div class="col-lg-4 offset-lg-4">
+    <div class="checkout">
+        <ul>
+            <li class="cart-total" >Total:
+            <span>{{ total }},000 TND</span>
+          </li>
+        </ul>
+        <a href="/welcome"class="proceed-btn">Confirm your Order</a>
+    </div>
+    </div>
 </div>
 </section>
-<div class="col-lg-4 offset-lg-4">
-<div class="checkout">
-    <ul>
-        <li class="cart-total" >Total:
-        <span>{{ total }},000 TND</span>
-      </li>
-    </ul>
-    <a href="#"class="proceed-btn">Confirm your Order</a>
-</div>
-</div>

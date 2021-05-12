@@ -3,41 +3,41 @@
 	<div class="container">
 	  <a class="navbar-brand" routerLink="" *ngIf="userRole===undefined" >Kitchen دارك</a>
 	  <a class="navbar-brand" routerLink="/welcome" *ngIf="userRole==='admin' || userRole==='user' || userRole==='chef'" >Kitchen دارك</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
-	  </button>
+	</button>
 
-	<div class="collapse navbar-collapse" id="navbarSupportedContent" (change)="role()" >
+	<div class="collapse navbar-collapse"  id="navbarSupportedContent" (change)="role()" >
 		<ul class="navbar-nav ml-auto">
-		<li class="nav-item active" *ngIf="userRole===undefined" >
+		<li class="nav-item" *ngIf="userRole===undefined" >
 			<a class="nav-link" routerLink="" >Home</a>
 		</li>
-		<li class="nav-item active" *ngIf="userRole==='admin' || userRole==='user'  || userRole==='chef'">
+		<li class="nav-item" *ngIf="userRole==='admin' || userRole==='user'  || userRole==='chef'">
 			<a class="nav-link" routerLink="/welcome" >Home</a>
 		</li>
-		  <li class="nav-item">
+		<li class="nav-item">
 			<a class="nav-link" routerLink="/about">About</a>
-		  </li>
-		  <li class="nav-item">
+		</li>
+		<li class="nav-item">
 			<a class="nav-link" routerLink="/chefplates" *ngIf="userRole==='admin' || userRole==='user'  || userRole==='chef' ">Plates</a>
-		  </li>
+		</li>
 
-		  <!-- <li class="nav-item">
+		<!-- <li class="nav-item">
         <div class="dropdown">
 
-          <a class="nav-link" >Brands</a>
-          <div class="dropdown-content">
+        <a class="nav-link" >Brands</a>
+        <div class="dropdown-content">
             <a href="#" (click)="selectBrand($event)" id="Traditional Food" routerLink="/brands">Traditional</a>
             <a href="#"(click)="selectBrand($event)" id="Sweaty Food" routerLink="/brands">Sweets</a>
             <a href="#" (click)="selectBrand($event)" id="HomeMade Fast Food" routerLink="/brands">Fast</a>
             <a href="#" (click)="selectBrand($event)" id="Healthy Food" routerLink="/brands">Healthy</a>
-          </div>
+        </div>
         </div>
 
-		  </li> -->
-		  <li class="nav-item">
+		</li> -->
+		<li class="nav-item">
 			<a class="nav-link" routerLink="/contact">Contact</a>
-		  </li>
+		</li>
 		  <li class="nav-item" *ngIf="userRole===undefined" >
 			<a class="nav-link" routerLink="/login" > Login </a>
 		</li>
@@ -50,15 +50,15 @@
 		<li class="nav-item">
 			<a class="nav-link" routerLink="/cart" *ngIf="userRole==='user'">
 				<div class="cart_icon">
-				  <i class="fas fa-shopping-bag "></i>
-				  <!-- <div class="cart_value">
-					2
-				  </div> -->
+				<i class="fas fa-shopping-bag "></i>
+				<!-- <div class="cart_value">
+
+				</div> -->
 				</div>
 			</a>
 			</li>
 		<li class="nav-item" *ngIf="userRole==='admin' || userRole==='user' || userRole==='chef' " >
-      <a class="nav-link" routerLink="" (click)="logout()"> Logout</a>
+        <a class="nav-link" routerLink="" (click)="logout()"> Logout</a>
 		</li>
     <!-- <li class="nav-item">
       <a class="nav-link" routerLink="/cart" *ngIf="userRole==='user'">

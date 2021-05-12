@@ -43,16 +43,20 @@
     <table class="table">
         <tr>
         <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
+        <th><i class="fas fa-mortar-pestle fa-lg"></i><strong>Plate Description</strong> </th>
         <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
         <th><i class="fas fa-dollar-sign fa-lg"></i><strong>Price</strong> </th>
-        <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong> </th>
+        <th><i class="fas fa-sort-numeric-up fa-lg"></i><strong>Quantity</strong> </th>
+        <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong></th>
         <th><i class="fas fa-edit fa-lg"></i><strong>Update</strong> </th>
     </tr>
 
     <tr *ngFor="let menu of menus | filter:filterTerm">
         <td>{{menu.title}}</td>
+        <td>{{menu.description}}</td>
         <td>{{menu.location}}</td>
         <td>{{menu.price}}</td>
+        <td>{{menu.quantity}}</td>
         <td><img src="{{menu.image}}"></td>
         <td><button class="btn black btnblack" data-toggle="modal" data-target="#myModal" (click)="getvalues(menu)">Update</button></td>
         
@@ -66,12 +70,16 @@
               <form [formGroup]="menuForm" >
                 <img src={{menu.image}} class="imgmodal" formControlName="image"   >
                 <div class="modalinput">
-                <label><strong>Image :</strong></label>
-                <input class="modalinput1" type="text" value={{menu.image}} formControlName="image"/><br>
+                <!-- <label><strong>Image :</strong></label> -->
+                <!-- <input class="modalinput1" type="file" #imageInput (change)="cloudy(imageInput)" value={{menu.image}} formControlName="image"/><br> -->
                 <label><strong>Plate Name :</strong></label>
                 <input class="modalinput2" type="text"  value={{menu.title}} formControlName="title"/><br>
+                <label><strong>Plate Description :</strong></label>
+                <input class="modalinput2" type="text"  value={{menu.description}} formControlName="description"/><br>
                 <label class="label3"><strong>Price :</strong></label>
                 <input class="modalinput3" type="text" value={{menu.price}} formControlName="price"/>
+                <label class="label3"><strong>Quantity :</strong></label>
+                <input class="modalinput3" type="text" value={{menu.quantity}} formControlName="quantity"/>
                 <label class="label3"><strong>Location :</strong></label>
                 <input class="modalinput3" type="text" value={{menu.location}} formControlName="location"/>
                 </div>

@@ -1,35 +1,16 @@
 
-
-.container-wrapper {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.849);
-}
-
-.container {
-  max-width: 80%;
-}
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
-    max-width: 50%;
+    margin-top: 20%;
   }
 }
-@media (min-width: 1024px) {
+@media (max-width: 768px) {
   .container {
-    max-width: 38%;
+    margin-top: 50%;
+    position: absolute;
   }
 }
 
-body {
-  color: #0D070A;
-}
-
-h1 {
-  font-family: "Rozha One", serif;
-  font-size: 3rem;
-}
 
 p {
   font-size: 1.05rem;
@@ -64,7 +45,7 @@ p{
   text-align: center;
   background-color: rgba(0, 0, 0, 0.678) ;
   font-size: 30px;
-  color: #F7F709;
+  color: #DEB28F;
   max-width: 60%;
   font-family: Cervino Regular, Condensed;
 }

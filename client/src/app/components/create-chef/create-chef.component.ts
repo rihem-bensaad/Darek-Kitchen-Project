@@ -4,6 +4,7 @@ import { Component, OnInit, Input , NgZone } from '@angular/core';
 import { FileUploader, FileUploaderOptions, ParsedResponseHeaders } from 'ng2-file-upload';
 import { Cloudinary } from '@cloudinary/angular-5.x';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -33,66 +34,15 @@ export class CreateChefComponent implements OnInit {
     imageCardId: new FormControl('',[Validators.required])
   });
 
-  constructor(private ChefService: ChefService, private http : HttpClient ,   private cloudinary: Cloudinary,private zone: NgZone , ) { }
+  constructor(private ChefService: ChefService, private http : HttpClient ,   private cloudinary: Cloudinary,private zone: NgZone  ) { }
   filterTerm!: string;
   
 ngOnInit(): void {
     this.getChefs()
     this.addChef()
-    // const uploaderOptions: FileUploaderOptions = {
-    //   url: `https://api.cloudinary.com/v1_1/${this.cloudinary.config().cloud_name}/upload`,
-    //   // Upload files automatically upon addition to upload queue
-    //   autoUpload: true,
-    //   // Use xhrTransport in favor of iframeTransport
-    //   isHTML5: true,
-    //   // Calculate progress independently for each uploaded file
-    //   removeAfterUpload: true,
-    //   // XHR request headers
-    //   headers: [
-    //     {
-    //       name: 'X-Requested-With',
-    //       value: 'XMLHttpRequest'
-    //     }
-    //   ]
-    // };
 
-
-
-    // this.uploader = new FileUploader(uploaderOptions);
-
-    // this.uploader.onBuildItemForm = (fileItem: any, form: FormData): any => {
-    //   // Add Cloudinary unsigned upload preset to the upload form
-    //   form.append('upload_preset', this.cloudinary.config().upload_preset);
-
-    //   // Add file to upload
-    //   form.append('file', fileItem);
-
-    //   // Use default "withCredentials" value for CORS requests
-    //   fileItem.withCredentials = false;
-    //   return { fileItem, form };
-    // };
   }
-    // onFileSelected(event : any){
-    //   console.log(event);
-    //   this.selectedFile = <File>event.target.files[0] 
-    // }
-    // onUpload(){
-    //   const fd = new FormData();
-    //   fd.append('image', this.selectedFile, this.selectedFile.name);
-    //   this.http.post('/', fd)
-    //   .subscribe(res => {
-    //     console.log(res);
-        
-    //   })
-    // }
-    
 
-  
-     deleteChef(chef:any){
-      this.ChefService.deleteChef(chef.ID)
-      .subscribe()
-      location.reload()
-      }
       _handleReaderLoaded(readerEvt:any) {
         var binaryString = readerEvt.target.result;
                this.base64textString= btoa(binaryString);
@@ -131,11 +81,57 @@ cloudy(link:any){
       })
   }
 
-
   getChefs() {
     this.ChefService.getChef().subscribe((data) => {
       this.chefs = data
     })
   }
   
+  deleteChef(chef:any){
+    this.ChefService.deleteChef(chef.ID)
+    .subscribe()
+    location.reload()
+    }
+
+
+    confirmBox(chef : any){
+      Swal.fire({
+        title: 'Are you sure want to remove?',
+        text: 'You will not be able to recover this file!',
+        width:'350px',
+        iconColor: '#DEB28F',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        confirmButtonColor:'#DEB28F',
+        background:"black",
+        backdrop: "#deb38f93",
+        cancelButtonText: 'No, keep it'
+      }).then((result) => {      
+        if (result.value) {
+          this.ChefService.deleteChef(chef.ID)
+          .subscribe() 
+          Swal.fire({
+            title:'Deleted!',
+            text:'This Chef has been deleted.',
+            icon:'success',
+            iconColor: '#DEB28F',
+            background:"black",
+            confirmButtonColor:'#DEB28F',
+            width:'350px',
+          })
+          this.getChefs()
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire({
+            title:'Cancelled',
+            text:'This Chef is safe :)',
+            icon:'error',
+            width:'350px',
+            background:"black",
+            iconColor: '#DEB28F',
+            confirmButtonColor:'#DEB28F',
+          })
+        }
+      })
+    }
 }
