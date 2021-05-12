@@ -24,7 +24,7 @@ export class AdminDashboardComponent implements OnInit {
     brandName: new FormControl(''),
     category: new FormControl(''),
     logo: new FormControl('')
-   });
+  });
 
   values: any = {};
   showMyContainer: boolean = false;
@@ -77,12 +77,12 @@ export class AdminDashboardComponent implements OnInit {
     this.brandForm.setValue(data)
   }
 
-   getusers() {
+  getusers() {
     this.userService.getUser().subscribe((data) => {
       this.users = data
     })
   }
-   deleteUser(brand: any) {
+  deleteUser(brand: any) {
     this.adminService.DeleteUser(brand.ID_user).subscribe(() => {
       this.getusers()
     })

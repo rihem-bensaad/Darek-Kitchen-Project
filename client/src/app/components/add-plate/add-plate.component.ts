@@ -35,9 +35,9 @@ export class AddPlateComponent implements OnInit {
   }
   _handleReaderLoaded(readerEvt:any) {
     var binaryString = readerEvt.target.result;
-           this.base64textString= btoa(binaryString);
-           
-           var url ='https://api.cloudinary.com/v1_1/dm1xlu8ce/image/upload'
+          this.base64textString= btoa(binaryString);
+          
+          var url ='https://api.cloudinary.com/v1_1/dm1xlu8ce/image/upload'
 var data = {
 file: 'data:image/jpeg;base64,' + btoa(binaryString) ,
 upload_preset: 'kgiezron'
@@ -47,7 +47,7 @@ this.http.post<any>(url,data)
 
 this.urlPic= result.url  
 })
-   }
+  }
 cloudy(link:any){
 var files = link.files;
   var file = files[0];
@@ -66,12 +66,12 @@ if (files && file) {
     this.menuService.postmenu(this.menuForm.value,this.urlPic,this.id)
     .subscribe()
       location.reload()
-   }
+  }
 
   deleteMenu(menu: any) {
     this.menuService.deletemenu(menu.ID_menu)
     .subscribe() 
-     location.reload()
+    location.reload()
   }
   confirmBox(menu : any){
     Swal.fire({

@@ -12,11 +12,5 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   
- navigate() {
-        this.router.navigate(['Contact'])
- 
-  }
-
 }

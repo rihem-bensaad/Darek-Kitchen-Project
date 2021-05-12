@@ -35,7 +35,7 @@
           <div class="search-wrapper">
             <form>
               <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
-              <button class="close-icon" type="reset"></button>
+              <!-- <button class="close-icon" type="reset"></button> -->
             </form>
           </div>
     
@@ -59,9 +59,7 @@
                 <td>{{menu.location}}</td>
                 <td>{{menu.price}}</td>
                 <td><img src={{menu.image}}></td>
-                <!-- <td><button class="btn black btnblack" data-toggle="modal" data-target="#myModal" (click)="getvalues(brand)">Update</button></td> -->
                 <td><button class="btn F7F709 btnyellow" (click)="confirmBox(menu)">Delete</button></td>
-
     </tr>
   </table>
             

@@ -1,5 +1,7 @@
 DROP DATABASE IF EXISTS darekitchen;
+
 CREATE DATABASE darekitchen;
+
 USE darekitchen;
 
 CREATE TABLE chef (

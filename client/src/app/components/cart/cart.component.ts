@@ -43,7 +43,7 @@ export class CartComponent implements OnInit {
         if (this.cartItem[i].quantity instanceof Array  ) {
 
         } else {
-           this.cartItem[i].quantity = arr
+          this.cartItem[i].quantity = arr
         }
         this.total +=  this.cartItem[i].price
       }

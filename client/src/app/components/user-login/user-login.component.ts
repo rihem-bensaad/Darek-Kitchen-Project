@@ -35,7 +35,7 @@ export class UserLoginComponent implements OnInit {
         if(this.DecodeToken(result['token'])['role']==="user"){
           this.router.navigate(['/welcome']) 
         }
-         if(this.DecodeToken(result['token'])['role']==="chef"){
+        if(this.DecodeToken(result['token'])['role']==="chef"){
           this.router.navigate(['/addplate'])
         }
         if(this.DecodeToken(result['token'])['role']==="admin"){
@@ -46,9 +46,9 @@ export class UserLoginComponent implements OnInit {
         }
         
       )}
-     
+  
     }
-       
+
   
 
 

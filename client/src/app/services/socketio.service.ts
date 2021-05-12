@@ -11,7 +11,7 @@ socket:any;
 readonly url:string = 'ws://localhost:3000'
   constructor() {
     this.socket = io(this.url)
-   }
+  }
 
 webSocketConnect(){
   return this.socket;
