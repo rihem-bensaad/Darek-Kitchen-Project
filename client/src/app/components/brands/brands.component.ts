@@ -34,11 +34,12 @@ export class BrandsComponent implements OnInit {
       })
   }
 
-  getBrandId(ID_brands: number) {
-    this.menuService.getMenuByBrandId(ID_brands).subscribe((data) => {
-      this.menuService.menu = data
-      console.log(this.menuService.menu, " data id brand");
-      this.router.navigate(['/menu'])
-    })
-  }
+//   getBrandId(ID_brands: number) {
+//     this.menuService.getMenuByBrandId(ID_brands).subscribe((data) => {
+//       this.menuService.menu = data
+//       console.log(this.menuService.menu, " data id brand");
+//       this.router.navigate(['/menu'])
+//     })
+//   }
+
 }

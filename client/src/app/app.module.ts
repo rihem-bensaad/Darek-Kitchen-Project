@@ -39,7 +39,8 @@ import { HighlightDirective } from './pipes/highlight.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { CloudinaryModule, CloudinaryConfiguration } from '@cloudinary/angular-5.x';
 import { Cloudinary } from 'cloudinary-core';
-import {SocketioService } from './services/socketio.service'
+import {SocketioService } from './services/socketio.service';
+import { AllplatesComponent } from './components/allplates/allplates.component'
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import {SocketioService } from './services/socketio.service'
     PlateComponent,
     ChefPlatesComponent,
     FilterPipe,
-    HighlightDirective
+    HighlightDirective,
+    AllplatesComponent
   ],
 
   imports: [

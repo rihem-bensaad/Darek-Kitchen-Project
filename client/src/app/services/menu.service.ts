@@ -16,11 +16,11 @@ export class MenuService {
   getmenu():Observable<any>{
     return this.http.get("http://localhost:3000/menu/get")
   }
-  getMenuByBrandId(ID_brands:Number){
-    return this.http.get("http://localhost:3000/menu/get/" + ID_brands)
+  getMenuBychef(id:Number){
+    return this.http.get("http://localhost:3000/menu/get/" + id)
   }
-  postmenu(menuObject: any,urlPic : any) {
-    return this.http.post("http://localhost:3000/menu/post", {...menuObject,urlPic})
+  postmenu(menuObject: any,urlPic : any, id : number) {
+    return this.http.post("http://localhost:3000/menu/post", {...menuObject,urlPic,id})
   }
   deletemenu(ID_menu:Number) {
     return this.http.delete("http://localhost:3000/menu/delete/"+ ID_menu)

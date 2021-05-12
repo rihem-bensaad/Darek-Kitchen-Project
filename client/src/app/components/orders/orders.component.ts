@@ -17,6 +17,6 @@ export class OrdersComponent implements OnInit {
     this.socketService.listen('test event').subscribe(res=>{
       console.log(res);
     })
-   }
+  }
 
 }

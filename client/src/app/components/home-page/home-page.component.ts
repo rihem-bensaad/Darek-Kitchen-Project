@@ -42,12 +42,5 @@ onSubmit() {
 
 }
   cartNumber: number = 0
-  catNumberFun() {
-    // var cartValue = JSON.parse(localStorage.getItem('locaCart'));
-    // this.cartNumber = cartValue.length;
-    // this.auth.cartSubject.next(this.cartNumber)
-  }
-
-
 
 }
