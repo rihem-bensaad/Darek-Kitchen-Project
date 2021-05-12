@@ -143,8 +143,8 @@ INSERT INTO brands ( brandName,category,logo) values ("Foundation","Healthy Food
   --   "price": 12
 
 
-  --  "title":"Mlewi",
-  --   "image":"https://1.bp.blogspot.com/-VT4MZ9BggJs/XnCGadcmwGI/AAAAAAAAgNY/kMNzGHycI1I_zyC3RLrTaRkgzRrEAj4XQCLcBGAsYHQ/s1600/90020401_216144062835727_2104574493761470464_n.jpg",
-  --   "location": "Mestir",
-  --   "description":"The ingredients: 300 g fine semolina 200 g flour lukewarm water 2 tbsp olive oil salt.",
-  --   "price": 18 
+--    "title":"Mlewi",
+--     "image":"https://1.bp.blogspot.com/-VT4MZ9BggJs/XnCGadcmwGI/AAAAAAAAgNY/kMNzGHycI1I_zyC3RLrTaRkgzRrEAj4XQCLcBGAsYHQ/s1600/90020401_216144062835727_2104574493761470464_n.jpg",
+--     "location": "Mestir",
+--     "description":"The ingredients: 300 g fine semolina 200 g flour lukewarm water 2 tbsp olive oil salt.",
+--     "price": 18 

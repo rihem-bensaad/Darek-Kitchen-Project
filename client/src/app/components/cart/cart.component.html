@@ -40,8 +40,8 @@
                       <h6> {{item.price}},000 TND</h6>
                     </td>
                     <td>
-                      <select (change)="getQuantity($event.target,item)" name="item.qty">
-                        <option  *ngFor="let a of item.quantity " >{{a}}</option>
+                      <select (change)="getQuantity($event.target,item)" name="item.qty" >
+                        <option  *ngFor="let a of item.quantity" >{{a}}</option>
                       </select>
                     </td>
                     <td>

@@ -6,12 +6,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthenticationService {
+
+  curentUserService: any;
+
   constructor(private http: HttpClient) {}
-   login(data:any) {
+  login(data:any) {
     return this.http.post("http://localhost:3000/login", data)
   }
-
   isloggedIn() {
-    return !!localStorage.getItem('data')
+    this.curentUserService = localStorage.getItem('data')
+    console.log("cuuuuuuuuuuuuuuuuuuuuuuu",this.curentUserService);
+    return !!localStorage.getItem('data');
+
   }
 }
