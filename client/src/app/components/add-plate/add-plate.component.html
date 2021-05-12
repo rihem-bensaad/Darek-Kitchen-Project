@@ -1,3 +1,5 @@
+<!--Sidebar-->
+
 <div class="dash">
 <div class="sidebar">
     <div class="sidebar-brand">
@@ -18,6 +20,8 @@
         </ul>
     </div>
 </div>
+
+<!--Chef Add Plate Form-->
 
 <form  [formGroup]="menuForm" >
 
@@ -53,7 +57,7 @@
         <label><b>Quantity :</b></label>
       <input id="inpquantity" type="text" placeholder="Price Menu" maxlength="3" formControlName="quantity"/>
     </div>
-
+<!--Add Plate Button-->
     <button id="addbtn" class="btn" (click)="addMenu()"><b>ADD</b></button>
 
   </form>

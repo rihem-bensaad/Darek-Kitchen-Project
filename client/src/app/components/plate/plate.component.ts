@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 export class PlateComponent implements OnInit {
   chefs: any = [];
   menus: any = [];
+  id : any = localStorage.getItem('id');
  menuForm = new FormGroup({
     ID_menu : new FormControl(''),
     title: new FormControl(''),
@@ -27,14 +28,15 @@ export class PlateComponent implements OnInit {
   filterTerm!: string;
   
   ngOnInit(): void {
-    this.getmenu()
+    // this.getmenu()
+    this.getMenuByChef(this.id)
   }
 
-  getmenu() {
-    this.menuService.getmenu().subscribe((data) => {
-      this.menus = data
-    })
-  }
+  // getmenu() {
+  //   this.menuService.getmenu().subscribe((data) => {
+  //     this.menus = data
+  //   })
+  // }
 updateMenu() {
   this.menuService.updateMenu(this.menuForm.value.ID_menu, this.menuForm.value)
   .subscribe()
@@ -50,8 +52,13 @@ updateMenu() {
   setTimeout(() => {
     location.reload()
   }, 1500);
-  this.getmenu()
-  
+  this.getMenuByChef(this.id)
+}
+
+getMenuByChef(id:any){
+  this.menuService.getMenuBychef(id).subscribe((data) => {
+    this.menus = data
+  }) 
 }
 
 getvalues(data: any) {
