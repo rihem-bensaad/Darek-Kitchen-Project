@@ -23,11 +23,11 @@ menuForm = new FormGroup({
 
   ngOnInit(): void {
   }
-   addMenu() {
-    this.menuService.postmenu(this.menuForm.value,this.urlPic).subscribe((data:any)=> {
-      console.log(data)
-    })
-   }
+  //  addMenu() {
+  //   this.menuService.postmenu(this.menuForm.value,this.urlPic).subscribe((data:any)=> {
+  //     console.log(data)
+  //   })
+  //  }
   deleteMenu(menu: any) {
     this.menuService.deletemenu(menu.ID_menu).subscribe(() => {
       console.log("deleted");
