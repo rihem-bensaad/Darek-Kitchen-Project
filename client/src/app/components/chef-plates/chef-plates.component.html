@@ -2,7 +2,7 @@
 <div class="myrow">
   <!--Grid row-->
   <div class="main">
-    
+
     <!-- Actual search box -->
     <div class="form-group has-search">
       <span class="fa fa-search form-control-feedback"></span>
@@ -16,14 +16,9 @@
         <!--Card-->
         <mdb-card  class="card-ecommerce">
           <!--Card image-->
-          <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-            <a >
-            <div class="imgBrand"><mdb-card-img class="imgCart" src="{{menu.image}}"  alt="sample photo"></mdb-card-img ></div>
-            </a>
-            <a>
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
+
+
+          <img class="imgCart" src="{{menu.image}}"  alt="sample photo">
           <!--Card image-->
           <!--Card content-->
           <mdb-card-body  class="text-center">
@@ -40,14 +35,16 @@
             </h4>
 
               <b><p class="descrip">{{menu.description}}</p></b>
-              <b><p class="price">{{menu.price}} TND/pc</p></b>
-              <p class="quantity">{{menu.quantity}} pcs. available</p>
+              <b><p class="price">{{menu.price}} TND/Unit</p></b>
+              <p class="quantity">{{menu.quantity}} units. available</p>
               <h6 class="location"><i class="fas fa-map-marker-alt"></i> {{menu.location}}</h6>
               <button class="btn btn-buy" (click)="addToCart(menu)"><i class="fas fa-plus plusicon"></i> Add to cart</button>
+              <form>
+                <input type="button" value="Démarrer la machine">
+              </form>
 
-            
             </mdb-card-title>
-          
+
           </mdb-card-body>
         </mdb-card>
         <!--Card-->

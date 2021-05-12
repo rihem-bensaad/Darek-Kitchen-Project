@@ -6,10 +6,6 @@
 
     <div class="sidebar-menu">
         <ul>
-            <!-- <li>
-                <a href="/manage"><span class="las la-igloo"></span>
-                <span>My Virtual Kitchen</span></a>
-            </li> -->
             <li >
                 <a  href="/addplate"  ><span class="la la-cutlery la-lg"></span>
                 <span>Add Plates</span></a>
@@ -18,10 +14,7 @@
                 <a href="/plate"><span class="las la-clipboard-list"></span>
                 <span>Update Plates</span> </a>
             </li>
-            <li>
-                <a href="/order"><span class="las la-clipboard-list"></span>
-                <span>orders</span> </a>
-            </li>
+            
         </ul>
     </div>
 </div>
@@ -70,18 +63,16 @@
               <form [formGroup]="menuForm" >
                 <img src={{menu.image}} class="imgmodal" formControlName="image"   >
                 <div class="modalinput">
-                <!-- <label><strong>Image :</strong></label> -->
-                <!-- <input class="modalinput1" type="file" #imageInput (change)="cloudy(imageInput)" value={{menu.image}} formControlName="image"/><br> -->
                 <label><strong>Plate Name :</strong></label>
-                <input class="modalinput2" type="text"  value={{menu.title}} formControlName="title"/><br>
+                <input class="modalinput2" type="text" maxlength="20" value={{menu.title}} formControlName="title"/><br>
                 <label><strong>Plate Description :</strong></label>
-                <input class="modalinput2" type="text"  value={{menu.description}} formControlName="description"/><br>
+                <input class="modalinput2" type="text" maxlength="25"  value={{menu.description}} formControlName="description"/><br>
                 <label class="label3"><strong>Price :</strong></label>
-                <input class="modalinput3" type="text" value={{menu.price}} formControlName="price"/>
+                <input class="modalinput3" type="text" maxlength="5" value={{menu.price}} formControlName="price"/>
                 <label class="label3"><strong>Quantity :</strong></label>
-                <input class="modalinput3" type="text" value={{menu.quantity}} formControlName="quantity"/>
+                <input class="modalinput3" type="text" maxlength="5" value={{menu.quantity}} formControlName="quantity"/>
                 <label class="label3"><strong>Location :</strong></label>
-                <input class="modalinput3" type="text" value={{menu.location}} formControlName="location"/>
+                <input class="modalinput3" type="text" maxlength="15" value={{menu.location}} formControlName="location"/>
                 </div>
               <button class="btn black editbtn" (click)="updateMenu()">EDIT</button>
                 
@@ -93,9 +84,7 @@
       <!-- The Modal -->
     <div class="modal" id="myModal">
         <div class="modal-dialog">
-          <div class="modal-content">
-         
-           
+          <div class="modal-content"> 
           </div>
         </div>
       </div>

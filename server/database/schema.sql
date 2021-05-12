@@ -1,5 +1,7 @@
 DROP DATABASE IF EXISTS darekitchen;
+
 CREATE DATABASE darekitchen;
+
 USE darekitchen;
 
 CREATE TABLE chef (
@@ -26,9 +28,11 @@ CREATE TABLE menu (
     price INT NOT NULL,
     description VARCHAR(555) NOT NULL,
     quantity Int NOT NULL,
-    -- ID_brands INT,
-    PRIMARY KEY (ID_menu)
-    -- FOREIGN KEY (ID_brands) REFERENCES brands(ID_brands)
+    PRIMARY KEY (ID_menu),
+    ID INT NOT NULL,
+    INDEX chef_ind (ID),
+    FOREIGN KEY (ID)
+    REFERENCES chef(ID)
 );
 CREATE TABLE admin (
     ID INT AUTO_INCREMENT,

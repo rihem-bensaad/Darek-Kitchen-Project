@@ -29,17 +29,12 @@ export class NavbarComponent implements OnInit {
     }
 
   logout() {
+    localStorage.removeItem('MyObject')
     localStorage.clear();
     this.userRole = undefined;
     this.router.navigate(['']);
   }
-  selectBrand($event:Event) {
-    console.log(($event.target as Element).id)
-    this.brandService.brandCategory = ($event.target as Element).id
-    this.router.navigate(['/brands'])
 
-
-}
 role(){
   const dataUser = (JSON.parse(localStorage.data).token)
   if(this.DecodeToken(dataUser)['role']==='user'){
@@ -51,10 +46,6 @@ role(){
 }else if(this.DecodeToken(dataUser)['role']===undefined){
   this.userRole = undefined
 }
-  }
-
-
-  ordres() {
 
   }
 }

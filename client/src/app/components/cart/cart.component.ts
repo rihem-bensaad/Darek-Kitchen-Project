@@ -14,10 +14,12 @@ export class CartComponent implements OnInit {
   total: any = 1
   quantity: number = 1
   range : any = []
+  array: any = []
   constructor(public menuService: MenuService, public ordersService: OrdersService) { }
 
   ngOnInit(): void {
-    this.getorders()
+    this.getorders(),
+      this.deleteItem
   }
 
 
@@ -42,9 +44,8 @@ export class CartComponent implements OnInit {
         if (this.cartItem[i].quantity instanceof Array  ) {
 
         } else {
-           this.cartItem[i].quantity = arr
+          this.cartItem[i].quantity = arr
         }
-        console.log(this.total,"total total")
         this.total +=  this.cartItem[i].price
       }
       localStorage.setItem('MyObject', JSON.stringify(this.cartItem))
@@ -55,10 +56,14 @@ export class CartComponent implements OnInit {
 
 
  async deleteItem(key:any) {
-   this.cartItem = await localStorage.getItem('MyObject')
-   const data = JSON.parse(this.cartItem).filter((e: any) => e.ID_menu !== key)
-   localStorage.setItem('MyObject', JSON.stringify(data))
-   this.getorders()
+   if (localStorage.getItem('MyObject')!==null) {
+    this.cartItem = await localStorage.getItem('MyObject')
+    const data = JSON.parse(this.cartItem).filter((e: any) => e.ID_menu !== key)
+    localStorage.setItem('MyObject', JSON.stringify(data))
+    this.getorders()
+   }else if (localStorage.getItem('MyObject')===this.array) {
+    localStorage.removeItem('MyObject')
+   } 
   }
 
 
@@ -87,7 +92,7 @@ export class CartComponent implements OnInit {
     this.total = this.cartItem.reduce((accumulator: any, element: any) => (accumulator + element.total), 0)
     localStorage.setItem('MyObject', JSON.stringify(this.cartItem))
     localStorage.setItem('total',JSON.stringify(this.total))
-    this.getorders()
+    // this.getorders()
   }
  }
 

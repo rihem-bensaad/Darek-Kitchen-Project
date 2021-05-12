@@ -79,7 +79,7 @@
 .cart .table tbody tr td h6{
   font-size:16px;
   color:white ! important;
-  margin-top: 15%;
+  margin-top: 18%;
 }
 .cart .table tbody tr td .counter{
   margin-bottom:0px;
@@ -181,7 +181,7 @@ img{
 }
 .btndel{
   color: white;
-  margin-top:17%;
+  margin-top:23%;
   padding: 5px;
   background:black;
 }
@@ -189,6 +189,8 @@ img{
   border:1px solid white;
 }
 .mytitle{
-  margin-top:30% ! important;
-  margin-right: 20% ! important;
+  margin-top:14% ! important;
+}
+td select{
+  margin-top: 23% ! important;
 }

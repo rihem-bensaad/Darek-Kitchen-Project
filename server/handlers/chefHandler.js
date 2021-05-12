@@ -5,12 +5,14 @@ const jwt = require('jsonwebtoken');
 
 
 module.exports.cheflogin = (req,res,callback)=>{
-    
+    var ID ;
     db.chefLogin(req.body.email,(err,result)=>{
+    
         if (result.length===0){
             callback()
-        }
+        } 
   else if (result.length>0){
+        ID = result[0].ID
       bcrypt.compare(req.body.password,result[0].password, (err,result)=>{
           if (err){
              
@@ -22,13 +24,15 @@ module.exports.cheflogin = (req,res,callback)=>{
                   const token = jwt.sign({
                       email : req.body.email,
                       userId: req.params.id,
-                      role : "chef"
+                      role : "chef",
+                      
                   }, 'secret', function(err,token){
+                      
                       res.status(200).json({
                          
                           message : " authentication sucessful !",
-                          token : token
-                          
+                          token : token,
+                          userId : ID
                       })
                   })
               }else{
