@@ -7,12 +7,12 @@ const jwt = require('jsonwebtoken');
 module.exports.cheflogin = (req,res,callback)=>{
     var ID ;
     db.chefLogin(req.body.email,(err,result)=>{
-        
+    
         if (result.length===0){
             callback()
-        }
-        else if (result.length > 0) {
-            ID = result[0].ID
+        } 
+  else if (result.length>0){
+        ID = result[0].ID
       bcrypt.compare(req.body.password,result[0].password, (err,result)=>{
           if (err){
              

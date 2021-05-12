@@ -15,7 +15,6 @@ const user = require('./routers/UserRouter.js');
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-
 const brand = require('./routers/brandRouter')
 const admin = require('./routers/adminRouter')
 const auth = require('./routers/authRouter')

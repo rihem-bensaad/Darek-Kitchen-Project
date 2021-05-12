@@ -20,6 +20,7 @@ import { PlateComponent } from './components/plate/plate.component';
 import { ChefPlatesComponent } from './components/chef-plates/chef-plates.component';
 import { CartComponent } from './components/cart/cart.component';
 import { GuardGuard } from './guard/guard.guard';
+import { AllplatesComponent } from './components/allplates/allplates.component';
 
 
 
@@ -46,6 +47,8 @@ const routes: Routes = [
 { path: '', pathMatch: 'full', redirectTo: '/login' },
 { path:'**', redirectTo:'/login'},
 
+{path: 'cart', component: CartComponent },
+{path: 'plates', component:AllplatesComponent}
 ];
 
 @NgModule({
