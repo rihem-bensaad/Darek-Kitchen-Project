@@ -9,14 +9,14 @@ const getMenu = function(callback){
 }
 
 const getMenuById = function(id,callback){
-    let syntax = `SELECT * from menu where ID="${id}"`
+    let syntax = `SELECT * from menu where ID_menu="${id}"`
     connection.query(syntax,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })
 }
 
 const postMenu = function(params,callback){
-    let syntax = "INSERT INTO menu (title, image, location , price, description, quantity, ID) values (?,?,?,?,?,?,?)"
+    let syntax = "INSERT INTO menu (title, image, location , price, description, quantity) values (?,?,?,?,?,?)"
     connection.query(syntax,params,(err,result)=>{
         return err ? callback(err,null) : callback(null,result)
     })

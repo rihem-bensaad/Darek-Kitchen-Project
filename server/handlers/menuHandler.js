@@ -4,7 +4,7 @@ const mysql = require('mysql');
 const cloud = require('cloudinary')
 
 module.exports.postmenu = (req, res) => {
-db.postMenu([req.body.title, req.body.urlPic ,req.body.location, req.body.price, req.body.description, req.body.quantity,req.body.id],(err,result)=>{
+db.postMenu([req.body.title, req.body.urlPic ,req.body.location, req.body.price, req.body.description, req.body.quantity],(err,result)=>{
     err ? console.log(err) : res.status(201).send("posted")
 })
 }
