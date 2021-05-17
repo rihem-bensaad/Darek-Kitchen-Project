@@ -62,7 +62,7 @@ export class CartComponent implements OnInit {
     this.getorders()
    }else if (localStorage.getItem('MyObject')===this.array) {
     localStorage.removeItem('MyObject')
-   } 
+   }
   }
 
 
@@ -92,4 +92,8 @@ export class CartComponent implements OnInit {
     localStorage.setItem('MyObject', JSON.stringify(this.cartItem))
     localStorage.setItem('total',JSON.stringify(this.total))
   }
+  topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 }

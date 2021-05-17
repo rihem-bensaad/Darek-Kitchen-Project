@@ -4,8 +4,6 @@ import { FormBuilder, FormGroup, Validators , FormControl} from '@angular/forms'
 import jwt_decode from "jwt-decode";
 import { AuthenticationService } from '../../services/authentication.service'
 import Swal from 'sweetalert2';
-// import Visibility from '@material-ui/icons/Visibility';
-// import VisibilityOff from '@material-ui/icons/VisibilityOff';
 
 @Component({
   selector: 'app-user-login',

@@ -53,7 +53,7 @@
   border-bottom:0px;
   background: #DEB28F;
   color: black !important;
-  
+
 }
 .cart .table thead tr td{
   padding-top:30px;
@@ -86,7 +86,7 @@
 }
 tbody{
   background-color:rgba(0, 0, 0, 0.904);
-  
+
 }
 .counter i{
   border: 1px solid #000;
@@ -193,4 +193,17 @@ img{
 }
 td select{
   margin-top: 23% ! important;
+}
+
+#myBtn:hover {
+  background-color: rgb(77, 75, 76);
+}
+#myBtn {
+  font-size: 18px;
+  background-color: gray;
+ padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+
+
 }
