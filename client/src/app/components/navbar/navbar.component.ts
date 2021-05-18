@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit {
     this.userRole = undefined;
     this.router.navigate(['']);
   }
-  
+
 role(){
   const dataUser = (JSON.parse(localStorage.data).token)
   if(this.DecodeToken(dataUser)['role']==='user'){

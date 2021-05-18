@@ -204,6 +204,5 @@ td select{
  padding: 15px;
   border-radius: 4px;
   cursor: pointer;
-
-
+  float: right;
 }

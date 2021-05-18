@@ -9,8 +9,17 @@
 
     <div class="input-field">
       <label><i class="fas fa-key fa-lg"></i></label>
-      <input type="password" placeholder="Password" id='Password' formControlName="password"/>
-      <input type="checkbox" (click)="myFunction()">Show Password
+      <span  (click)="toggleFieldTextType()" class="icon-show" style="cursor: pointer;" *ngIf="!fieldTextType"><i class="fa fa-eye-slash" ></i></span>
+      <span  (click)="toggleFieldTextType()"class="icon-show" style="cursor: pointer;" *ngIf="fieldTextType"><i class="fa fa-eye" ></i></span>
+      <div class="input-group">
+        <!-- Change input type to be able to accept dynamic data -->
+        <input
+          [type]="fieldTextType ? 'text' : 'password'"
+          class="form-control"
+          formControlName="password"
+          placeholder="Password"
+        />
+      </div>
 
     </div>
     <button class="btn solid" (click)="postFrom()">Connexion</button>
