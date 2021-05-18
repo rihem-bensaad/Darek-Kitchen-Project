@@ -19,18 +19,12 @@ export class UserLoginComponent implements OnInit {
     password: new FormControl(''),
   });
 
-  constructor(private authService:AuthenticationService, private router: Router, private fb: FormBuilder) { }
+  constructor(private authService:AuthenticationService, private router: Router) { }
 
   ngOnInit(): void {
 
   }
-
-    initRegForm() {
-      this.loginForm = this.fb.group({
-        email: ["", [Validators.required, Validators.email]],
-        password: ["", Validators.required]
-      });
-    }
+  
     toggleFieldTextType() {
       this.fieldTextType = !this.fieldTextType;
     }

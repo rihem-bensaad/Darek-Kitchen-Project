@@ -103,10 +103,10 @@ label{
     text-decoration: bold !important;
     box-shadow: none !important;
     font-size: 12px;
-  }              
-  
+  }
+
   p{
-    
+
     margin-top: -26.5% ! important;
     margin-left: 3%;
   }
@@ -146,10 +146,10 @@ label{
     text-decoration: bold !important;
     box-shadow: none !important;
     font-size: 12px;
-  }              
-  
+  }
+
   p{
-    
+
     margin-top: -26.5% ! important;
     margin-left: 3%;
   }
@@ -188,10 +188,10 @@ label{
     text-decoration: bold !important;
     box-shadow: none !important;
     font-size: 15px;
-  }              
-  
+  }
+
   p{
-    
+
     margin-top: -26.5% ! important;
     margin-left: 3%;
   }
@@ -253,10 +253,10 @@ a{
     text-decoration: bold !important;
     box-shadow: none !important;
     font-size: 12px;
-  }              
-  
+  }
+
   p{
-    
+
     margin-top: -26.5% ! important;
     margin-left: 3%;
   }
@@ -264,3 +264,12 @@ a{
     font-size: 10px ! important;
   }
 }
+
+.icon-show {
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 3px;
+}
+
+
+

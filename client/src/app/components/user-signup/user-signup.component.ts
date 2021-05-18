@@ -9,7 +9,7 @@ import { UserService } from '../../services/user.service'
   styleUrls: ['./user-signup.component.css']
 })
 export class UserSignupComponent implements OnInit {
-
+   fieldTextType: boolean = false;
   signupForm = new FormGroup({
     firstName: new FormControl([''],[Validators.required]),
     lastName: new FormControl([''],[Validators.required]),
@@ -19,7 +19,7 @@ export class UserSignupComponent implements OnInit {
     location: new FormControl([''],[Validators.required]),
   });
 
-  
+
 
 
   constructor(private userService: UserService, private router: Router) { }
@@ -27,6 +27,9 @@ export class UserSignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+   toggleFieldTextType() {
+      this.fieldTextType = !this.fieldTextType;
+  }
 
 shouldShowFirstNameRequiredError() {
 
@@ -76,4 +79,5 @@ shouldShowLocationRequiredError() {
         this.router.navigate(['/login']);
       })
   }
+
 }

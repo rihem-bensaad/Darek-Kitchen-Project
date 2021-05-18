@@ -138,6 +138,7 @@ form{
 ::ng-deep .input-field {
   grid-template-columns: 15% 70% !important;
 }
+
 *:focus {
   outline: none;
   border: none;
