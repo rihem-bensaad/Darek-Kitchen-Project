@@ -46,6 +46,5 @@ role(){
 }else if(this.DecodeToken(dataUser)['role']===undefined){
   this.userRole = undefined
 }
-
   }
 }
