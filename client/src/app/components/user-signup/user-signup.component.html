@@ -34,14 +34,11 @@
 
           <div class="fields">
             <label><i class="fas fa-key fa-lg"></i></label>
-
             <input [type]="fieldTextType ? 'text' : 'password'" placeholder="Password*" id='password' formControlName="password"/>
             <span  (click)="toggleFieldTextType()" class="icon-show" style="cursor: pointer;" *ngIf="!fieldTextType"><i class="fa fa-eye-slash" ></i></span>
             <span  (click)="toggleFieldTextType()"class="icon-show" style="cursor: pointer;" *ngIf="fieldTextType"><i class="fa fa-eye" ></i></span>
-
             <div class="err" [ngClass]="signupForm.controls['password'].hasError('required') || signupForm.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'" >Must contain at least 8 characters.</div>
           </div>
-
           <button class="btn solid" (click)="postFrom()">Signup</button>
 
         </form>
