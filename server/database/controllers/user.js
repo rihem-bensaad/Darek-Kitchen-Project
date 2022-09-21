@@ -1,6 +1,4 @@
 const con = require('../config.js');
-
-
 module.exports.getuser = function (req, res) {
   con.query("SELECT * FROM user", function (err, result) {
     if (err) {
@@ -10,7 +8,6 @@ module.exports.getuser = function (req, res) {
     }
   });
 };
-
 module.exports.getuserById = function (req, res) {
   const sql = "SELECT * FROM user WHERE id = ?"
   con.query(sql, [req.params.id],function (err, result) {
@@ -22,8 +19,6 @@ module.exports.getuserById = function (req, res) {
     }
   });
 };
-
-
   module.exports.edituser = function(req,res){ 
     let sql =  "UPDATE user SET firstName=?, lastName=?, email=?, phoneNumber=?, location=? WHERE id = ?";
     let x = req.body
@@ -35,7 +30,6 @@ module.exports.getuserById = function (req, res) {
           }        
     })
 }
-
 module.exports.deleteuser = function(req,res) { 
   const sql = 'DELETE FROM user WHERE ID_user=?'
         con.query(sql, [req.params.ID_user],function(err, result) {
